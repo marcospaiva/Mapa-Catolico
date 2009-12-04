@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-04 16:05:31
+<?php /* Smarty version 2.6.22, created on 2009-12-04 16:46:17
          compiled from main_home.tpl */ ?>
 <!--It`s a main home of this app-->
 <h1 class="grid_6">Cadastro de Paróquias e Capelas</h1>

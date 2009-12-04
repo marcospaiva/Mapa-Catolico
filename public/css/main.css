@@ -29,6 +29,6 @@
 
 
 #vicinity h2{font-size:16px;}
-	#vicinity #vicinity_list li{padding:5px;margin-top:20px;margin-bottom:20px; background:red;}
-		#vicinity #vicinity_list li .vicinity{display:block;width:110px; height:110px;background:green;float:left;margin-right:5px;}
-		#vicinity #vicinity_list li p{}
+	#vicinity #vicinity_list li{padding:5px;margin-top:20px;margin-bottom:20px; background:orange;}
+		#vicinity #vicinity_list li .vicinity img{margin-right:5px;float:left;}
+		#vicinity #vicinity_list li .vicinity a{}
