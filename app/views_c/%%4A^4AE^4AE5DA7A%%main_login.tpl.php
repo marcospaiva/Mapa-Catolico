@@ -1,16 +1,13 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-04 09:43:34
+<?php /* Smarty version 2.6.22, created on 2009-12-04 16:05:31
          compiled from main_login.tpl */ ?>
-<form id="main_login" class="grid_6">
+<form id="main_login" class="grid_7">
 	<fieldset>
-		<legend>Já tem uma conta?</legend>
-		<label>
-			Email:
-			<input type="text"></input>
-		</label>
-		<label>
-			Senha:
-			<input type="text"></input>
-		</label>
-		<input type="submit" value="Enviar">
+		<h1>Já tenho uma conta!</h1>
+		<label for="name">Email:</label>
+			<input type="text" id="name"></input>
+		<label for="mail">Senha:</label>
+			<input type="text" id="mail"></input>
+		
+			<input type="submit" value="Entrar">
 	</fieldset>
 </form>

@@ -2,6 +2,13 @@
 	@author - Marcos Paiva.
 	@App - Cadastro de Paróquias e Capelas.
 	@version - beta.
+	
+	This is the style of the entire application.
+	All styles will be fragmented, so that the load is optimized, from that base file. This is all based on the concept of modulation,
+	like that proposed here:"http://www.tableless.com.br/modulando-o-css".
+	
+	Please don`t change this structure
+	
 */
 
 /*Imports*/
@@ -31,11 +38,11 @@ del{text-decoration:line-through}
 table{border-collapse:collapse;border-spacing:0}
 /*************************************************/
 
-div{border:1px solid orange;margin-top:5px;}
+div{border:1px solid orange;margin-top:10px;}
 
-#main_menu{background:orange;}
-	#main_menu li{display:inline;}
-	
-#main_login{background:red;}
-	#main_login fieldset{border:none;}
-		#main_login fieldset legend{background:orange;}
+/*Declaration footer to be common to all pages*/
+#footer{height:67px;}
+#footer #links ul li a{display:block;float:left;padding:5px;margin:2px;font-size:12px;background:orange;}
+#copy{height:67px;text-align:right;}
+	#copy img{vertical-align:middle;}
+#links{border:none;}
