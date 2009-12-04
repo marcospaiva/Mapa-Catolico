@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-04 08:03:55
+<?php /* Smarty version 2.6.22, created on 2009-12-04 09:43:34
          compiled from footer.tpl */ ?>
 <ul>
 	<li><a href="">Termos de uso</a></li>

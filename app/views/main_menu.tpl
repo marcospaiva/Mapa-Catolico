@@ -1,4 +1,4 @@
-<ul id="main_menu">
+<ul id="main_menu" class="grid_6">
 	<li><a href="">Crie uma Conta</a></li>
 	<li><a href="">Contato</a></li>
 	<li><a href="">Ajuda</a></li>
