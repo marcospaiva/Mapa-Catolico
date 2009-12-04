@@ -49,6 +49,7 @@ $view->assign('urlbase','/paroquias/');
 $config = new Zend_Config_Ini('./app/config.ini','local');
 Zend_Registry::set('config', $config);
 
+$view->assign('urlbase','http://localhost:8888/paroquias/public/');
 
 
 //loada classe BD
