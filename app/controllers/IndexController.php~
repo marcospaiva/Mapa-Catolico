@@ -1,0 +1,43 @@
+<?php
+
+class IndexController extends Zend_Controller_Action
+{
+	public $view;
+	
+	public function init()
+	{
+		$this->view = Zend_Registry::get("view");
+	}  
+	
+	public function indexAction()
+	{
+		//gerando data atual e atribuindo à variavel $date
+		$date = new Zend_Date();
+		//$date =  Zend_Date::now(); //tbem gera data atual
+		//gerando apenas mes da data atual
+		
+		$request = $this->getRequest();
+		$mes = $request->getParam('mes');
+		
+		if($mes != ''){
+			$m = $mes;
+		}else{
+			$m = $date->get(Zend_Date::MONTH);
+		}
+
+		$ms = new Meses();
+		$meses = $ms->Listar();
+				
+		$v = new Videos();
+		$vids = $v->Listar($m);
+
+		$this->view->assign('vids',$vids);
+		$this->view->assign('data',$date);
+		$this->view->assign('meses',$meses);
+		$this->view->assign('mes',$mes);
+		$this->view->assign('m',$date->get(Zend_Date::MONTH_NAME));
+		$this->view->display('index.tpl');
+	}
+}
+
+?>
