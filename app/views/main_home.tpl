@@ -7,4 +7,4 @@
 <form id="main_search" class="grid_6">
 	<input type="text" value="Busca"><input type="submit" value="buscar">
 </form>
-<a id="new_account"class="grid_6" href="">Crie uma conta</a>
+<p id="new_account" class="btn_more_left"><a class=" btn_more_center" href="">Crie uma conta</a><span class="btn_more_right"></span></p>

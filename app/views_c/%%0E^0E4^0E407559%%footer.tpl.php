@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-04 16:46:17
+<?php /* Smarty version 2.6.22, created on 2009-12-07 14:24:02
          compiled from footer.tpl */ ?>
 <div id="links"class="grid_6">
 <ul class="grid_6">
@@ -13,4 +13,4 @@
 	<li><a href="">Gente de Fé.</a></li>
 </ul>
 </div>
-<p id="copy" class="grid_6">Copyright 2009 <img src="http://www.cancaonova.com/i/logo_cancaonova.gif" alt="cancaonova"</p>
+<p id="copy" class="grid_6">Copyright 2009 <span id="cn_sig">Cancaonova.com</span></p>

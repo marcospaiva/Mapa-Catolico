@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-04 16:46:17
+<?php /* Smarty version 2.6.22, created on 2009-12-07 14:24:02
          compiled from /Applications/MAMP/htdocs/paroquias/app/views/index.tpl */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-04 16:46:17
+<?php /* Smarty version 2.6.22, created on 2009-12-07 14:24:02
          compiled from main_home.tpl */ ?>
 <!--It`s a main home of this app-->
 <h1 class="grid_6">Cadastro de Paróquias e Capelas</h1>
@@ -9,4 +9,4 @@
 <form id="main_search" class="grid_6">
 	<input type="text" value="Busca"><input type="submit" value="buscar">
 </form>
-<a id="new_account"class="grid_6" href="">Crie uma conta</a>
+<p id="new_account" class="btn_more_left"><a class=" btn_more_center" href="">Crie uma conta</a><span class="btn_more_right"></span></p>

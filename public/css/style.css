@@ -13,6 +13,7 @@
 
 /*Imports*/
 @import url("grid.css");
+@import url("btn.css");
 
 /* reset css v1.0 | 20080212 */
 html, body, div, span, applet, object, iframe,
@@ -41,8 +42,8 @@ table{border-collapse:collapse;border-spacing:0}
 div{border:1px solid orange;margin-top:10px;}
 
 /*Declaration footer to be common to all pages*/
-#footer{height:67px;}
-#footer #links ul li a{display:block;float:left;padding:5px;margin:2px;font-size:12px;background:orange;}
-#copy{height:67px;text-align:right;}
-	#copy img{vertical-align:middle;}
-#links{border:none;}
+#footer{height:67px; background-color:#dfdfdf;font-size:12px}
+	#footer #links{border:none;}/*to fix the problem only*/
+		#footer #links ul li a{display:block;float:left;padding:5px;margin:2px;}
+#copy{height:67px;text-align:right;line-height:67px;}
+	#copy #cn_sig{display:block;width:100px;height:27px;float:right;margin:15px 10px 10px 10px;background:url("../img/cn_vertical.gif") 0 0 no-repeat;text-indent:-1000px;overflow:hidden;}

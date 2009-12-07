@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-04 16:46:17
+<?php /* Smarty version 2.6.22, created on 2009-12-07 14:24:02
          compiled from main_login.tpl */ ?>
 <form id="main_login" class="grid_7">
 	<fieldset>
