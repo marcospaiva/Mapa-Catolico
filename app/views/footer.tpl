@@ -11,4 +11,4 @@
 	<li><a href="">Gente de Fé.</a></li>
 </ul>
 </div>
-<p id="copy" class="grid_6">Copyright 2009 <img src="http://www.cancaonova.com/i/logo_cancaonova.gif" alt="cancaonova"</p>
+<p id="copy" class="grid_6">Copyright 2009 <span id="cn_sig">Cancaonova.com</span></p>
