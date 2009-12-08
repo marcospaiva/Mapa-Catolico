@@ -8,9 +8,17 @@
 		
 	</head>
 	<body>
-		<div class="container_12 clearfix">{include file=main_menu.tpl} {include file=main_login.tpl}</div>
-		<div id="main_home" class="container_12 clearfix">{include file=main_home.tpl}</div>
-		<div id="vicinity"class="container_12 clearfix">{include file=main_vicinity.tpl}</div>
-		<div id="footer" class="container_12 clearfix">{include file=footer.tpl}</div>
+		<div class="total">
+			<div class="container_12 clearfix">{include file=main_menu.tpl} {include file=main_login.tpl}</div>
+		</div>
+		<div class="total">
+			<div id="main_home" class="container_12 clearfix">{include file=main_home.tpl}</div>
+		</div>
+		<div class="total">
+			<div id="vicinity"class="container_12 clearfix">{include file=main_vicinity.tpl}</div>
+		</div>
+		<div class="footer_100">
+			<div id="footer" class="container_12 clearfix">{include file=footer.tpl}</div>
+		</div>
 	</body>
 </html>

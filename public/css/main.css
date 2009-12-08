@@ -10,29 +10,39 @@
 
 #main_menu{}
 	#main_menu li{margin: 1px;}
-	#main_menu li:hover{background-color:yellow;}
-		#main_menu li a{}
+	#main_menu li:hover{}
+		#main_menu li a{font-weight:bold; color:#666;display:block;float:left;margin:1px;padding:5px;font-size:14px;}
 	#main_menu li span{}
 
 #main_login{font-size:.8em;}
 	#main_login fieldset{text-align:right;}
 		#main_login fieldset h1{display:inline;margin-right:15px;}
 		#main_login fieldset input[type="text"]{width:9em;padding:2px;font-size:12px;}
-		#main_login fieldset input[type="submit"]{padding:5px; border:1px solid blue;}
+		#main_login fieldset input[type="submit"]{background:url("../img/background_button.jpg") 0 0 repeat-x;border:1px solid #dfdfdf;padding:2px;}
 
 #main_home h1{background:url("../img/logo_top.jpg") 30px 20px no-repeat;height:200px; text-indent:-9999px; overflow:hidden;}
-#main_home  #first{font-size:20px; margin-top:30px;}
-#main_home  #second{font-size:14px;margin-top:20px;}
-	#main_home  #second em{display:block;text-align:right;padding:12px;}
-	
-#main_search input[type="text"]{width:300px;font-size:20px; padding:10px;margin:10px 0 10px 20px;border:none;background-color:#ffe000;}
-#main_search input[type="submit"]{font-size:20px;padding:9px; border:none;background-color:#ff4444;}
+#main_home  #first{font-size:20px; margin-top:30px;color:#1667a8;}
+#main_home  #second{font-size:14px;margin-top:20px;color:#666;}
+	#main_home  #second em{display:block;text-align:right;padding:12px;font-weight:bold;}
 
-#new_account {background-color:orange;margin:10px 0 0 85px;}
-	#new_account a{width:350px; text-align:center; font-size:20px;}
+#main_search{}
+	#main_search input[type="text"]{width:300px;font-size:20px;float:left;margin:0 0 0 25px;padding:5px;}
+		#main_search label input[type="submit"]{font-size:20px; border:none;cursor:pointer;}
+			#main_search label input[type="submit"]:hover{text-decoration:underline;}
+			#main_search label:hover{background-color:#ea8208;}
 
+#new_account {background-color:#076cb0;margin:0 0 10px 85px;}
+#new_account:hover{background-color:#ea8208;}
+	#new_account a{width:350px; text-align:center; font-size:20px;color:#fff;text-decoration:none;}
+	#new_account a:hover{text-decoration:underline;}
 
-#vicinity h2{font-size:16px;margin:10px;}
-	#vicinity #vicinity_list li{padding:5px;margin-top:20px;margin-bottom:20px; background:orange;}
-		#vicinity #vicinity_list li a.vicinity{display:block;float:left;}
-		/*#vicinity #vicinity_list li a{margin-top:5px;}*/
+#vicinity h2{font-size:20px;padding-top:25px;font-weight:normal;color:#076cb0;}
+	#vicinity #vicinity_list li{padding:5px;margin-top:20px;margin-bottom:20px;border-right:1px solid #076cb0;;font-size:14px;}
+		#vicinity #vicinity_list li p{margin:10px 0;}
+			#vicinity #vicinity_list li p.name{font-size:16px;}
+			
+			#vicinity #vicinity_list li a.vicinity,#vicinity #vicinity_list li a img{overflow:hidden;float:left;}
+			
+			#vicinity #vicinity_list li a.vicinity:hover{border:3px solid #076cb0;}
+			#vicinity #vicinity_list li a.vicinity:hover img{margin:-3px;}
+		

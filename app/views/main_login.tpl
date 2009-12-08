@@ -6,6 +6,6 @@
 		<label for="mail">Senha:</label>
 			<input type="text" id="mail"></input>
 		
-			<input type="submit" value="Entrar">
+		<input type="submit" value="Entrar" class="btn_form">
 	</fieldset>
 </form>

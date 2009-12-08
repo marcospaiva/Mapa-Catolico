@@ -5,6 +5,7 @@
 <span class="clear"></span>
 <!--line break here-->
 <form id="main_search" class="grid_6">
-	<input type="text" value="Busca"><input type="submit" value="buscar">
+	<input type="text" value="Busca"/>
+	<label class="btn_more_left"><input type="submit" value="buscar" class="btn_more_center"><span class="btn_more_right"></span></label>
 </form>
 <p id="new_account" class="btn_more_left"><a class=" btn_more_center" href="">Crie uma conta</a><span class="btn_more_right"></span></p>

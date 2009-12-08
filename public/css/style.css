@@ -24,7 +24,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,arial,sans-serif;}
+table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,arial,sans-serif;color:#666;}
 body{line-height:1;text-align:center}
 body *{text-align:left} 
 ol,ul{list-style:none}
@@ -38,12 +38,17 @@ del{text-decoration:line-through}
 /* tables still need 'cellspacing="0"' in the markup */
 table{border-collapse:collapse;border-spacing:0}
 /*************************************************/
-
-div{border:1px solid orange;margin-top:10px;}
+body{background-color:#d1d1d1;}
+div.total{background-color:white;}
+/*define a global style for links*/
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
 
 /*Declaration footer to be common to all pages*/
-#footer{height:67px; background-color:#dfdfdf;font-size:12px}
-	#footer #links{border:none;}/*to fix the problem only*/
-		#footer #links ul li a{display:block;float:left;padding:5px;margin:2px;}
-#copy{height:67px;text-align:right;line-height:67px;}
+.footer_100{background:url("../img/background_foot.jpg") 0 0 repeat-x #d1d1d1;}
+#footer{height:67px;font-size:12px;}
+	#footer #links{margin-top:10px;}
+		#footer #links ul li a{display:block;float:left;padding:5px;margin:2px;color:#076cb0;}
+
+#copy{height:67px;text-align:right;line-height:67px;margin-top:10px;}
 	#copy #cn_sig{display:block;width:100px;height:27px;float:right;margin:15px 10px 10px 10px;background:url("../img/cn_vertical.gif") 0 0 no-repeat;text-indent:-1000px;overflow:hidden;}

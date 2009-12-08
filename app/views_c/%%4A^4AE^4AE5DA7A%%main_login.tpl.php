@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-07 14:24:02
+<?php /* Smarty version 2.6.22, created on 2009-12-08 12:56:33
          compiled from main_login.tpl */ ?>
 <form id="main_login" class="grid_7">
 	<fieldset>
@@ -8,6 +8,6 @@
 		<label for="mail">Senha:</label>
 			<input type="text" id="mail"></input>
 		
-			<input type="submit" value="Entrar">
+		<input type="submit" value="Entrar" class="btn_form">
 	</fieldset>
 </form>
