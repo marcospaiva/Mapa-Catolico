@@ -8,12 +8,6 @@
 	
 */
 
-#main_menu{}
-	#main_menu li{margin: 1px;}
-	#main_menu li:hover{}
-		#main_menu li a{font-weight:bold; color:#666;display:block;float:left;margin:1px;padding:5px;font-size:14px;}
-	#main_menu li span{}
-
 #main_login{font-size:.8em;}
 	#main_login fieldset{text-align:right;}
 		#main_login fieldset h1{display:inline;margin-right:15px;}

@@ -16,7 +16,7 @@ class IndexController extends Zend_Controller_Action
                 $x = "testando o esquema paty";
 		
                 $this->view->assign('teste', $x);		
-		$this->view->display('index.tpl');
+		$this->view->display('search.tpl');
 	}
 }
 

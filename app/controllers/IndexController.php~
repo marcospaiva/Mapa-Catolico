@@ -36,7 +36,7 @@ class IndexController extends Zend_Controller_Action
 		$this->view->assign('meses',$meses);
 		$this->view->assign('mes',$mes);
 		$this->view->assign('m',$date->get(Zend_Date::MONTH_NAME));
-		$this->view->display('index.tpl');
+		$this->view->display('search.tpl');
 	}
 }
 

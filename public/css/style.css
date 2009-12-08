@@ -38,13 +38,23 @@ del{text-decoration:line-through}
 /* tables still need 'cellspacing="0"' in the markup */
 table{border-collapse:collapse;border-spacing:0}
 /*************************************************/
+
+/*Global styling *******************************************************/
 body{background-color:#d1d1d1;}
 div.total{background-color:white;}
 /*define a global style for links*/
 a{text-decoration:none;}
 a:hover{text-decoration:underline;}
 
-/*Declaration footer to be common to all pages*/
+/*Declaration top to be common to all pages ***************************************/
+#common_menu{}
+	#common_menu li{margin: 1px;}
+	#common_menu li:hover{}
+		#common_menu li a{font-weight:bold; color:#666;display:block;float:left;margin:1px;padding:5px;font-size:14px;}
+	#common_menu li span{}
+
+
+/*Declaration footer to be common to all pages ***************************************/
 .footer_100{background:url("../img/background_foot.jpg") 0 0 repeat-x #d1d1d1;}
 #footer{height:67px;font-size:12px;}
 	#footer #links{margin-top:10px;}

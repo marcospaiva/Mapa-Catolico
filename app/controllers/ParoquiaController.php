@@ -36,7 +36,7 @@ class ParoquiaController extends Zend_Controller_Action {
         $id = $paroquias->insert($dado);
 
         $this->view->assign('teste',$id);
-        $this->view->display('index.tpl');
+        $this->view->display('search.tpl');
 
     }
 
