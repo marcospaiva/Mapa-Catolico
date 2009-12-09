@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-08 16:24:50
+<?php /* Smarty version 2.6.22, created on 2009-12-09 07:47:55
          compiled from /Applications/MAMP/htdocs/paroquias/app/views/search.tpl */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -29,7 +29,16 @@ unset($_smarty_tpl_vars);
 		<div class="total">
 			<div class="container_12 clearfix">
 				<ul id="search_result" class="grid_12">
-					<li>bla bla bla</li>
+					<li>
+						<a href="" class="vicinity">
+							<img src="<?php echo $this->_tpl_vars['urlbase']; ?>
+img/logo_top.jpg" width="110" height="110">
+						</a>
+						<p class="name"><a href="">Paróquia São Benedito</a></p>
+						<p><a href="">Paróquia São Benedito</a></p>
+						<p><a href="">Paróquia São Benedito</a></p>
+						<p><a href="">Paróquia São Benedito</a></p>
+					</li>
 				</ul>
 			</div>
 		</div>

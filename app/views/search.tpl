@@ -17,7 +17,15 @@
 		<div class="total">
 			<div class="container_12 clearfix">
 				<ul id="search_result" class="grid_12">
-					<li>bla bla bla</li>
+					<li>
+						<a href="" class="vicinity">
+							<img src="{$urlbase}img/logo_top.jpg" width="110" height="110">
+						</a>
+						<p class="name"><a href="">Paróquia São Benedito</a></p>
+						<p><a href="">Paróquia São Benedito</a></p>
+						<p><a href="">Paróquia São Benedito</a></p>
+						<p><a href="">Paróquia São Benedito</a></p>
+					</li>
 				</ul>
 			</div>
 		</div>
