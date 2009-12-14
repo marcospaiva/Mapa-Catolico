@@ -8,3 +8,18 @@
 
 .common_top{padding:5px 0;}
 .common_top a{display:block;width:230px;height:120px;background:url("../img/logo_top_less.jpg") 0 0 no-repeat;overflow:hidden;text-indent:-9999px;}
+
+#search_result li{padding:5px;margin-top:20px;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #076cb0;font-size:14px;}
+	#search_result li p{margin:10px 0;}
+		#search_result li p.name{font-size:16px;}
+		
+		#search_result li a.search_list, #search_result li a img{overflow:hidden;float:left;}
+		
+		#search_result li a.search_list:hover{border:3px solid #076cb0;}
+		#search_result li a.search_list:hover img{margin:-3px;}
+
+#more_results{font-size:16px;font-weight:bold;text-align:center;margin-bottom:5px;}
+
+#paginate_result{padding-bottom:10px;text-align:center;}
+	#paginate_result li{display:inline;}
+		#paginate_result li a{color:#076cb0;}

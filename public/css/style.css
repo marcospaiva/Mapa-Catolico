@@ -53,6 +53,10 @@ a:hover{text-decoration:underline;}
 		#common_menu li a{font-weight:bold; color:#666;display:block;float:left;margin:1px;padding:5px;font-size:14px;}
 	#common_menu li span{}
 
+#common_search{float:left;}
+	#common_search fieldset{float:left;}
+		#common_search fieldset legend{float:left;}
+
 
 /*Declaration footer to be common to all pages ***************************************/
 .footer_100{background:url("../img/background_foot.jpg") 0 0 repeat-x #d1d1d1;}

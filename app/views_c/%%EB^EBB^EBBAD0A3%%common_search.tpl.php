@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-09 07:47:55
+<?php /* Smarty version 2.6.22, created on 2009-12-14 13:33:05
          compiled from common_search.tpl */ ?>
 <form id="common_search" class="grid_12 clearfix">
 	<fieldset>
