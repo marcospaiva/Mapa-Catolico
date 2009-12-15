@@ -1,4 +1,4 @@
-<form id="main_login" class="grid_7">
+<form id="main_login" class="grid_6">
 	<fieldset>
 		<h1>Já tenho uma conta!</h1>
 		<label for="name">Email:</label>

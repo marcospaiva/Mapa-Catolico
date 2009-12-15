@@ -53,9 +53,10 @@ a:hover{text-decoration:underline;}
 		#common_menu li a{font-weight:bold; color:#666;display:block;float:left;margin:1px;padding:5px;font-size:14px;}
 	#common_menu li span{}
 
-#common_search{float:left;}
-	#common_search fieldset{float:left;}
-		#common_search fieldset legend{float:left;}
+#common_search{font-size:20px;}
+	#common_search fieldset{text-align:center;margin:30px 0;}
+		#common_search fieldset select,#common_search fieldset input[type="text"]{font-size:14px;padding:3px;}
+		#common_search fieldset input[type="submit"]{}
 
 
 /*Declaration footer to be common to all pages ***************************************/

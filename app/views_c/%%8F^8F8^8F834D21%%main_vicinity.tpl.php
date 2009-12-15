@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-08 15:39:24
+<?php /* Smarty version 2.6.22, created on 2009-12-14 16:05:10
          compiled from main_vicinity.tpl */ ?>
 <!--This main vicinity - it`s no seriusly-->
 <h2 class="grid_12">Paróquias e Capelas mais próximas de você!</h2>

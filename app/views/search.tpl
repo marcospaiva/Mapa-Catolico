@@ -9,10 +9,10 @@
 	</head>
 	<body>
 		<div class="total">
-			<div class="container_12 clearfix">{include file=common_menu.tpl}</div>
+			<div class="container_12 clearfix">{include file=common_menu.tpl} {include file=common_rightbox.tpl}</div>
 		</div>
 		<div class="total">
-			<div  style="background:orange;" class="container_12 clearfix">{include file=common_top.tpl}</div>
+			<div class="container_12 clearfix">{include file=common_top.tpl}</div>
 		</div>
 		<div class="total">
 			<div class="container_12 clearfix">

@@ -1,0 +1,1 @@
+<p id="common_rightbox" class="grid_6"><a href="">Faça o login</a> ou <a href="">Crie uma conta</a></p>

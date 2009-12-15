@@ -1,6 +1,6 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-08 15:39:24
+<?php /* Smarty version 2.6.22, created on 2009-12-14 16:05:10
          compiled from main_login.tpl */ ?>
-<form id="main_login" class="grid_7">
+<form id="main_login" class="grid_6">
 	<fieldset>
 		<h1>Já tenho uma conta!</h1>
 		<label for="name">Email:</label>

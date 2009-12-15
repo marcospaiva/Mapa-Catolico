@@ -12,9 +12,7 @@
 #search_result li{padding:5px;margin-top:20px;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #076cb0;font-size:14px;}
 	#search_result li p{margin:10px 0;}
 		#search_result li p.name{font-size:16px;}
-		
 		#search_result li a.search_list, #search_result li a img{overflow:hidden;float:left;}
-		
 		#search_result li a.search_list:hover{border:3px solid #076cb0;}
 		#search_result li a.search_list:hover img{margin:-3px;}
 
@@ -23,3 +21,6 @@
 #paginate_result{padding-bottom:10px;text-align:center;}
 	#paginate_result li{display:inline;}
 		#paginate_result li a{color:#076cb0;}
+		
+#common_rightbox{text-align:right;margin-top:5px;}
+	#common_rightbox a{font-weight:bold;font-size:14px;}
