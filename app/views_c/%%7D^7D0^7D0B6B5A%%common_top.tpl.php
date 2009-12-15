@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-15 08:27:13
+<?php /* Smarty version 2.6.22, created on 2009-12-15 15:07:26
          compiled from common_top.tpl */ ?>
 <h1 class="common_top grid_3"><a href="">Cadastro de Paroquias e capelas</a></h1>
 <div id="ads" class="grid_9"><img src="<?php echo $this->_tpl_vars['urlbase']; ?>

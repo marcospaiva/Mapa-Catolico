@@ -1,5 +1,5 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-15 09:39:45
-         compiled from /Applications/MAMP/htdocs/paroquias/app/views/search.tpl */ ?>
+<?php /* Smarty version 2.6.22, created on 2009-12-15 15:07:26
+         compiled from /Applications/MAMP/htdocs/paroquias/app/views/parish.tpl */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 	<head>
@@ -31,33 +31,27 @@ unset($_smarty_tpl_vars);
  ?></div>
 		</div>
 		<div class="total">
-			<div class="container_12 clearfix">
-				<ul id="search_result" class="grid_12">
-					<li>
-						<a href="" class="search_list">
-							<img src="<?php echo $this->_tpl_vars['urlbase']; ?>
-img/logo_top.jpg" width="110" height="110">
-						</a>
-						<p class="name"><a href="">Paróquia São Benedito</a></p>
-						<p><a href="">Paróquia São Benedito</a></p>
-						<p><a href="">Paróquia São Benedito</a></p>
-						<p><a href="">Paróquia São Benedito</a></p>
-					</li>
-				</ul>
-				<p id="more_results">Mais resultados:</p>
-				<ul id="paginate_result">
-					<li><a href="">1</a></li>
-					<li><a href="">2</a></li>
-					<li><a href="">3</a></li>
-					<li><a href="">4</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-				</ul>
+			<div id="parish" class="container_12 clearfix">
+				<h1 class="grid_12">Paróquia São Benedito de Figueira Afonso</h1>
+				<h2 class="grid_12">Cruzeiro-SP</h2>
+				<div id="info" class="grid_4">
+					<p><strong>Diocese:</strong>Lorena</p>
+					<p><strong>Bispo:</strong>Lindomar da Silva Souza</p>
+					<p><strong>Pároco:</strong>Cléverson Alvez do Nascimento</p>
+					
+					<p><strong>Endereço:</strong>Rua Benedito rui barbosa</p>
+					<p><strong>Numero</strong>1234</p>
+					<p><strong>Bairro:</strong>Aguás de lindóia</p>
+					<p><strong>País:</strong>Brasil</p>
+					<p><strong>Site:</strong><a href="">www.paroquia.com.br</a></p>
+					
+					<p><strong>Descrição:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque quam et nibh rutrum a scelerisque nulla bibendum. Sed id sapien leo. Vestibulum interdum, ante et semper ultrices, tortor risus tempus odio, dapibus blandit mi elit eu odio. Nullam sodales, metus ultrices vehicula scelerisque, augue urna viverra risus, sit amet tincidunt enim leo sagittis nunc. Donec sem risus, pharetra sodales condimentum vel, sagittis vel diam.</p>
+					
+					<p><strong>Quem cadastrou:</strong><a href="" class="clearfix">blablabla</a><a href="" class="clearfix">email</a></p>
+					
+				</div>
+				<div id="render_map" class="grid_8"><img src="<?php echo $this->_tpl_vars['urlbase']; ?>
+/img/imagem1.png" /></div>
 			</div>
 		</div>
 		<div class="footer_100">

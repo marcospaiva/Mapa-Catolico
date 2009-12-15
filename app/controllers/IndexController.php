@@ -11,12 +11,8 @@ class IndexController extends Zend_Controller_Action
 	}  
 	
 	public function indexAction()
-	{
-
-                $x = "testando o esquema paty";
-		
-                $this->view->assign('teste', $x);		
-		$this->view->display('search.tpl');
+	{		
+		$this->view->display('parish.tpl');
 	}
 }
 
