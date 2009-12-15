@@ -8,7 +8,9 @@
 
 .common_top{padding:5px 0;}
 .common_top a{display:block;width:230px;height:120px;background:url("../img/logo_top_less.jpg") 0 0 no-repeat;overflow:hidden;text-indent:-9999px;}
+#ads{margin-top:20px;}
 
+/*o proximo bloco será responsável pelos resultados de buscas*/
 #search_result li{padding:5px;margin-top:20px;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #076cb0;font-size:14px;}
 	#search_result li p{margin:10px 0;}
 		#search_result li p.name{font-size:16px;}
@@ -21,6 +23,14 @@
 #paginate_result{padding-bottom:10px;text-align:center;}
 	#paginate_result li{display:inline;}
 		#paginate_result li a{color:#076cb0;}
+
+/**/
 		
 #common_rightbox{text-align:right;margin-top:5px;}
-	#common_rightbox a{font-weight:bold;font-size:14px;}
+	#common_rightbox a,#common_rightbox_loged a{font-weight:bold;font-size:14px;}
+
+#common_rightbox_loged{text-align:right;padding:5px;}
+
+#common_rightbox_loged{display:none;}/****essa informação é setada com JS se o usuário está logado ou não*****/
+
+/**/
