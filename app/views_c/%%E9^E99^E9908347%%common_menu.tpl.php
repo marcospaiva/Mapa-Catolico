@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-15 15:07:26
+<?php /* Smarty version 2.6.22, created on 2009-12-16 10:21:46
          compiled from common_menu.tpl */ ?>
 <ul id="common_menu" class="grid_6">
 	<li><a href="">Crie uma Conta</a></li>

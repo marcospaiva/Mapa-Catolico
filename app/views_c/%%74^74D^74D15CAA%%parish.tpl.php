@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-15 15:07:26
+<?php /* Smarty version 2.6.22, created on 2009-12-15 15:55:40
          compiled from /Applications/MAMP/htdocs/paroquias/app/views/parish.tpl */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -50,8 +50,11 @@ unset($_smarty_tpl_vars);
 					<p><strong>Quem cadastrou:</strong><a href="" class="clearfix">blablabla</a><a href="" class="clearfix">email</a></p>
 					
 				</div>
-				<div id="render_map" class="grid_8"><img src="<?php echo $this->_tpl_vars['urlbase']; ?>
-/img/imagem1.png" /></div>
+				<div id="render_map" class="grid_8">
+					<img src="<?php echo $this->_tpl_vars['urlbase']; ?>
+/img/imagem1.png" />
+					<p id="legend"class="prefix_6"><a href="">Paroquias</a><a href="">Capela</a></p>
+				</div>
 			</div>
 		</div>
 		<div class="footer_100">

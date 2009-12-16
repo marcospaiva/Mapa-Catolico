@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-15 15:07:26
+<?php /* Smarty version 2.6.22, created on 2009-12-16 10:21:46
          compiled from footer.tpl */ ?>
 <div id="links"class="grid_6">
 <ul class="grid_6">
