@@ -12,7 +12,7 @@ class IndexController extends Zend_Controller_Action
 	
 	public function indexAction()
 	{		
-		$this->view->display('parish.tpl');
+		$this->view->display('common_main.tpl');
 	}
 }
 
