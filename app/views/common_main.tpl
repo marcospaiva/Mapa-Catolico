@@ -15,7 +15,7 @@
 			<div id="main_home" class="container_12 clearfix">{include file=common_top.tpl}</div>
 		</div>
 		<div class="total">
-			{include file=parish.tpl}
+			{include file=contact.tpl}
 		</div>
 		<div class="footer_100">
 			<div id="footer" class="container_12 clearfix">{include file=footer.tpl}</div>

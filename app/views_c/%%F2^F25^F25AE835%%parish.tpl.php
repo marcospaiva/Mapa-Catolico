@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-16 10:21:46
+<?php /* Smarty version 2.6.22, created on 2009-12-16 13:52:49
          compiled from parish.tpl */ ?>
 			<div id="parish" class="container_12 clearfix">
 				<h1 class="grid_12">Paróquia São Benedito de Figueira Afonso</h1>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-16 10:21:46
+<?php /* Smarty version 2.6.22, created on 2009-12-16 16:02:50
          compiled from /Applications/MAMP/htdocs/paroquias/app/views/common_main.tpl */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -32,7 +32,7 @@ unset($_smarty_tpl_vars);
 		</div>
 		<div class="total">
 			<?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => "parish.tpl", 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => "contact.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
