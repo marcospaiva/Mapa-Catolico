@@ -40,5 +40,6 @@
 
 #parish #info, #parish #render_map{margin-top:20px;margin-bottom:20px;}
 #parish #render_map{overflow:hidden;}
+	#parish #render_map #legend a{display:block;float:left;padding:5px;}
 #parish #info p{margin-bottom:5px;}
 #parish #info p strong{padding-right:5px;}
