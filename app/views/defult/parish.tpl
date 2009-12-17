@@ -1,24 +1,27 @@
-			<div id="parish" class="container_12 clearfix">
-				<h1 class="grid_12">Paróquia São Benedito de Figueira Afonso</h1>
-				<h2 class="grid_12">Cruzeiro-SP</h2>
+			
+                        <div id="parish" class="container_12 clearfix">
+				<h1 class="grid_12"> {if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}</h1>
+				<h2 class="grid_12">{$pa.pa_cidade}-{$pa.pa_estado}</h2>
 				<div id="info" class="grid_4">
-					<p><strong>Diocese:</strong>Lorena</p>
-					<p><strong>Bispo:</strong>Lindomar da Silva Souza</p>
-					<p><strong>Pároco:</strong>Cléverson Alvez do Nascimento</p>
+                                        <p><img src="http://img.cancaonova.com/paroquias/paroquias/{$pa.pa_id}.jpg"><br>
+					<p><strong>Diocese:</strong>{$diocese}</p>
+					<p><strong>Bispo:</strong>{$bispo}</p>
+					<p><strong>Pároco:</strong>{$pa.pa_paroco}</p>
 					
-					<p><strong>Endereço:</strong>Rua Benedito rui barbosa</p>
-					<p><strong>Numero</strong>1234</p>
-					<p><strong>Bairro:</strong>Aguás de lindóia</p>
-					<p><strong>País:</strong>Brasil</p>
-					<p><strong>Site:</strong><a href="">www.paroquia.com.br</a></p>
+					<p><strong>Endereço:</strong>{$pa.pa_rua}</p>
+					<p><strong>Numero</strong>{$pa.pa_numero}</p>
+					<p><strong>Bairro:</strong>{$pa.pa_bairro}</p>
+					<p><strong>País:</strong>{$pa.pa_pais}</p>
+					{if $pa.pa_site eq ""} {else}<p><strong>Site:</strong><a href="{$pa.pa_site}">{$pa.pa_site}</a></p>{/if}
 					
-					<p><strong>Descrição:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque quam et nibh rutrum a scelerisque nulla bibendum. Sed id sapien leo. Vestibulum interdum, ante et semper ultrices, tortor risus tempus odio, dapibus blandit mi elit eu odio. Nullam sodales, metus ultrices vehicula scelerisque, augue urna viverra risus, sit amet tincidunt enim leo sagittis nunc. Donec sem risus, pharetra sodales condimentum vel, sagittis vel diam.</p>
+					<p><strong>Descrição:</strong>{$pa.pa_descricao}</p>
 					
-					<p><strong>Quem cadastrou:</strong><a href="" class="clearfix">blablabla</a><a href="" class="clearfix">email</a></p>
+					<p><strong>Quem cadastrou:</strong><a href="" class="clearfix">{$usuario}</a>
+                                        <a href="" class="clearfix">{$email}</a></p>
 					
 				</div>
-				<div id="render_map" class="grid_8">
-					<img src="{$urlbase}/img/imagem1.png" />
+				<div id="map_canvas" class="grid_8" style="height:500px;">
+					
 					<p id="legend"class="prefix_6"><a href="">Paroquias</a><a href="">Capela</a></p>
 				</div>
 			</div>

@@ -3,7 +3,7 @@
 <ul id="vicinity_list" class="grid_12">
 	<li class="grid_4">
 		<a href="" class="vicinity">
-			<img src="{$urlbase}img/logo_top.jpg" width="110" height="110">
+			<img src="{$urlbase}public/img/logo_top.jpg" width="110" height="110">
 		</a>
 		<p class="name"><a href="">Paróquia São Benedito</a></p>
 		<p><a href="">Paróquia São Benedito</a></p>
@@ -12,7 +12,7 @@
 	</li>
 	<li class="grid_4">
 		<a href="" class="vicinity">
-			<img src="{$urlbase}img/logo_top.jpg" width="110" height="110">
+			<img src="{$urlbase}public/img/logo_top.jpg" width="110" height="110">
 		</a>
 		<p class="name"><a href="">Paróquia São Benedito</a></p>
 		<p><a href="">Paróquia São Benedito</a></p>

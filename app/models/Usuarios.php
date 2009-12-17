@@ -17,10 +17,26 @@ class Usuarios extends Zend_Db_Table_Abstract
 		return $this->fetchAll();
 
 	}
+        public function ListarDados($usr)
+	{
+		return $this->fetchAll("us_id = '$usr'")->current();
+
+	}
+        public function ListarUsuarios($palavra)
+	{
+		return $this->fetchAll("us_nome LIKE '%$palavra%'");
+
+	}
 
         public function BuscaEndereco()
         {
                 return $this->fechAll();
+        }
+       
+        public function Logar()
+        {
+            
+
         }
 
         

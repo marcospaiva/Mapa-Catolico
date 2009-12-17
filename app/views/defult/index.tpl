@@ -3,8 +3,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Projeto - Teste</title>
-		<link href="{$urlbase}css/style.css" type="text/css" rel="stylesheet" />
-		<link href="{$urlbase}css/main.css" type="text/css" rel="stylesheet" />
+		<link href="{$urlbase}/public/css/style.css" type="text/css" rel="stylesheet" />
+		<link href="{$urlbase}/public/css/main.css" type="text/css" rel="stylesheet" />
 		
 	</head>
 	<body>
