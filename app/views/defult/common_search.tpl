@@ -7,7 +7,7 @@
 				<option>Usuarios</option>
 				<option>Cidades</option>
 			</select>
-			<input type="text">
-			<input type="submit" value="Buscar">
+			<input type="text" />
+			<input type="submit" value="Buscar" /> 
 	</fieldset>
 </form>
