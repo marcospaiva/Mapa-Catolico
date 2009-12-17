@@ -1,5 +1,5 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-16 16:43:02
-         compiled from contact.tpl */ ?>
+<?php /* Smarty version 2.6.22, created on 2009-12-17 08:31:53
+         compiled from defult/contact.tpl */ ?>
 <div id="contact" class="container_12 clearfix">
 	<form action="" method="post">
 			<fieldset>

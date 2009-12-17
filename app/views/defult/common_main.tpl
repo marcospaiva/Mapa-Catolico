@@ -9,16 +9,16 @@
 	</head>
 	<body>
 		<div class="total">
-			<div class="container_12 clearfix">{include file=common_menu.tpl} {include file=common_rightbox.tpl}</div>
+			<div class="container_12 clearfix">{include file=defult/common_menu.tpl} {include file=defult/common_rightbox.tpl}</div>
 		</div>
 		<div class="total">
-			<div id="main_home" class="container_12 clearfix">{include file=common_top.tpl}</div>
+			<div id="main_home" class="container_12 clearfix">{include file=defult/common_top.tpl}</div>
 		</div>
 		<div class="total">
-			{include file=contact.tpl}
+			{include file=defult/search.tpl}
 		</div>
 		<div class="footer_100">
-			<div id="footer" class="container_12 clearfix">{include file=footer.tpl}</div>
+			<div id="footer" class="container_12 clearfix">{include file=defult/footer.tpl}</div>
 		</div>
 	</body>
 </html>

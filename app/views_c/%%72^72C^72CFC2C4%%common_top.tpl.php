@@ -1,5 +1,5 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-16 16:43:02
-         compiled from common_top.tpl */ ?>
+<?php /* Smarty version 2.6.22, created on 2009-12-17 08:34:36
+         compiled from defult/common_top.tpl */ ?>
 <h1 class="common_top grid_3"><a href="">Cadastro de Paroquias e capelas</a></h1>
 <div id="ads" class="grid_9"><img src="<?php echo $this->_tpl_vars['urlbase']; ?>
 img/ads.jpg" alt="bla bla bla"/></div>

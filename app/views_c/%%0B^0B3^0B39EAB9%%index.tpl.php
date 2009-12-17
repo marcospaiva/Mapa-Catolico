@@ -1,5 +1,5 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-16 16:43:02
-         compiled from /Applications/MAMP/htdocs/paroquias/app/views/common_main.tpl */ ?>
+<?php /* Smarty version 2.6.22, created on 2009-12-17 08:32:56
+         compiled from /Applications/MAMP/htdocs/paroquias/app/views/defult/index.tpl */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 	<head>
@@ -8,38 +8,38 @@
 		<link href="<?php echo $this->_tpl_vars['urlbase']; ?>
 css/style.css" type="text/css" rel="stylesheet" />
 		<link href="<?php echo $this->_tpl_vars['urlbase']; ?>
-css/common.css" type="text/css" rel="stylesheet" />
-		<!--This page is a template for all of pages in this app-->
+css/main.css" type="text/css" rel="stylesheet" />
+		
 	</head>
 	<body>
 		<div class="total">
 			<div class="container_12 clearfix"><?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => "common_menu.tpl", 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => "defult/common_menu.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?> <?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => "common_rightbox.tpl", 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => "defult/main_login.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?></div>
 		</div>
 		<div class="total">
 			<div id="main_home" class="container_12 clearfix"><?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => "common_top.tpl", 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => "defult/main_home.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?></div>
 		</div>
 		<div class="total">
-			<?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => "contact.tpl", 'smarty_include_vars' => array()));
+			<div id="vicinity"class="container_12 clearfix"><?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "defult/main_vicinity.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?>
+ ?></div>
 		</div>
 		<div class="footer_100">
 			<div id="footer" class="container_12 clearfix"><?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => "footer.tpl", 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => "defult/footer.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?></div>

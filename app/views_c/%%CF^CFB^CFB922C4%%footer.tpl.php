@@ -1,5 +1,5 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-16 16:43:02
-         compiled from footer.tpl */ ?>
+<?php /* Smarty version 2.6.22, created on 2009-12-17 08:34:36
+         compiled from defult/footer.tpl */ ?>
 <div id="links"class="grid_6">
 <ul class="grid_6">
 	<li><a href="">Termos de uso</a></li>

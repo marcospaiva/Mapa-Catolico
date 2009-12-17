@@ -1,5 +1,5 @@
-<?php /* Smarty version 2.6.22, created on 2009-12-16 16:43:02
-         compiled from common_menu.tpl */ ?>
+<?php /* Smarty version 2.6.22, created on 2009-12-17 08:34:36
+         compiled from defult/common_menu.tpl */ ?>
 <ul id="common_menu" class="grid_6">
 	<li><a href="">Crie uma Conta</a></li>
 	<li><a href="">Contato</a></li>
