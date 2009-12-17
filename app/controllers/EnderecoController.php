@@ -6,10 +6,12 @@ class EnderecoController extends Zend_Controller_Action
 {
 
     public $view;
+    public $gkey;
     public function init()
     {
 
         $this->view = Zend_Registry::get("view");
+        $this->gkey = Zend_Registry::get("gkey");
 
     }
 
@@ -60,7 +62,7 @@ class EnderecoController extends Zend_Controller_Action
         $numero  = $this->_request->getParam('numero');
 
         $endereco = "$tp_logr $logr, $numero, $cidade, $uf";
-        $gmaps    = new gMaps('ABQIAAAAtyifEzud_MG-24R0knqNRBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQ1p6q_H4y1AP7lpdRuEXBZPNtIAA');
+        $gmaps    = new gMaps($this->gkey);
         $cord     = $gmaps->geolocal($endereco);
 
         $lat = $cord['lat'];
@@ -90,7 +92,7 @@ class EnderecoController extends Zend_Controller_Action
         $numero  = $this->_request->getParam('numero');
 
         $endereco = "$tp_logr $logr, $numero, $cidade, $uf";
-        $gmaps    = new gMaps('ABQIAAAAtyifEzud_MG-24R0knqNRBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQ1p6q_H4y1AP7lpdRuEXBZPNtIAA');
+        $gmaps    = new gMaps($this->gkey);
         $cord     = $gmaps->geolocal($endereco);
 
         $lat = $cord['lat'];
