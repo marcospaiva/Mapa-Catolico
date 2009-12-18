@@ -18,7 +18,7 @@ setlocale (LC_ALL, 'pt_BR');
 date_default_timezone_set('America/Sao_Paulo');
  
 /* Seta include path para o funcionamento correto do framework ***OBRIGATÓRIO*** */
-set_include_path('.'.PATH_SEPARATOR.'./lib'
+set_include_path('.'.PATH_SEPARATOR.'./lib/'
 .PATH_SEPARATOR.'./app/models/' //facilitar depois ao loadar as nossos modelos
 .PATH_SEPARATOR.get_include_path());
  
@@ -36,20 +36,39 @@ include 'Zend/Loader.php';
  */
 $controlador = Zend_Controller_Front::getInstance();
 $controlador->throwExceptions(true); // mostrar excessões(apenas para testes)
-$controlador->setControllerDirectory('./app/controllers'); // seta diretório com nossos controllers
+$controlador->setControllerDirectory('./app/controllers/'); // seta diretório com nossos controllers
+
+
+$router = $controlador->getRouter();
+$route = new Zend_Controller_Router_Route('/p/:diocese/:paroquia', array(
+	'module'=>'',
+	'controller' => 'paroquiaexibir',
+	'action'=> 'exibir'));
+$router->addRoute('index.exibir.paroquia', $route);
+
+
+$controler = new Controller();
 
 // Carrega a classe Smarty
 $view = new ViewSmarty();
 
 // Adiciona o Smarty no registro como view
 Zend_Registry::set('view', $view);
+Zend_Registry::set('controler', $controler);
 
-$view->assign('urlbase','/paroquias/');
+
 //loada o arquivo de configuracao
 $config = new Zend_Config_Ini('./app/config.ini','local');
-Zend_Registry::set('config', $config);
 
-$view->assign('urlbase','http://localhost:8888/paroquias/public/');
+$urlbase = "http://localhost:8888/paroquias/";
+$gkey = "ABQIAAAAtyifEzud_MG-24R0knqNRBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQ1p6q_H4y1AP7lpdRuEXBZPNtIAA";
+
+
+$view->assign('urlbase',$urlbase);
+
+Zend_Registry::set('config', $config);
+Zend_Registry::set('urlbase', $urlbase);
+Zend_Registry::set('gkey', $gkey);
 
 
 //loada classe BD
@@ -63,7 +82,7 @@ Zend_Db_Table::setDefaultAdapter($db);
 
 // Adiciona db no registro como db
 Zend_Registry::set('db',$db);
-//Zend_Registry::set('db2',$db2);
+
 
 //Roda o sistema
 $controlador->dispatch();
