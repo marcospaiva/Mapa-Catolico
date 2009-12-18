@@ -10,15 +10,11 @@ class IndexController extends Zend_Controller_Action {
 
     }
 
-    public function indexAction() {
-
-        $x = "testando o esquema paty";
-
+    public function indexAction() 
+	{
         $this->view->assign('apikey',$this->gkey);
-        $this->view->assign('teste', $x);
-        $this->view->display('index.tpl');
-
-    }
+        $this->view->display('defult/index.tpl');
+	}
     
     public function logarAction() {
 

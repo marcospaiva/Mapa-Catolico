@@ -17,13 +17,12 @@ class BuscaController extends Zend_Controller_Action {
 
     public function buscarAction() {
 
-
-        $this->_redirect($this->urlbase.'busca/'.$this->_request->getParam('tipo').'/palavra/'.$this->_request->getParam('palavra'));
+       $this->_redirect($this->urlbase.'busca/'.$this->_request->getParam('tipo').'/palavra/'.$this->_request->getParam('palavra'));
 
     }
 
     public function paroquiaAction() {
-
+		
         $pagina=1;
         if($this->_request->getParam('pagina')) {
             $pagina=$this->_request->getParam('pagina');
@@ -97,14 +96,14 @@ class BuscaController extends Zend_Controller_Action {
 
 
     public function usuarioAction() {
-
+	
          $pagina=1;
         if($this->_request->getParam('pagina')) {
             $pagina=$this->_request->getParam('pagina');
         }
 
         $u      =  new Usuarios();
-   
+   			
         $result =  $u->ListarUsuarios($this->_request->getParam('palavra'))->toArray();
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/usuario/palavra/'.$this->_request->getParam('palavra').'/pagina/');
