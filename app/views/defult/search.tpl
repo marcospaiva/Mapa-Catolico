@@ -31,23 +31,7 @@
 					</li>
                                         {/foreach}
 				</ul>
-                                
-                                {include file="paginacao.tpl"}
-
-				<p id="more_results">Mais resultados:</p>
-				<ul id="paginate_result">
-					<li><a href="">1</a></li>
-					<li><a href="">2</a></li>
-					<li><a href="">3</a></li>
-					<li><a href="">4</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-					<li><a href="">5</a></li>
-				</ul>
+               {include file="defult/paginate.tpl"}
 			</div>
 		</div>
 	

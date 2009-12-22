@@ -40,17 +40,18 @@ table{border-collapse:collapse;border-spacing:0}
 /*************************************************/
 
 /*Global styling *******************************************************/
-body{background-color:#d1d1d1;}
-div.total{background-color:white;}
+body{background-color:#e2e2e2;}
+div.total{background: url("../img/background_map.jpg");}
 /*define a global style for links*/
-a{text-decoration:none;}
+a{text-decoration:none; color:blue;}
 a:hover{text-decoration:underline;}
 
 /*Declaration top to be common to all pages ***************************************/
 #common_menu{}
-	#common_menu li{margin: 1px;}
+	#common_menu li{}
 	#common_menu li:hover{}
-		#common_menu li a{font-weight:bold; color:#666;display:block;float:left;margin:1px;padding:5px;font-size:14px;}
+		#common_menu li a{font-weight:bold; color:#076cb0;display:block;float:left;margin-right:1px;padding:5px 10px 5px 0;font-size:14px;}
+		#common_menu li a:hover{color:orange;}
 	#common_menu li span{}
 
 #common_search{font-size:20px;}
@@ -60,7 +61,7 @@ a:hover{text-decoration:underline;}
 
 
 /*Declaration footer to be common to all pages ***************************************/
-.footer_100{background:url("../img/background_foot.jpg") 0 0 repeat-x #d1d1d1;}
+.footer_100{background:url("../img/background_foot.jpg") 0 0 repeat-x #e2e2e2;}
 #footer{height:67px;font-size:12px;}
 	#footer #links{margin-top:10px;}
 		#footer #links ul li a{display:block;float:left;padding:5px;margin:2px;color:#076cb0;}
