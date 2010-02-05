@@ -13,9 +13,9 @@
 
 /*Imports*/
 @import url("grid.css");
-@import url("btn.css");
 
 /* reset css v1.0 | 20080212 */
+*{font-family:"HelveticaNeue","Helvetica Neue","Helvetica Neue",Helvetica,arial,sans-serif;font-weight:400;color:#333;}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,7 +24,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,arial,sans-serif;color:#666;}
+table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;letter-spacing:normal;word-spacing:0;}
 body{line-height:1;text-align:center}
 body *{text-align:left} 
 ol,ul{list-style:none}
@@ -39,32 +39,31 @@ del{text-decoration:line-through}
 table{border-collapse:collapse;border-spacing:0}
 /*************************************************/
 
+/*The color reference: #15508A as first - #266097 as light blue - #A16B10 as orange over*/
+
 /*Global styling *******************************************************/
 body{background-color:#e2e2e2;}
-div.total{background: url("../img/background_map.jpg");}
-/*define a global style for links*/
-a{text-decoration:none; color:blue;}
-a:hover{text-decoration:underline;}
+div.total{background: white;}
+div.total_search{background:#f0f0f0;border-top:1px dotted #e2e2e2;border-bottom:1px dotted #e2e2e2;height:60px;}
+a{text-decoration:none; color:#008AC9}
+a:hover{text-decoration:underline;color:#A16B10;}
+
+.title{color:#15508A;font-size:24px; padding:20px 0 5px 0;}
+
+/*rate*/
+.reliable_rate{background-color:green;padding:2px;}
+.unreliable_rate{background-color:red;padding:2px;}
+
 
 /*Declaration top to be common to all pages ***************************************/
 #common_menu{}
-	#common_menu li{}
-	#common_menu li:hover{}
-		#common_menu li a{font-weight:bold; color:#076cb0;display:block;float:left;margin-right:1px;padding:5px 10px 5px 0;font-size:14px;}
-		#common_menu li a:hover{color:orange;}
-	#common_menu li span{}
-
-#common_search{font-size:20px;}
-	#common_search fieldset{text-align:center;margin:30px 0;}
-		#common_search fieldset select,#common_search fieldset input[type="text"]{font-size:14px;padding:3px;}
-		#common_search fieldset input[type="submit"]{}
-
+	#common_menu li a{font-weight:bold;display:block;float:right;margin-right:1px;padding:20px 0 0 10px;font-size:14px;}
 
 /*Declaration footer to be common to all pages ***************************************/
 .footer_100{background:url("../img/background_foot.jpg") 0 0 repeat-x #e2e2e2;}
 #footer{height:67px;font-size:12px;}
 	#footer #links{margin-top:10px;}
-		#footer #links ul li a{display:block;float:left;padding:5px;margin:2px;color:#076cb0;}
+		#footer #links ul li a{font-weight:600;display:block;float:left;padding:5px;margin:2px;}
 
 #copy{height:67px;text-align:right;line-height:67px;margin-top:10px;}
 	#copy #cn_sig{display:block;width:100px;height:27px;float:right;margin:15px 10px 10px 10px;background:url("../img/cn_vertical.gif") 0 0 no-repeat;text-indent:-1000px;overflow:hidden;}

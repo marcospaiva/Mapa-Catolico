@@ -8,35 +8,60 @@
 	
 */
 
-#main_login{font-size:.8em;}
-	#main_login fieldset{text-align:right;}
-		#main_login fieldset h1{display:inline;margin-right:15px;}
-		#main_login fieldset input[type="text"]{width:9em;padding:2px;font-size:12px;}
-		#main_login fieldset input[type="submit"]{background:url("../img/background_button.jpg") 0 0 repeat-x;border:1px solid #dfdfdf;padding:2px;}
+/*The color reference: #15508A as first - #008AC9 as light blue - #A16B10 as orange over*/
 
-#main_home h1{background:url("../img/logo_top.jpg") 30px 20px no-repeat;height:200px; text-indent:-9999px; overflow:hidden;}
-#main_home  #first{font-size:20px; margin-top:30px;color:#1667a8;}
-#main_home  #second{font-size:14px;margin-top:20px;color:#666;}
-	#main_home  #second em{display:block;text-align:right;padding:12px;font-weight:bold;}
+#main_login{font-size:.8em;}
+	#main_login h1{display:inline;margin-right:15px;background:orange}
+	#main_login fieldset{text-align:right;}
+		#main_login fieldset input[type="text"]{}
+		#main_login fieldset input[type="submit"]{}
+
+#main_home h1{background:url("../img/logo_top.jpg") 0 0 no-repeat;height:200px; text-indent:-9999px; overflow:hidden;position:relative;top:-10px;left:30px;}
+#main_home  #first{font-size:20px; margin-top:15px;color:#15508A;}
+#main_home  #second{font-family:Georgia,"Times New Roman",Times,serif;font-style:italic;font-size:16px;margin-top:20px;color:#008AC9;}
+	#main_home  #second em{font-weight:bold;font-size:12px;color:#A16B10;}
 
 #main_search{}
-	#main_search input[type="text"]{width:300px;font-size:20px;float:left;margin:0 0 0 25px;padding:5px;}
-		#main_search label input[type="submit"]{font-size:20px; border:none;cursor:pointer;}
-			#main_search label input[type="submit"]:hover{text-decoration:underline;}
-			#main_search label:hover{background-color:#ea8208;}
+	#main_search label.lupe{display:block;width:26px;height:40px;margin:0;float:left;text-indent:-1000px;overflow:hidden;margin-left:27px;}
+	#main_search label.lupe:hover{background-position:0 -41px;}
+	#main_search input[type="text"]{border-top:solid 1px #c7c7c7;
+									border-bottom:solid 1px #c7c7c7;
+									border-left:none;
+									border-right:none;
+									background-color:#ececec;
+									display:block;
+									float:left;
+									height:30px;
+									width:300px;
+									font-size:18px;
+									padding-top:7px;
+									}
+	#main_search label.lupe,#main_search  input[type="submit"]{background:url("../img/lupa_search.jpg")0 0 no-repeat}
+	#main_search  input[type="submit"]{
+									display:block;
+									width:102px;
+									height:40px;
+									margin:0;
+									border:none;
+									background-position:-51px 0px;
+									font-size:20px;
+									text-align:center;
+									color:#fff;
+									cursor:pointer;
+									}
+	#main_search  input[type="submit"]:hover{background-position:-51px -41px;}
 
-#new_account {background-color:#076cb0;margin:0 0 10px 85px;}
-#new_account:hover{background-color:#ea8208;}
-	#new_account a{width:350px; text-align:center; font-size:20px;color:#fff;text-decoration:none;}
-	#new_account a:hover{text-decoration:underline;}
+#login{float:left;margin-right:5px;line-height:40px;font-size:20px;margin-left:120px;}
 
-#vicinity h2{font-size:20px;padding-top:25px;font-weight:normal;color:#076cb0;}
-	#vicinity #vicinity_list li{padding:5px;margin-top:20px;margin-bottom:20px;border-right:1px solid #076cb0;;font-size:14px;}
+#new_account{background:url("../img/blue_hightlight.jpg")0 0 no-repeat;line-height:40px;height:40px;overflow:hidden;text-align:center;width:191px;}
+#new_account:hover{background-position:0 -40px;}
+	#new_account a{width:170px; text-align:center; font-size:20px;color:#fff;text-decoration:none;}
+
+
+#vicinity{}
+#vicinity h2{}
+	#vicinity #vicinity_list{}
+	#vicinity #vicinity_list li{padding:5px;margin-top:20px;margin-bottom:20px;border-right:1px dotted #008AC9;;font-size:14px;}
 		#vicinity #vicinity_list li p{margin:10px 0;}
-			#vicinity #vicinity_list li p.name{font-size:16px;}
-			
-			#vicinity #vicinity_list li a.vicinity,#vicinity #vicinity_list li a img{overflow:hidden;float:left;}
-			
-			#vicinity #vicinity_list li a.vicinity:hover{border:3px solid #076cb0;}
-			#vicinity #vicinity_list li a.vicinity:hover img{margin:-3px;}
-		
+		#vicinity #vicinity_list li p.name{font-size:16px;}
+		#vicinity #vicinity_list li a.vicinity{display:block; float:left;}

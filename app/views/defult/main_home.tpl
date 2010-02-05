@@ -1,12 +1,15 @@
-<!--It`s a main home of this app-->
-<h1 class="grid_6">Cadastro de Paróquias e Capelas</h1>
-<p id="first" class="grid_6">Olá, eu sou um texto descritivo da ferramenta de cadastro de paróquias e capelas. Sou um texto breve e sucinto.</p>
-<p id="second" class="grid_6">Eu sou uma frase famosa de algum padre ou papa, ou até mesmo um versiculo biblico.<em>Referência</em></p>
+<!--main home-->
+<h1 class="grid_6">Cadastro de Paróquias e Capelas.</h1>
+<p id="first" class="grid_6">Agora você pode cadastrar as paróquias ou capelas que conhece e contribua para a evangelização de muitos.</p>
+<p id="second" class="grid_6">Jovens católicos, levem para o mundo digital o testemunho de sua fé.<em> (Papa Bento XVI)</em></p>
 <span class="clear"></span>
 <!--line break here-->
-<form id="main_search" class="grid_6" method= "POST" action = "{$urlbase}busca/buscar">
+<form id="main_search" class="grid_6" method= "POST" action = "">
 	<input type="hidden" id="tipo" name="tipo" value="paroquia">
+	<label for="palavra" class="lupe">Faça a sua busca</label>
 	<input type="text" name="palavra" id="palavra" value="Busca"/>
-	<label class="btn_more_left"><input type="submit" value="buscar" class="btn_more_center"><span class="btn_more_right"></span></label>
+	<input type="submit" value="Buscar" />
 </form>
-<p id="new_account" class="btn_more_left"><a class=" btn_more_center" href="">Crie uma conta</a><span class="btn_more_right"></span></p>
+<p id="login"><a href="#">Faça o login</a> ou</p>
+<p id="new_account"><a href="common_main_new_account.php" title="crie uma nova conta">Crie uma conta</a></p>
+<!--end main home-->

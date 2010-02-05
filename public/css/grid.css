@@ -24,6 +24,7 @@
 .grid_4,
 .grid_5,
 .grid_6,
+.grid_6_float,
 .grid_7,
 .grid_8,
 .grid_9,
@@ -74,6 +75,10 @@
 .container_12 .grid_6 {
 	width:470px;
 }
+.container_12 .grid_6_float {
+	width:470px;
+	float:right;
+}
 
 .container_12 .grid_7 {
 	width:550px;
@@ -86,6 +91,12 @@
 .container_12 .grid_9 {
 	width:710px;
 }
+/*add by marcos_paiva*/
+.container_12 .grid_9_center {
+	margin:0 auto;
+	width:710px;
+}
+/*end add by marcos_paiva*/
 
 .container_12 .grid_10 {
 	width:790px;
