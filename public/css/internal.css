@@ -1,0 +1,141 @@
+/*
+	@author - Marcos Paiva.
+	@App - Cadastro de Paróquias e Capelas.
+	@version - beta.
+*/
+
+/*The color reference: #15508A as first - #008AC9 as light blue - #A16B10 as orange over*/
+
+/*estiliza a caixa de propaganda*/
+#ads{border-bottom:1px dotted #008AC9; padding-bottom:10px;}
+	#ads a{display:block;width:728px; height:90px; margin:0 auto;}
+
+/*topo comum*/
+#common_top{min-height:160px;padding-bottom:10px;padding-top:10px;}
+#common_logo a{
+				display:block;
+				width:400px;
+				height:160px;
+				background:url("../img/logo_top.jpg") 0 0 no-repeat;
+				overflow:hidden;
+				text-indent:-9999px;				
+				}
+			
+/*Estiliza a busca Padrão*/
+
+#common_search{}
+	#common_search form{margin:0 auto;width:620px;padding:10px 0}
+	#common_search fieldset{font-size:20px;}
+		#common_search fieldset label,#common_search fieldset select,#common_search fieldset .litle_left, #common_search fieldset input{
+																								display:block;
+																								float:left;
+																								height:40px;
+																								line-height:40px;
+																								font-size:18px;
+																								margin:0;
+																								}
+	
+	#common_search fieldset .litle_left,#common_search fieldset input[type="submit"]{background:url("../img/lupa_search.jpg") 0 0 no-repeat;}
+	#common_search fieldset .litle_left{width:9px;}
+	#common_search fieldset select,#common_search fieldset input[type="text"]{padding-top:7px;}
+	#common_search fieldset input[type="text"]{height:30px;padding-left:7px;width:300px;}
+	#common_search fieldset select,#common_search fieldset input[type="text"]{
+															border-top:solid 1px #c7c7c7;
+															border-bottom:solid 1px #c7c7c7;
+															border-left:none;
+															border-right:none;
+															background-color:#ececec;
+															}
+	#common_search fieldset input[type="submit"]{
+									border:none;width:102px;margin:0;
+									text-align:center;
+									color:#fff;
+									cursor:pointer;background-position:-51px 0px;}
+	#common_search fieldset input[type="submit"]:hover{background-position:-51px -41px;}
+
+/**/
+#search_result{padding:20px 0;}
+#search_result li{border-bottom:1px dotted #008AC9;font-size:14px;margin-top:0px;margin-bottom:20px;padding-bottom:20px;}
+	#search_result li a img{border:1px solid #e2e2e2;}
+	#search_result li a.img_list{border:1px dotted #e2e2e2;overflow:hidden;float:left;margin-bottom:5px;padding:5px;}	
+	#search_result li p{position:relative;left:10px;margin-bottom:5px;}
+		#search_result li p strong{font-weight:bold;padding-right:2px;}
+		#search_result li p.name{font-size:20px;padding-top:5px;}
+	
+#more_results{font-size:16px;font-weight:bold;text-align:center;margin-bottom:5px;}
+#paginate_result{padding-bottom:20px;text-align:center;}
+	#paginate_result li{display:inline;padding:5px;}
+	
+/**/
+	
+#common_rightbox{text-align:right;margin-top:5px;}
+	#common_rightbox a,#common_rightbox_loged a{font-weight:bold;font-size:14px;}
+
+#common_rightbox_loged{text-align:right;padding:5px;}
+
+#common_rightbox_loged{display:none;}/****essa informação é setada com JS se o usuário está logado ou não*****/
+
+/**/
+#parish{font-size:14px;}
+#parish h1{}
+#parish h2{font-size:16px;font-weight:normal;margin-top:5px;color:#008AC9;}
+
+#parish #info p strong{color:#15508A;font-weight:700;}
+
+#parish #info, #parish #render_map{margin-top:20px;margin-bottom:20px;}
+#parish #render_map{overflow:hidden;}
+	#parish #legend{padding-top:20px;padding-bottom:20px;}
+		#parish #legend li {float:left;line-height:78px;}
+			#parish #legend li .icon_parish, #parish #legend li .icon_chapel{display:block;float:left;width:55px;height:78px;background:url("../img/par_cap_legend.jpg") 0 0 no-repeat;text-indent:55px;line-height:78px;}
+			#parish #legend li .icon_chapel{background-position:-55px 0;}
+#parish #info p{margin-bottom:5px;}
+#parish #info p strong{padding-right:5px;}
+
+
+/*nova conta*/
+
+#new_account,#contact{font-size:14px;}
+	#new_account form,
+	#contact form{padding-bottom:30px;}
+		#new_account form legend,
+		#contact form legend{color:#15508A;font-size:24px;padding:20px 5px 5px 5px;}
+			
+			#new_account form fieldset,#contact form fieldset{border-bottom:1px #15508A dotted;margin-bottom:20px;padding:20px;}
+				
+				#new_account form fieldset label,#contact form fieldset label{display:block;margin:5px;}
+				
+				#new_account form fieldset input,#new_account form fieldset select,
+				#contact form fieldset input,#contact form fieldset select{font-size:14px;margin-left:20px;padding:2px;}
+				
+				#new_account form fieldset input[title="nome"],#new_account form fieldset input[title="email"],
+				#contact form fieldset input[title="nome"],#contact form fieldset input[title="email"]{width:300px;}
+				
+				#new_account form fieldset textarea{margin-right:20px;font-size:12px;width:100%;}
+			
+			#new_account form input[type="submit"],#contact form input[type="submit"]{
+												background:url("../img/blue_hightlight.jpg")0 0 no-repeat;
+												border:none;
+												color:#fff;
+												cursor:pointer;
+												display:block;
+												font-size:20px;
+												line-height:40px;
+												height:40px;
+												position:relative;
+												left:30px;
+												text-align:center;
+												width:191px;
+												}
+			#new_account form input[type="submit"]:hover,#contact form input[type="submit"]:hover{background-position:0 -40px;}	
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
