@@ -1,6 +1,6 @@
 <!--parish/chapel profile-->	
 
-<div id="parish" class="container_12 clearfix">
+<div id="parish" class="clearfix">
 	<h1 class="grid_12 title">{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}</h1>
 	<h2 class="grid_12">{$pa.pa_cidade}-{$pa.pa_estado}</h2>
 	<div id="info" class="grid_4">
@@ -40,4 +40,4 @@
 		</ul>
 	</div>
 </div>
-		<!--end parish/chapel profile-->
+<!--end parish/chapel profile-->

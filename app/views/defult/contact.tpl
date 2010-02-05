@@ -4,13 +4,13 @@
 			<fieldset>
 				<legend title="Faça contato">Alguma dúvida ou sujestão? Fale com agente!</legend>
 				<label for="name">Nome completo:</label>
-				<input type="text" id="nome" value="" title="nome" />
+				<input type="text" id="nome" value="" title="Digite o seu nome completo." />
 				
 				<label for="email">E-mail:</label>
-				<input type="text" id="email" value="{$email}" title="email"/>
+				<input type="text" id="email" value="{$email}" title="Digite o seu email corretamente."/>
 				
-				<label for="sexo">Assunto:</label>
-				<select name="sexo" id="sexo" title="sexo">
+				<label for="assunto">Assunto:</label>
+				<select name="assunto" id="assunto" title="Selecione o assunto da mensagem.">
 					<option value="elogio">Elogios</option>
 					<option value="sugestao">Sugestões</option>
 					<option value="duvida">Dúvidas</option>

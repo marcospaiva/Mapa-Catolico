@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Projeto - Teste</title>
 		<link href="{$urlbase}public/css/style.css" type="text/css" rel="stylesheet" />
-		<link href="{$urlbase}public/css/common.css" type="text/css" rel="stylesheet" />
+		<link href="{$urlbase}public/css/internal.css" type="text/css" rel="stylesheet" />
 		<!--This page is a template for all of pages in this app-->
 	</head>
 
@@ -17,13 +17,16 @@
         {/if}
 	
 		<div class="total">
-			<div class="container_12 clearfix">{include file="defult/common_menu.tpl"} {include file="defult/common_rightbox.tpl"}</div>
+			<div class="container_12 clearfix">{include file="defult/ads.tpl"}</div>
 		</div>
 		<div class="total">
-			<div id="main_home" class="container_12 clearfix">{include file="defult/common_top.tpl"}</div>
+			<div class="container_12 clearfix">{include file="defult/common_top.tpl"}</div>
+		</div>
+		<div class="total_search">
+			<div class="container_12 clearfix">{include file="defult/common_search.tpl"}</div>
 		</div>
 		<div class="total">
-			{include file= $template }
+			<div class="container_12 clearfix">{include file= $template }</div>
 		</div>
 		<div class="footer_100">
 			<div id="footer" class="container_12 clearfix">{include file="defult/footer.tpl"}</div>
