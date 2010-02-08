@@ -3,7 +3,7 @@
 /*
  * funcao que loada todas as classe quando elas sao instancias
  * nao sendo necessario loadar cada classe quando for utiliza-la
- * nao eh necessario require ou Zen_Loader
+ * nao eh necessario require ou Zen_Loader rafael
  */
 function __autoload($class)
 {
