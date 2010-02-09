@@ -18,7 +18,7 @@ setlocale (LC_ALL, 'pt_BR');
 date_default_timezone_set('America/Sao_Paulo');
  
 /* Seta include path para o funcionamento correto do framework ***OBRIGATÓRIO*** */
-set_include_path('.'.PATH_SEPARATOR.'./lib/'
+set_include_path('.'.PATH_SEPARATOR.'./lib'
 .PATH_SEPARATOR.'./app/models/' //facilitar depois ao loadar as nossos modelos
 .PATH_SEPARATOR.get_include_path());
  
@@ -36,7 +36,7 @@ include 'Zend/Loader.php';
  */
 $controlador = Zend_Controller_Front::getInstance();
 $controlador->throwExceptions(true); // mostrar excessões(apenas para testes)
-$controlador->setControllerDirectory('./app/controllers/'); // seta diretório com nossos controllers
+$controlador->setControllerDirectory('./app/controllers'); // seta diretório com nossos controllers
 
 
 $router = $controlador->getRouter();
@@ -60,8 +60,9 @@ Zend_Registry::set('controler', $controler);
 //loada o arquivo de configuracao
 $config = new Zend_Config_Ini('./app/config.ini','local');
 
-$urlbase = "http://localhost:8888/paroquias/";
-$gkey = "ABQIAAAAtyifEzud_MG-24R0knqNRBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQ1p6q_H4y1AP7lpdRuEXBZPNtIAA";
+$urlbase = "http://localhost/paroquias/";
+$gkey = "ABQIAAAAtyifEzud_MG-24R0knqNRBQybuiquNdW7ZSAdU9XlxXJqRIuExSTYphIUt8KTs6_eNQIwcAZRyz0rA";
+//"ABQIAAAAtyifEzud_MG-24R0knqNRBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQ1p6q_H4y1AP7lpdRuEXBZPNtIAA";
 
 
 $view->assign('urlbase',$urlbase);
