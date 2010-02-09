@@ -62,7 +62,6 @@ $config = new Zend_Config_Ini('./app/config.ini','local');
 
 $urlbase = "http://localhost/paroquias/";
 $gkey = "ABQIAAAAtyifEzud_MG-24R0knqNRBQybuiquNdW7ZSAdU9XlxXJqRIuExSTYphIUt8KTs6_eNQIwcAZRyz0rA";
-//"ABQIAAAAtyifEzud_MG-24R0knqNRBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQ1p6q_H4y1AP7lpdRuEXBZPNtIAA";
 
 
 $view->assign('urlbase',$urlbase);
