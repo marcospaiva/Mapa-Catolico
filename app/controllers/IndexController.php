@@ -35,11 +35,13 @@ class IndexController extends Zend_Controller_Action {
 
         if ($result->isValid()) {
 
-            $dados = $auth->getResultRowObject(array('us_id','us_nome'));// recuperar a linha da tabela mediante autenticação com sucesso
+            $dados = $auth->getResultRowObject(array('us_id','us_nome','us_latitude', 'us_longitude'));// recuperar a linha da tabela mediante autenticação com sucesso
 
             $session = new Zend_Session_Namespace('paroquias');// inicio sessao
             $session->id = $dados->us_id;
             $session->nome = $dados->us_nome;
+            $session->lat = $dados->us_latitude;
+            $session->lon = $dados->us_longitude;
             $this->_redirect("admin");
         // sem erro
         }else {

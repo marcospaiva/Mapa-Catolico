@@ -28,6 +28,18 @@ class Controller
 		return $this->session->id;
 			
 	}
+
+       public function getLatitude()
+        {
+           return $this->session->lat;
+
+        }
+
+        public function getLongitude()
+        {
+           return $this->session->lon;
+
+        }
 	
 }
 
