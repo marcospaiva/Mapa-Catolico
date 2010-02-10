@@ -199,7 +199,7 @@ class M2br {
 				$this->extensao = 'bmp'; 
 				break;
 			default:  
-				trigger_error( 'Arquivo inv�lido!', E_USER_WARNING );
+				trigger_error( 'Arquivo inválido!', E_USER_WARNING );
 				break;
 		}
 	} // fim criaImagem

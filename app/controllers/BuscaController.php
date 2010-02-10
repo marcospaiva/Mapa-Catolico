@@ -11,8 +11,8 @@ class BuscaController extends Zend_Controller_Action {
 
     }
     public function indexAction() {
-        $this->view->assign('template',"defult/search.tpl");
-        $this->view->display('defult/common_main.tpl');
+        $this->view->assign('template',"dafault/search.tpl");
+        $this->view->display('dafault/common_main.tpl');
     }
 
     public function buscarAction() {
@@ -35,8 +35,8 @@ class BuscaController extends Zend_Controller_Action {
         $this->view->assign('url',$this->urlbase.'busca/paroquia/palavra/'.$this->_request->getParam('palavra').'/pagina/');
 
         $this->view->assign('tipo',"paroquia");
-        $this->view->assign('template',"defult/search.tpl");
-        $this->view->display('defult/common_main.tpl');
+        $this->view->assign('template',"dafault/search.tpl");
+        $this->view->display('dafault/common_main.tpl');
 
     }
     public function capelaAction() {
@@ -54,8 +54,8 @@ class BuscaController extends Zend_Controller_Action {
         $this->view->assign('url',$this->urlbase.'busca/capela/palavra/'.$this->_request->getParam('palavra').'/pagina/');
 
         $this->view->assign('tipo',"capela");
-        $this->view->assign('template',"defult/search.tpl");
-        $this->view->display('defult/common_main.tpl');
+        $this->view->assign('template',"dafault/search.tpl");
+        $this->view->display('dafault/common_main.tpl');
 
     }
     public function cidadeAction() {
@@ -72,8 +72,8 @@ class BuscaController extends Zend_Controller_Action {
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/cidade/palavra/'.$this->_request->getParam('palavra').'/pagina/');
         $this->view->assign('tipo',"cidade");
-        $this->view->assign('template',"defult/search.tpl");
-        $this->view->display('defult/common_main.tpl');
+        $this->view->assign('template',"dafault/search.tpl");
+        $this->view->display('dafault/common_main.tpl');
 
     }
     public function cidadesAction() {
@@ -89,8 +89,8 @@ class BuscaController extends Zend_Controller_Action {
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/cidades/cidade/'.$this->_request->getParam('cidade').'/uf/'.$this->_request->getParam('uf').'/pagina/');
         $this->view->assign('tipo',"paroquia");
-        $this->view->assign('template',"defult/search.tpl");
-        $this->view->display('defult/common_main.tpl');
+        $this->view->assign('template',"dafault/search.tpl");
+        $this->view->display('dafault/common_main.tpl');
 
     }
 
@@ -108,8 +108,8 @@ class BuscaController extends Zend_Controller_Action {
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/usuario/palavra/'.$this->_request->getParam('palavra').'/pagina/');
         $this->view->assign('tipo',"usuario");
-        $this->view->assign('template',"defult/search.tpl");
-        $this->view->display('defult/common_main.tpl');
+        $this->view->assign('template',"dafault/search.tpl");
+        $this->view->display('dafault/common_main.tpl');
 
     }
     public function usuariosAction() {
@@ -125,8 +125,8 @@ class BuscaController extends Zend_Controller_Action {
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/usuarios/id/'.$this->_request->getParam('id').'/pagina/');
        $this->view->assign('tipo',"paroquia");
-        $this->view->assign('template',"defult/search.tpl");
-        $this->view->display('defult/common_main.tpl');
+        $this->view->assign('template',"dafault/search.tpl");
+        $this->view->display('dafault/common_main.tpl');
 
     }
 }

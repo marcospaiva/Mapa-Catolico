@@ -8,7 +8,7 @@
 		<!--This page is a template for all of pages in this app-->
 	</head>
 
-        {if $template eq "defult/parish.tpl"}
+        {if $template eq "dafault/parish.tpl"}
         <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
         <script src="{$urlbase}public/js/maps.js" type="text/javascript"></script>
             <body onload="init('{$pa.pa_nome}','{$pa.pa_latitude}','{$pa.pa_longitude}')">
@@ -17,19 +17,19 @@
         {/if}
 	
 		<div class="total">
-			<div class="container_12 clearfix">{include file="defult/ads.tpl"}</div>
+			<div class="container_12 clearfix">{include file="dafault/ads.tpl"}</div>
 		</div>
 		<div class="total">
-			<div class="container_12 clearfix">{include file="defult/common_top.tpl"}</div>
+			<div class="container_12 clearfix">{include file="dafault/common_top.tpl"}</div>
 		</div>
 		<div class="total_search">
-			<div class="container_12 clearfix">{include file="defult/common_search.tpl"}</div>
+			<div class="container_12 clearfix">{include file="dafault/common_search.tpl"}</div>
 		</div>
 		<div class="total">
 			<div class="container_12 clearfix">{include file= $template }</div>
 		</div>
 		<div class="footer_100">
-			<div id="footer" class="container_12 clearfix">{include file="defult/footer.tpl"}</div>
+			<div id="footer" class="container_12 clearfix">{include file="dafault/footer.tpl"}</div>
 		</div>
 	</body>
 </html>

@@ -5,7 +5,7 @@
 	<h2 class="grid_12">{$pa.pa_cidade}-{$pa.pa_estado}</h2>
 	<div id="info" class="grid_4">
 		<p>
-			<img src="http://img.cancaonova.com/paroquias/paroquias/{$pa.pa_id}.jpg" width="110" height="110" alt="{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}"/>
+			<img src="http://img.cancaonova.com/paroquias/paroquias/{$item.pa_id}.jpg" width="110" height="110" alt="{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}"/>
 		</p>
 		<p><strong>Diocese:</strong>{$diocese}</p>
 		<p><strong>Bispo:</strong>{$bispo}</p>

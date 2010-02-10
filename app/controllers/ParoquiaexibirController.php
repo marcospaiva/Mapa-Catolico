@@ -64,8 +64,8 @@ class ParoquiaexibirController extends Zend_Controller_Action {
         $this->view->assign('diocese', $diocese);
         $this->view->assign('pa', $result);
 
-        $this->view->assign('template',"defult/parish.tpl");
-        $this->view->display('defult/common_main.tpl');
+        $this->view->assign('template',"dafault/parish.tpl");
+        $this->view->display('dafault/common_main.tpl');
 
     }
 

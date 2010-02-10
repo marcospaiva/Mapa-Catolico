@@ -53,6 +53,6 @@
         {/if}</li>
 		{/foreach}
 	</ul>
-{include file="defult/paginate.tpl"}
+{include file="dafault/paginate.tpl"}
 </div>
 <!--end search-->

@@ -13,7 +13,7 @@ class IndexController extends Zend_Controller_Action {
     public function indexAction() 
 	{
         $this->view->assign('apikey',$this->gkey);
-        $this->view->display('defult/index.tpl');
+        $this->view->display('default/index.tpl');
 	}
     
     public function logarAction() {

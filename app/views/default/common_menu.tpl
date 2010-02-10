@@ -6,6 +6,6 @@
 	<li><a href="{$urlbase}usuario/cadastro" title="Crie uma nova conta.">Crie uma Conta</a></li>
 </ul>
 <!--Aqui tem que fazer um IF: se for index não carrega o login.tpl, se não for carrega.-->
-{include file=defult/login.tpl}
+{include file=dafault/login.tpl}
 <!---->
 <!--end common menu-->

@@ -18,8 +18,8 @@ class UsuarioController extends Zend_Controller_Action {
         $this->view->assign('sexo_c',2);
         $this->view->assign('mensagem',"Todos os campos sao obrigatorios!");
 
-        $this->view->assign('template',"defult/new_account.tpl");
-        $this->view->display('defult/common_main.tpl');
+        $this->view->assign('template',"dafault/new_account.tpl");
+        $this->view->display('dafault/common_main.tpl');
     }
 
     public function cadastro1Action() {
@@ -42,8 +42,8 @@ class UsuarioController extends Zend_Controller_Action {
             $this->view->assign('mensagem',"Digite a mesma senha no dois campos!");
 
 
-            $this->view->assign('template',"defult/new_account.tpl");
-            $this->view->display('defult/common_main.tpl');
+            $this->view->assign('template',"dafault/new_account.tpl");
+            $this->view->display('dafault/common_main.tpl');
 
             break;
 
