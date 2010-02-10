@@ -18,6 +18,7 @@
 
 		<div id='container'>
 			<div id='geral' align='center'>
+                                <div><br>|{$a1}|<br>|{$a2}|<br>|{$a3}|<br>|{$a4}|<br>|{$a5}|<br>|{$a6}|<br></div>
 				<div id="menu">
 					<br/>
 				</div>                          

@@ -69,6 +69,31 @@ class ParoquiaexibirController extends Zend_Controller_Action {
 
     }
 
+    public function validarAction(){
+
+          $lat1 = $this->controler->getLatitude();
+          $lon1 = $this->controler->getLongitude();
+
+          $lat2 = $this->_request->getUserParam("latitude");
+          $lon2 = $this->_request->getUserParam("longitude");
+
+         $v = new Validacao();
+
+         $distancia = $v->calculoDistancia($lat1, $lon1, $lat2, $lon2);
+         $pontuacao = $v->calculoPontuacao($distancia);
+
+
+         $this->view->assign('a1', $lat1);
+         $this->view->assign('a2', $lon1);
+         $this->view->assign('a3', $lat2);
+         $this->view->assign('a4', $lon2);
+         $this->view->assign('a5', $distancia);
+         $this->view->assign('a6', $pontuacao);
+         $this->view->display('teste.tpl');
+
+
+    }
+
 
 }
 ?>
