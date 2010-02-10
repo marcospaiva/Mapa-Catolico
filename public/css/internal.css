@@ -22,6 +22,7 @@
 				}
 /**/
 #login{font-size:12px;margin-top:20px;}
+	#login form fieldset{float:left;}
 	#login form fieldset legend,#login form fieldset label{display:none;}
 	#login form input{background:url("../img/background_login.jpg")0 0 no-repeat; border:none; display:block; height:20px; float:left; margin:1px;padding:4px;width:160px;}
 	#login form input[type="submit"]{
@@ -29,10 +30,12 @@
 		background-position:-168px 0;
 		cursor:pointer;
 		color:#fff;
-		float:righ;
-		height:40px;
 		font-size:14px;
+		float:left;
+		height:40px;
+		line-height:40px;
 		width:59px;
+		padding:0;
 		text-align:center;
 	}
 /**/
