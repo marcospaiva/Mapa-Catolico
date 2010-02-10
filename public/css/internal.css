@@ -20,6 +20,22 @@
 				overflow:hidden;
 				text-indent:-9999px;				
 				}
+/**/
+#login{font-size:12px;margin-top:20px;}
+	#login form fieldset legend,#login form fieldset label{display:none;}
+	#login form input{background:url("../img/background_login.jpg")0 0 no-repeat; border:none; display:block; height:20px; float:left; margin:1px;padding:4px;width:160px;}
+	#login form input[type="submit"]{
+		border:none;
+		background-position:-168px 0;
+		cursor:pointer;
+		color:#fff;
+		float:righ;
+		height:40px;
+		font-size:14px;
+		width:59px;
+		text-align:center;
+	}
+/**/
 			
 /*Estiliza a busca Padrão*/
 
