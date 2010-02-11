@@ -15,7 +15,20 @@
 		<p><strong>Numero:</strong>{$pa.pa_numero}</p>
 		<p><strong>Bairro:</strong>{$pa.pa_bairro}</p>
 		<p><strong>País:</strong>{$pa.pa_pais}</p>
-		
+
+                {if $denuncia > 0 }
+                    <form method="post" name="form1" action ="{$urlbase}paroquiaexibir/validar">
+                        <input type="hidden" name="id" id="id" value="{$pa.pa_id}">
+                        <input type="hidden" name="latitude" id="latitude" value="{$pa.pa_latitude}">
+                        <input type="hidden" name="longitude" id="longitude" value="{$pa.pa_longitude}">
+                        <input type="hidden" name="pontuacao" id="pontuacao" value="{$pa.pa_validacao}">
+
+                        <input type="submit" value="Confiavel">
+                     <form>
+                {else}
+                    <p>{$pa.pa_validacao}%</p>
+                {/if}
+
 		{if $pa.pa_site eq ""} {else}
 		<p>
 			<strong>Site:</strong><a href="{$pa.pa_site}">{$pa.pa_site}</a>

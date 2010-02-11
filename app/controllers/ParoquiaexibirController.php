@@ -43,6 +43,21 @@ class ParoquiaexibirController extends Zend_Controller_Action {
             $tipo = "Capela";
         }
 
+        
+        if($result["pa_validacao"] < 5){
+
+            $pontuacao = "30";
+
+        }elseif($result["pa_validacao"] < 10){
+
+            $pontuacao = "70";
+
+        }elseif($result["pa_validacao"] < 15){
+
+            $pontuacao = "100";
+        }
+
+
         $usuario = $u->ListarDados($result["us_id"]);
 
 
