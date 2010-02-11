@@ -18,10 +18,10 @@
 		<p class="local"><strong>Bairro:</strong>{$pa.pa_bairro}</p>
 		<p class="local"><strong>País:</strong>{$pa.pa_pais}</p>
 		<hr/>
-		<p><strong>Descrição:</strong>{$pa.pa_descricao}</p>
+		<p class="other"><strong>Descrição:</strong>{$pa.pa_descricao}</p>
 
 		{if $pa.pa_site eq ""} {else}
-		<p >
+		<p class="other">
 			<strong>Site:</strong><a href="{$pa.pa_site}">{$pa.pa_site}</a>
 		</p>
 		{/if}
