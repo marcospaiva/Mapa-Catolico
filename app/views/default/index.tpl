@@ -11,16 +11,16 @@
 	</head>
 	<body>
 		<div class="total">
-			<div class="container_12 clearfix">{include file=dafault/common_menu.tpl}</div>
+			<div class="container_12 clearfix">{include file=default/common_menu.tpl}</div>
 		</div>
 		<div class="total">
-			<div id="main_home" class="container_12 clearfix">{include file=dafault/main_home.tpl}</div>
+			<div id="main_home" class="container_12 clearfix">{include file=default/main_home.tpl}</div>
 		</div>
 		<div class="total">
-			<div id="vicinity"class="container_12 clearfix">{include file=dafault/main_vicinity.tpl}</div>
+			<div id="vicinity"class="container_12 clearfix">{include file=default/main_vicinity.tpl}</div>
 		</div>
 		<div class="footer_100">
-			<div id="footer" class="container_12 clearfix">{include file=dafault/footer.tpl}</div>
+			<div id="footer" class="container_12 clearfix">{include file=default/footer.tpl}</div>
 		</div>
 	</body>
 </html>
