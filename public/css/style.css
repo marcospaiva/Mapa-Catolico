@@ -39,7 +39,7 @@ del{text-decoration:line-through}
 table{border-collapse:collapse;border-spacing:0}
 /*************************************************/
 
-/*The color reference: #15508A as first - #266097 as light blue - #A16B10 as orange over*/
+/*The color reference: #15508A as first - #266097 as light blue - #FF6C00as orange over*/
 
 /*Global styling *******************************************************/
 body{background-color:#e2e2e2;}
@@ -47,6 +47,7 @@ div.total{background: white;}
 div.total_search{background:#f0f0f0;border-top:1px dotted #e2e2e2;border-bottom:1px dotted #e2e2e2;height:60px;}
 a{text-decoration:none; color:#008AC9}
 a:hover{text-decoration:underline;color:#A16B10;}
+hr{color:#008AC9;}
 
 .title{color:#15508A;font-size:24px; padding:20px 0 5px 0;}
 

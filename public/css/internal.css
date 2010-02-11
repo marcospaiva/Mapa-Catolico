@@ -4,7 +4,7 @@
 	@version - beta.
 */
 
-/*The color reference: #15508A as first - #008AC9 as light blue - #A16B10 as orange over*/
+/*The color reference: #15508A as first - #008AC9 as light blue - #FF6C00as orange over*/
 
 /*estiliza a caixa de propaganda*/
 #ads{border-bottom:1px dotted #008AC9; padding-bottom:10px;}
@@ -104,11 +104,15 @@
 
 /**/
 #parish{font-size:14px;}
-#parish h1{}
 #parish h2{font-size:16px;font-weight:normal;margin-top:5px;color:#008AC9;}
+	#parish #info p a.img_list{border:1px dotted #ff0000;display:block;overflow:hidden;padding:5px;}
+	#parish #info p a img{border:1px solid #e2e2e2;}
+	#parish #info p strong{color:#15508A;font-weight:700;}
 
-#parish #info p strong{color:#15508A;font-weight:700;}
-
+	/**/
+		#parish #info p.religious strong{color:#FF6C00;}
+		#parish #info p.local strong{color:#A16B10;}
+	/**/
 #parish #info, #parish #render_map{margin-top:20px;margin-bottom:20px;}
 #parish #render_map{overflow:hidden;}
 	#parish #legend{padding-top:20px;padding-bottom:20px;}
