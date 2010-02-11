@@ -1,12 +1,12 @@
 <!--Login-->
 <div id="login" class="grid_6_float">
-	<form action="login_submit" method="get">
+	<form action="{$urlbase}index/entrar" method="post" name="psot1">
 		<fieldset>
 			<legend>Login</legend>
-			<label for="name">Nome</label><input type="text" name="name" value="" id="name"/>
-			<label for="password">Senha</label><input type="password" name="password" value="" id="password"/>
+			<label for="email">Nome</label><input type="text" name="email" value="Email" id="email" title="Insira o seu email."/>
+			<label for="password">Senha</label><input type="password" name="senha" value="Senha" id="senha" title="Insira a sua senha."/>
 		</fieldset>
-		<input type="submit" name="login" value="Logar" id="some_name"/>
+		<input type="submit" name="login" value="Entrar" id="some_name"/>
 	</form>
 </div>
 <!--end Login-->
