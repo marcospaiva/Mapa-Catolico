@@ -20,6 +20,16 @@
 		<hr/>
 		<p class="other"><strong>Descrição:</strong>{$pa.pa_descricao}</p>
 
+                {if $denuncia > 0 }
+                    <form method="post" name="form1" action ="{$urlbase}paroquiaexibir/validar">
+                        <input type="hidden" name="id" id="id" value="{$pa.pa_id}">                       
+                        <input type="hidden" name="pontuacao" id="pontuacao" value="{$pa.pa_validacao}">
+                        <input type="submit" value="Você já esteve aqui?">
+                     <form>
+                {else}
+                    <p>{$pa.pa_validacao} pessoa(s) já estiveram aqui!</p>
+                {/if}
+
 		{if $pa.pa_site eq ""} {else}
 		<p class="other">
 			<strong>Site:</strong><a href="{$pa.pa_site}">{$pa.pa_site}</a>

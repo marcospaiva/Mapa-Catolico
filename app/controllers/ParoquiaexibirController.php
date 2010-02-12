@@ -43,6 +43,21 @@ class ParoquiaexibirController extends Zend_Controller_Action {
             $tipo = "Capela";
         }
 
+        /*
+        if($result["pa_validacao"] < 5){
+
+            $pontuacao = "30";
+
+        }elseif($result["pa_validacao"] < 10){
+
+            $pontuacao = "70";
+
+        }elseif($result["pa_validacao"] < 15){
+
+            $pontuacao = "100";
+        }
+
+*/
         $usuario = $u->ListarDados($result["us_id"]);
 
 
@@ -72,21 +87,23 @@ class ParoquiaexibirController extends Zend_Controller_Action {
     public function validarAction() {
 
         $par = new Paroquias();
-
+/*
         $lat1 = $this->controler->getLatitude();
         $lon1 = $this->controler->getLongitude();
 
         $lat2 = $this->_request->getUserParam("latitude");
         $lon2 = $this->_request->getUserParam("longitude");
+ *
+ */
         $id   = $this->_request->getUserParam('id');
-        $pont = $this->_request->getUserParam('pontuacao');
-
+        $pont = $this->_request->getUserParam('pontuacao')+1;
+  /*
         $val  = new Validacao();
 
         $distancia = $val->calculoDistancia($lat1, $lon1, $lat2, $lon2);
         $pontuacao = $val->calculoPontuacao($distancia)+$pont;
-
-        $dado = array('pa_validacao'=>$pontuacao);
+*/
+        $dado = array('pa_validacao'=>$pont);
         $id   = "pa_id = ".$id;
 
         $par->update($dado,$id);
