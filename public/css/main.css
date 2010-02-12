@@ -8,7 +8,7 @@
 	
 */
 
-/*The color reference: #15508A as first - #008AC9 as light blue - #A16B10 as orange over*/
+/*The color reference: #15508A as first - #008AC9 as light blue - #FF6C00as orange over*/
 
 #main_login{font-size:.8em;}
 	#main_login h1{display:inline;margin-right:15px;background:orange}
@@ -19,7 +19,7 @@
 #main_home h1{background:url("../img/logo_top.jpg") 0 0 no-repeat;height:200px; text-indent:-9999px; overflow:hidden;position:relative;top:-10px;left:30px;}
 #main_home  #first{font-size:20px; margin-top:15px;color:#15508A;}
 #main_home  #second{font-family:Georgia,"Times New Roman",Times,serif;font-style:italic;font-size:16px;margin-top:20px;color:#008AC9;}
-	#main_home  #second em{font-weight:bold;font-size:12px;color:#A16B10;}
+	#main_home  #second em{font-weight:bold;font-size:12px;color:#FF6C00;}
 
 #main_search{}
 	#main_search label.lupe{display:block;width:26px;height:40px;margin:0;float:left;text-indent:-1000px;overflow:hidden;margin-left:27px;}
