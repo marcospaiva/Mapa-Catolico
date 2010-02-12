@@ -4,12 +4,12 @@
 <p id="second" class="grid_6">Jovens católicos, levem para o mundo digital o testemunho de sua fé.<em> (Papa Bento XVI)</em></p>
 <span class="clear"></span>
 <!--line break here-->
-<form id="main_search" class="grid_6" method= "POST" action = "{$urlbase}/busca/buscar">
+<form id="main_search" class="grid_6" method= "POST" action = "{$urlbase}busca/buscar">
 	<input type="hidden" id="tipo" name="tipo" value="paroquia">
 	<label for="palavra" class="lupe">Faça a sua busca</label>
 	<input type="text" name="palavra" id="palavra" value="Busca"/>
 	<input type="submit" value="Buscar" />
 </form>
 <p id="login"><a href="#">Faça o login</a> ou</p>
-<p id="new_account"><a href="common_main_new_account.php" title="crie uma nova conta">Crie uma conta</a></p>
+<p id="new_account"><a href="{$urlbase}usuario/cadastro" title="crie uma nova conta">Crie uma conta</a></p>
 <!--end main home-->
