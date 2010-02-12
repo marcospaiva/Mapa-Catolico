@@ -18,7 +18,7 @@
 		<p class="local"><strong>Bairro:</strong>{$pa.pa_bairro}</p>
 		<p class="local"><strong>País:</strong>{$pa.pa_pais}</p>
 		<hr/>
-		<p><strong>Descrição:</strong>{$pa.pa_descricao}</p>
+		<p class="other"><strong>Descrição:</strong>{$pa.pa_descricao}</p>
 
 <<<<<<< HEAD:app/views/default/parish.tpl
 		<p><strong>Endereço:</strong>{$pa.pa_rua}</p>
@@ -42,7 +42,7 @@
 =======
 >>>>>>> e0720adeafc09172c7a212017bfb0333e486adba:app/views/default/parish.tpl
 		{if $pa.pa_site eq ""} {else}
-		<p >
+		<p class="other">
 			<strong>Site:</strong><a href="{$pa.pa_site}">{$pa.pa_site}</a>
 		</p>
 		{/if}
