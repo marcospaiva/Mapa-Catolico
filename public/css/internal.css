@@ -104,8 +104,8 @@
 
 /**/
 #parish{font-size:14px;}
-#parish h2{font-size:16px;font-weight:normal;margin-top:;color:#008AC9;}
-	#parish #info p a.img_list{border:1px dotted #ff0000;display:block;overflow:hidden;padding:5px;}
+#parish h2{font-size:16px;font-weight:normal;color:#008AC9;}
+	#parish #info p a.img_list{border:1px dotted #e2e2e2;display:block;overflow:hidden;padding:5px;width:112px;}
 	#parish #info p a img{border:1px solid #e2e2e2;}
 	#parish #info p strong{color:#15508A;font-weight:700;}
 
