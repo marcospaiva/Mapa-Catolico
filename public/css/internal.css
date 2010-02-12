@@ -135,14 +135,17 @@
 			#new_account form fieldset,#contact form fieldset{border-bottom:1px #15508A dotted;margin-bottom:20px;padding:20px;}
 				
 				#new_account form fieldset label,#contact form fieldset label{display:block;margin:5px;}
+				#new_account form fieldset label.check{display:inline;margin-top:20px;}
 				
 				#new_account form fieldset input,#new_account form fieldset select,
 				#contact form fieldset input,#contact form fieldset select{font-size:14px;margin-left:20px;padding:2px;}
 				
-				#new_account form fieldset input[title="nome"],#new_account form fieldset input[title="email"],
-				#contact form fieldset input[title="nome"],#contact form fieldset input[title="email"]{width:300px;}
+				#new_account form fieldset input[id="nome"],#new_account form fieldset input[id="mail"],
+				#contact form fieldset input[id="nome"],#contact form fieldset input[id="mail"]{width:300px;}
 				
-				#new_account form fieldset textarea{margin-right:20px;font-size:12px;width:100%;}
+				#contact form fieldset input[type="radio"]{margin-left:0; border:1px solid #000;}
+				
+				#new_account form fieldset textarea{margin-right:20px;font-size:12px;padding:5px;width:100%;}
 			
 			#new_account form input[type="submit"],#contact form input[type="submit"]{
 												background:url("../img/blue_hightlight.jpg")0 0 no-repeat;
