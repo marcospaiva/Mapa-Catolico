@@ -1,6 +1,9 @@
 <!--search-->
 <div class="grid_12">
-	<h1 class="title grid_12">Você Buscou por: Capelas São Sebastião.</h1>
+	<h1 class="title grid_12">A sua busca tem {10} resultados.</h1>
+	<!--Aqui é uma condicional para verificar se a busca não retornou nada.
+	<h1 class="title grid_12">Ocorreu algum erro, por favor, tente buscar mais uma ver.</h1>
+	-->
 	<ul id="search_result" class="grid_12">
 		
 		{foreach name=loop item=item from=$dados}
