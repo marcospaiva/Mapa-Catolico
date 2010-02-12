@@ -42,20 +42,29 @@
 	{/if}
 	
         {if $tipo eq "usuario" }
-            <p class="name">Nome: <a href='{$urlbase}busca/usuarios/id/{$item.us_id}/'>{$item.us_nome}</a></p>
-            <p>Email: {$item.us_email}</p>
-            <p>Cidade: {$item.us_cidade} - {$item.us_estado}</p>
-        {/if}
+         <li class="clearfix">   
+			<p class="name"><a href='{$urlbase}busca/usuarios/id/{$item.us_id}/'>{$item.us_nome}</a></p>
+            <p><strong>Email:</strong> {$item.us_email}</p>
+            <p><strong>Cidade:</strong> {$item.us_cidade} - {$item.us_estado}</p>
+			<p><strong>10:</strong> Paróquias e <strong>20</strong> Capelas cadastradas.</p>
+        </li>
+		{/if}
 
         {if $tipo eq "cidade" }
-            <p class="name">
+        <li>
+    		<p class="name">
                 <a href='{$urlbase}busca/cidades/cidade/{$item.pa_cidade}/uf/{$item.pa_estado}'>
                      {$item.pa_cidade} - {$item.pa_estado} 
                  </a>
             </p>
-        {/if}</li>
+			<p><strong>Quantidade de Paroquias:</strong> 10</p>
+			<p><strong>Quantidade de Capelas:</strong> 10</p>
+			<p><strong>Quantidade de Usuários:</strong> 10</p>
+		</li>
+        {/if}
 		{/foreach}
 	</ul>
+	<!--Aqui tem que colocar um if pra verificar se a busca retornou algum resultado.-->
 {include file="default/paginate.tpl"}
 </div>
 <!--end search-->
