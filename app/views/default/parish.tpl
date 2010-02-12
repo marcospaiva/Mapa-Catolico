@@ -20,27 +20,16 @@
 		<hr/>
 		<p class="other"><strong>Descrição:</strong>{$pa.pa_descricao}</p>
 
-<<<<<<< HEAD:app/views/default/parish.tpl
-		<p><strong>Endereço:</strong>{$pa.pa_rua}</p>
-		<p><strong>Numero:</strong>{$pa.pa_numero}</p>
-		<p><strong>Bairro:</strong>{$pa.pa_bairro}</p>
-		<p><strong>País:</strong>{$pa.pa_pais}</p>
-
                 {if $denuncia > 0 }
                     <form method="post" name="form1" action ="{$urlbase}paroquiaexibir/validar">
-                        <input type="hidden" name="id" id="id" value="{$pa.pa_id}">
-                        <input type="hidden" name="latitude" id="latitude" value="{$pa.pa_latitude}">
-                        <input type="hidden" name="longitude" id="longitude" value="{$pa.pa_longitude}">
+                        <input type="hidden" name="id" id="id" value="{$pa.pa_id}">                       
                         <input type="hidden" name="pontuacao" id="pontuacao" value="{$pa.pa_validacao}">
-
-                        <input type="submit" value="Confiavel">
+                        <input type="submit" value="Você já esteve aqui?">
                      <form>
                 {else}
-                    <p>{$pa.pa_validacao}%</p>
+                    <p>{$pa.pa_validacao} pessoa(s) já estiveram aqui!</p>
                 {/if}
 
-=======
->>>>>>> e0720adeafc09172c7a212017bfb0333e486adba:app/views/default/parish.tpl
 		{if $pa.pa_site eq ""} {else}
 		<p class="other">
 			<strong>Site:</strong><a href="{$pa.pa_site}">{$pa.pa_site}</a>
