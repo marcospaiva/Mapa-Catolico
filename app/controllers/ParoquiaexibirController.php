@@ -86,7 +86,7 @@ class ParoquiaexibirController extends Zend_Controller_Action {
 
     public function validarAction() {
 
-        $par = new Paroquias();
+       // $par = new Paroquias();
 /*
         $lat1 = $this->controler->getLatitude();
         $lon1 = $this->controler->getLongitude();
@@ -95,20 +95,27 @@ class ParoquiaexibirController extends Zend_Controller_Action {
         $lon2 = $this->_request->getUserParam("longitude");
  *
  */
-        $id   = $this->_request->getUserParam('id');
-        $pont = $this->_request->getUserParam('pontuacao')+1;
-  /*
-        $val  = new Validacao();
 
-        $distancia = $val->calculoDistancia($lat1, $lon1, $lat2, $lon2);
-        $pontuacao = $val->calculoPontuacao($distancia)+$pont;
-*/
-        $dado = array('pa_validacao'=>$pont);
-        $id   = "pa_id = ".$id;
 
-        $par->update($dado,$id);
+        $id   = $this->_request->getParam('id');
+        $pont = $this->_request->getParam('pontuacao');
 
-       
+        $va = new Validacao();
+
+        if(!$va->ListarDados($this->controler->id(), $id)){
+
+            
+            $dados = array( 'us_id' => $this->controler->id(), 
+                            'pa_id' => $id);
+            $va->insert($dados);
+
+            $par = new Paroquias();
+            $pont++;
+            $dado = array(  'pa_validacao' => $pont );
+            $id   = "pa_id=".$id;
+
+            $par->update($dado,$id);
+        }
         $this->_redirect($_SERVER['HTTP_REFERER']);
 
     }
