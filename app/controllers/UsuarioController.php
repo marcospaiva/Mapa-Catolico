@@ -10,6 +10,8 @@ class UsuarioController extends Zend_Controller_Action {
 
     }
 
+   
+
     public function cadastroAction() {
 
 
@@ -22,6 +24,83 @@ class UsuarioController extends Zend_Controller_Action {
         $this->view->display('default/common_main.tpl');
     }
 
+     public function inserirAction() {
+
+        if($this->_request->getPost('password') <> $this->_request->getPost('password2')) {
+            
+            $this->view->assign('cep',$cep);
+            $this->view->assign('email',$email);
+            $this->view->assign('nome',$nome);  
+            $this->view->assign('sexo_id',array(1,2));
+            $this->view->assign('sexo',array("Masculino","Feminino"));
+            $this->view->assign('sexo_c',$sexo);
+            $this->view->assign('mensagem',"Digite a mesma senha no dois campos!");
+
+            $this->view->assign('template',"default/new_account.tpl");
+            $this->view->display('default/common_main.tpl');
+
+            break;
+        }
+   
+
+        $usuarios = new Usuarios;
+
+        $c   = new Ceps();
+        $res = $c->ObterEstado($this->_request->getPost('cep'));
+        $uf  = $res['uf'];
+        $end = $c->ObterEndereco($this->_request->getPost('cep'), $uf);
+
+
+        $cidade  = "";
+        $bairro  = "";
+        $rua     = "";  
+
+        foreach ($end as $z) {
+            $cidade  = $z['cidade'];
+            $bairro  = $z['bairro'];
+            $rua     = $z['tp_logradouro']." ".$z['logradouro'];
+        }
+
+
+
+        $data    = date("Y-m-d");
+
+
+        $dado = array(
+            'us_nome'=>$this->_request->getPost('nome'),            
+            'us_email'=>$this->_request->getPost('email'),
+            'us_senha'=>md5($this->_request->getPost('password')),
+            'us_sexo'=>$this->_request->getPost('sexo'),
+            'us_estado'=>$uf,
+            'us_cidade'=>$cidade,
+            'us_bairro'=>$bairro,
+            'us_rua'=>$rua,
+            'us_cep'=>$this->_request->getPost('cep'),
+            'us_log'=>$data
+        );
+
+
+        $id = $usuarios->insert($dado);
+
+        //$inc = new Inc();
+				$url = 'http://'.$_SERVER['SERVER_NAME'].'/confirmacao/'.base64_encode($id).'/';
+				//envia email de confirmacao
+
+				new Mail('cadastro',
+						'c',
+						array(array('nome'=>$this->_request->getPost('nome'),'url'=>$url,'login'=>$this->_request->getPost('email'),'senha'=>$this->_request->getPost('password'))),
+						array(array('email'=>$this->_request->getPost('email'),'nome'=>$this->_request->getPost('nome'))),
+						$idioma);
+
+			$this->_redirect('/sucesso');
+
+        $this->view->assign('teste',$id);
+        $this->view->display('cadastrousuario3.tpl');
+
+    }
+
+
+/*
     public function cadastro1Action() {
 
         $cep   = $this->_request->getPost('cep');
@@ -40,7 +119,6 @@ class UsuarioController extends Zend_Controller_Action {
             $this->view->assign('sexo',array("Masculino","Feminino"));
             $this->view->assign('sexo_c',$sexo);
             $this->view->assign('mensagem',"Digite a mesma senha no dois campos!");
-
 
             $this->view->assign('template',"default/new_account.tpl");
             $this->view->display('default/common_main.tpl');
@@ -159,6 +237,6 @@ class UsuarioController extends Zend_Controller_Action {
         $this->view->display('cadastrousuario3.tpl');
 
     }
-
+*/
 }
 ?>
