@@ -1,10 +1,10 @@
 <!--new account-->
 <div id="new_account" class="grid_9_center">
-	<form action="{$urlbase}usuario/cadastro1" method="post">
+	<form action="{$urlbase}usuario/inserir" method="post">
 			<fieldset>
 				<legend title="Digite os seus dados corretamente">Digite os dados abaixo corretamente</legend>
 				<label for="nome">Nome completo:</label>
-				<input type="text" id="nome" value="{$nome}" title="Digite o seu nome completo" />
+				<input type="text" id="nome" name="nome" value="{$nome}" title="Digite o seu nome completo" />
                 
 				<label for="sexo">Sexo:</label>
 				<select name="sexo" id="sexo" title="Selecione o seu sexo">
@@ -12,16 +12,16 @@
 				</select>
 				
 				<label for="mail">E-mail:</label>
-				<input type="text" id="mail" value="{$email}" title="Digite o seu email corretamente"/>
+				<input type="text" id="email" name="email" value="{$email}" title="Digite o seu email corretamente"/>
 				
 				<label for="password">Senha: (preferencialmente com 6 digitos)</label>
-				<input type="password" id="password" title="Digite uma senha de 6 digitos"/>
+				<input type="password" id="password" name="password" title="Digite uma senha de 6 digitos"/>
 				
 				<label for="password2">Repita a senha:</label>
-				<input type="password" id="password2" title="Repira a senha"/>
+				<input type="password" id="password2" name="password2" title="Repira a senha"/>
 				
 				<label for="cep">Seu CEP:</label>
-				<input type="text" id="cep" title="informe o seu CEP"/>
+				<input type="text" id="cep" name="cep" title="informe o seu CEP"/>
 				
 				<label for="capitcha">Digite o resultado de: <strong>1+3</strong></label>
 				<input type="text" id="capitcha" title="Digite o resultado de 1+3"/>

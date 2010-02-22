@@ -1,8 +1,18 @@
 <?php
 
-class Validacao {
+class Validacao extends Zend_Db_Table_Abstract {
+    //configurando nome da tabela
+    //por padrao Zend_Db_Table busca pelo nome da classe separando maiusculas por _
+    protected $_name = 'validacao';
 
+    //identificando chave primaria da tabela
+    //por padrao Zend_Db_Table busca chave primaria pelo nome id
+    protected $_primary = 'va_id';
 
+    public function ListarDados($usr,$par) {
+        return $this->fetchAll("us_id = '$usr' AND pa_id = '$par'")->current();
+
+    }
     public function calculoDistancia($lat1, $lon1, $lat2, $lon2) {
 
 
@@ -18,33 +28,30 @@ class Validacao {
 
 
         $a = $lat1-$lat2;
-        $b = $lon1-$lon2;       
+        $b = $lon1-$lon2;
 
         if( $a < 0 ) $a*=-1;
         if( $b < 0 ) $b*=-1;
 
         $d = sqrt($a*$a*$b*$b);
-      
+
         return $d;
 
     }
 
     public function calculoPontuacao($distancia) {
 
-        if($distancia < 1.5)
-        {
+        if($distancia < 1.5) {
             $pontos = 5;
 
         }
-        elseif($distancia > 1.5 && $distancia < 8)
-        {
+        elseif($distancia > 1.5 && $distancia < 8) {
             $pontos = 3;
         }
-        elseif($distancia > 8)
-        {
+        elseif($distancia > 8) {
             $pontos = 1;
         }
-        
+
         return $pontos;
 
 

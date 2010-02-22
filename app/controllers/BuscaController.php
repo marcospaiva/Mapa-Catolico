@@ -30,7 +30,10 @@ class BuscaController extends Zend_Controller_Action {
 
 
         $p      =  new Paroquias();
-        $result =  $p->ListarParoquias($this->_request->getParam('palavra'))->toArray();        
+        $result =  $p->ListarParoquias($this->_request->getParam('palavra'))->toArray();
+        $total  =  count($result);
+
+        $this->view->assign('total',$total);
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/paroquia/palavra/'.$this->_request->getParam('palavra').'/pagina/');
 
@@ -50,6 +53,9 @@ class BuscaController extends Zend_Controller_Action {
         $p      =  new Paroquias();
 
         $result =  $p->ListarCapela($this->_request->getParam('palavra'))->toArray();
+        $total  =  count($result);
+
+        $this->view->assign('total',$total);
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/capela/palavra/'.$this->_request->getParam('palavra').'/pagina/');
 
@@ -68,7 +74,9 @@ class BuscaController extends Zend_Controller_Action {
         $p      =  new Paroquias();
 
         $result =  $p->ListarCidades($this->_request->getParam('palavra'))->toArray();
-        
+        $total  =  count($result);
+
+        $this->view->assign('total',$total);
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/cidade/palavra/'.$this->_request->getParam('palavra').'/pagina/');
         $this->view->assign('tipo',"cidade");
@@ -86,6 +94,9 @@ class BuscaController extends Zend_Controller_Action {
         $p      =  new Paroquias();
 
         $result =  $p->ListarCidade($this->_request->getParam('cidade'),$this->_request->getParam('uf'))->toArray();
+        $total  =  count($result);
+
+        $this->view->assign('total',$total);
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/cidades/cidade/'.$this->_request->getParam('cidade').'/uf/'.$this->_request->getParam('uf').'/pagina/');
         $this->view->assign('tipo',"paroquia");
@@ -105,6 +116,9 @@ class BuscaController extends Zend_Controller_Action {
         $u      =  new Usuarios();
    			
         $result =  $u->ListarUsuarios($this->_request->getParam('palavra'))->toArray();
+        $total  =  count($result);
+
+        $this->view->assign('total',$total);
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/usuario/palavra/'.$this->_request->getParam('palavra').'/pagina/');
         $this->view->assign('tipo',"usuario");
@@ -114,7 +128,7 @@ class BuscaController extends Zend_Controller_Action {
     }
     public function usuariosAction() {
 
-         $pagina=1;
+        $pagina=1;
         if($this->_request->getParam('pagina')) {
             $pagina=$this->_request->getParam('pagina');
         }
@@ -122,9 +136,12 @@ class BuscaController extends Zend_Controller_Action {
         $p      =  new Paroquias();
 
         $result =  $p->ListarAdmin($this->_request->getParam('id'))->toArray();
+        $total  =  count($result);
+
+        $this->view->assign('total',$total);
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/usuarios/id/'.$this->_request->getParam('id').'/pagina/');
-       $this->view->assign('tipo',"paroquia");
+        $this->view->assign('tipo',"paroquia");
         $this->view->assign('template',"default/search.tpl");
         $this->view->display('default/common_main.tpl');
 
