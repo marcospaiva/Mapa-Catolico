@@ -13,10 +13,10 @@ class IndexController extends Zend_Controller_Action {
     public function indexAction() 
 	{
         $this->view->assign('apikey',$this->gkey);
-        $p = new Paroquias();
+       // $p = new Paroquias();
 
-        $cont1 = $p->listarPaDestaque();
-        $cont2 = $p->listarCaDestaque();
+       // $cont1 = $p->listarPaDestaque();
+       // $cont2 = $p->listarCaDestaque();
 
         $this->view->display('default/index.tpl');
 	}
