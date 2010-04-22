@@ -15,7 +15,7 @@
 @import url("grid.css");
 
 /* reset css v1.0 | 20080212 */
-*{font-family:"HelveticaNeue","Helvetica Neue","Helvetica Neue",Helvetica,arial,sans-serif;font-weight:400;color:#333;}
+*{font-family:"Trebuchet MS", verdana,arial,sans-serif;font-weight:400;color:#222;}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -39,17 +39,17 @@ del{text-decoration:line-through}
 table{border-collapse:collapse;border-spacing:0}
 /*************************************************/
 
-/*The color reference: #15508A as first - #266097 as light blue - #FF6C00 as orange over*/
+/*The color reference: #CC4726 as first - #E87817 as light blue - #FF6C00 as orange over  ##CC4726  E87817*/
 
 /*Global styling *******************************************************/
 body{background-color:#e2e2e2;}
-div.total{background: white;}
+div.total{background:#F9F0DE;}
 div.total_search{background:#f0f0f0;border-top:1px dotted #e2e2e2;border-bottom:1px dotted #e2e2e2;height:60px;}
-a{text-decoration:none; color:#008AC9}
-a:hover{text-decoration:underline;color:#FF6C00;}
+a{text-decoration:none; color:#E87817}
+a:hover{text-decoration:underline;color:#008AC9;}
 hr{color:#008AC9;}
 
-.title{color:#15508A;font-size:24px; padding:20px 0 5px 0;}
+.title{color:#CC4726;font-size:24px; padding:20px 0 5px 0;}
 
 /*rate*/
 .reliable_rate{background-color:green;padding:2px;}

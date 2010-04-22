@@ -8,7 +8,7 @@
 	
 */
 
-/*The color reference: #15508A as first - #008AC9 as light blue - #FF6C00as orange over*/
+/*The color reference: CC4726 as first - #E87817 as light blue - #FF6C00as orange over*/
 
 #main_login{font-size:.8em;}
 	#main_login h1{display:inline;margin-right:15px;background:orange}
@@ -17,9 +17,9 @@
 		#main_login fieldset input[type="submit"]{}
 
 #main_home h1{background:url("../img/logo_top.jpg") 0 0 no-repeat;height:200px; text-indent:-9999px; overflow:hidden;position:relative;top:-10px;left:30px;}
-#main_home  #first{font-size:20px; margin-top:15px;color:#15508A;}
-#main_home  #second{font-family:Georgia,"Times New Roman",Times,serif;font-style:italic;font-size:16px;margin-top:20px;color:#008AC9;}
-	#main_home  #second em{font-weight:bold;font-size:12px;color:#FF6C00;}
+#main_home  #first{font-size:20px; margin-top:15px;color:#CC4726;}
+#main_home  #second{font-family:Georgia,"Times New Roman",Times,serif;font-style:italic;font-size:16px;margin-top:20px;color:#E87817;}
+	#main_home  #second em{font-weight:bold;font-size:12px;color:#008AC9;}
 
 #main_search{}
 	#main_search label.lupe{display:block;width:26px;height:40px;margin:0;float:left;text-indent:-1000px;overflow:hidden;margin-left:27px;}
@@ -61,7 +61,7 @@
 #vicinity{}
 #vicinity h2{}
 	#vicinity #vicinity_list{}
-	#vicinity #vicinity_list li{padding:5px;margin-top:20px;margin-bottom:20px;border-right:1px dotted #008AC9;;font-size:14px;}
+	#vicinity #vicinity_list li{padding:5px;margin-top:20px;margin-bottom:20px;border-right:1px dotted #E87817;;font-size:14px;}
 		#vicinity #vicinity_list li p{margin:10px 0;}
 		#vicinity #vicinity_list li p.name{font-size:16px;}
 		#vicinity #vicinity_list li a.vicinity{display:block; float:left;}
