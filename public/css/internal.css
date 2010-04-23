@@ -67,11 +67,11 @@
 	#common_search fieldset select,#common_search fieldset input[type="text"]{padding-top:7px;}
 	#common_search fieldset input[type="text"]{height:30px;padding-left:7px;width:300px;}
 	#common_search fieldset select,#common_search fieldset input[type="text"]{
-															border-top:solid 1px #c7c7c7;
-															border-bottom:solid 1px #c7c7c7;
+															border-top:solid 1px #da8e2f;
+															border-bottom:solid 1px #da8e2f;
 															border-left:none;
 															border-right:none;
-															background-color:#ececec;
+															background-color:#ead8a5;
 															}
 	#common_search fieldset input[type="submit"]{
 									border:none;width:102px;margin:0;
@@ -148,7 +148,7 @@
 				#new_account form fieldset textarea{margin-right:20px;font-size:12px;padding:5px;width:100%;}
 			
 			#new_account form input[type="submit"],#contact form input[type="submit"]{
-												background:url("../img/blue_hightlight.jpg")0 0 no-repeat;
+												background:url("../img/back_link.jpg")0 0 no-repeat;
 												border:none;
 												color:#fff;
 												cursor:pointer;
