@@ -64,8 +64,9 @@
 	
 	#common_search fieldset .litle_left,#common_search fieldset input[type="submit"]{background:url("../img/lupa_search.jpg") 0 0 no-repeat;}
 	#common_search fieldset .litle_left{width:9px;}
-	#common_search fieldset select,#common_search fieldset input[type="text"]{padding-top:7px;}
-	#common_search fieldset input[type="text"]{height:30px;padding-left:7px;width:300px;}
+	#common_search fieldset select,#common_search fieldset input[type="text"]{}
+	#common_search fieldset input[type="text"]{height:36px;padding-left:5px;width:300px;}
+	#common_search fieldset select{padding-top:7px;}
 	#common_search fieldset select,#common_search fieldset input[type="text"]{
 															border-top:solid 1px #da8e2f;
 															border-bottom:solid 1px #da8e2f;
@@ -83,9 +84,9 @@
 /**/
 #search_result{padding:20px 0;}
 #search_result li{border-bottom:1px dotted #008AC9;font-size:14px;margin-top:0px;margin-bottom:20px;padding-bottom:20px;}
-	#search_result li a img{border:1px solid #e2e2e2;}
+	/*#search_result li a img{border:1px solid #e2e2e2;}
 	#search_result li a.img_list{border:1px dotted #e2e2e2;overflow:hidden;float:left;margin-bottom:5px;padding:5px;}	
-	#search_result li p{position:relative;left:10px;margin-bottom:5px;}
+	#search_result li p{position:relative;left:10px;margin-bottom:5px;}*/
 		#search_result li p strong{font-weight:bold;padding-right:2px;}
 		#search_result li p.name{font-size:20px;padding-top:5px;}
 	
@@ -130,7 +131,7 @@
 	#new_account form,
 	#contact form{padding-bottom:30px;}
 		#new_account form legend,
-		#contact form legend{color:#15508A;font-size:24px;padding:20px 5px 5px 5px;}
+		#contact form legend{font-size:24px;padding:20px 5px 5px 0;}
 			
 			#new_account form fieldset,#contact form fieldset{border-bottom:1px #15508A dotted;margin-bottom:20px;padding:20px;}
 				

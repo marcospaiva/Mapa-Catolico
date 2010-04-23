@@ -2,7 +2,7 @@
 <div id="new_account" class="grid_9_center">
 	<form action="{$urlbase}usuario/inserir" method="post">
 			<fieldset>
-				<legend title="Digite os seus dados corretamente">Digite os dados abaixo corretamente</legend>
+				<legend title="Digite os seus dados corretamente" class="title">Digite os dados abaixo corretamente</legend>
 				<label for="nome">Nome completo:</label>
 				<input type="text" id="nome" name="nome" value="{$nome}" title="Digite o seu nome completo" />
                 

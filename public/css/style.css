@@ -55,6 +55,10 @@ hr{color:#008AC9;}
 .reliable_rate{background-color:green;padding:2px;}
 .unreliable_rate{background-color:red;padding:2px;}
 
+/**/
+li a img{border:1px solid #F2DEB3;}
+li a.img_list{border:1px dotted #F2B54F;overflow:hidden;float:left;margin-bottom:5px;padding:5px;}	
+li p{position:relative;left:10px;margin-bottom:5px;}
 
 /*Declaration top to be common to all pages ***************************************/
 #common_menu{}
