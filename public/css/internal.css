@@ -41,17 +41,18 @@
 		font-size:14px;
 		text-align:center;
 		color:#fff;
-		height:29px;
+		height:27px;
 		padding:2px;
 		width:59px;
-		
+		cursor:pointer;
 	}
+	#login form input[type="submit"]:hover{background-position:-168px -27px;}
 /**/
 			
 /*Estiliza a busca Padrão*/
 
 #common_search{}
-	#common_search form{margin:0 auto;width:620px;padding:10px 0}
+	#common_search form{margin:0 auto;width:620px;padding:15px 0}
 	#common_search fieldset{font-size:20px;}
 		#common_search fieldset label,#common_search fieldset select,#common_search fieldset .litle_left, #common_search fieldset input{
 																								display:block;

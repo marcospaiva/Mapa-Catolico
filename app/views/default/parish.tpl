@@ -1,5 +1,3 @@
-<!--parish/chapel profile-->	
-
 <div id="parish" class="clearfix">
 	<h1 class="grid_12 title">{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}</h1>
 	<h2 class="grid_12">{$pa.pa_cidade}-{$pa.pa_estado}</h2>
@@ -20,15 +18,15 @@
 		<hr/>
 		<p class="other"><strong>Descrição:</strong>{$pa.pa_descricao}</p>
 
-                {if $denuncia > 0 }
+               
                     <form method="post" name="form1" action ="{$urlbase}paroquiaexibir/validar">
-                        <input type="hidden" name="id" id="id" value="{$pa.pa_id}">                       
-                        <input type="hidden" name="pontuacao" id="pontuacao" value="{$pa.pa_validacao}">
+                        <input type="text" name="id" id="id" value="{$pa.pa_id}">                       
+                        <input type="text" name="pontuacao" id="pontuacao" value="{$pa.pa_validacao}">
                         <input type="submit" value="Você já esteve aqui?">
                      <form>
-                {else}
+                
                     <p>{$pa.pa_validacao} pessoa(s) já estiveram aqui!</p>
-                {/if}
+             
 
 		{if $pa.pa_site eq ""} {else}
 		<p class="other">
@@ -43,13 +41,12 @@
 		</p>
 
 	</div>
-	<!--here render the map-->
+
 	<div id="map_canvas" class="grid_8" style="height:500px;"></div>
-		<!--end render the map-->
+	
 		<ul id="legend" class="prefix_9">
 			<li><span class="icon_parish"></span>Paróquias</li>
 			<li><span class="icon_chapel"></span>Capelas</li>
 		</ul>
 	</div>
 </div>
-<!--end parish/chapel profile-->
