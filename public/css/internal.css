@@ -134,21 +134,25 @@
 		#new_account form legend,
 		#contact form legend{font-size:24px;padding:20px 5px 5px 0;}
 			
-			#new_account form fieldset,#contact form fieldset{border-bottom:1px #15508A dotted;margin-bottom:20px;padding:20px;}
+			#new_account form fieldset,#contact form fieldset{/*border-bottom:1px #15508A dotted;*/padding:20px;}
 				
-				#new_account form fieldset label,#contact form fieldset label{display:block;margin:5px;}
-				#new_account form fieldset label.check{display:inline;margin-top:20px;}
+				#new_account form fieldset label,#contact form fieldset label{display:block;font-size:16px;height:40px;float:left;line-height:40px;margin:10px 5px 10px 0;padding-left:5px;text-align:right;width:150px;}
+				#new_account form fieldset label.check{display:inline;}
 				
 				#new_account form fieldset input,#new_account form fieldset select,
-				#contact form fieldset input,#contact form fieldset select{font-size:14px;margin-left:20px;padding:2px;}
+				#contact form fieldset input,#contact form fieldset select{font-size:14px;margin-top:10px;}
+				#new_account form fieldset select,#contact form fieldset select{margin-top:20px;}
 				
-				#new_account form fieldset input[id="nome"],#new_account form fieldset input[id="mail"],
-				#contact form fieldset input[id="nome"],#contact form fieldset input[id="mail"]{width:300px;}
+				#new_account form fieldset input,#new_account form fieldset textarea{border:1px solid #DA8E2F;-moz-border-radius: 5px;height:40px;}
+				#new_account form fieldset input:focus{border-color:blue;}
+															
+				#new_account form fieldset input[id="nome"],#new_account form fieldset input[id="email"],
+				#contact form fieldset input[id="nome"],#contact form fieldset input[id="email"]{width:350px;}
 				
-				#contact form fieldset input[type="radio"]{margin-left:0; border:1px solid #000;}
+				#new_account form fieldset input[type="radio"]{margin-left:0; border:1px solid #000;}
 				
-				#new_account form fieldset textarea{margin-right:20px;font-size:12px;padding:5px;width:100%;}
-			
+				#new_account form fieldset textarea{font-size:10px;height:80px;width:450px;padding:5px;margin-top:10px;}
+				.tos-agree{font-size:16px; padding:10px;margin-top:15px;}
 			#new_account form input[type="submit"],#contact form input[type="submit"]{
 												background:url("../img/back_link.jpg")0 0 no-repeat;
 												border:none;
@@ -159,7 +163,7 @@
 												line-height:40px;
 												height:40px;
 												position:relative;
-												left:30px;
+												left:180px;
 												text-align:center;
 												width:191px;
 												}

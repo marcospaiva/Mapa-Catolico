@@ -15,18 +15,12 @@
 		<p class="local"><strong>Numero:</strong>{$pa.pa_numero}</p>
 		<p class="local"><strong>Bairro:</strong>{$pa.pa_bairro}</p>
 		<p class="local"><strong>País:</strong>{$pa.pa_pais}</p>
+		<form method="post" name="form1" action ="{$urlbase}paroquiaexibir/validar">
+			<input type="submit" value="Eu já estive aqui!"/>
+	    </form>
+		<p>{$pa.pa_validacao} pessoa(s) já estiveram aqui!</p>
 		<hr/>
-		<p class="other"><strong>Descrição:</strong>{$pa.pa_descricao}</p>
-
-               
-                    <form method="post" name="form1" action ="{$urlbase}paroquiaexibir/validar">
-                        <input type="text" name="id" id="id" value="{$pa.pa_id}">                       
-                        <input type="text" name="pontuacao" id="pontuacao" value="{$pa.pa_validacao}">
-                        <input type="submit" value="Você já esteve aqui?">
-                     <form>
-                
-                    <p>{$pa.pa_validacao} pessoa(s) já estiveram aqui!</p>
-             
+		<p class="other"><strong>Descrição:</strong>{$pa.pa_descricao}</p>           
 
 		{if $pa.pa_site eq ""} {else}
 		<p class="other">

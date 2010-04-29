@@ -6,7 +6,7 @@
 		<title>Projeto - Teste</title>
 		<link href="{$urlbase}public/css/style.css" type="text/css" rel="stylesheet" />
 		<link href="{$urlbase}public/css/main.css" type="text/css" rel="stylesheet" />
-		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 		
 	</head>
 	<body>

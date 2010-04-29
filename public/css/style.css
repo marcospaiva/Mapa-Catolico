@@ -71,4 +71,4 @@ li p{position:relative;left:10px;margin-bottom:5px;}
 		#footer #links ul li a{color:#222222;font-weight:600;display:block;float:left;padding:5px;margin:2px;}
 
 #copy{height:67px;text-align:right;line-height:67px;margin-top:10px;}
-	#copy #cn_sig{display:block;width:100px;height:27px;float:right;margin:15px 10px 10px 10px;background:url("../img/cn_vertical.gif") 0 0 no-repeat;text-indent:-1000px;overflow:hidden;}
+	#copy #cn_sig{display:block;width:100px;height:27px;float:right;margin:15px 10px 10px 10px;background:url("../img/cn_vertical.png") 0 0 no-repeat;text-indent:-1000px;overflow:hidden;}
