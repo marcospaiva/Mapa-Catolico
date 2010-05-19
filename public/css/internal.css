@@ -20,19 +20,25 @@
 				overflow:hidden;
 				text-indent:-9999px;				
 				}
-/**/
-#login{font-size:12px;margin-top:20px;height:29px;}
-	#login form fieldset{float:left;margin-left:69px;}
-	#login form fieldset legend,#login form fieldset label{display:none;}
+
+/*
+===================================
+LOGIN
+===================================
+*/
+#login{font-size:12px;min-height:30px;}
+	#login form fieldset{float:left;margin-left:50px;}	
+		#login form fieldset legend{display:none;}
+		#login form fieldset label{display:block;float:left;line-height:30px;}
 	#login form input{background:url("../img/background_login.jpg")0 0 no-repeat;
 					  border:none;
 					  display:block;
 					  height:20px;
 					  float:left;
-					  margin:1px;
+					  margin:1px 5px;
 					  padding:4px;
 					  width:160px;
-					  line-height:29px;
+					  line-height:30px;
 						}
 	#login form input[type="submit"]{
 		border:none;
@@ -47,10 +53,19 @@
 		cursor:pointer;
 	}
 	#login form input[type="submit"]:hover{background-position:-168px -27px;}
-/**/
-			
-/*Estiliza a busca Padrão*/
-
+/*
+===================================
+SEARCH RESULSTS
+===================================
+*/
+#common_rightbox{text-align:right;margin-top:5px;}
+	#common_rightbox a,#common_rightbox_loged a{font-weight:bold;font-size:14px;}
+#common_rightbox_loged{text-align:right;padding:5px;}
+/*
+===================================
+COMMON SEARCH
+===================================
+*/
 #common_search{}
 	#common_search form{margin:0 auto;width:620px;padding:15px 0}
 	#common_search fieldset{font-size:20px;}
@@ -82,77 +97,67 @@
 									cursor:pointer;background-position:-51px 0px;}
 	#common_search fieldset input[type="submit"]:hover{background-position:-51px -41px;}
 
-/**/
+/*
+===================================
+SEARCH RESULSTS
+===================================
+*/
 #search_result{padding:20px 0;}
 #search_result li{border-bottom:1px dotted #008AC9;font-size:14px;margin-top:0px;margin-bottom:20px;padding-bottom:20px;}
-	/*#search_result li a img{border:1px solid #e2e2e2;}
-	#search_result li a.img_list{border:1px dotted #e2e2e2;overflow:hidden;float:left;margin-bottom:5px;padding:5px;}	
-	#search_result li p{position:relative;left:10px;margin-bottom:5px;}*/
 		#search_result li p strong{font-weight:bold;padding-right:2px;}
 		#search_result li p.name{font-size:20px;padding-top:5px;}
+		p.religious strong{color:#14761B;}
+		p.local strong{color:#FF6C00;}
+		p.other strong{color:#114D5E;}
 	
 #more_results{font-size:16px;font-weight:bold;text-align:center;margin-bottom:5px;}
 #paginate_result{padding-bottom:20px;text-align:center;}
 	#paginate_result li{display:inline;padding:5px;}
 	
-/**/
-	
-#common_rightbox{text-align:right;margin-top:5px;}
-	#common_rightbox a,#common_rightbox_loged a{font-weight:bold;font-size:14px;}
 
-#common_rightbox_loged{text-align:right;padding:5px;}
 
-#common_rightbox_loged{display:none;}/****essa informação é setada com JS se o usuário está logado ou não*****/
-
-/**/
+/*
+===================================
+Vizualização da paróquia ou capela.
+===================================
+*/
 #parish{font-size:14px;}
-#parish h2{font-size:16px;font-weight:normal;color:#008AC9;}
-	#parish #info p a.img_list{border:1px dotted #e2e2e2;display:block;overflow:hidden;padding:5px;width:112px;}
-	#parish #info p a img{border:1px solid #e2e2e2;}
-	#parish #info p strong{color:#15508A;font-weight:700;}
-
-	/**/
-		#parish #info p.religious strong{color:#14761B;}
-		#parish #info p.local strong{color:#FF6C00;}
-		#parish #info p.other strong{color:#114D5E;}
-	/**/
+	#parish h2{font-size:16px;font-weight:normal;color:#008AC9;}
+		#parish #info p{margin-bottom:5px;}
+			#parish #info p strong{color:#15508A;font-weight:700;padding-right:5px;}
+				#parish #info p a.img_list{border:1px dotted #e2e2e2;display:block;overflow:hidden;padding:5px;width:112px;}
+				#parish #info p a img{border:1px solid #e2e2e2;}
+			/*diferenciação por cores das informações*/
+			#parish #info p.religious strong{color:#14761B;}
+			#parish #info p.local strong{color:#FF6C00;}
+			#parish #info p.other strong{color:#114D5E;}
 #parish #info, #parish #render_map{margin-top:20px;margin-bottom:20px;}
 #parish #render_map{overflow:hidden;}
-	#parish #legend{padding-top:20px;padding-bottom:20px;}
-		#parish #legend li {float:left;line-height:78px;}
-			#parish #legend li .icon_parish, #parish #legend li .icon_chapel{display:block;float:left;width:55px;height:78px;background:url("../img/par_cap_legend.jpg") 0 0 no-repeat;text-indent:55px;line-height:78px;}
-			#parish #legend li .icon_chapel{background-position:-55px 0;}
-#parish #info p{margin-bottom:5px;}
-#parish #info p strong{padding-right:5px;}
 
 
-/*nova conta*/
 
+/*
+===================================
+Nova conta usuário / Contato
+===================================
+*/
 #new_account,#contact{font-size:14px;}
-	#new_account form,
-	#contact form{padding-bottom:30px;}
-		#new_account form legend,
-		#contact form legend{font-size:24px;padding:20px 5px 5px 0;}
-			
-			#new_account form fieldset,#contact form fieldset{/*border-bottom:1px #15508A dotted;*/padding:20px;}
-				
-				#new_account form fieldset label,#contact form fieldset label{display:block;font-size:16px;height:40px;float:left;line-height:40px;margin:10px 5px 10px 0;padding-left:5px;text-align:right;width:150px;}
-				#new_account form fieldset label.check{display:inline;}
-				
-				#new_account form fieldset input,#new_account form fieldset select,
-				#contact form fieldset input,#contact form fieldset select{font-size:14px;margin-top:10px;}
-				#new_account form fieldset select,#contact form fieldset select{margin-top:20px;}
-				
-				#new_account form fieldset input,#new_account form fieldset textarea{border:1px solid #DA8E2F;-moz-border-radius: 5px;height:40px;}
-				#new_account form fieldset input:focus{border-color:blue;}
-															
-				#new_account form fieldset input[id="nome"],#new_account form fieldset input[id="email"],
-				#contact form fieldset input[id="nome"],#contact form fieldset input[id="email"]{width:350px;}
-				
-				#new_account form fieldset input[type="radio"]{margin-left:0; border:1px solid #000;}
-				
-				#new_account form fieldset textarea{font-size:10px;height:80px;width:450px;padding:5px;margin-top:10px;}
-				.tos-agree{font-size:16px; padding:10px;margin-top:15px;}
+	#new_account form,#contact form{padding-bottom:30px;}
+		#new_account form legend,#contact form legend{font-size:24px;padding:20px 5px 5px 0;}
+		#new_account form fieldset,#contact form fieldset{padding:20px;}
+			#new_account form fieldset label,#contact form fieldset label,#new_account form fieldset h3{display:block;font-size:16px;height:40px;float:left;line-height:40px;margin:10px 5px 10px 0;padding-left:5px;text-align:right;width:150px;}
+			#new_account form fieldset input,#new_account form fieldset select,
+			#contact form fieldset input,#contact form fieldset select{font-size:14px;margin-top:10px;}
+			#new_account form fieldset select,#contact form fieldset select{margin-top:20px;}
+			#new_account form fieldset input,#new_account form fieldset p.tos,
+			#contact form fieldset input,#contact form fieldset textarea{border:1px solid #DA8E2F;background-color:#fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;height:40px;}
+			#new_account form fieldset input:focus{border-color:#CC4726;}
+			#new_account form fieldset p.tos{overflow:auto;}
+			#new_account form fieldset input[id="nome"],#new_account form fieldset input[id="email"],
+			#contact form fieldset input[id="nome"],#contact form fieldset input[id="email"]{width:350px;}
+			#new_account form fieldset p.tos,#contact form fieldset textarea{font-size:10px;height:80px;width:450px;padding:5px;margin-top:10px;}
+			#contact form fieldset textarea{font-size:14px;}
+			.tos-agree{font-size:16px; padding:10px;margin-top:15px;}
 			#new_account form input[type="submit"],#contact form input[type="submit"]{
 												background:url("../img/back_link.jpg")0 0 no-repeat;
 												border:none;
@@ -170,13 +175,76 @@
 			#new_account form input[type="submit"]:hover,#contact form input[type="submit"]:hover{background-position:0 -40px;}	
 				
 				
+/*
+===================================
+TOS / Política de Privacidade
+===================================
+*/
+#tos{margin:20px 0;}
+	#tos ul li{}
+		#tos ul li a{background-color:#EAD8A5;-moz-border-radius:5px;float:left;font-size:16px;font-weight:bold;margin-right:1px;padding:10px;}
+	#tos div{margin:20px 0; text-indent:20px;}
+.ui-tabs .ui-tabs-hide{display: none !important;}	
+.ui-state-active a, .ui-widget-content .ui-state-active a{color:#B52E29;cursor:text;}
+.ui-widget-content .ui-state-active a:hover{text-decoration:none;}
 				
 				
-				
-				
-				
-				
-				
-				
-				
-				
+/*
+===================================
+ADMIN
+===================================
+*/				
+#admin_menu{margin:30px 0;}
+	#admin_menu ul li a{background-color:#EAD8A5;-moz-border-radius:5px;float:left;font-size:16px;font-weight:bold;margin-right:1px;padding:10px;}
+.logged{margin-top:30px;}
+.logged .logout{color:#B52E29;}
+/*
+===================================
+ADMIN/STEPS
+===================================
+*/
+.steps h2{font-weight:bold;font-size:18px;margin:10px 0;}				
+form.step-1{padding:0 15px 10px 15px; margin-bottom:20px;}
+form.step-1 fieldset{margin-bottom:30px;}
+	
+	form.step-1 legend{font-weight:bold;font-size:18px;margin:10px 0;}
+	form.step-1 a{font-size:12px;}
+	form.step-1 label{display:block;font-size:14px;margin:5px 0;}
+	form.step-1 input[type="text"],
+	form.step-1 textarea{border:1px solid #DA8E2F;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;}
+	form.step-1 input[type="submit"]{background-color:#E87817;border:1px solid #DA8E2F;color:#FFF;cursor:pointer;font-size:16px;margin:10px 0 0 10px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;}
+	form.step-1 a.next{background-color:#E87817;border:1px solid #DA8E2F;color:#FFF;cursor:pointer;font-size:16px;margin-left:10px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;}
+	.litle{width:50px;}
+	.strong{width:300px;}
+/*
+===================================
+ADMIN/EDIT
+===================================
+*/
+#edit{margin-bottom:30px;}	
+	#edit table tr{margin-top:10px;}
+		#edit table tr th{display:block;font-weight:bold;font-size:18px;margin:10px 0;}	
+		#edit table tr td{border-bottom:1px solid #B52E29;padding:10px;margin-top:10px;font-size:14px;}
+		#edit table tr td.exclude{/*background-color:#B52E29;*/}
+			#edit table tr td.exclude a{color:#B52E29;}
+		#edit table tr:hover{background-color:#F2DEB3;cursor:default;}
+/*
+===================================
+ADMIN/EDIT_ACCOUNT
+===================================
+*/
+#edit_account{margin-bottom:30px;}
+	#edit_account form fieldset{margin-bottom:30px;}
+		#edit_account form fieldset legend{font-weight:bold;font-size:18px;margin:10px 0;}
+		#edit_account form fieldset label{display:block;font-size:14px;margin:5px 0;}
+		#edit_account form fieldset input{border:1px solid #DA8E2F;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;}
+		#edit_account form fieldset input[name="nome"],
+			#edit_account form fieldset input[name="email"]{width:300px;}
+	#edit_account form input[type="submit"]{background-color:#E87817;border:1px solid #DA8E2F;color:#FFF;cursor:pointer;font-size:16px;margin-left:10px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;}}
+/*
+===================================
+MASTER ADMIN
+===================================
+*/
+#master_menu{margin:30px 0;}
+	#master_menu ul li a{background-color:#EAD8A5;-moz-border-radius:5px;float:left;font-size:16px;font-weight:bold;margin-right:1px;padding:10px;}

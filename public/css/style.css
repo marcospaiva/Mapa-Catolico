@@ -52,7 +52,7 @@ hr{color:#008AC9;}
 .title{color:#CC4726;font-size:24px; padding:20px 0 5px 0;}
 
 /*rate*/
-.reliable_rate{background-color:green;padding:2px;}
+.reliable_rate{color:#FF6C00;font-weight:bold;}
 .unreliable_rate{background-color:red;padding:2px;}
 
 /**/
@@ -61,8 +61,9 @@ li a.img_list{border:1px dotted #F2B54F;overflow:hidden;float:left;margin-bottom
 li p{position:relative;left:10px;margin-bottom:5px;}
 
 /*Declaration top to be common to all pages ***************************************/
-#common_menu{}
-	#common_menu li a{font-weight:bold;display:block;float:right;margin-right:1px;padding:20px 0 0 10px;font-size:14px;}
+#common_menu{margin-top:20px;margin-bottom:20px;}
+	#common_menu li{float:left;margin-left:13px;}
+		#common_menu li a{font-weight:bold;}
 
 /*Declaration footer to be common to all pages ***************************************/
 .footer_100{background:url("../img/background_foot.jpg") 0 0 repeat-x #E87817;}
