@@ -15,49 +15,51 @@ class ParoquiaController extends Zend_Controller_Action {
 
     public function cadastroAction() {
 
-        $this->view->assign('tipo_id',array(2,1));
-        $this->view->assign('tipo',array("Capela","Paroquia"));
-        $this->view->assign('tipo_c',1);
 
-        $this->view->display('cadastroparoquia.tpl');
+        $this->view->assign('template',"admin/step_1.tpl");
+        $this->view->display('admin/admin.tpl');
 
     }
 
     public function cadastro1Action() {
 
-        $cep   = $this->_request->getPost('cep');
-        $tipo  = $this->_request->getPost('tipo');
+        $cep   = $this->_request->getParam('cep');       
 
         $c   = new Ceps();
+
         $res = $c->ObterEstado($cep);
-        $uf  = $res['uf'];
-        $end = $c->ObterEndereco($cep, $uf);
+
 
         $cidade  = "";
         $bairro  = "";
         $rua     = "";
+        $uf      = "";
 
+        if(isset($res)){
+            $uf  = $res['uf'];
+            $end = $c->ObterEndereco($cep, $uf);
 
-
-        foreach ($end as $z) {
-            $cidade  = $z['cidade'];
-            $bairro  = $z['bairro'];
-            $rua     = $z['tp_logradouro']." ".$z['logradouro'];
+            foreach ($end as $z) {
+                $cidade  = $z['cidade'];
+                $bairro  = $z['bairro'];
+                $rua     = $z['tp_logradouro']." ".$z['logradouro'];
+            }
         }
+       
 
         $this->view->assign('bairro',$bairro);
         $this->view->assign('cidade',$cidade);
         $this->view->assign('cep',$cep);
-        $this->view->assign('rua',$rua);
-        $this->view->assign('tipo',$tipo);
+        $this->view->assign('rua',$rua);       
         $this->view->assign('uf',$uf);
 
-        $this->view->display('cadastroparoquia1.tpl');
-
+        $this->view->assign('template',"admin/step_2.tpl");
+        $this->view->display('admin/admin.tpl');
     }
 
-    public function cadastro2Action() {
-
+    public function cadastro2Action(){
+        
+        $pais    = $this->_request->getPost('pais');
         $bairro  = $this->_request->getPost('bairro');
         $cidade  = $this->_request->getPost('cidade');
         $cep     = $this->_request->getPost('cep');
@@ -67,12 +69,6 @@ class ParoquiaController extends Zend_Controller_Action {
         $rua     = $this->_request->getPost('rua');
         $uf      = $this->_request->getPost('uf');
 
-
-         $di    =  new Diocese();
-        $dados =  $di->ArrayIdDioceseUf($uf);
-
-
-
         $endereco = "$rua, $numero, $cidade, $uf";
         $gmaps    = new gMaps($this->gkey);
         $cord     = $gmaps->geolocal($endereco);
@@ -80,27 +76,81 @@ class ParoquiaController extends Zend_Controller_Action {
         $lat = $cord['lat'];
         $lon = $cord['lon'];
 
+
+        if($lat == 0){
+
+            $cord = $gmaps->geolocal("$cidade - $uf, $pais");
+            $lat = $cord['lat'];
+            $lon = $cord['lon'];
+
+        }
+
         $this->view->assign('bairro',$bairro);
         $this->view->assign('cidade',$cidade);
+        $this->view->assign('pais',$pais);
+        $this->view->assign('cep',$cep);       
+        $this->view->assign('lat',$lat);
+        $this->view->assign('lon',$lon);
+        $this->view->assign('numero',$numero);
+        $this->view->assign('rua',$rua);        
+        $this->view->assign('uf',$uf);
+
+        $this->view->assign('apikey',$this->gkey);
+        $this->view->assign('template',"admin/step_3.tpl");
+        $this->view->display('admin/admin.tpl');
+
+    }
+
+    public function cadastro3Action() {
+
+        $pais    = $this->_request->getPost('pais');
+        $bairro  = $this->_request->getPost('bairro');
+        $cidade  = $this->_request->getPost('cidade');
+        $cep     = $this->_request->getPost('cep');
+        $logr    = $this->_request->getPost('logr');
+        $numero  = $this->_request->getPost('numero');
+        $tipo    = $this->_request->getPost('tipo');
+        $rua     = $this->_request->getPost('rua');
+        $uf      = $this->_request->getPost('uf');
+        $lat2     = $this->_request->getPost('lat2');
+        $lon2     = $this->_request->getPost('lon2');
+        $lat     = $this->_request->getPost('lat');
+        $lon     = $this->_request->getPost('lng');
+
+
+        if($lat == 0){
+
+            $lat = $lat2;
+            $lon = $lon2;
+
+        }
+
+
+         $di    =  new Diocese();
+         $dados =  $di->ArrayIdDioceseUf($uf);
+
+
+        $this->view->assign('bairro',$bairro);
+        $this->view->assign('cidade',$cidade);
+        $this->view->assign('pais',$pais);
         $this->view->assign('cep',$cep);
         $this->view->assign('diocese',$dados);
         $this->view->assign('lat',$lat);
         $this->view->assign('lon',$lon);
         $this->view->assign('numero',$numero);
-        $this->view->assign('rua',$rua);
-        $this->view->assign('tipo',$tipo);
+        $this->view->assign('rua',$rua);       
         $this->view->assign('uf',$uf);
+        $this->view->assign('tipo_id',array(2,1));
+        $this->view->assign('tipo',array("Capela","Paroquia"));
+        $this->view->assign('tipo_c',1);
 
-        if($tipo == 1) {
-            $this->view->display('cadastroparoquia2a.tpl');
-        }else {
-            $this->view->display('cadastroparoquia2b.tpl');
-        }
+        $this->view->assign('template',"admin/step_4.tpl");
+        $this->view->display('admin/admin.tpl');
 
     }
 
 
-    public function cadastro3Action() {
+    public function cadastro4Action() {
 
 
         $this->view->assign('bairro',$this->_request->getPost('bairro'));
@@ -112,13 +162,16 @@ class ParoquiaController extends Zend_Controller_Action {
         $this->view->assign('nome',$this->_request->getPost('nome'));
         $this->view->assign('numero',$this->_request->getPost('numero'));
         $this->view->assign('paroco',$this->_request->getPost('paroco'));
+        $this->view->assign('pais',$this->_request->getPost('pais'));
         $this->view->assign('rua',$this->_request->getPost('rua'));
         $this->view->assign('tipo',$this->_request->getPost('tipo'));
         $this->view->assign('uf',$this->_request->getPost('uf'));
 
-        $this->view->display('cadastroparoquia3.tpl');
+        $this->view->assign('template',"admin/step_5.tpl");
+        $this->view->display('admin/admin.tpl');
 
     }
+     
 
 
     public function inserirAction() {
@@ -134,14 +187,13 @@ class ParoquiaController extends Zend_Controller_Action {
             'pa_nome'=>$this->_request->getPost('nome'),
             'pa_descricao'=>$this->_request->getPost('descricao'),
             'pa_paroco'=>$this->_request->getPost('paroco'),
-            'pa_tel'=>$this->_request->getPost('tel'),
-            'pa_tel_cod'=>$this->_request->getPost('tel_cod'),
+            'pa_tel'=>$this->_request->getPost('tel'),     
             'pa_site'=>$this->_request->getPost('site'),
             'pa_email'=>$this->_request->getPost('email'),
             'pa_tipo'=>$this->_request->getPost('tipo'),
             'pa_estado'=>$this->_request->getPost('uf'),
             'pa_cidade'=>$this->_request->getPost('cidade'),
-            'pa_pais'=>"Brasil",
+            'pa_pais'=>$this->_request->getPost('pais'),
             'pa_bairro'=>$this->_request->getPost('bairro'),
             'pa_rua'=>$this->_request->getPost('rua'),
             'pa_numero'=>$this->_request->getPost('numero'),
@@ -167,9 +219,7 @@ class ParoquiaController extends Zend_Controller_Action {
 
         $img->dell($destino);
 
-
-        $this->view->assign('teste',$id);
-        $this->view->display('index.tpl');
+        $this->view->display('admin/admin.tpl');
 
     }
 

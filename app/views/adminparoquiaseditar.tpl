@@ -30,7 +30,7 @@ Faz parte da diocese de: <select name=diocese id =diocese>
     Nome da Paroquia : <input type="text" name="nome" id="nome" value="{$pa.pa_nome}"><br>
     Nome do Paroco : <input type="text" name="paroco" id="paroco" value="{$pa.pa_paroco}"><br>
 
-    telefone: <input type="text" name="tel_cod" id="tel_cod" value="{$pa.pa_tel_cod}">
+   TEL
     <input type="text" name="tel" id="tel" value="{$pa.pa_tel}"><br>
     email : <input type="text" name="email" id="email" value="{$pa.pa_email}"><br>
     site : <input type="text" name="site" id="site" value="{$pa.pa_site}"><br>

@@ -7,31 +7,15 @@
 		    </tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>	
+                       {foreach from=$paroquias item=par}
+                        <tr>
+                              <td>{$par.pa_nome}</td>
+                              <td><a href="{$urlbase}admin/paroquiaeditar/id/{$par.pa_id}">Editar</a></td>
+                              <td class="exclude"><a href="{$urlbase}admin/paroquiadeletar/id/{$par.pa_id}">Exluir</a></td>
+                        </tr>
+
+                        {/foreach}
+			
 		</tbody>
 	</table>
 </div>

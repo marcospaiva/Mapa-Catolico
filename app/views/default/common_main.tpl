@@ -5,17 +5,19 @@
 		<title>Projeto - Teste</title>
 		<link href="{$urlbase}public/css/style.css" type="text/css" rel="stylesheet" />
 		<link href="{$urlbase}public/css/internal.css" type="text/css" rel="stylesheet" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>-->
 		<!--This page is a template for all of pages in this app-->
 	</head>
-
+       
         {if $template eq "default/parish.tpl"}
-        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
-        <script src="{$urlbase}public/js/maps.js" type="text/javascript"></script>
-            <body onload="init('{$pa.pa_nome}','{$pa.pa_latitude}','{$pa.pa_longitude}')">
-        {else}
-            <body>
-        {/if}
+
+            <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
+            <script src="{$urlbase}public/js/maps.js" type="text/javascript"></script>
+            <body onload="init('{$pa.pa_nome}','{$pa.pa_latitude}','{$pa.pa_longitude}')">               
+             
+        {else}        
+            <body>           
+        {/if}     
 	
 		<div class="total">
 			<div class="container_12 clearfix">{include file="default/ads.tpl"}</div>

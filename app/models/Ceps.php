@@ -17,8 +17,7 @@ class Ceps extends Zend_Db_Table_Abstract
 	public function ObterEstado($cep)
 	{
                 $parte   = explode("-", $cep);
-                $prefixo = $parte[0];
-                
+                $prefixo = $parte[0];                
                 $result  = $this->fetchAll("cep5='$prefixo'")->current();
                 return $result;
 	}

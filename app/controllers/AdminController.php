@@ -20,7 +20,8 @@ class AdminController extends Zend_Controller_Action {
     }
     public function indexAction() {
 
-        $this->view->display('admin.tpl');
+        $this->view->assign('template',"admin/vazio.tpl");
+        $this->view->display('admin/admin.tpl');
     }
 
     public function denunciarAction(){
@@ -56,7 +57,8 @@ class AdminController extends Zend_Controller_Action {
         $lista = $par->ListarAdmin($this->controler->id());
 
         $this->view->assign('paroquias',$lista);
-        $this->view->display('adminparoquias.tpl');
+        $this->view->assign('template',"admin/edit.tpl");
+        $this->view->display('admin/admin.tpl');
 
     }
 

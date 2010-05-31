@@ -75,6 +75,11 @@ class Paroquias extends Zend_Db_Table_Abstract
             return $this->fetchAll("pa_cidade LIKE '$cidade' AND pa_estado LIKE '$estado'");
         }
 
+        public function ListarDestaque($pag){
+
+                return $this->fetchAll($this->select()->order("pa_id DESC")->limit(2,$pag));
+        }
+
 }
 
 ?>

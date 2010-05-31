@@ -5,22 +5,34 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<title>index2</title>
 		<style type="text/css" media="screen">
-			@import url("css/internal.css");
-			@import url("css/style.css");
+			@import url("{$urlbase}public/css/internal.css");
+			@import url("{$urlbase}public/css/style.css");
 		</style>
 	</head>
-	<body>
+
+        {if $template eq "admin/step_3.tpl"}
+             <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
+             <script src="{$urlbase}public/js/gmapez-2.5.js" type="text/javascript"></script>
+             <body onUnload="GUnload()">
+
+        {else}
+            <body>
+        {/if}
+	
 		<div class="total">
-			<div class="container_12 clearfix"><?php include("top_admin.php"); ?></div>
+			<div class="container_12 clearfix">{include file="admin/top_admin.tpl"}</div>
 		</div>
 		<div class="total">
-			<div class="container_12 clearfix"><?php include("common_search.php"); ?></div>
+			<div class="container_12 clearfix">{include file="default/common_search.tpl"}</div>
 		</div>
 		<div class="total">
-			<div class="container_12 clearfix"><?php include("admin_menu.php"); ?></div>
+			<div class="container_12 clearfix">{include file="admin/admin_menu.tpl"}</div>
+		</div>
+                <div class="total">
+			<div class="container_12 clearfix">{include file= $template }</div>
 		</div>
 		<div class="footer_100 clearfix">
-			<div id="footer" class="container_12 clearfix"><?php include("footer.php"); ?></div>
+			<div id="footer" class="container_12 clearfix">{include file="default/footer.tpl"}</div>
 		</div>
 		
 		
