@@ -5,11 +5,11 @@
 		<li><a href="" title="Política de privacidade">Política de privacidade</a></li>
 	</ul>
 	<ul class="grid_6">
-		<li><a href="" title="Portal Canção Nova">Portal CN</a></li>
-		<li><a href="" title="Shopping Canção Nova">Shopping</a></li>
-		<li><a href="" title="Ajude a Canção Nova">Eu ajudo</a></li>
-		<li><a href="" title="Mashup Canção Nova">Mashup</a></li>
-		<li><a href="">Gente de Fé.</a></li>
+		<li><a href="http://cancaonova.com" title="Portal Canção Nova">Portal CN</a></li>
+		<li><a href="http://shopping.cancaonova.com" title="Shopping Canção Nova">Shopping</a></li>
+		<li><a href="http://clube.cancaonova.com/" title="Ajude a Canção Nova">Eu ajudo</a></li>
+		<li><a href="http://mashup.cancaonova.com/" title="Mashup Canção Nova">Mashup</a></li>
+		<li><a href="http://gentedefe.com/" title="Gente de fé">Gente de Fé.</a></li>
 	</ul>
 </div>
 <p id="copy" class="grid_6">Copyright 2009 <span id="cn_sig">Cancaonova.com</span></p>
