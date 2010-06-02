@@ -17,7 +17,7 @@
 		<input name="lat" type="hidden" id="lat" size="25" maxlength="0" readonly="readonly"/>
 		<input name="lng" type="hidden" id="lng" size="25" maxlength="0" readonly="readonly"/>
 		
-		<div id="map_canvas" class="grid_7 clearfix" style="height:300px;background:red;">
+		<div id="map_canvas" class="grid_7 clearfix" style="height:300px;">
 		</div>
 		<a href="#" onClick="dropPinClicked();">Adicione um marcador</a>
 		<span class="clear"></span>
