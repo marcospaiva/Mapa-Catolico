@@ -1,5 +1,5 @@
 <div class="grid_7 steps">
-	<h2>Essa é a etapa 3 o do cadastramento, siga os passos corretamente.</h2>
+	<h2>Essa é a etapa 4 o do cadastramento, siga os passos corretamente.</h2>
 	<form class="step-1" action="{$urlbase}paroquia/cadastro4" method="post" name="form1">
 
             <input type="hidden" name="bairro" id="bairro" value="{$bairro}">
@@ -18,17 +18,17 @@
 			<!-- <legend>Passo 3</legend> -->
 			
 			<label for="diocese">Nome da Diocese</label>
-			<select name=diocese id =diocese>
-                                {html_options options=$diocese}
-                        </select>
+			<select name="diocese" id="diocese">
+            	{html_options options=$diocese}
+            </select>
                         
 			<label for="tipo">Tipo</label>
-			<select name=tipo id =tipo>
-                            {html_options values=$tipo_id selected=$tipo_c output=$tipo}
-                        </select>
+			<select name="tipo" id="tipo">
+                {html_options values=$tipo_id selected=$tipo_c output=$tipo}
+            </select>
 		
 		</fieldset>
-		<a href="admin_content_n_2.php">voltar uma etapa</a><input type="submit" value="Proximo passo">
+		<a href="">voltar uma etapa</a><input type="submit" value="Proximo passo">
 	</form>
 </div>
 

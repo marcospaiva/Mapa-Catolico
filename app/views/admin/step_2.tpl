@@ -14,7 +14,7 @@
 			<label for="cidade">Cidade</label>
 			<input type="text" name="cidade" value="{$cidade}" id="cidade">
 
-                        <label for="bairro">Bairro</label>
+            <label for="bairro">Bairro</label>
 			<input type="text" name="bairro" value="{$bairro}" id="bairro">
 			
 			<label for="rua">Rua</label>
@@ -24,6 +24,6 @@
 			<input type="text" name="numero" value="{$numero}" id="numero" class="litle"/>
 		
 		</fieldset>
-		<a href="admin_content_n_1.php">voltar uma etapa</a><input type="submit" value="Proximo passo">
+		<a href="">voltar uma etapa</a><input type="submit" value="Proximo passo">
 	</form>
 </div>

@@ -37,10 +37,5 @@
 	</div>
 
 	<div id="map_canvas" class="grid_8" style="height:500px;"></div>
-	
-		<ul id="legend" class="prefix_9">
-			<li><span class="icon_parish"></span>Paróquias</li>
-			<li><span class="icon_chapel"></span>Capelas</li>
-		</ul>
 	</div>
 </div>
