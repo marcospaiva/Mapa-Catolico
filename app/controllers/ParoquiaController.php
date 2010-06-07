@@ -36,6 +36,7 @@ class ParoquiaController extends Zend_Controller_Action {
         $uf      = "";
 
         if(isset($res)){
+            
             $uf  = $res['uf'];
             $end = $c->ObterEndereco($cep, $uf);
 

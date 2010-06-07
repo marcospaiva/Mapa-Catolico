@@ -16,11 +16,9 @@ class IndexController extends Zend_Controller_Action {
         
          $paro   = new Paroquias();
 
-        $cont   = $paro->listarDestaque(0);
-        $cont2   = $paro->listarDestaque(1);
+        $cont   = $paro->listarDestaque(3);
 
-        $this->view->assign('dados',$cont);
-        $this->view->assign('dados2',$cont2);
+        $this->view->assign('dados',$cont);      
 
         $this->view->display('default/index.tpl');
 	}
