@@ -1,4 +1,4 @@
-<!--  -->
+<!-- TOS -->
 <div id="tos" class="grid_10 push_1">
 	<ul>
 		<li><a href="#tos_txt">Termos de uso</a></li>
@@ -13,4 +13,4 @@
 	</div>
 </div>
 
-<!--  -->
+<!-- end TOS -->
