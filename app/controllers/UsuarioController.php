@@ -98,6 +98,16 @@ class UsuarioController extends Zend_Controller_Action {
         $this->view->display('cadastrousuario3.tpl');
 
     }
+    
+     public function editarAction() {
+
+
+
+        $this->view->assign('template',"admin/edit_account.tpl");
+        $this->view->display('default/common_main.tpl');
+    }
+
+
 
 
 /*
