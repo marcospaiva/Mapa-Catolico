@@ -76,7 +76,7 @@ class AdminController extends Zend_Controller_Action {
         $this->view->assign('sexo_id',array(1,2));
         $this->view->assign('sexo',array("Masculino","Feminino"));
         $this->view->assign('usuario',$lista);
-        $this->view->display('adminusuario.tpl');
+        $this->view->display('admin/edit_account.tpl');
 
     }
 

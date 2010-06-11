@@ -1,6 +1,6 @@
 <div class="grid_7 steps">
 	<h2>Essa é a etapa 4 do cadastramento, siga os passos corretamente.</h2>
-<<<<<<< HEAD
+
 	<form action="{$urlbase}paroquia/inserir" method="post" name="form" id="form" enctype='multipart/form-data'>
                 <input type="hidden" name="bairro" id="bairro" value="{$bairro}">
                 <input type="hidden" name="cep" id="cep" value="{$cep}">
@@ -40,29 +40,12 @@
 			
 			<label for="imagem">Foto (da paroquia ou capela)</label>
 			<input type="file" name="imagem" id="imagem">
-=======
-	<form class="step-1" action="common_main_parish.php">
-		<fieldset id="" class="">
-			<!-- <legend>Passo 4</legend> -->
-			
-			<label for="telefone">Telefone</label>
-			<input type="text" name="telefone" value="" id="telefone">
-			
-			<label for="email">Email</label>
-			<input type="text" name="email" value="" id="email" class="strong"/>
-			
-			<label for="foto_(da_paroquia_ou_capela)">Foto (da paroquia ou capela)</label>
-			<input type="file" name="foto_(da_paroquia_ou_capela)" value="" id="foto_(da_paroquia_ou_capela)">
->>>>>>> d11275dfb71280eb68b507c3b68ff0f5a8a9a589
 			
 			<label for="descricao">Descrição</label>
 			<textarea name="descricao" rows="8" cols="40"></textarea>
 				
 		</fieldset>
-<<<<<<< HEAD
-		<a href="admin_content_n_3.php">voltar uma etapa</a><input type="submit" name="" value="Finalizar Cadastro >" id="">
-=======
 		<a href="">voltar uma etapa</a><input type="submit" name="" value="Finalizar Cadastro >" id="">
->>>>>>> d11275dfb71280eb68b507c3b68ff0f5a8a9a589
+
 	</form>
 </div>
