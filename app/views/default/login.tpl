@@ -1,5 +1,5 @@
 <!--Login-->
-<div id="login" class="grid_7 clearfix">
+
 	<form action="{$urlbase}index/entrar" method="post" name="psot1">
 		<fieldset>
 			<legend>Login</legend>
@@ -9,5 +9,5 @@
 		</fieldset>
 		<input type="submit" name="login" value="Entrar" id="some_name"/>
 	</form>
-</div>
+
 <!--end Login-->
