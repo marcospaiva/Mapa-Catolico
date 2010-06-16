@@ -8,15 +8,13 @@
 			@import url("{$urlbase}public/css/internal.css");
 			@import url("{$urlbase}public/css/style.css");
 		</style>
-	</head>
-
-        {if $template eq "admin/step_3.tpl"}
+		{if $template eq "admin/step_3.tpl"}
              <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
              <script src="{$urlbase}public/js/gmapez-2.5.js" type="text/javascript"></script>
-             <body onUnload="GUnload()">
-
-        {else}
-            <body>
+		</head>             
+		<body onUnload="GUnload()">
+		{else}     
+    	<body>
         {/if}
 	
 		<div class="total">
@@ -34,7 +32,7 @@
 		<div class="footer_100 clearfix">
 			<div id="footer" class="container_12 clearfix">{include file="default/footer.tpl"}</div>
 		</div>
-		
-		
+	
+	
 	</body>
 </html>
