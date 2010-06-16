@@ -10,6 +10,10 @@
 	<input type="text" name="palavra" id="palavra" value="Busca"/>
 	<input type="submit" value="Buscar" />
 </form>
+<div class="tooltip">
+	<a href="#">[X]fechar</a>
+	{include file=default/login.tpl}
+</div>
 <p id="login"><a href="#">Faça o login</a> ou</p>
 <p id="new_account"><a href="{$urlbase}usuario/cadastro" title="crie uma nova conta">Crie uma conta</a></p>
 <!--end main home-->

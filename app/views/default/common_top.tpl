@@ -6,7 +6,8 @@
 	
 	{include file=default/common_menu.tpl}
 	
-	{include file=default/login.tpl}
-	
+	<div id="login" class="grid_7 clearfix">
+		{include file=default/login.tpl}
+	</div>
 </div>
 <!--end common top-->
