@@ -3,10 +3,12 @@ class UsuarioController extends Zend_Controller_Action {
 
     public $view;
     public $gkey;
+    public $controler;
 
     public function init() {
         $this->view = Zend_Registry::get("view");
         $this->gkey = Zend_Registry::get("gkey");
+        $this->controler = Zend_Registry::get("controler");
 
     }
 
@@ -103,8 +105,17 @@ class UsuarioController extends Zend_Controller_Action {
 
 
 
+        $this->view->assign('sexo_id',array(1,2));
+        $this->view->assign('sexo',array("Masculino","Feminino"));
+        //$this->view->assign('sexo_c',2);
+        $this->view->assign('mensagem',"Todos os campos sao obrigatorios!");
+
+        $usuario = new Usuarios();
+
+        $us = $usuario->ListarDados($this->controler->id());
+        $this->view->assign('usuario', $us);
         $this->view->assign('template',"admin/edit_account.tpl");
-        $this->view->display('default/common_main.tpl');
+        $this->view->display('admin/admin.tpl');
     }
 
 

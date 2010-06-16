@@ -7,27 +7,27 @@
 		</ul>
 		
 		<input type="hidden" name="lat" id="lat" value="{$usuario.us_latitude}"/>
-	    <input type="hidden" name="lon" id="lon" value="{$usuario.us_longitude}"/>
+	        <input type="hidden" name="lon" id="lon" value="{$usuario.us_longitude}"/>
 		
 		<fieldset id="account" class="">
 			<legend>Edite a sua conta:</legend>
 			<label for="nome">Seu Nome</label>
-			<input type="text" name="nome" value="" id="nome" value="{$usuario.us_nome}"/>
+			<input type="text" name="nome"  id="nome" value="{$usuario.us_nome}"/>
 		
 			<label for="email">Email</label>
-			<input type="text" name="email" value="" id="email" value="{$usuario.us_email}"/>
+			<input type="text" name="email"  id="email" value="{$usuario.us_email}"/>
 			
 			<label for="sexo">Sexo:</label>
 			<select name="sexo" id="sexo" title="Selecione o seu sexo">
-				{html_options values=$sexo_id selected=$sexo_c output=$sexo}
+				{html_options values=$sexo_id selected=$usuario.us_sexo output=$sexo}
 			</select>
 			
 			
 			<label for="senha">Senha</label>
-			<input type="password" name="senha" value="" id="senha"/>
+			<input type="password" name="senha" id="senha"/>
 			
 			<label for="repita_a_senha">Repita a senha</label>
-			<input type="password" name="repita_a_senha" value="" id="repita_a_senha"/>
+			<input type="password" name="repita_a_senha"  id="repita_a_senha"/>
 			
 			
 		</fieldset>
@@ -49,10 +49,10 @@
 			<input type="text" name="bairro" id="" value="{$usuario.us_bairro}"/>
 			
 			<label for="rua">Rua</label>
-			<input type="text" name="rua" value="" id="rua" class="strong" value="{$usuario.us_rua}"/>
+			<input type="text" name="rua"  id="rua" class="strong" value="{$usuario.us_rua}"/>
 			
 			<label for="numero">Número</label>
-			<input type="text" name="numero" value="" id="numero" class="litle" value="{$usuario.us_numero}" />
+			<input type="text" name="numero"  id="numero" class="litle" value="{$usuario.us_numero}" />
 			
 			
 		</fieldset>

@@ -6,8 +6,8 @@
 			<input type="hidden" name="cep" id="cep" value="{$cep}">
 			<input type="hidden" name="cidade" id="cidade" value="{$cidade}">
 			<input type="hidden" name="pais" id="pais" value="{$pais}">
-			<input type="hidden" name="lat2" id="lat2" value="22" >
-			<input type="hidden" name="lon2" id="lon2" value="12" >
+			<input type="hidden" name="lat2" id="lat2" value="{$lat}" >
+			<input type="hidden" name="lon2" id="lon2" value="{$lon}" >
 			<input type="hidden" name="numero" id="numero" value="{$numero}">
 			<input type="hidden" name="tipo" id="tipo" value="{$tipo}">
 			<input type="hidden" name="rua" id="rua" value="{$rua}">
