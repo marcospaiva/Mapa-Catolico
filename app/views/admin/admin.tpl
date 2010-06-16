@@ -8,6 +8,12 @@
 			@import url("{$urlbase}public/css/internal.css");
 			@import url("{$urlbase}public/css/style.css");
 		</style>
+                    {if $template eq "admin/edit_account.tpl"}
+                 <script src="{$urlbase}public/js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
+                 <script src="{$urlbase}public/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+                 <script src="{$urlbase}public/js/master_admin.js" type="text/javascript"></script>
+
+        {/if}
 	</head>
 
         {if $template eq "admin/step_3.tpl"}
@@ -18,6 +24,7 @@
         {else}
             <body>
         {/if}
+      
 	
 		<div class="total">
 			<div class="container_12 clearfix">{include file="admin/top_admin.tpl"}</div>
