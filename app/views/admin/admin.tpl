@@ -9,8 +9,8 @@
 			@import url("{$urlbase}public/css/style.css");
 		</style>
 		{if $template eq "admin/edit_account.tpl"}
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 		<script src="{$urlbase}public/js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
-		<script src="{$urlbase}public/js/jquery-1.4.2.min.js" type="text/javascript"></script>
 		<script src="{$urlbase}public/js/master_admin.js" type="text/javascript"></script>
         </head>
 		{/if}
@@ -21,7 +21,7 @@
 		</head>             
 		<body onUnload="GUnload()">
 		{else}     
-		</head>    	
+		   	
 		<body>
         {/if}
       

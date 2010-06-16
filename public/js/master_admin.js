@@ -1,3 +1,4 @@
+
 $(function() {
-         $("#edit_acc").tabs();
+    $("#edit_acc").tabs();
 });

@@ -233,12 +233,12 @@ ADMIN/EDIT
 ===================================
 */
 #edit{margin-bottom:30px;}	
-	#edit table tr{margin-top:10px;}
-		#edit table tr th{display:block;font-weight:bold;font-size:18px;margin:10px 0;}	
+	#edit table tr{margin-top:10px;text-align:center;}
+		#edit table tr th{font-weight:bold;font-size:18px;margin:10px 0;}	
 		#edit table tr td{border-bottom:1px solid #B52E29;padding:10px;margin-top:10px;font-size:14px;}
 		#edit table tr td.exclude{/*background-color:#B52E29;*/}
 			#edit table tr td.exclude a{color:#B52E29;}
-		#edit table tr:hover{background-color:#F2DEB3;cursor:default;}
+		#edit table tbody tr:hover{background-color:#F2DEB3;cursor:default;}
 /*
 ===================================
 ADMIN/EDIT_ACCOUNT
