@@ -1,6 +1,11 @@
 <div class="grid_12 steps">
-	<h2>Essa é a etapa 3 o do cadastramento, siga os passos corretamente.</h2>
+	<h2 title="Etapa 3 de 5">Etapa 3 de 5</h2>
 	<form action="{$urlbase}paroquia/cadastro3" method="post" name="form" id="form" class="step-1 clearfix">
+		<fieldset id="" class="">
+			<legend>Adicione o marcador mapa</legend>
+			
+			
+		
 		
 			<input type="hidden" name="bairro" id="bairro" value="{$bairro}">
 			<input type="hidden" name="cep" id="cep" value="{$cep}">
@@ -17,14 +22,16 @@
 		<input name="lat" type="hidden" id="lat" size="25" maxlength="0" readonly="readonly"/>
 		<input name="lng" type="hidden" id="lng" size="25" maxlength="0" readonly="readonly"/>
 		
+		<a href="#" onClick="dropPinClicked();" title="Adicione o marcador no mapa">Adicionar o marcador</a>
+		<span class="clear"></span>
 		<div id="map_canvas" class="grid_7 clearfix" style="height:300px;">
 		</div>
-		<a href="#" onClick="dropPinClicked();">Adicione um marcador</a>
+		
 		<span class="clear"></span>
 		
 		
-		<a href="">voltar uma etapa</a><input type="submit" value="Proximo passo">
-		
+	<a href="" title="Volte uma etapa">voltar uma etapa</a><input type="submit" value="Proximo passo" title="Ir para a próxima etapa"/>
+		</fieldset>
 		{literal}
 		<script type="text/javascript">
 
