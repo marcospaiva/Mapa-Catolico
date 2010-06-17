@@ -15,6 +15,13 @@
         </head>
 		{/if}
 		
+		{if $template eq "admin/edit_parish.tpl"}
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script src="{$urlbase}public/js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
+		<script src="{$urlbase}public/js/master_admin.js" type="text/javascript"></script>
+        </head>
+		{/if}
+		
 		{if $template eq "admin/step_3.tpl"}
         <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
         <script src="{$urlbase}public/js/gmapez-2.5.js" type="text/javascript"></script>

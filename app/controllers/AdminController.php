@@ -98,7 +98,9 @@ class AdminController extends Zend_Controller_Action {
         $this->view->assign('tipo',array("Capela","Paroquia"));
 
         $this->view->assign('pa',$lista);
-        $this->view->display('adminparoquiaseditar.tpl');
+		
+		$this->view->assign('template',"admin/edit_parish.tpl");
+        $this->view->display('admin/admin.tpl');
 
     }
 
