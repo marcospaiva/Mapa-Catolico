@@ -2,7 +2,6 @@
 <div id="tos" class="grid_10 push_1">
 	<ul>
 		<li><a href="#tos_txt">Termos de uso</a></li>
-		<!-- <li><a href="#pp_txt">Política de privacidade</a></li> -->
 	</ul>
 	<span class="clear"></span>
 	<div id="tos_txt">
