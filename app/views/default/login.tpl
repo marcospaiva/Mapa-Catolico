@@ -8,6 +8,7 @@
 			<label for="password">Senha</label><input type="password" name="senha" value="Senha" id="senha" title="Insira a sua senha."/>
 		</fieldset>
 		<input type="submit" name="login" value="Entrar" id="some_name"/>
+		<a href="#">Esqueci a senha.</a>
 	</form>
 
 <!--end Login-->
