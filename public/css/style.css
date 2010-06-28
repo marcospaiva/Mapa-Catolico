@@ -51,6 +51,7 @@ hr{color:#008AC9;}
 
 .title{color:#CC4726;font-size:24px; padding:20px 0 5px 0;}
 
+.forgot_pass{display: block;font-size: 12px;text-align: right;padding: 10px 10px 0 0;}
 /*rate*/
 .reliable_rate{color:#FF6C00;font-weight:bold;}
 .unreliable_rate{background-color:red;padding:2px;}

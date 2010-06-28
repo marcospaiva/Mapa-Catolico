@@ -10,11 +10,6 @@
 
 /*The color reference: CC4726 as first - #E87817 as light blue - #FF6C00as orange over*/
 
-#main_login{font-size:.8em;}
-	#main_login h1{display:inline;margin-right:15px;background:orange}
-	#main_login fieldset{text-align:right;}
-		#main_login fieldset input[type="text"]{}
-		#main_login fieldset input[type="submit"]{}
 .tooltip{
 			background:#FFF; 
 			border:1px solid #CC4726; 
