@@ -78,11 +78,19 @@
 		<div class="total">
 			<div class="container_12 clearfix">{include file="admin/top_admin.tpl"}</div>
 		</div>
+	
 		<div class="total">
+<<<<<<< HEAD
 			<div class="container_12 clearfix">{include file="default/common_search.tpl"}</div>
 		</div>
 		<div class="total">
 			<div class="container_12 clearfix">{if $menu eq "master"} {include file="admin/master_menu.tpl"} {else} {include file="admin/admin_menu.tpl"}{/if}</div>
+=======
+			<div class="container_12 clearfix">
+				{include file="admin/admin_menu.tpl"}
+				{include file="admin/master_menu.tpl"}
+			</div>
+>>>>>>> a4c843ad9cd9d11c04659f6a32691a69fe17c25f
 		</div>
                 <div class="total">
 			<div class="container_12 clearfix">{include file= $template }</div>

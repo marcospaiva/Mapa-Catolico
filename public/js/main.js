@@ -19,7 +19,7 @@ $(".tooltip a").click(function(){
 
 /**************************************************/
 
-/*SISTEMA DE ABAS*/
+/*SISTEMA DE ABAS
 $(function() {
 	$("#tos").tabs();
-});
+});*/
