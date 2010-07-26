@@ -1,6 +1,6 @@
 <div class="grid_7 steps">
 	<h2 title="Etapa 4 de 5">Etapa 4 de 5</h2>
-	<form class="step-1" action="{$urlbase}paroquia/cadastro4" method="post" name="form1">
+	<form class="step-1" action="{$urlbase}admin/paroquiacadastro4" method="post" name="form1">
 		<fieldset id="" class="">
 			<legend>Informações Religiosas</legend>
             <input type="hidden" name="bairro" id="bairro" value="{$bairro}">

@@ -1,6 +1,7 @@
 <!---->
 <div id="edit_account" class="grid_12">
-	<form action="{$urlbase}/admin/usuarioupdate" method="post" name="form1" id="edit_acc">
+	<form action="{$urlbase}admin/usuarioupdate" method="post" name="form1" id="edit_acc">
+
 		<ul class="clearfix">
 			<li><a href="#account">Seus dados</a></li>
 			<li><a href="#info">Sua localização</a></li>
@@ -8,6 +9,7 @@
 		
 		<input type="hidden" name="lat" id="lat" value="{$usuario.us_latitude}"/>
 	        <input type="hidden" name="lon" id="lon" value="{$usuario.us_longitude}"/>
+                <input type="hidden" name="id" id="id" value="{$usuario.us_id}"/>
 		
 		<fieldset id="account" class="">
 			<legend>Edite a sua conta:</legend>
@@ -24,29 +26,29 @@
 			
 			
 			<label for="senha">Senha</label>
-			<input type="password" name="senha" id="senha"/>
+			<input type="password" name="password1" id="password1"/>
 			
 			<label for="repita_a_senha">Repita a senha</label>
-			<input type="password" name="repita_a_senha"  id="repita_a_senha"/>
+			<input type="password" name="password2"  id="password2"/>
 			
 			
 		</fieldset>
 		<fieldset id="info" class="">
 			<legend>Informações sobre a sua localização:</legend>
 			<label for="cep">CEP</label>
-			<input type="text" name="cep" value="{$usuario.us_cep}" id="cep"/>
+			<input type="text" name="cep" id="cep" value="{$usuario.us_cep}" />
 			
 			<label for="pais">País</label>
-			<input type="text" name="" value="{$usuario.us_pais}" id="">
+			<input type="text" name="pais" id="pais" value="{$usuario.us_pais}" >
 			
 			<label for="uf">Estado</label>
-			<input type="text" name="uf" id="" class="litle" value="{$usuario.us_estado}"/>
+			<input type="text" name="uf" id="uf" class="litle" value="{$usuario.us_estado}"/>
 			
 			<label for="cidade">Cidade</label>
-			<input type="text" name="cidade" id="" value="{$usuario.us_cidade}"/>
+			<input type="text" name="cidade" id="cidade" value="{$usuario.us_cidade}"/>
 			
 			<label for="bairro">Bairro</label>
-			<input type="text" name="bairro" id="" value="{$usuario.us_bairro}"/>
+			<input type="text" name="bairro" id="bairro" value="{$usuario.us_bairro}"/>
 			
 			<label for="rua">Rua</label>
 			<input type="text" name="rua"  id="rua" class="strong" value="{$usuario.us_rua}"/>

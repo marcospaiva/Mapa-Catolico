@@ -7,31 +7,23 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
+
+                 {foreach name=loop item=item from=$dados}
+					<tr>
+				<td>{$item.us_nome} -{$item.us_email} || {$item.us_cidade} - {$item.us_estado}</td>                                
+				<td><a href="{$urlbase}master/usuarioeditar/id/{$item.us_id}">Editar</a></td>
+				{if $item.us_ativo eq 1}
+                                     <td class="exclude"><a href="{$urlbase}master/usuariostatus/id/{$item.us_id}/status/2{$caminho}">Bloquear</a></td>
+                                {elseif $item.us_ativo eq 2}
+                                     <td class="exclude"><a href="{$urlbase}master/usuariostatus/id/{$item.us_id}/status/1{$caminho}">Desbloquear</a></td>
+                                {elseif $item.us_ativo eq 0}
+                                     <td class="exclude"><a href="{$urlbase}master/usuariostatus/id/{$item.us_id}/status/1{$caminho}">Liberar</a></td>
+                                {/if}
 			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
+                 {/foreach}
+
+                  {include file="default/paginate.tpl"}
+			
 		</tbody>		
 	</table>
 </div>

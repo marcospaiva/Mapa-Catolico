@@ -18,7 +18,7 @@ class EnderecoController extends Zend_Controller_Action
      public function cadastro1Action() {
 
         $cep = $this->_request->getParam('cep');
-        $c   = new Ceps();
+        $c   = new Cep();
         $res = $c->ObterEstado($cep);
         $uf  = $res['uf'];
         $end = $c->ObterEndereco($cep, $uf);

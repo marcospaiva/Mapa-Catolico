@@ -14,18 +14,25 @@ class IndexController extends Zend_Controller_Action {
 	{
         $this->view->assign('apikey',$this->gkey);
         
-         $paro   = new Paroquias();
+        $paro   = new Paroquias();
+
+        $fr  = new Frases();
+
+        $frases = $fr->Listarcapa();
 
         $cont   = $paro->listarDestaque(3);
 
-        $this->view->assign('dados',$cont);      
+        $this->view->assign('dados',$cont);
+        $this->view->assign('frase',$frases);
 
         $this->view->display('default/index.tpl');
 	}
     
     public function logarAction() {
 
-        $this->view->display('logar.tpl');
+//        $this->view->display('logar.tpl');
+        $this->view->assign('template',"admin/vazio.tpl");
+        $this->view->display('default/common_main.tpl');
     }
 
     public function entrarAction() {
@@ -49,7 +56,9 @@ class IndexController extends Zend_Controller_Action {
             $session->nome = $dados->us_nome;
             $session->lat = $dados->us_latitude;
             $session->lon = $dados->us_longitude;
-            $this->_redirect("admin");
+
+            if($dados->us_id == 1){ $this->_redirect("master");  }
+                $this->_redirect("admin");
         // sem erro
         }else {
         // erro

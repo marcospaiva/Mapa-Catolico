@@ -1,6 +1,6 @@
 <div class="grid_12 steps">
 	<h2 title="Etapa 3 de 5">Etapa 3 de 5</h2>
-	<form action="{$urlbase}paroquia/cadastro3" method="post" name="form" id="form" class="step-1 clearfix">
+	<form action="{$urlbase}admin/paroquiacadastro3" method="post" name="form" id="form" class="step-1 clearfix">
 		<fieldset id="" class="">
 			<legend>Adicione o marcador mapa</legend>
 			

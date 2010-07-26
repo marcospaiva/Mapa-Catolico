@@ -7,8 +7,8 @@
 	<h1 class="title grid_12">A sua busca tem {$total} resultados.</h1>
 
 	<!--Aqui é uma condicional para verificar se a busca não retornou nada.
-	--><h1 class="title grid_12">Ocorreu algum erro, por favor, tente buscar mais uma ver.</h1>
-	
+	<h1 class="title grid_12">Ocorreu algum erro, por favor, tente buscar mais uma ver.</h1>
+	-->
 	<ul id="search_result" class="grid_12">
 		
 		{foreach name=loop item=item from=$dados}
@@ -27,21 +27,16 @@
 				</a>
 			</p>
 		
-		    <p><strong>Endereço:</strong>{$item.pa_rua}, {$item.pa_numero}, <strong>Bairro:</strong>{$item.pa_bairro}, <strong>País:</strong>{$item.pa_pais}.<span class="reliable_rate"> 100% confiavel</span></p>
-		
-		    <p><strong>Diocese:</strong>{$item.pa_diocese}, <strong>Bispo:</strong>{$item.pa_bispo}, <strong>Pároco:</strong>{$pa.pa_paroco}.</p>
+		    <p><strong>Endereço:</strong>{$item.pa_rua}, {$item.pa_numero}, 
+                    <p><strong>Bairro:</strong>{$item.pa_bairro}  <strong>Cidade:</strong>{$item.pa_cidade} - {$item.pa_estado}
+		    <p><strong><span class="reliable_rate"> {$item.pa_validacao} pessoa(s) já estiveram aqui!</span></strong></p></p>
 		
 			{if $pa.pa_site eq ""} {else}
 			<p>
 				<strong>Site:</strong><a href="{$pa.pa_site}">{$pa.pa_site}</a>
 			</p>
-			{/if}
-		
-		    <p>
-				<strong>Quem cadastrou:</strong>
-				<a href="" class="clearfix">{$item.pa_usuario}</a>
-	            <a href="" class="clearfix">{$item.pa_email}</a>
-			</p>	
+			{/if}		
+		    	
 			
 		</li>
 	{/if}
@@ -50,8 +45,7 @@
          <li class="clearfix">   
 			<p class="name"><a href='{$urlbase}busca/usuarios/id/{$item.us_id}/'>{$item.us_nome}</a></p>
             <p><strong>Email:</strong> {$item.us_email}</p>
-            <p><strong>Cidade:</strong> {$item.us_cidade} - {$item.us_estado}</p>
-			<p><strong>10:</strong> Paróquias e <strong>20</strong> Capelas cadastradas.</p>
+            <p><strong>Cidade:</strong> {$item.us_cidade} - {$item.us_estado} </p>
         </li>
 		{/if}
 
@@ -62,9 +56,7 @@
                      {$item.pa_cidade} - {$item.pa_estado} 
                  </a>
             </p>
-			<p><strong>Quantidade de Paroquias:</strong> 10</p>
-			<p><strong>Quantidade de Capelas:</strong> 10</p>
-			<p><strong>Quantidade de Usuários:</strong> 10</p>
+			<p><strong>Quantidade de Paroquias/Capelas:</strong> {$item.total}</p>			
 		</li>
         {/if}
 		{/foreach}

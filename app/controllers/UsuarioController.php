@@ -4,19 +4,20 @@ class UsuarioController extends Zend_Controller_Action {
     public $view;
     public $gkey;
     public $controler;
+    public $urlbase;
 
     public function init() {
         $this->view = Zend_Registry::get("view");
         $this->gkey = Zend_Registry::get("gkey");
         $this->controler = Zend_Registry::get("controler");
+        $this->urlbase = Zend_Registry::get("urlbase");
 
     }
 
-   
-
     public function cadastroAction() {
 
-
+        
+        
         $this->view->assign('sexo_id',array(1,2));
         $this->view->assign('sexo',array("Masculino","Feminino"));
         $this->view->assign('sexo_c',2);
@@ -27,15 +28,15 @@ class UsuarioController extends Zend_Controller_Action {
     }
 
      public function inserirAction() {
-
+         
         if($this->_request->getPost('password') <> $this->_request->getPost('password2')) {
             
-            $this->view->assign('cep',$cep);
-            $this->view->assign('email',$email);
-            $this->view->assign('nome',$nome);  
+            $this->view->assign('cep',$this->_request->getPost('cep1'));
+            $this->view->assign('email1',$this->_request->getPost('email1'));
+            $this->view->assign('nome',$this->_request->getPost('nome'));
             $this->view->assign('sexo_id',array(1,2));
             $this->view->assign('sexo',array("Masculino","Feminino"));
-            $this->view->assign('sexo_c',$sexo);
+            $this->view->assign('sexo_c', $this->_request->getPost('sexo'));
             $this->view->assign('mensagem',"Digite a mesma senha no dois campos!");
 
             $this->view->assign('template',"default/new_account.tpl");
@@ -47,7 +48,7 @@ class UsuarioController extends Zend_Controller_Action {
 
         $usuarios = new Usuarios;
 
-        $c   = new Ceps();
+        $c   = new Cep();
         $res = $c->ObterEstado($this->_request->getPost('cep'));
         $uf  = $res['uf'];
         $end = $c->ObterEndereco($this->_request->getPost('cep'), $uf);
@@ -70,7 +71,7 @@ class UsuarioController extends Zend_Controller_Action {
 
         $dado = array(
             'us_nome'=>$this->_request->getPost('nome'),            
-            'us_email'=>$this->_request->getPost('email'),
+            'us_email'=>$this->_request->getPost('email1'),
             'us_senha'=>md5($this->_request->getPost('password')),
             'us_sexo'=>$this->_request->getPost('sexo'),
             'us_estado'=>$uf,
@@ -85,22 +86,81 @@ class UsuarioController extends Zend_Controller_Action {
         $id = $usuarios->insert($dado);
 
         //$inc = new Inc();
-				$url = 'http://'.$_SERVER['SERVER_NAME'].'/confirmacao/'.base64_encode($id).'/';
+		$url = $this->urlbase.'usuario/confirmacao/cod/'.base64_encode($id).'/';
 				//envia email de confirmacao
 
-				new Mail('cadastro',
-						'c',
-						array(array('nome'=>$this->_request->getPost('nome'),'url'=>$url,'login'=>$this->_request->getPost('email'),'senha'=>$this->_request->getPost('password'))),
-						array(array('email'=>$this->_request->getPost('email'),'nome'=>$this->_request->getPost('nome'))),
-						$idioma);
+		new Mail('c',
+			     array(
+                                    array('nome'=>$this->_request->getPost('nome'),
+                                           'url'=>$url,
+                                           'login'=>$this->_request->getPost('email1'),
+                                           'senha'=>$this->_request->getPost('password')
+                                          )
+                                    )
+                             ,
+                                    array(
+                                          array('email'=>$this->_request->getPost('email1'),
+                                                'nome'=>$this->_request->getPost('nome')
+                                                )
+                                         )
+                          );
 
-			$this->_redirect('/sucesso');
+			$this->_redirect('index.php');
 
-        $this->view->assign('teste',$id);
-        $this->view->display('cadastrousuario3.tpl');
+      //  $this->view->assign('teste',$id);
+        //$this->view->display('cadastrousuario3.tpl');
 
     }
-    
+
+    public function verificaemailAction()
+	{
+
+		$retorno = false;
+
+                
+
+		try
+		{
+
+			Zend_loader::loadClass("Zend_Json");
+			$this->_helper->viewRenderer->setNoRender();
+
+			$request = $this->getRequest();
+			//pegando variavel via get
+			$email = $request->getParam('email');			
+
+			$usuario = new Usuarios();
+			//verificando a existencia do login
+
+			$existe = $usuario->ConsultaEmail($email);
+			
+
+
+                        if(count($existe) != NULL)
+                        {
+                                $retorno = true;
+
+                        }else{
+                                $retorno = false;
+                        }
+
+
+		}
+		catch (Exception $e)
+		{
+			// faz nada
+		}
+
+		$objJson = Zend_Json::encode($retorno);
+		// coloca na camada de visao
+		$this->_response->appendBody($objJson);
+
+		return ;
+
+
+	}
+
+    /*    verificar admin
      public function editarAction() {
 
 
@@ -116,6 +176,18 @@ class UsuarioController extends Zend_Controller_Action {
         $this->view->assign('usuario', $us);
         $this->view->assign('template',"admin/edit_account.tpl");
         $this->view->display('admin/admin.tpl');
+    }
+     *
+     */
+    public function confirmacaoAction(){
+
+        $id = base64_decode($this->_request->getParam('cod'));
+	$ativar = array('us_ativo'=>1);
+	$usuario = new Usuarios();
+	$usuario->update($ativar,'us_id = '.$id);
+        
+	$this->_redirect('index.php');
+
     }
 
 
@@ -151,7 +223,7 @@ class UsuarioController extends Zend_Controller_Action {
         
 
 
-        $c   = new Ceps();
+        $c   = new Cep();
         $res = $c->ObterEstado($cep);
         $uf  = $res['uf'];
         $end = $c->ObterEndereco($cep, $uf);

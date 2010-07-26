@@ -34,6 +34,19 @@ class Paroquias extends Zend_Db_Table_Abstract
                 return $this->fetchAll("di_id = '$id_di' AND pa_nome LIKE '%$paroquia%'")->current();
 
         }
+        public function ListarPalavras($palavra,$order)
+        {
+             $part =  explode(" ", $palavra);
+             $w = '';
+             $x = 0;
+             foreach ($part as $pa){
+                  if($x == 1){ $w .= " AND ";}
+                  $w .= "pa_nome LIKE '%$pa%'";
+                  $x = 1;
+             }
+             return $this->fetchAll($this->select()->where($w)->order($order));
+
+        }
         public function ListarParoquias($palavra)
 	{
                 $part =  explode(" ", $palavra);
@@ -62,9 +75,13 @@ class Paroquias extends Zend_Db_Table_Abstract
 	}
         public function ListarCidades($palavra)
         {
+            $select  = $this->select();
+            $select->from($this, array('count(*) as total','pa_cidade','pa_estado'));
+            $select->where("pa_cidade LIKE '%$palavra%'");
+            $select->group("pa_cidade");
+            //$select = $this->select()->from(array('COUNT(*) AS total'))->where("pa_cidade LIKE '%$palavra%'")->group("pa_cidade");
 
-            $select = $this->select()->where("pa_cidade LIKE '%$palavra%'")->group("pa_cidade");
-
+           //$select = $this->select()->where("pa_cidade LIKE '%$palavra%'")->group("pa_cidade");
            // var_dump($this->fetchAll($select));
             return $this->fetchAll($select);
 
@@ -78,6 +95,11 @@ class Paroquias extends Zend_Db_Table_Abstract
         public function ListarDestaque($pag){
 
                 return $this->fetchAll($this->select()->order("pa_id DESC")->limit(3));
+        }
+
+        public function ListarId($id){
+
+                return $this->fetchAll("pa_id = '$id'")->current();
         }
 
 }

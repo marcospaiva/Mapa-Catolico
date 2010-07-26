@@ -8,7 +8,18 @@
 		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>-->
 		<!--This page is a template for all of pages in this app-->
 	</head>
-       
+             
+                
+        {if $template eq "default/new_account.tpl"}
+            <script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
+            <script type="text/javascript" src="{$urlbase}public/js/jquery-validate/jquery.validate.js"></script>
+            <script type="text/javascript" src="{$urlbase}public/js/jquery.maskedinput-1.2.2.js"/></script>
+            <script type="text/javascript" src="{$urlbase}public/js/cadastro.js"></script>
+            <script type="text/javascript" src="{$urlbase}public/js/mascara.js"></script>
+            
+
+        {/if}
+        
         {if $template eq "default/parish.tpl"}
 
             <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>

@@ -74,6 +74,7 @@ class ParoquiaexibirController extends Zend_Controller_Action {
         $this->view->assign('apikey',$this->gkey);
         $this->view->assign('tipo', $tipo);
         $this->view->assign('usuario', $usuario["us_nome"]);
+        $this->view->assign('usuarioid', $usuario["us_id"]);
         $this->view->assign('email', $usuario["us_email"]);
         $this->view->assign('bispo', $bispo);
         $this->view->assign('diocese', $diocese);
@@ -86,19 +87,8 @@ class ParoquiaexibirController extends Zend_Controller_Action {
 
     public function validarAction() {
 
-       // $par = new Paroquias();
-/*
-        $lat1 = $this->controler->getLatitude();
-        $lon1 = $this->controler->getLongitude();
-
-        $lat2 = $this->_request->getUserParam("latitude");
-        $lon2 = $this->_request->getUserParam("longitude");
- *
- */
-
-
-        $id   = $this->_request->getParam('id');
-        $pont = $this->_request->getParam('pontuacao');
+        $id   = $this->_request->getPost('paroquia');
+        $pont = $this->_request->getPost('validacao');
 
         $va = new Validacao();
 

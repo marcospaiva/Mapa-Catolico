@@ -7,31 +7,15 @@
 			</tr>
 		</thead>
 		<tbody>
+               
+		</li>
+                         {foreach name=loop item=item from=$dados}
 			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
+				<td>{$tipo} : {$item.pa_nome}</td><td>{$item.pa_cidade} - {$item.pa_estado}</td>
+				<td><a href="{$urlbase}master/paroquiaeditar/id/{$item.pa_id}">Editar</a></td>
+				<td class="exclude"><a href="{$urlbase}admin/paroquiadeletar/id/{$item.pa_id}">Exluir</a></td>
 			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
-			<tr>
-				<td>Paróquia nossa senhora da piedade perpetua</td>
-				<td><a href="#">Editar</a></td>
-				<td class="exclude"><a href="#">Exluir</a></td>
-			</tr>
+                        {/foreach}			
 		</tbody>		
 	</table>
 </div>

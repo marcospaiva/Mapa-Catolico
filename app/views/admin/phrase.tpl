@@ -1,11 +1,11 @@
 <div id="edit" class="grid_12">
-	<form action="" method="get" accept-charset="utf-8">
+	<form action="{$urlbase}master/frasesalvar" method="post" accept-charset="utf-8">
 		<fieldset id="" class="">
 			<legend></legend>
 			<label for="">Nova frase</label>
-			<textarea id="" ></textarea>
+			<textarea id="frase" name="frase"></textarea>
 			<label for="autor">Autor</label>
-			<input type="text" name="autor" value="" id="autor">
+			<input type="text" name="autor" id="autor">
 		</fieldset>
 		<input type="submit" name="some_name" value="Enviar" id="some_name">
 		
@@ -18,36 +18,21 @@
 					</tr>
 				</thead>
 				<tbody>
+                                       {foreach name=loop item=item from=$frases}
 					<tr>
-						<td>Paróquia nossa senhora da piedade perpetua</td>
-						<td>Jonnas Abbib</td>
-						<td><a href="#">Editar</a></td>
-						<td class="exclude"><a href="#">Exluir</a></td>
+						<td>{$item.fr_frase}</td>
+						<td>{$item.fr_autor}</td>
+                                                {if $item.fr_ativo eq 1}
+                                                    <td class="exclude"><a href="{$urlbase}master/frasestatus/id/{$item.fr_id}/status/0">Bloquear</a></td>
+                                                {elseif $item.fr_ativo eq 0}
+                                                    <td class="exclude"><a href="{$urlbase}master/frasestatus/id/{$item.fr_id}/status/1">Liberar</a></td>
+                                                {/if}
+						<td><a href="{$urlbase}master/fraseeditar/id/{$item.fr_id}">Editar</a></td>
+						<td class="exclude"><a href="{$urlbase}master/frasedelet/id/{$item.fr_id}">Exluir</a></td>
 					</tr>
-					<tr>
-						<td>Paróquia nossa senhora da piedade perpetua</td>
-						<td>Jonnas Abbib</td>
-						<td><a href="#">Editar</a></td>
-						<td class="exclude"><a href="#">Exluir</a></td>
-					</tr>
-					<tr>
-						<td>Paróquia nossa senhora da piedade perpetua</td>
-						<td>Jonnas Abbib</td>
-						<td><a href="#">Editar</a></td>
-						<td class="exclude"><a href="#">Exluir</a></td>
-					</tr>
-					<tr>
-						<td>Paróquia nossa senhora da piedade perpetua</td>
-						<td>Jonnas Abbib</td>
-						<td><a href="#">Editar</a></td>
-						<td class="exclude"><a href="#">Exluir</a></td>
-					</tr>
-					<tr>
-						<td>Paróquia nossa senhora da piedade perpetua</td>
-						<td>Jonnas Abbib</td>
-						<td><a href="#">Editar</a></td>
-						<td class="exclude"><a href="#">Exluir</a></td>
-					</tr>
+                                        {/foreach}
+
+					
 				</tbody>		
 			</table>
 		</div>

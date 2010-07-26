@@ -25,7 +25,7 @@ class ParoquiaController extends Zend_Controller_Action {
 
         $cep   = $this->_request->getParam('cep');       
 
-        $c   = new Ceps();
+        $c   = new Cep();
 
         $res = $c->ObterEstado($cep);
 

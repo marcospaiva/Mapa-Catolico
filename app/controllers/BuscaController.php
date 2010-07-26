@@ -31,15 +31,15 @@ class BuscaController extends Zend_Controller_Action {
 
         $p      =  new Paroquias();
         $result =  $p->ListarParoquias($this->_request->getParam('palavra'))->toArray();
+        
         $total  =  count($result);
-
         $this->view->assign('total',$total);
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/paroquia/palavra/'.$this->_request->getParam('palavra').'/pagina/');
-
         $this->view->assign('tipo',"paroquia");
         $this->view->assign('template',"default/search.tpl");
         $this->view->display('default/common_main.tpl');
+
 
     }
     public function capelaAction() {
@@ -122,6 +122,7 @@ class BuscaController extends Zend_Controller_Action {
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/usuario/palavra/'.$this->_request->getParam('palavra').'/pagina/');
         $this->view->assign('tipo',"usuario");
+        
         $this->view->assign('template',"default/search.tpl");
         $this->view->display('default/common_main.tpl');
 

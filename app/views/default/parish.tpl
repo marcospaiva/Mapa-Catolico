@@ -15,9 +15,13 @@
 		<p class="local"><strong>Numero:</strong>{$pa.pa_numero}</p>
 		<p class="local"><strong>Bairro:</strong>{$pa.pa_bairro}</p>
 		<p class="local"><strong>País:</strong>{$pa.pa_pais}</p>
+                {if $usuariobase eq ""}{else}
 		<form method="post" name="form1" action ="{$urlbase}paroquiaexibir/validar">
+                        <input type="hidden" id="validacao" name="validacao" value="{$pa.pa_validacao}">
+                        <input type="hidden" id="paroquia" name="paroquia" value="{$pa.pa_id}">
 			<input type="submit" value="Eu já estive aqui!"/>
-	    </form>
+	        </form>
+                {/if}
 		<p>{$pa.pa_validacao} pessoa(s) já estiveram aqui!</p>
 		<hr/>
 		<p class="other"><strong>Descrição:</strong>{$pa.pa_descricao}</p>           
@@ -30,7 +34,7 @@
 		<hr/>
 		<p>
 			<strong title="Quem cadastrou">Quem cadastrou:</strong>
-			<a href="" class="clearfix" title="Usuário: {$usuario}">{$usuario}</a>
+			<a href="{$urlbase}busca/usuarios/id/{$usuarioid}/" class="clearfix" title="Usuário: {$usuario}">{$usuario}</a>
             <a href="" class="clearfix" title="Email: {$email}">{$email}</a>
 		</p>
 

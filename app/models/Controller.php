@@ -29,6 +29,12 @@ class Controller
 			
 	}
 
+        public function nome()
+	{
+		return $this->session->nome;
+
+	}
+
        public function getLatitude()
         {
            return $this->session->lat;

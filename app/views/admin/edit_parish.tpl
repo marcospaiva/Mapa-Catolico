@@ -2,7 +2,7 @@
 <div id="edit_parish" class="grid_12">
 
 
-	<form action="{$urlbase}/admin/paroquiaupdate" method="post" name="form1" id="edit_par">
+	<form action="{$urlbase}admin/paroquiaupdate" method="post" name="edit_par" id="edit_par" enctype='multipart/form-data'>
     	<input type="hidden" name="id" id="id" value="{$pa.pa_id}"/>
     	<input type="hidden" name="lat" id="lat" value="{$pa.pa_latitude}" />
     	<input type="hidden" name="lon" id="lon" value="{$pa.pa_longitude}" />
@@ -47,9 +47,12 @@
 		
 			<label for="bairro">Bairro</label>
 			<input type="text" name="bairro" value="{$pa.pa_bairro}" id="bairro"/>
+
+                        <label for="rua">Rua</label>
+			<input type="text" name="rua" value="{$pa.pa_rua}" id="rua"/>
 		
-			<label for="rua">Rua</label>
-			<input type="text/submit/hidden/button" name="rua" value="{$pa.pa_numero}" id="rua"/>
+			<label for="rua">Numero</label>
+			<input type="text" name="numero" value="{$pa.pa_numero}" id="numero"/>
 		
 		
 		</fieldset>
@@ -67,7 +70,7 @@
 			<input type="text" name="site" value="{$pa.pa_site}" id="site"/>
 		
 			<label for="imagem">Imagem</label>
-			<input type="file" name="imagem" value="" id="imagem"/>
+			<input type="file" name="imagem" id="imagem" title="Enviar imagem"/>
 		
 			<label for="descricao">Descrição</label>
 			<textarea name="descricao" id="descricao">{$pa.pa_descricao}</textarea>

@@ -6,5 +6,6 @@ RewriteEngine On
 #RewriteRule ^(.*)$ index.php [NC,L]
 
 RewriteRule .* index.php
+#RewriteRule ^(.*)$ /~rafael/mapacatolico/index.php [NC,L]
 php_flag magic_quotes_gpc off
 php_flag register_globals off

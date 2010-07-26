@@ -1,7 +1,7 @@
 <!--main home-->
 <h1 class="grid_6">Cadastro de Paróquias e Capelas.</h1>
 <p id="first" class="grid_6">Agora você pode cadastrar as paróquias ou capelas que conhece e contribua para a evangelização de muitos.</p>
-<p id="second" class="grid_6">Jovens católicos, levem para o mundo digital o testemunho de sua fé.<em> (Papa Bento XVI).</em></p>
+<p id="second" class="grid_6">{$frase.fr_frase}<em> ({$frase.fr_autor}).</em></p>
 <span class="clear"></span>
 <!--line break here-->
 <form id="main_search" class="grid_6" method= "POST" action = "{$urlbase}busca/buscar">
