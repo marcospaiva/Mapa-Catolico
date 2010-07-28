@@ -5,11 +5,9 @@
 
      {foreach name=loop item=item from=$dados}
 	<li class="grid_3">
-		<a href="" class="img_list">
-	    	<img src="http://img.cancaonova.com/paroquias/paroquias/{$item.pa_id}.jpg" width="110" height="110" alt="{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}" />
-	    </a>
-             
-		<p class="name">
+                <img src="{image id =$item.pa_id}" width="110" height="110" alt="{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}" />
+
+                <p class="name">
 			<a href="{$urlbase}p/{$item.di_id}/{$item.pa_nome}/" title="{if $item.pa_tipo eq "1"}Paroquia {else} Capela {/if} {$item.pa_nome}">
 				{$item.pa_nome}
 			</a>

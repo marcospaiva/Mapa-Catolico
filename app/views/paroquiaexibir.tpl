@@ -58,7 +58,7 @@
 	</head>
 	<body onload="init('{$pa.pa_nome}','{$pa.pa_latitude}','{$pa.pa_longitude}')">
 
-    <img src="http://img.cancaonova.com/paroquias/paroquias/{$pa.pa_id}.jpg"><br>
+    <img src="{image id =$pa.pa_id}"><br>
     id: {$pa.pa_id}<br>
     lat: {$pa.pa_latitude}<br>
     long: {$pa.pa_longitude}<br>

@@ -208,7 +208,7 @@ class MasterController extends Zend_Controller_Action {
 
         $us = $usuario->ListarDados($this->_request->getParam('id'));
         $this->view->assign('usuario', $us);
-        $this->view->assign('template',"admin/edit_account.tpl");
+        $this->view->assign('template',"admin/master_edit_account.tpl");
         $this->view->display('admin/admin_master.tpl');
     }
 
@@ -222,9 +222,51 @@ class MasterController extends Zend_Controller_Action {
         $usr->update($dado, $cond);
         $url =  $this->urlbase.'master/usuario/palavra/'.$this->_request->getParam('palavra').'/pagina/'.$this->_request->getParam('pagina').'/';
         $this->_redirect($url);
+      
+    }
 
-         
+    public function usuarioupdateAction() {
 
+
+        $usr = new Usuarios;
+
+        $url =  $this->urlbase."master/usuario/palavra/".$this->_request->getPost('nome');
+        $id  =  $this->_request->getPost('id');
+
+        $usuario = $usr->ListarDados($id);
+
+        $data    = date("Y-m-d");
+
+        if(($this->_request->getPost('password1') == $this->_request->getPost('password2')) && strlen($this->_request->getPost('password1')) > 0){
+            $password = md5($this->_request->getPost('password1'));
+        }else{
+            $password = $usuario['us_senha'];
+        }
+
+
+        $dado = array(
+            'us_nome'=>$this->_request->getPost('nome'),
+            'us_senha'=>$password,
+            'di_id'=>$this->_request->getPost('diocese'),
+            'us_email'=>$this->_request->getPost('email'),
+            'us_sexo'=>$this->_request->getPost('sexo'),
+            'us_estado'=>$this->_request->getPost('uf'),
+            'us_cidade'=>$this->_request->getPost('cidade'),
+            'us_bairro'=>$this->_request->getPost('bairro'),
+            'us_pais'=>$this->_request->getPost('pais'),
+            'us_rua'=>$this->_request->getPost('rua'),
+            'us_numero'=>$this->_request->getPost('numero'),
+            'us_cep'=>$this->_request->getPost('cep'),
+            'us_latitude'=>$this->_request->getPost('lat'),
+            'us_longitude'=>$this->_request->getPost('lon'),
+            'us_log'=>$data
+        );
+
+        $cond = "us_id =".$id;
+        $usr->update($dado, $cond);
+
+
+        $this->_redirect($url);
 
     }
 

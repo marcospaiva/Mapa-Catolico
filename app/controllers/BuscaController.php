@@ -21,6 +21,29 @@ class BuscaController extends Zend_Controller_Action {
 
     }
 
+
+     public function geralAction() {
+
+        $pagina=1;
+        if($this->_request->getParam('pagina')) {
+            $pagina=$this->_request->getParam('pagina');
+        }
+
+
+        $p      =  new Paroquias();
+        $result =  $p->ListarGeral($this->_request->getParam('palavra'))->toArray();
+
+        $total  =  count($result);
+        $this->view->assign('total',$total);
+        $this->view->assign('dados',Paginacao::paginar($result,$pagina));
+        $this->view->assign('url',$this->urlbase.'busca/geral/palavra/'.$this->_request->getParam('palavra').'/pagina/');
+        $this->view->assign('tipo',"geral");
+        $this->view->assign('template',"default/search.tpl");
+        $this->view->display('default/common_main.tpl');
+
+
+    }
+
     public function paroquiaAction() {
 		
         $pagina=1;

@@ -1,6 +1,6 @@
 <!---->
 <div id="edit_account" class="grid_12">
-	<form action="{$urlbase}admin/usuarioupdate" method="post" name="form1" id="edit_acc">
+	<form action="{$urlbase}master/usuarioupdate" method="post" name="form1" id="edit_acc">
 
 		<ul class="clearfix">
 			<li><a href="#account">Seus dados</a></li>
@@ -8,7 +8,8 @@
 		</ul>
 		
 		<input type="hidden" name="lat" id="lat" value="{$usuario.us_latitude}"/>
-	        <input type="hidden" name="lon" id="lon" value="{$usuario.us_longitude}"/>                
+	        <input type="hidden" name="lon" id="lon" value="{$usuario.us_longitude}"/>
+                <input type="hidden" name="id" id="id" value="{$usuario.us_id}"/>
 		
 		<fieldset id="account" class="">
 			<legend>Edite a sua conta:</legend>

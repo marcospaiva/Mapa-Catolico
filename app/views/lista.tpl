@@ -13,7 +13,7 @@
 	<body>
 
     {foreach name=loop item=item from=$dados}
-    <img src="http://img.cancaonova.com/paroquias/paroquias/{$item.pa_id}.jpg"><br>
+    <img src="{image id =$item.pa_id}"><br>
 
     <a href='{$urlbase}/p/{$item.di_id}/{$item.pa_nome}/'>
     Paroquia : {$item.pa_nome} </a><br>
