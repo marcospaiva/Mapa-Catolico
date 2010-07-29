@@ -38,7 +38,7 @@
                 <textarea name="descricao" rows="8" cols="40" title="Digite uma descrição"></textarea>
 				
 		</fieldset>
-		<a href="">voltar uma etapa</a><input type="submit"  name="button" id="button" value="Finalizar Cadastro"/>
+		<a href="javascript:history.back()">voltar uma etapa</a><input type="submit"  name="button" id="button" value="Finalizar Cadastro"/>
 
 	</form>
 </div>

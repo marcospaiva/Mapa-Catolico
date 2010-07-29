@@ -4,7 +4,7 @@
 	<div id="info" class="grid_4">
 		<p>
 			<a href="{$urlbase}p/{$item.di_id}/{$item.pa_nome}/" class="img_list">
-		    	<img src="http://img.cancaonova.com/paroquias/paroquias/1.jpg" width="110" height="110" alt="{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}" />
+		    	<img src="{image id =$item.pa_id}" width="110" height="110" alt="{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}" />
 		    </a>
 		</p>
 		<hr/>

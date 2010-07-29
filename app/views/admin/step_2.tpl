@@ -24,7 +24,7 @@
 			<input type="text" name="numero" id="numero" value="{$numero}" id="numero" class="litle"/>
 		
 		</fieldset>
-		<a href="" title="Volte uma etapa">voltar uma etapa</a>
+		<a href="javascript:history.back()" title="Volte uma etapa">voltar uma etapa</a>
                 <input type="submit" name="button" id="button" value="Proximo passo" title="Ir para a próxima etapa"/>
 	</form>
 </div>

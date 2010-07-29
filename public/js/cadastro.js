@@ -66,7 +66,8 @@ jQuery('#formcadastro').validate( {
 				minlength: "M&iacute;nimo de 2 letras!"
 			},
 			email1: {
-				required: "Preencha seu email"
+				required: "Preencha seu email",
+                                mailvalido: "Email já cadastrado!"
 			},
 
 			password: {

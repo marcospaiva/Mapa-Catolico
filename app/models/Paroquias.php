@@ -47,6 +47,16 @@ class Paroquias extends Zend_Db_Table_Abstract
              return $this->fetchAll($this->select()->where($w)->order($order));
 
         }
+        public function ListarGeral($palavra)
+	{
+                $part =  explode(" ", $palavra);
+                $w = '';
+                foreach ($part as $pa){
+
+                   $w .= " AND pa_nome LIKE '%$pa%'";
+                }
+		return $this->fetchAll("pa_tipo > '0'".$w);
+	}
         public function ListarParoquias($palavra)
 	{
                 $part =  explode(" ", $palavra);

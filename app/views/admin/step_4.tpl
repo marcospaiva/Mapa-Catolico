@@ -25,7 +25,7 @@
             </select>
 		
 		</fieldset>
-		<a href="" title="Volte uma etapa">voltar uma etapa</a><input type="submit" value="Proximo passo" title="Ir para a próxima etapa"/>
+		<a href="javascript:history.back()" title="Volte uma etapa">voltar uma etapa</a><input type="submit" value="Proximo passo" title="Ir para a próxima etapa"/>
 	</form>
 </div>
 

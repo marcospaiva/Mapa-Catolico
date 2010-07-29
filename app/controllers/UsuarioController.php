@@ -105,10 +105,11 @@ class UsuarioController extends Zend_Controller_Action {
                                          )
                           );
 
-			$this->_redirect('index.php');
-
-      //  $this->view->assign('teste',$id);
-        //$this->view->display('cadastrousuario3.tpl');
+			//$this->_redirect('index.php');
+        $this->view->assign('tipo',"cadastro");
+        $this->view->assign('redirect',"default/index.tpl");
+        $this->view->assign('template',"default/menssagem.tpl");
+        $this->view->display('default/common_main.tpl');
 
     }
 

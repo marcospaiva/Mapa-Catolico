@@ -5,6 +5,7 @@ class AdminController extends Zend_Controller_Action {
     public $controler;
     public $gkey;
     public $urlbase;
+
     
     public function init() {
 
@@ -112,19 +113,13 @@ class AdminController extends Zend_Controller_Action {
         $usr = new Usuarios;
         $id = $this->controler->id();
 
-        $url =  $this->urlbase.'admin/usuario';
-        
-        if($usr->Master($this->_request->getPost('id'))){
-
-             $url =  $this->urlbase."master/usuario/palavra/".$this->_request->getPost('nome');
-             $id  =  $this->_request->getPost('id');
-
-        }
+        $url =  $this->urlbase.'admin/usuario';        
+       
         $usuario = $usr->ListarDados($id);
 
         $data    = date("Y-m-d");
 
-        if($this->_request->getPost('password1') == $this->_request->getPost('password2')){
+        if($this->_request->getPost('password1') == $this->_request->getPost('password2') && strlen($this->_request->getPost('password1')) > 0){
             $password = md5($this->_request->getPost('password1'));
         }else{
             $password = $usuario['us_senha'];
