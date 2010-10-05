@@ -31,7 +31,7 @@ class BuscaController extends Zend_Controller_Action {
 
 
         $p      =  new Paroquias();
-        $result =  $p->ListarGeral($this->_request->getParam('palavra'))->toArray();
+        $result =  $p->ListarGeral($this->_request->getParam('palavra'));
 
         $total  =  count($result);
         $this->view->assign('total',$total);
@@ -53,7 +53,7 @@ class BuscaController extends Zend_Controller_Action {
 
 
         $p      =  new Paroquias();
-        $result =  $p->ListarParoquias($this->_request->getParam('palavra'))->toArray();
+        $result =  $p->ListarParoquias($this->_request->getParam('palavra'));
         
         $total  =  count($result);
         $this->view->assign('total',$total);
@@ -75,7 +75,7 @@ class BuscaController extends Zend_Controller_Action {
 
         $p      =  new Paroquias();
 
-        $result =  $p->ListarCapela($this->_request->getParam('palavra'))->toArray();
+        $result =  $p->ListarCapela($this->_request->getParam('palavra'));
         $total  =  count($result);
 
         $this->view->assign('total',$total);
@@ -138,7 +138,9 @@ class BuscaController extends Zend_Controller_Action {
 
         $u      =  new Usuarios();
    			
-        $result =  $u->ListarUsuarios($this->_request->getParam('palavra'))->toArray();
+        $result =  $u->ListarUsuarios($this->_request->getParam('palavra'));
+
+        //var_dump($result);
         $total  =  count($result);
 
         $this->view->assign('total',$total);

@@ -10,7 +10,7 @@ jQuery.validator.addMethod("mailvalido", function(){
 	jQuery.ajax({
 		cache:false,
         	async:false,		
-		url: 'http://www.mapacatolico.com/usuario/verificaemail/',
+		url: 'http://localhost/mapacatolico/usuario/verificaemail/',
 		type: 'post',
 		dataType: 'Json',
 		data: {
@@ -76,7 +76,7 @@ jQuery('#formcadastro').validate( {
 			},
 
 			password2: {
-				required: "Preencher confirma&ccedil;&atilde;o de Senha",
+				required: "Confirme a sua senha",
 				minlength: "M&iacute;nimo de 6 letras",
 				equalTo: "Confirma&ccedil;&atilde;o de senha nao confere"
 			},

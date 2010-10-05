@@ -51,18 +51,32 @@ class UsuarioController extends Zend_Controller_Action {
         $c   = new Cep();
         $res = $c->ObterEstado($this->_request->getPost('cep'));
         $uf  = $res['uf'];
-        $end = $c->ObterEndereco($this->_request->getPost('cep'), $uf);
+
+        if(!$uf){
+            
+            $uf      = "";
+            $cidade  = "";
+            $bairro  = "";
+            $rua     = "";
+            
+        }else{
+            
+            $end = $c->ObterEndereco($this->_request->getPost('cep'), $uf);
 
 
-        $cidade  = "";
-        $bairro  = "";
-        $rua     = "";  
+            $cidade  = "";
+            $bairro  = "";
+            $rua     = "";  
 
-        foreach ($end as $z) {
-            $cidade  = $z['cidade'];
-            $bairro  = $z['bairro'];
-            $rua     = $z['tp_logradouro']." ".$z['logradouro'];
+            foreach ($end as $z) {
+                $cidade  = $z['cidade'];
+                $bairro  = $z['bairro'];
+                $rua     = $z['tp_logradouro']." ".$z['logradouro'];
+            }
+
+
         }
+        
 
 
 
@@ -79,7 +93,8 @@ class UsuarioController extends Zend_Controller_Action {
             'us_bairro'=>$bairro,
             'us_rua'=>$rua,
             'us_cep'=>$this->_request->getPost('cep'),
-            'us_log'=>$data
+            'us_log'=>$data,
+            'us_cadastro'=>$data
         );
 
 
@@ -107,7 +122,7 @@ class UsuarioController extends Zend_Controller_Action {
 
 			//$this->_redirect('index.php');
         $this->view->assign('tipo',"cadastro");
-        $this->view->assign('redirect',"default/index.tpl");
+        $this->view->assign('redirect',"index.php");
         $this->view->assign('template',"default/menssagem.tpl");
         $this->view->display('default/common_main.tpl');
 
@@ -161,25 +176,7 @@ class UsuarioController extends Zend_Controller_Action {
 
 	}
 
-    /*    verificar admin
-     public function editarAction() {
-
-
-
-        $this->view->assign('sexo_id',array(1,2));
-        $this->view->assign('sexo',array("Masculino","Feminino"));
-        //$this->view->assign('sexo_c',2);
-        $this->view->assign('mensagem',"Todos os campos sao obrigatorios!");
-
-        $usuario = new Usuarios();
-
-        $us = $usuario->ListarDados($this->controler->id());
-        $this->view->assign('usuario', $us);
-        $this->view->assign('template',"admin/edit_account.tpl");
-        $this->view->display('admin/admin.tpl');
-    }
-     *
-     */
+ 
     public function confirmacaoAction(){
 
         $id = base64_decode($this->_request->getParam('cod'));
@@ -191,146 +188,43 @@ class UsuarioController extends Zend_Controller_Action {
 
     }
 
+    public function recuperarAction() {
 
 
+        $this->view->assign('template',"default/recuperarsenha.tpl");
+        $this->view->display('default/common_main.tpl');
+    }
 
-/*
-    public function cadastro1Action() {
+    public function recuperarsenhaAction(){
 
-        $cep   = $this->_request->getPost('cep');
-        $email = $this->_request->getPost('email');
-        $nome  = $this->_request->getPost('nome');
-        $senha = $this->_request->getPost('senha');
-        $sexo  = $this->_request->getPost('sexo');
-        
+        $CaracteresAceitos = 'abcdefghijklmnopqrstuvxywzABCDEFGHIJKLMNOPQRSTUVXYWZ0123456789';
+        $max = strlen($CaracteresAceitos)-1;
+	$novasenha = '';
+	for($i=0; $i < 8; $i++) {
+		$novasenha .= $CaracteresAceitos{mt_rand(0, $max)};
+	}
 
-        if($senha <> $this->_request->getPost('senha1')) {
-          
-            $this->view->assign('cep',$cep);
-            $this->view->assign('email',$email);
-            $this->view->assign('nome',$nome);  
-            $this->view->assign('sexo_id',array(1,2));
-            $this->view->assign('sexo',array("Masculino","Feminino"));
-            $this->view->assign('sexo_c',$sexo);
-            $this->view->assign('mensagem',"Digite a mesma senha no dois campos!");
+				$dados = array('us_senha'=>md5($novasenha));
 
-            $this->view->assign('template',"default/new_account.tpl");
-            $this->view->display('default/common_main.tpl');
+				$usuario = new Usuarios();
+				$usuario->update($dados,'us_email = "'.$this->_request->getPost('email').'"');
 
-            break;
-
-        }
-
-        
+				new Mail(
+					'e',
+					array('senha'=>$novasenha),
+					array(array('email'=>$this->_request->getPost('email'),'nome'=>'')));
 
 
-        $c   = new Cep();
-        $res = $c->ObterEstado($cep);
-        $uf  = $res['uf'];
-        $end = $c->ObterEndereco($cep, $uf);
-
-
-
-        $di    =  new Diocese();
-        $dados =  $di->ArrayIdDioceseUf($uf);
-
-        $this->view->assign('diocese',$dados);
-
-
-        $cidade  = "";
-        $bairro  = "";
-        $rua     = "";        
-
-        foreach ($end as $z) {
-            $cidade  = $z['cidade'];
-            $bairro  = $z['bairro'];
-            $rua     = $z['tp_logradouro']." ".$z['logradouro'];
-        }
-
-        $this->view->assign('bairro',$bairro);
-        $this->view->assign('cidade',$cidade);
-        $this->view->assign('cep',$cep);
-        $this->view->assign('email',$email);        
-        $this->view->assign('nome',$nome);
-        $this->view->assign('senha',$senha);
-        $this->view->assign('sexo',$sexo);
-        $this->view->assign('rua',$rua);          
-        $this->view->assign('uf',$uf);
-
-        $this->view->display('cadastrousuario1.tpl');
+	$this->view->assign('tipo',"recuperar");
+        $this->view->assign('redirect',"index.php");
+        $this->view->assign('template',"default/menssagem.tpl");
+        $this->view->display('default/common_main.tpl');
 
     }
 
-    public function cadastro2Action() {
-
-        $bairro  = $this->_request->getPost('bairro');
-        $cidade  = $this->_request->getPost('cidade');
-        $cep     = $this->_request->getPost('cep');
-        $diocese = $this->_request->getPost('diocese');
-        $email   = $this->_request->getPost('email');        
-        $nome    = $this->_request->getPost('nome');
-        $numero  = $this->_request->getPost('numero');
-        $rua     = $this->_request->getPost('rua');
-        $senha   = $this->_request->getPost('senha');
-        $sexo    = $this->_request->getPost('sexo');        
-        $uf      = $this->_request->getPost('uf');
-
-        $endereco = "$rua, $numero, $cidade, $uf";
-        $gmaps    = new gMaps($this->key);
-        $cord     = $gmaps->geolocal($endereco);
-
-        $lat = $cord['lat'];
-        $lon = $cord['lon'];
-
-        $this->view->assign('bairro',$bairro);
-        $this->view->assign('cidade',$cidade);
-        $this->view->assign('cep',$cep);
-        $this->view->assign('diocese',$diocese);
-        $this->view->assign('email',$email);
-        $this->view->assign('lat',$lat);        
-        $this->view->assign('lon',$lon);
-        $this->view->assign('nome',$nome);
-        $this->view->assign('numero',$numero);
-        $this->view->assign('rua',$rua);
-        $this->view->assign('senha',$senha);
-        $this->view->assign('sexo',$sexo);                
-        $this->view->assign('uf',$uf);
-
-        $this->view->display('cadastrousuario2.tpl');
-    }
-
-    public function inserirAction() {
-
-        $usuarios = new Usuarios;
-
-       
-        $data    = date("Y-m-d");
-  
-
-        $dado = array(
-            'us_nome'=>$this->_request->getPost('nome'),
-            'di_id'=>$this->_request->getPost('diocese'),
-            'us_email'=>$this->_request->getPost('email'),
-            'us_senha'=>md5($this->_request->getPost('senha')),
-            'us_sexo'=>$this->_request->getPost('sexo'),
-            'us_estado'=>$this->_request->getPost('uf'),
-            'us_cidade'=>$this->_request->getPost('cidade'),
-            'us_bairro'=>$this->_request->getPost('bairro'),
-            'us_rua'=>$this->_request->getPost('rua'),
-            'us_numero'=>$this->_request->getPost('numero'),
-            'us_cep'=>$this->_request->getPost('cep'),
-            'us_latitude'=>$this->_request->getPost('lat'),
-            'us_longitude'=>$this->_request->getPost('lon'),
-            'us_log'=>$data
-        );
 
 
-        $id = $usuarios->insert($dado);
 
-        $this->view->assign('teste',$id);
-        $this->view->display('cadastrousuario3.tpl');
 
-    }
-*/
 }
 ?>

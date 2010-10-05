@@ -3,7 +3,7 @@
 	<table border="0" cellspacing="0" cellpadding="0">
 		<thead>
 		    <tr colspan="3">
-		        <th>Edite os seus cadastros abaixo:</th>
+		       {if $count eq "0"}<th>Você não tem nenhuma paroquia cadastrada.</th> {else} <th>Edite os seus cadastros abaixo:</th>{/if}
 		    </tr>
 		</thead>
 		<tbody>

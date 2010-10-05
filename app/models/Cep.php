@@ -24,14 +24,20 @@ class Cep extends Zend_Db_Table_Abstract
 
 
         public function ObterEndereco($cep, $uf)
-        {                
+        {
+
+                if(!$uf){
+
+                    return false;
+                }
+
                 $db = Zend_Registry::get('db');
-		$s  = $db->select();
-		$s->from('cep.'.$uf, array('cidade','logradouro','bairro','cep','tp_logradouro'));
+                $s  = $db->select();
+                $s->from('cep.'.$uf, array('cidade','logradouro','bairro','cep','tp_logradouro'));
                 $s->where('cep = ?',$cep);
                 $result = $db->fetchAll($s);
                 return $result;
-
+                
         }
 
 

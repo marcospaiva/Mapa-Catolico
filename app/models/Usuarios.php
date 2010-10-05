@@ -43,7 +43,24 @@ class Usuarios extends Zend_Db_Table_Abstract
 	}
         public function ListarUsuarios($palavra)
 	{
-		return $this->fetchAll("us_nome LIKE '%$palavra%'");
+
+                $db = Zend_Registry::get("db");
+		$s = $db->select();
+
+                $palavra = "%$palavra%";
+
+        	$s->from(array('u'=>'usuarios'),array('us_id','us_nome','us_email','us_cidade','us_estado'));
+		$s->from(array('p'=>'paroquias'),array('COUNT(pa_id) AS paroquias'));
+		$s->where('p.us_id = u.us_id');
+		$s->where('u.us_ativo = 1');
+                $s->where('u.us_nome LIKE ?',$palavra);
+		$s->group('u.us_id');
+		$s->order('u.us_nome ASC');
+
+                //var_dump($s);
+		return $db->fetchAll($s);
+
+		//return $this->fetchAll("us_nome LIKE '%$palavra%'");
 
 	}             
 
@@ -62,10 +79,35 @@ class Usuarios extends Zend_Db_Table_Abstract
                 else return false;
         }
        
-        public function Logar()
-        {
-            
 
+        public function Total($di,$df){
+
+            
+            $select  = $this->select();
+            $select->from($this, array('count(*) as ust'));
+
+            if(strlen($di)>4){
+
+            $select->where("us_cadastro >= ?",$di);
+            $select->where("us_cadastro <= ?",$df);
+
+            }
+            
+            return $this->fetchAll($select);
+
+            
+        }
+        public function TotalEstado($di,$df){
+            $select  = $this->select();
+            $select->from($this, array('count(*) as total', 'upper(us_estado) as estado'));
+            if(strlen($di)>4){
+                $select->where("us_cadastro >= ?",$di);
+                $select->where("us_cadastro <= ?",$df);
+
+            }
+            $select->group("us_estado");
+            $select->order("us_estado ASC");
+            return $this->fetchAll($select);
         }
 
         

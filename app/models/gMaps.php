@@ -1,20 +1,22 @@
-<?
+<?php
 class gMaps {
 // Host do GoogleMaps
     private $mapsHost = 'maps.google.com';
     // Sua Google Maps API Key
 
     //localhost
-    public $mapsKey = 'ABQIAAAAtyifEzud_MG-24R0knqNRBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQ1p6q_H4y1AP7lpdRuEXBZPNtIAA';
+    public $mapsKey = "ABQIAAAAtyifEzud_MG-24R0knqNRBQVtU-WX29OsKs3KrfgQmedgUIyWRSkbCVG2CypusOhktQ3m11ZdMbtZw";
 
     //dev.cancaonova.com
     //public $mapsKey = 'ABQIAAAAtyifEzud_MG-24R0knqNRBTxsqdkMiF_0e71Rp8XAfJbcCwvMBSIVFejOQ8RatmDKbB6kPYNF7u1EA';
 
 
     function __construct($key = null) {
+
         if (!is_null($key)) {
             $this->mapsKey = $key;
         }
+        
     }
 
     function carregaUrl($url) {
@@ -50,10 +52,9 @@ class gMaps {
     }
 
 
-    function buscacordenadas($endereco) {      
+    function buscacordenadas($endereco) {
         
-
-        $gmaps = new gMaps('ABQIAAAAtyifEzud_MG-24R0knqNRBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQ1p6q_H4y1AP7lpdRuEXBZPNtIAA');
+        $gmaps = new gMaps('ABQIAAAAtyifEzud_MG-24R0knqNRBQVtU-WX29OsKs3KrfgQmedgUIyWRSkbCVG2CypusOhktQ3m11ZdMbtZw');
 
         $dados = $gmaps->geolocal($endereco);
 

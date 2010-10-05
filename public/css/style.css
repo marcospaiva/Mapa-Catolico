@@ -51,11 +51,10 @@ hr{color:#008AC9;}
 
 .title{color:#CC4726;font-size:24px; padding:20px 0 5px 0;}
 
-.forgot_pass{display: block;font-size: 12px;text-align: right;padding: 10px 10px 0 0;}
 /*rate*/
-.reliable_rate{color:#FF6C00;font-weight:bold;}
+.reliable_rate{display:block;color:#FF6C00;font-weight:bold;margin-top:5px;}
 .unreliable_rate{background-color:red;padding:2px;}
-
+.error{color:red; font-size:12px;display:inline;}
 /**/
 li a img{border:1px solid #F2DEB3;}
 li a.img_list{border:1px dotted #F2B54F;overflow:hidden;float:left;margin-bottom:5px;padding:5px;}	

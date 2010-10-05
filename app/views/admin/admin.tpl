@@ -10,7 +10,7 @@
 		</style>
 
                 {if $template eq "admin/step_1.tpl"}
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
                 <script type="text/javascript" src="{$urlbase}public/js/jquery-validate/jquery.validate.js"></script>
                 <script type="text/javascript" src="{$urlbase}public/js/jquery.maskedinput-1.2.2.js"/></script>
                 <script type="text/javascript" src="{$urlbase}public/js/admin_step1.js"></script>
@@ -19,14 +19,14 @@
                 {/if}
 
                 {if $template eq "admin/step_2.tpl"}
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
                 <script type="text/javascript" src="{$urlbase}public/js/jquery-validate/jquery.validate.js"></script>                
                 <script type="text/javascript" src="{$urlbase}public/js/admin_step2.js"></script>              
         </head>
                 {/if}
 
                 {if $template eq "admin/step_4.tpl"}
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
                 <script type="text/javascript" src="{$urlbase}public/js/jquery-validate/jquery.validate.js"></script>
                 <script type="text/javascript" src="{$urlbase}public/js/jquery.maskedinput-1.2.2.js"/></script>
                 <script type="text/javascript" src="{$urlbase}public/js/admin_step4.js"></script>
@@ -34,7 +34,7 @@
         </head>
                 {/if}
                 {if $template eq "admin/step_5_1.tpl"}
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
                 <script type="text/javascript" src="{$urlbase}public/js/jquery-validate/jquery.validate.js"></script>
                 <script type="text/javascript" src="{$urlbase}public/js/jquery.maskedinput-1.2.2.js"/></script>
                 <script type="text/javascript" src="{$urlbase}public/js/admin_step5_1.js"></script>
@@ -42,7 +42,7 @@
         </head>
                 {/if}
                 {if $template eq "admin/step_5_2.tpl"}
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
                 <script type="text/javascript" src="{$urlbase}public/js/jquery-validate/jquery.validate.js"></script>
                 <script type="text/javascript" src="{$urlbase}public/js/jquery.maskedinput-1.2.2.js"/></script>
                 <script type="text/javascript" src="{$urlbase}public/js/admin_step5_2.js"></script>
@@ -51,20 +51,20 @@
                 {/if}
 
 		{if $template eq "admin/edit_account.tpl"}
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script src="{$urlbase}public/js/jquery-1.4.2.min.js" type="text/javascript"></script>
 		<script src="{$urlbase}public/js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
 		<script src="{$urlbase}public/js/master_admin.js" type="text/javascript"></script>
         </head>
 		{/if}
 		
 		{if $template eq "admin/edit_parish.tpl"}
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script src="{$urlbase}public/js/jquery-1.4.2.min.js" type="text/javascript"></script>
 		<script src="{$urlbase}public/js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
 		<script src="{$urlbase}public/js/master_admin.js" type="text/javascript"></script>
         </head>
 		{/if}
 		
-		{if $template eq "admin/step_3.tpl"}
+		{if $template eq "admin/step_3.tpl"  ||  $template eq "admin/edit_parish.tpl" }
         <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
         <script src="{$urlbase}public/js/gmapez-2.5.js" type="text/javascript"></script>
 		</head>             
@@ -78,19 +78,11 @@
 		<div class="total">
 			<div class="container_12 clearfix">{include file="admin/top_admin.tpl"}</div>
 		</div>
-	
 		<div class="total">
-<<<<<<< HEAD
 			<div class="container_12 clearfix">{include file="default/common_search.tpl"}</div>
 		</div>
 		<div class="total">
 			<div class="container_12 clearfix">{if $menu eq "master"} {include file="admin/master_menu.tpl"} {else} {include file="admin/admin_menu.tpl"}{/if}</div>
-=======
-			<div class="container_12 clearfix">
-				{include file="admin/admin_menu.tpl"}
-				{include file="admin/master_menu.tpl"}
-			</div>
->>>>>>> a4c843ad9cd9d11c04659f6a32691a69fe17c25f
 		</div>
                 <div class="total">
 			<div class="container_12 clearfix">{include file= $template }</div>
