@@ -65,6 +65,14 @@ class MenuController extends Zend_Controller_Action {
 
     }
 
+    public function termosAction() {
+
+
+        $this->view->assign('template',"default/tos.tpl");
+        $this->view->display('default/common_main.tpl');
+
+    }
+
 
 }
 
