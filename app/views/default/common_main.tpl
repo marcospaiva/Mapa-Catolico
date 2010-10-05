@@ -2,14 +2,26 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>MapaCatolico</title>
+		
+		<meta http-equiv="content-language" content="pt-br" />
+		<meta name="description" content="Cadastro nacional de paróquias e capelas." />
+		<meta name="keywords" content="Mapa, católico, localização, paróquias, capelas" />
+		<meta name="robots" content="index" />
+		
+		
+		<title>Mapa católico - cadastro de paróquias e capelas</title>
 		<link href="{$urlbase}public/css/style.css" type="text/css" rel="stylesheet" />
 		<link href="{$urlbase}public/css/internal.css" type="text/css" rel="stylesheet" />
 		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>-->
 		<!--This page is a template for all of pages in this app-->
 	</head>
              
-                
+        {if $template eq "default/help.tpl"}
+			<script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
+			<script type="text/javascript" src="{$urlbase}public/js/jquery-ui-1.8.1.custom.min.js"></script>
+			<script type="text/javascript" src="{$urlbase}public/js/main.js"></script>
+		{/if}
+        
         {if $template eq "default/new_account.tpl"}
             <script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
             <script type="text/javascript" src="{$urlbase}public/js/jquery-validate/jquery.validate.js"></script>
@@ -28,7 +40,8 @@
              
         {else}        
             <body>           
-        {/if} 
+        {/if}     
+	
 		<div class="total">
 			<div class="container_12 clearfix">{include file="default/ads.tpl"}</div>
 		</div>
