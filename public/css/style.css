@@ -65,8 +65,6 @@ li p{position:relative;left:10px;margin-bottom:5px;}
 	#common_menu li{float:left;margin-left:13px;}
 		#common_menu li a{font-weight:bold;}
 
-
-label.error{color:red; display:block;float:left;}
 /*Declaration footer to be common to all pages ***************************************/
 .footer_100{background:url("../img/background_foot.jpg") 0 0 repeat-x #E87817;}
 #footer{height:67px;font-size:12px;}
