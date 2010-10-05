@@ -1,15 +1,13 @@
 <!-- TOS -->
 <div id="tos" class="grid_10 push_1">
-	<ul>
-		<li><a href="#tos_txt">Termos de uso</a></li>
+	<ul id="links">
+		<li><a href="">Termos de uso</a></li>
 	</ul>
 	<span class="clear"></span>
 	<div id="tos_txt">
-		<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-	</div>
-</div>
-
-<!-- end TOS --> durante a sua vigência. 
+		<p>
+			
+		Este Termo de Uso aplica-se ao uso de todos os Produtos, Softwares, Aplicativos, Aplicações, Ferramentas, Serviços online na Web e/ou para Dispositivos Moveis, disponibilizados pela Canção Nova na Web, ou de qualquer outra forma, que aqui neste termo podem ser tratos por: “Ferramentas, Serviços e Aplicações na Web”, “Aplicativo”, “Aplicativos”, “Aplicação”, “Aplicações”, “Ferramentas e Serviços”, “Serviços”, “Serviço”, “Ferramentas”, “Ferramenta” e/ou “Canção Nova”, incluindo-se atualizações durante a sua vigência. 
 		</p>
 		<p>
 		Os “Produtos, Softwares, Aplicações, Ferramentas e Serviços na Web” (sites) e/ou para Dispositivos Moveis disponibilizados pela Canção Nova”, abaixo relacionados fazem parte deste termo e/ou de qualquer outro que venha a ser criado posteriormente.
