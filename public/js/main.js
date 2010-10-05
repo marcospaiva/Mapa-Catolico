@@ -23,3 +23,6 @@ $(".tooltip a").click(function(){
 $(function() {
 	$("#tos").tabs();
 });*/
+$(function() {
+	$("#help").tabs();
+});

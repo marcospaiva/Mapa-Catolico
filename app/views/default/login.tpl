@@ -3,13 +3,13 @@
 	<form action="{$urlbase}index/entrar" method="post" name="psot1">
 		<fieldset>
 			<legend>Login</legend>
-			<label for="email">Nome</label>
-				<input type="text" name="email" value="Email" id="email" title="Insira o seu email."/>
-			<label for="password">Senha</label><input type="password" name="senha" value="Senha" id="senha" title="Insira a sua senha."/>
+                        <p><label for="mensagem">{$mensagem}</label></p>
+
+			<label for="email">Email</label>
+			<input type="text" name="email" value="" id="email" title="Insira o seu email."/>
+			<label for="password">Senha</label><input type="password" name="senha" value="" id="senha" title="Insira a sua senha."/>
 		</fieldset>
-		<input type="submit" name="login" value="Entrar" id="some_name"/>
-		<span class="clear"></span>
-		<a href="#" class="forgot_pass">Esqueci a senha.</a>
+            <input type="submit" name="login" value="Entrar" id="some_name"/><a href="{$urlbase}usuario/recuperar">Recuperar senha</a>
 	</form>
 
 <!--end Login-->

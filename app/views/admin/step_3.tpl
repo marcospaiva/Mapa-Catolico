@@ -1,11 +1,7 @@
 <div class="grid_12 steps">
 	<h2 title="Etapa 3 de 5">Etapa 3 de 5</h2>
 	<form action="{$urlbase}admin/paroquiacadastro3" method="post" name="form" id="form" class="step-1 clearfix">
-		<fieldset id="" class="">
-			<legend>Adicione o marcador mapa</legend>
-			
-			
-		
+		<fieldset id="" class="">			
 		
 			<input type="hidden" name="bairro" id="bairro" value="{$bairro}">
 			<input type="hidden" name="cep" id="cep" value="{$cep}">
@@ -22,7 +18,6 @@
 		<input name="lat" type="hidden" id="lat" size="25" maxlength="0" readonly="readonly"/>
 		<input name="lng" type="hidden" id="lng" size="25" maxlength="0" readonly="readonly"/>
 		
-		<a href="#" onClick="dropPinClicked();" title="Adicione o marcador no mapa">Adicionar o marcador</a>
 		<span class="clear"></span>
 		<div id="map_canvas" class="grid_7 clearfix" style="height:300px;">
 		</div>
@@ -51,6 +46,8 @@
 		map.setUI(customUI);
 		map.enableContinuousZoom();
 		map.addControl(new GMapTypeControl());
+
+
 
 		var options = {
 		suppressInitialResultSelection : true,
@@ -84,9 +81,8 @@
 
 		var marker;
 
-		function createMarker(){
 
-		marker = new GMarker(map.getCenter(),{
+                marker = new GMarker(map.getCenter(),{
 		draggable:true
 		});
 		map.addOverlay(marker);
@@ -121,23 +117,7 @@
 		document.getElementById("lng").value=marker.getLatLng().lng().toFixed(6);
 		});
 
-		return marker
-
-		}
-
-		function dropPinClicked()
-		{
-
-		var latlng = map.getCenter();
-
-		if (!marker)
-		{
-		marker = createMarker(latlng);
-
-		} else {
-		marker.setLatLng(latlng);
-		}
-		}
+		
 		</script>
 		{/literal}
 		

@@ -44,6 +44,7 @@ class Paroquias extends Zend_Db_Table_Abstract
                   $w .= "pa_nome LIKE '%$pa%'";
                   $x = 1;
              }
+
              return $this->fetchAll($this->select()->where($w)->order($order));
 
         }
@@ -51,32 +52,83 @@ class Paroquias extends Zend_Db_Table_Abstract
 	{
                 $part =  explode(" ", $palavra);
                 $w = '';
-                foreach ($part as $pa){
+              
+                $db = Zend_Registry::get("db");
+		$s = $db->select();
+        	$s->from(array('d'=>'diocese'),array('di_diocese','di_bispo','di_cidade','di_estado'));
+		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao'));
 
-                   $w .= " AND pa_nome LIKE '%$pa%'";
+                foreach ($part as $pa){
+                    $palavra = "%$pa%";
+                    $s->where('p.pa_nome LIKE ?',$palavra);
                 }
-		return $this->fetchAll("pa_tipo > '0'".$w);
+
+		$s->where('d.di_id = p.di_id');
+                $s->where('p.pa_tipo > 0');
+                //$s->where($w);
+		$s->group('p.pa_id');
+		$s->order('p.pa_nome ASC');
+
+                //var_dump($s);
+		return $db->fetchAll($s);
+
+                
+
+		//return $this->fetchAll("pa_tipo > '0'".$w);
 	}
         public function ListarParoquias($palavra)
 	{
                 $part =  explode(" ", $palavra);
                 $w = '';
-                foreach ($part as $pa){
 
-                   $w .= " AND pa_nome LIKE '%$pa%'";
+                $db = Zend_Registry::get("db");
+		$s = $db->select();
+        	$s->from(array('d'=>'diocese'),array('di_diocese','di_bispo','di_cidade','di_estado'));
+		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao'));
+
+                foreach ($part as $pa){
+                    $palavra = "%$pa%";
+                    $s->where('p.pa_nome LIKE ?',$palavra);
                 }
-		return $this->fetchAll("pa_tipo = '1'".$w);
-	}
+
+		$s->where('d.di_id = p.di_id');
+                $s->where('p.pa_tipo = 1');
+                //$s->where($w);
+		$s->group('p.pa_id');
+		$s->order('p.pa_nome ASC');
+
+                //var_dump($s);
+		return $db->fetchAll($s);
+
+         }
 
          public function ListarCapela($palavra)
 	{
                 $part =  explode(" ", $palavra);
                 $w = '';
-                foreach ($part as $pa){
 
-                   $w .= " AND pa_nome LIKE '%$pa%'";
+
+
+                $db = Zend_Registry::get("db");
+		$s = $db->select();
+        	$s->from(array('d'=>'diocese'),array('di_diocese','di_bispo','di_cidade','di_estado'));
+		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao'));
+
+                foreach ($part as $pa){
+                    $palavra = "%$pa%";
+                    $s->where('p.pa_nome LIKE ?',$palavra);
                 }
-		return $this->fetchAll("pa_tipo = '2'".$w);
+
+		$s->where('d.di_id = p.di_id');
+                $s->where('p.pa_tipo = 2');
+                //$s->where($w);
+		$s->group('p.pa_id');
+		$s->order('p.pa_nome ASC');
+
+                //var_dump($s);
+		return $db->fetchAll($s);
+
+		//return $this->fetchAll("pa_tipo = '2'".$w);
 	}
 
         public function ListarCapelas()
@@ -104,12 +156,69 @@ class Paroquias extends Zend_Db_Table_Abstract
 
         public function ListarDestaque($pag){
 
-                return $this->fetchAll($this->select()->order("pa_id DESC")->limit(3));
+                return $this->fetchAll($this->select()->order("RAND()")->limit(3));
         }
 
         public function ListarId($id){
 
                 return $this->fetchAll("pa_id = '$id'")->current();
+        }
+
+        public function TotalParoquia($di,$df){
+
+            $select  = $this->select();
+            $select->from($this, array('count(*) as pat'));
+            $select->where('pa_tipo = 1');
+            if(strlen($di)>4){
+                $select->where("pa_cadastro >= ?",$di);
+                $select->where("pa_cadastro <= ?",$df);
+
+            }
+            return $this->fetchAll($select);
+
+        }
+
+        public function TotalParoquiaEstado($di,$df){
+            $select  = $this->select();
+            $select->from($this, array('count(*) as total', 'upper(pa_estado) as estado'));
+            $select->where('pa_tipo = 1');
+            if(strlen($di)>4){
+                $select->where("pa_cadastro >= ?",$di);
+                $select->where("pa_cadastro <= ?",$df);
+
+            }
+            $select->group("pa_estado");
+            $select->order("pa_estado ASC");
+            return $this->fetchAll($select);
+        }
+
+        public function TotalCapela($di,$df){
+
+            $select  = $this->select();
+            $select->from($this, array('count(*) as cat'));
+            $select->where('pa_tipo = 2');
+            if(strlen($di)>4){
+                $select->where("pa_cadastro >= ?",$di);
+                $select->where("pa_cadastro <= ?",$df);
+
+            }
+            return $this->fetchAll($select);
+
+
+        }
+        
+         public function TotalCapelaEstado($di,$df){
+            $select  = $this->select();
+            $select->from($this, array('count(*) as total', 'upper(pa_estado) as estado'));
+            $select->where('pa_tipo = 2');
+            if(strlen($di)>4){
+                $select->where("pa_cadastro >= ?",$di);
+                $select->where("pa_cadastro <= ?",$df);
+
+            }
+            $select->group("pa_estado");
+            $select->order("pa_estado ASC");
+            return $this->fetchAll($select);
         }
 
 }

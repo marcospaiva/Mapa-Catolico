@@ -35,7 +35,11 @@
 			<p>
 				<strong>Site:</strong><a href="{$pa.pa_site}">{$pa.pa_site}</a>
 			</p>
-			{/if}		
+			{/if}
+
+                    <p><strong>Diocese:</strong>{$item.di_diocese}
+                    <p><strong>Bispo:</strong>{$item.di_bispo}
+                    <p><strong>Cidade:</strong>{$item.di_cidade} - {$item.di_estado}
 		    	
 			
 		</li>
@@ -46,6 +50,7 @@
 			<p class="name"><a href='{$urlbase}busca/usuarios/id/{$item.us_id}/'>{$item.us_nome}</a></p>
             <p><strong>Email:</strong> {$item.us_email}</p>
             <p><strong>Cidade:</strong> {$item.us_cidade} - {$item.us_estado} </p>
+            <p><strong>Paroquias e capelas cadastradas:</strong>{$item.paroquias} </p>
         </li>
 		{/if}
 
@@ -62,6 +67,6 @@
 		{/foreach}
 	</ul>
 	<!--Aqui tem que colocar um if pra verificar se a busca retornou algum resultado.-->
-{include file="default/paginate.tpl"}
+{if $total eq "0"}{else}{include file="default/paginate.tpl"}{/if}
 </div>
 <!--end search-->

@@ -62,3 +62,16 @@ jQuery('#formadmin2').validate( {
 
 
 
+
+			}
+		}
+
+
+});
+
+	});
+});
+
+
+
+

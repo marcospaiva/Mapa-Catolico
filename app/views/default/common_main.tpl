@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Projeto - Teste</title>
+		<title>MapaCatolico</title>
 		<link href="{$urlbase}public/css/style.css" type="text/css" rel="stylesheet" />
 		<link href="{$urlbase}public/css/internal.css" type="text/css" rel="stylesheet" />
 		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>-->
@@ -28,8 +28,7 @@
              
         {else}        
             <body>           
-        {/if}     
-	
+        {/if} 
 		<div class="total">
 			<div class="container_12 clearfix">{include file="default/ads.tpl"}</div>
 		</div>

@@ -1,11 +1,18 @@
-RewriteEngine On
+#dev
+#RewriteEngine On
 #RewriteCond %{REQUEST_FILENAME} -s [OR]
 #RewriteCond %{REQUEST_FILENAME} -l [OR]
 #RewriteCond %{REQUEST_FILENAME} -d
 #RewriteRule ^(.*)$ - [NC,L]
-#RewriteRule ^(.*)$ index.php [NC,L]
-
-RewriteRule .* index.php
 #RewriteRule ^(.*)$ /~rafael/mapacatolico/index.php [NC,L]
+
+
+#local-producao
+RewriteEngine On
+RewriteRule ^(.*)$ index.php [NC,L]
+#RewriteRule .* index.php
+
+
+
 php_flag magic_quotes_gpc off
 php_flag register_globals off

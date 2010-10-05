@@ -37,16 +37,64 @@ class IndexController extends Zend_Controller_Action {
 
     public function entrarAction() {
 
-    // configura Zend_Auth adapter para uma tabela do banco de dados
+        $auth = Zend_Auth::getInstance();
+        $auth->clearIdentity();
+
+        // configura Zend_Auth adapter para uma tabela do banco de dados
         $db = Zend_Registry::get ('db');
         $auth = new Zend_Auth_Adapter_DbTable($db,'usuarios','us_email','us_senha','? AND us_ativo = 1');
         // Set the input credential values to authenticate against
         $auth->setIdentity($this->_request->getParam('email'));
         $auth->setCredential(md5($this->_request->getParam('senha')));
-        // faz a autenticação
-        $result = $auth->authenticate();
-        // verifica autenticacao
 
+        // faz a autenticação
+        $autenticado = $auth->authenticate();
+        $objUsuario  = $auth->getResultRowObject( null, 'senha' );
+
+        switch ( $autenticado->getCode() )
+        {
+
+            case Zend_Auth_Result::FAILURE_CREDENTIAL_INVALID:               
+                $this->view->assign('mensagem',"Senha incorreta");
+                $this->view->assign('template',"default/login.tpl");
+                $this->view->display('default/common_main.tpl');
+                break;
+
+            case Zend_Auth_Result::FAILURE_IDENTITY_AMBIGUOUS:
+                $this->view->assign('mensagem',"Senha incorreta");
+                $this->view->assign('template',"default/login.tpl");
+                $this->view->display('default/common_main.tpl');
+                break;
+
+            case Zend_Auth_Result::FAILURE_UNCATEGORIZED:
+                $this->view->assign('mensagem',"Senha incorreta");
+                $this->view->assign('template',"default/login.tpl");
+                $this->view->display('default/common_main.tpl');
+                break;
+
+            case Zend_Auth_Result::FAILURE_IDENTITY_NOT_FOUND:
+                
+                $this->view->assign('mensagem',"E-mail digitado errado ou não existe em nossa base de dados, verifique o e-mail!");
+                $this->view->assign('template',"default/login.tpl");
+                $this->view->display('default/common_main.tpl');
+                break;
+
+            case Zend_Auth_Result::SUCCESS:
+                $dados = $auth->getResultRowObject(array('us_id','us_nome','us_latitude', 'us_longitude'));// recuperar a linha da tabela mediante autenticação com sucesso
+                $session = new Zend_Session_Namespace('paroquias');// inicio sessao
+                $session->id = $dados->us_id;
+                $session->nome = $dados->us_nome;
+                $session->lat = $dados->us_latitude;
+                $session->lon = $dados->us_longitude;
+
+                if($dados->us_id == 1){ $this->_redirect("master");  }
+                elseif($dados->us_id == 2){ $this->_redirect("relatorio");  }
+                else
+                    $this->_redirect("admin");
+                break;
+       }
+
+/*
         if ($result->isValid()) {
 
             $dados = $auth->getResultRowObject(array('us_id','us_nome','us_latitude', 'us_longitude'));// recuperar a linha da tabela mediante autenticação com sucesso
@@ -62,12 +110,16 @@ class IndexController extends Zend_Controller_Action {
         // sem erro
         }else {
         // erro
+
             $erro = '?erro=1';
+
         }
 
         // redireciona para pagina atual
         $url = explode('?',$_SERVER['HTTP_REFERER']);
         $this->_redirect($url[0].$erro);
+
+        */
     }
       public function sairAction() {
     // apagar session

@@ -45,4 +45,4 @@
 		<input type="submit" name="button" id="button" value="Crie a minha conta" title="crie a minha conta"/>
 	</form>
 </div>
-<!--end new account-->
+<!--end new account-->ccount-->

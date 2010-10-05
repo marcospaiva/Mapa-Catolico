@@ -2,18 +2,18 @@
 class AdminController extends Zend_Controller_Action {
 
     public $view;
-    public $controler;
     public $gkey;
     public $urlbase;
+    public $controler;
+    
 
     
     public function init() {
 
-        $this->view = Zend_Registry::get("view");
+        $this->view      = Zend_Registry::get("view");
+        $this->gkey      = Zend_Registry::get("gkey");
+        $this->urlbase   = Zend_Registry::get("urlbase");
         $this->controler = Zend_Registry::get("controler");
-        $this->gkey = Zend_Registry::get("gkey");
-        $this->urlbase = Zend_Registry::get("urlbase");
-        
 
         if(!$this->controler->logado()){
 
@@ -60,6 +60,8 @@ class AdminController extends Zend_Controller_Action {
       
         $lista = $par->ListarAdmin($this->controler->id());
 
+        $count = count($lista);
+        $this->view->assign('count',$count);
         $this->view->assign('paroquias',$lista);
         $this->view->assign('template',"admin/edit.tpl");
         $this->view->display('admin/admin.tpl');
@@ -101,6 +103,8 @@ class AdminController extends Zend_Controller_Action {
         $this->view->assign('tipo_id',array(2,1));
         $this->view->assign('tipo',array("Capela","Paroquia"));
         $this->view->assign('pa',$lista);
+        $this->view->assign('apikey',$this->gkey);
+
 		
 	$this->view->assign('template',"admin/edit_parish.tpl");
         $this->view->display('admin/admin.tpl');
@@ -268,7 +272,7 @@ class AdminController extends Zend_Controller_Action {
         $uf      = $this->_request->getPost('uf');
 
         $endereco = "$rua, $numero, $cidade, $uf";
-        $gmaps    = new gMaps($this->gkey);
+        $gmaps    = new gMaps();
         $cord     = $gmaps->geolocal($endereco);
 
         $lat = $cord['lat'];
@@ -380,7 +384,7 @@ class AdminController extends Zend_Controller_Action {
 
         $paroquias = new Paroquias;
 
-
+        $data    = date("Y-m-d");
 
         $dado = array(
 
@@ -401,26 +405,34 @@ class AdminController extends Zend_Controller_Action {
             'pa_numero'=>$this->_request->getPost('numero'),
             'pa_cep'=>$this->_request->getPost('cep'),
             'pa_latitude'=>$this->_request->getPost('lat'),
-            'pa_longitude'=>$this->_request->getPost('lon')
+            'pa_longitude'=>$this->_request->getPost('lon'),
+            'pa_cadastro'=>$data
         );
 
 
         $id = $paroquias->insert($dado);
 
-        $local      = $_FILES["imagem"]["tmp_name"];
-        $destino    = "./public/img/paroquias/".$id.".jpg";
-        $destinoFTP = "paroquias/".$id.".jpg";
+        $local       = $_FILES["imagem"]["tmp_name"];
+        $imagem      = $id.".jpg";
+        $destino     = "./public/img/paroquias/".$imagem;
+        $destinoFTP  = "paroquias/".$imagem;
 
+        $imagem2     = $id."i.jpg";
+        $destino2    = "./public/img/paroquias/".$imagem2;
+        $destinoFTP2 = "paroquias/".$imagem2;
+        $path        = "./public/img/paroquias/";
 
         $img =  new Imagem();
         $img->upload($local,$destino);
+        $img->iphone($path, $imagem);
         $img->redimencionar($destino, "100","100");
 
         $ftp = new Ftp();
         $ftp->upload($destinoFTP,$destino);
+        $ftp->upload($destinoFTP2,$destino2);
 
-        $img->dell($destino);
-
+        //$img->dell($destino);
+        //$img->dell($destino2);
 
         $url =  $this->urlbase."admin/paroquia";
         $this->_redirect($url);
@@ -450,7 +462,6 @@ class AdminController extends Zend_Controller_Action {
 
 
     }
-
 
 }
 

@@ -10,10 +10,17 @@
 	<input type="text" name="palavra" id="palavra" value="Busca"/>
 	<input type="submit" value="Buscar" />
 </form>
+
+ {if $usuariobase eq ""}
 <div class="tooltip">
 	<a href="#">[X]fechar</a>
 	{include file=default/login.tpl}
 </div>
 <p id="login"><a href="#">Faça o login</a> ou</p>
 <p id="new_account"><a href="{$urlbase}usuario/cadastro" title="crie uma nova conta">Crie uma conta</a></p>
+
+{else}
+<p id="login"><a href="{$urlbase}admin/paroquiacadastro" title="Cadastrar Paroquia ou Capela">Cadastrar sua Paroquia ou Capela</a></p>
+
+{/if}
 <!--end main home-->
