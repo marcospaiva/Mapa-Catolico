@@ -328,3 +328,26 @@ EDIT/form
 #edit form fieldset label{display:block;font-size:14px;margin:5px 0;}
 #edit form fieldset input,#edit form fieldset textarea{border:1px solid #DA8E2F;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;width:300px;}
 #edit form input[type="submit"]{background-color:#E87817;border:1px solid #DA8E2F;color:#FFF;cursor:pointer;font-size:16px;margin-left:10px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;}
+/*
+===================================
+REPORT
+===================================
+*/
+#report{padding:20px;}
+	#report h2{text-align:center;}
+	#report table{float:left;margin-right:10px;}
+	#report table{}
+	#report form{background-color:#E7832A;width:675px;margin:10px auto;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+		#report form fieldset{float:left;margin-right:20px;padding:10px;}
+		#report form input{background-color:#CC4726;
+							border:none; 
+							color:#fff;
+							font-size:14px; 
+							padding:11px;
+							-webkit-border-radius: 5px;
+							-moz-border-radius: 5px;
+							border-radius: 5px;
+							cursor:pointer;
+							}
+		#report table thead tr th{background-color:#E7832A;padding:5px 10px;margin:2px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+		#report table tbody tr td{text-align:center;}
