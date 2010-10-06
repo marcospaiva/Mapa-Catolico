@@ -1,5 +1,5 @@
-<!--contact-->
-<div id="contact" class="grid_9_center">
+<!--message-->
+<div id="message" class="grid_9_center">
 
         {if $tipo eq "cadastro"}
             Cadastro efetivado com sucesso! Dentro de alguns instantes recebera a confirmação do cadastro em seu e-mail!
@@ -16,4 +16,4 @@
         <a href="{$urlbase}{$redirect}" title="Ir para" class="clearfix">OK</a>
 
 </div>
-<!--end contact-->
+<!--end message-->
