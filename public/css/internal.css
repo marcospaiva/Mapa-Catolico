@@ -139,7 +139,7 @@ SEARCH RESULSTS
 #search_result{padding:20px 0;}
 #search_result li{border-bottom:1px dotted #008AC9;font-size:14px;margin-top:0px;margin-bottom:20px;padding-bottom:20px;}
 		#search_result li p strong{font-weight:bold;padding-right:2px;}
-		#search_result li p.name{font-size:20px;padding-top:5px;}
+		#search_result li p.name{font-size:20px;padding-top:5px;text-transform: capitalize;}
 		p.religious strong{color:#14761B;}
 		p.local strong{color:#FF6C00;}
 		p.other strong{color:#114D5E;}
@@ -147,9 +147,6 @@ SEARCH RESULSTS
 #more_results{font-size:16px;font-weight:bold;text-align:center;margin-bottom:5px;}
 #paginate_result{padding-bottom:20px;text-align:center;}
 	#paginate_result li{display:inline;padding:5px;}
-	
-
-
 /*
 ===================================
 Vizualização da paróquia ou capela. Usuário
