@@ -49,7 +49,7 @@ a{text-decoration:none; color:#E87817}
 a:hover{text-decoration:underline;color:#008AC9;}
 hr{color:#008AC9;}
 
-.title{color:#CC4726;font-size:24px; padding:20px 0 5px 0;}
+.title{color:#CC4726;font-size:24px; padding:20px 0 5px 0;text-transform: capitalize;}
 
 /*rate*/
 .reliable_rate{display:block;color:#FF6C00;font-weight:bold;margin-top:5px;}
