@@ -85,13 +85,6 @@
 	#new_account a{width:170px; text-align:center; font-size:20px;color:#fff;text-decoration:none;}
 
 
-#vicinity{}
-#vicinity h2{}
-	#vicinity #vicinity_list{}
-	#vicinity #vicinity_list li{padding:5px;margin-top:20px;margin-bottom:20px;border-right:1px dotted #E87817;;font-size:14px;}
-		#vicinity #vicinity_list li p{margin:10px 0;}
-		#vicinity #vicinity_list li p.name{font-size:16px;}
-		#vicinity #vicinity_list li a.vicinity{display:block; float:left;}om:20px;border-right:1px dotted #E87817;;font-size:14px;}
-		#vicinity #vicinity_list li p{margin:10px 0;}
-		#vicinity #vicinity_list li p.name{font-size:16px;}
-		#vicinity #vicinity_list li a.vicinity{display:block; float:left;}
+#vicinity{padding:20px 0;}
+	#vicinity h2{margin-bottom:20px;}
+	#vicinity ul li p.name{margin-top:5px;text-transform: capitalize;}
