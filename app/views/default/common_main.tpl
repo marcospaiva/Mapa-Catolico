@@ -25,7 +25,7 @@
         {if $template eq "default/new_account.tpl"}
             <script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
             <script type="text/javascript" src="{$urlbase}public/js/jquery-validate/jquery.validate.js"></script>
-            <script type="text/javascript" src="{$urlbase}public/js/jquery.maskedinput-1.2.2.js"/></script>
+            <script type="text/javascript" src="{$urlbase}public/js/jquery.maskedinput-1.2.2.js"></script>
             <script type="text/javascript" src="{$urlbase}public/js/cadastro.js"></script>
             <script type="text/javascript" src="{$urlbase}public/js/mascara.js"></script>
             
