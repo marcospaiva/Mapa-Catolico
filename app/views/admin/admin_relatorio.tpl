@@ -14,10 +14,7 @@
 		<div class="total">
 			<div class="container_12 clearfix">{include file="admin/top_admin.tpl"}</div>
 		</div>
-		<div class="total">
-			<div class="container_12 clearfix">{include file="default/common_search.tpl"}</div>
-		</div>
-                <div class="total">
+        <div class="total">
 			<div class="container_12 clearfix">{include file= $template }</div>
 		</div>
 		<div class="footer_100 clearfix">
