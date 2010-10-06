@@ -1,9 +1,6 @@
 <!-- TOS -->
-<div id="tos" class="grid_10 push_1">
-	<ul id="links">
-		<li><a href="">Termos de uso</a></li>
-	</ul>
-	<span class="clear"></span>
+<div id="tos" class="grid_12">
+	<h1 class="title">Termos de uso</h1>
 	<div id="tos_txt">
 		<p>
 			
