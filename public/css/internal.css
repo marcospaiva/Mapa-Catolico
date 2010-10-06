@@ -53,6 +53,40 @@ LOGIN
 		cursor:pointer;
 	}
 	#login form input[type="submit"]:hover{background-position:-168px -27px;}
+	#login .recover{display:block;font-size:14px;margin:5px;text-align:right;color:#FF8813;}
+		#login .recover:hover{color:#008AC9;}
+/*
+===================================
+MESSAGE/RECOVER
+===================================
+*/
+#message, #recover{padding-top:20px;padding-bottom:20px;}
+	#message h1, #recover h1{text-align:center;}
+	#recover #recover_form{width:460px;margin:20px auto;}
+		#recover #recover_form label{display:block;float:left;height:40px;line-height:40px;}
+		#recover #recover_form input[type="text"]{border:1px solid #DA8E2F;
+													background-color:#fff;
+													display:block;
+													float:left;
+													-webkit-border-radius: 5px;
+													-moz-border-radius: 5px;
+													border-radius: 5px;
+													height:36px;
+													width:300px;}
+		#recover #recover_form input[type="submit"]{
+							background:url("../img/lupa_search.jpg") -51px 0px no-repeat;
+							border:none;
+							color:#fff;
+							cursor:pointer;
+							font-size:18px;
+							height:40px;
+							margin:0;
+							width:102px;
+							text-align:center;
+							position:relative;
+							left:-5px;
+							}
+			#recover #recover_form input[type="submit"]:hover{background-position:-51px -41px;}
 /*
 ===================================
 SEARCH RESULSTS
