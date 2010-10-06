@@ -1,73 +1,83 @@
-<!---->
-<div id="edit" class="grid_12">
+<!--report-->
+<div id="report" class="grid_12">
+	<h1 class="title">Relatório de cadastros</h1>
+	<h2>Filtre a sua pesquisa</h2>
+	<form action="{$urlbase}relatorio/index" method="post" name="periodo do relatorio" class="clearfix">
+		<fieldset id="" class="">
+			<legend></legend>
+			<label for="">Data Inicio:</label>
+			{html_select_date prefix = "Data_i_" month_format="%m" field_order="DMY" field_separator="/" time=$datai start_year='-5' end_year='+2'}
+		</fieldset>
+		<fieldset id="" class="">
+			<legend></legend>
+			<label for="">Data Final</label>
+			{html_select_date prefix = "Data_f_" month_format="%m" field_order="DMY" field_separator="/" time=$dataf start_year='-5' end_year='+2'}			
+		</fieldset>
+		<input type="submit" name="Pesquisar" value="Pesquisar" id="Pesquisar">
+		
+	</form>
 	<table border="0" cellspacing="0" cellpadding="0">
 		<thead>
-			<tr colspan="3">
-				<th >Relatorio de cadastros</th>
+			<tr>
+				<th>UF</th>
+				<th>Usuários</th>
 			</tr>
 		</thead>
 		<tbody>
-
-                <form action="{$urlbase}relatorio/index" method="post" name="form1">
-                <tr>
-                    <td>Data Inicio:</td><td>{html_select_date prefix = "Data_i_" month_format="%m" field_order="DMY" field_separator="/" time=$datai start_year='-5' end_year='+2'}</td>
-                    <td>Data Final: </td><td>{html_select_date prefix = "Data_f_" month_format="%m" field_order="DMY" field_separator="/" time=$dataf start_year='-5' end_year='+2'}</td>
-                    <td><input type="submit" value="OK"></td>
-                </tr>
-
-
-                </form>
-                <tr>
-                    <td>Usuarios Cadastrados: </td>
-                    <td>{$totalusuario}</td>
+			{foreach name=loop item=item from=$usuario}
+			<tr>
+				<td>{$item.estado}</th>
+				<td>{$item.total}</th>
+			</tr>
+			{/foreach}
+		</tbody>
+	</table>
+	<table border="0" cellspacing="0" cellpadding="0">
+		<thead>
+			<tr>
+				<th>UF</th>
+				<th>Capelas</th>
+			</tr>
+		</thead>
+		<tbody>
+			{foreach name=loop item=item from=$capela}
+			<tr>
+				<td>{$item.estado}</th>
+				<td>{$item.total}</th>
+			</tr>
+			{/foreach}
+		</tbody>
+	</table>
+	
+	<table border="0" cellspacing="0" cellpadding="0">
+		<thead>
+			<tr>
+				<th>UF</th>
+				<th>Paróquias</th>
+			</tr>
+		</thead>
+		<tbody>
+			{foreach name=loop item=item from=$paroquia}
+			<tr>
+				<td>{$item.estado}</th>
+				<td>{$item.total}</th>
+			</tr>
+			{/foreach}
+		</tbody>
+	</table>
+	<table border="0" cellspacing="0" cellpadding="0" class="grid_4">
+		<tr>
+			<th>Total de usuários:</th>
+			<td>{$totalusuario}</td>
 		</tr>
-                <tr>
-                    <td>Capelas Cadastradas: </td>
-                    <td>{$totalcapela}</td>
+		<tr>
+			<th>Total de usuários</th>
+			<td>{$totalcapela}</td>
 		</tr>
-                <tr>
-                    <td>Paroquias Cadastradas: </td>
-                    <td>{$totalparoquia}</td>
-                    
+		<tr>
+			<th>Total de paróquias</th>
+			<td>{$totalparoquia}</td>
 		</tr>
-
-                <tr><td><br></td></tr>
-                <tr><td>Usuario: </td></tr>
-                {foreach name=loop item=item from=$usuario}
-
-                <tr>
-                    <td>{$item.estado}</td><td>{$item.total}</td>
-
-
-                </tr>
-
-                {/foreach}
-
-                <tr><td><br></td></tr>
-                <tr><td>Capela: </td></tr>
-                {foreach name=loop item=item from=$capela}
-
-                <tr>
-                    <td>{$item.estado}</td><td>{$item.total}</td>
-
-
-                </tr>
-
-                {/foreach}
-
-                <tr><td><br></td></tr>
-                <tr><td>Paroquia: </td></tr>
-                {foreach name=loop item=item from=$paroquia}
-
-                <tr>
-                    <td>{$item.estado}</td><td>{$item.total}</td>
-
-
-                </tr>
-
-                {/foreach}
-
-		</tbody>		
 	</table>
 </div>
 <!---->
