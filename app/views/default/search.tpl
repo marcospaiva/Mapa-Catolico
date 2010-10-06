@@ -1,14 +1,10 @@
 <!--search-->
 <div class="grid_12">
-
-	<!--<h1 class="title grid_12">A sua busca tem {10} resultados.</h1>-->
-
-
-	<h1 class="title grid_12">A sua busca tem {$total} resultados.</h1>
-
-	<!--Aqui é uma condicional para verificar se a busca não retornou nada.
-	<h1 class="title grid_12">Ocorreu algum erro, por favor, tente buscar mais uma ver.</h1>
-	-->
+	{if $total eq ""}
+		<h1 class="title grid_12">Nada foi encontrado com os termos da sua busca :(</h1>
+	{else}
+		<h1 class="title grid_12">A sua busca tem {$total} resultados.</h1>
+	{/if}
 	<ul id="search_result" class="grid_12">
 		
 		{foreach name=loop item=item from=$dados}
@@ -66,7 +62,8 @@
         {/if}
 		{/foreach}
 	</ul>
-	<!--Aqui tem que colocar um if pra verificar se a busca retornou algum resultado.-->
-{if $total eq "0"}{else}{include file="default/paginate.tpl"}{/if}
+	{if $total ge "10"}
+		{include file="default/paginate.tpl"}	
+	{/if}
 </div>
 <!--end search-->
