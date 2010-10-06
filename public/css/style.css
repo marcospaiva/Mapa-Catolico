@@ -24,7 +24,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;letter-spacing:normal;word-spacing:0;}
+table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;line-height:120%;letter-spacing:normal;word-spacing:0;}
 body{line-height:1;text-align:center}
 body *{text-align:left} 
 ol,ul{list-style:none}
