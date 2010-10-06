@@ -123,7 +123,7 @@ class UsuarioController extends Zend_Controller_Action {
 			//$this->_redirect('index.php');
         $this->view->assign('tipo',"cadastro");
         $this->view->assign('redirect',"index.php");
-        $this->view->assign('template',"default/menssagem.tpl");
+        $this->view->assign('template',"default/message.tpl");
         $this->view->display('default/common_main.tpl');
 
     }
@@ -217,7 +217,7 @@ class UsuarioController extends Zend_Controller_Action {
 
 	$this->view->assign('tipo',"recuperar");
         $this->view->assign('redirect',"index.php");
-        $this->view->assign('template',"default/menssagem.tpl");
+        $this->view->assign('template',"default/message.tpl");
         $this->view->display('default/common_main.tpl');
 
     }

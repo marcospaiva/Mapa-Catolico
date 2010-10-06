@@ -51,7 +51,7 @@ class MenuController extends Zend_Controller_Action {
         $this->view->assign('redirect',"index.php");
 
 
-        $this->view->assign('template',"default/menssagem.tpl");
+        $this->view->assign('template',"default/message.tpl");
         $this->view->display('default/common_main.tpl');
 
         
