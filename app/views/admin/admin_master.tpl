@@ -37,9 +37,6 @@
 			<div class="container_12 clearfix">{include file="admin/top_admin.tpl"}</div>
 		</div>
 		<div class="total">
-			<div class="container_12 clearfix">{include file="default/common_search.tpl"}</div>
-		</div>
-		<div class="total">
 			<div class="container_12 clearfix">{include file="admin/master_menu.tpl"}</div>
 		</div>
                 <div class="total">
