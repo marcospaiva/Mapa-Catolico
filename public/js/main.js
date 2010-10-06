@@ -16,13 +16,3 @@ $(".tooltip a").click(function(){
       close();
    });
 });
-
-/**************************************************/
-
-/*SISTEMA DE ABAS
-$(function() {
-	$("#tos").tabs();
-});*/
-$(function() {
-	$("#help").tabs();
-});
