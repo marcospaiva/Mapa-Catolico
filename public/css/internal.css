@@ -8,7 +8,7 @@
 
 /*estiliza a caixa de propaganda*/
 #ads{border-bottom:1px dotted #008AC9; padding-bottom:10px;}
-	#ads a{display:block;width:728px; height:90px; margin:0 auto;}
+	#ads object{display:block;width:728px; height:90px; margin:0 auto;}
 
 /*topo comum*/
 #common_top{min-height:160px;padding-bottom:10px;padding-top:10px;}
@@ -144,7 +144,7 @@ Vizualização da paróquia ou capela. Usuário
 	#parish #info, #parish #render_map{margin-top:20px;margin-bottom:20px;}
 	#parish #render_map{overflow:hidden;}
 	#user{padding-bottom:20px;}
-
+#map_canvas{padding-bottom:20px;}
 
 
 /*
@@ -155,10 +155,10 @@ Nova conta usuário / Contato
 #new_account,#contact{font-size:14px;}
 	#new_account form,#contact form{padding-bottom:30px;}
 		#new_account form legend,#contact form legend{font-size:24px;padding:20px 5px 5px 0;}
-		#new_account form fieldset,#contact form fieldset{padding:20px;}
-			#new_account form fieldset label,#contact form fieldset label,#new_account form fieldset h3{display:block;font-size:16px;height:40px;float:left;line-height:40px;margin:10px 5px 10px 0;padding-left:5px;text-align:right;width:150px;}
+		#new_account form fieldset,#contact form fieldset{padding:20px 5px;}
+			#new_account form fieldset label,#contact form fieldset label,#new_account form fieldset h3{display:block;font-size:16px ;height:40px ;float:left ;line-height:40px;margin:10px 5px 10px 0;padding-left:5px;text-align:right;width:150px;}
 			#new_account form fieldset input,#new_account form fieldset select,
-			#contact form fieldset input,#contact form fieldset select{font-size:14px;margin-top:10px;}
+			#contact form fieldset input,#contact form fieldset select{font-size:14px;margin-top:10px;display:block;float:left;}
 			#new_account form fieldset select,#contact form fieldset select{margin-top:20px;}
 			#new_account form fieldset input,#new_account form fieldset p.tos,
 			#contact form fieldset input,#contact form fieldset textarea{border:1px solid #DA8E2F;background-color:#fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;height:40px;}
@@ -184,7 +184,7 @@ Nova conta usuário / Contato
 												width:191px;
 												}
 			#new_account form input[type="submit"]:hover,#contact form input[type="submit"]:hover{background-position:0 -40px;}	
-				
+			#new_account form fieldset label.error,#contact form fieldset label.error{font-size:12px !important;text-align:left;width:150px !important;}
 				
 /*
 ===================================
@@ -193,18 +193,22 @@ TOS / Política de Privacidade
 */
 #tos,#help{margin:20px 0;}
 	#tos ul li{}
-	#tos ul#links li a,#help ul li a{background-color:#EAD8A5;-moz-border-radius:5px;float:left;font-size:16px;font-weight:bold;margin-right:1px;padding:10px;}
+		#tos ul#links li a,#help ul li a{background-color:#EAD8A5;-moz-border-radius:5px;float:left;font-size:16px;font-weight:bold;margin-right:1px;padding:10px;}
 	#tos div,#help div{margin:20px 0; text-indent:20px;}
-	.ui-tabs .ui-tabs-hide{display: none !important;}	
-	.ui-state-active a, .ui-widget-content .ui-state-active a{color:#B52E29;cursor:text;}
-	.ui-widget-content .ui-state-active a:hover{text-decoration:none;}
-	#tos #tos_txt{font-size:12px;}
-		#tos #tos_txt p{margin:10px 0;}
-			#tos #tos_txt dl dt{margin:10px;font-weight:bold;}
-			#tos #tos_txt dl{margin-top:10px 0;}		
-			#tos #tos_txt em{display:block;margin-top:10px;}
-/**/		
-				
+.ui-tabs .ui-tabs-hide{display: none !important;}	
+.ui-state-active a, .ui-widget-content .ui-state-active a{color:#B52E29;cursor:text;}
+.ui-widget-content .ui-state-active a:hover{text-decoration:none;}
+
+#tos #tos_txt{font-size:12px;}
+	#tos #tos_txt p{margin:10px 0;}
+		#tos #tos_txt dl dt{margin:10px;font-weight:bold;}
+		#tos #tos_txt dl{margin-top:10px 0;}		
+		#tos #tos_txt em{display:block;margin-top:10px;}
+
+/**/
+#message{}
+	#message p{width:500px;margin:0 auto;padding:20px;}
+	#message a{display:block;padding:6px;margin:0 0 0 100px ;background-color:#EAD8A5;-moz-border-radius:5px;width:25px;}
 /*
 ===================================
 ADMIN
@@ -212,7 +216,7 @@ ADMIN
 */				
 #admin_menu{margin:20px 0;}
 	#admin_menu ul li a{background-color:#EAD8A5;-moz-border-radius:5px;float:left;font-size:16px;font-weight:bold;margin-right:1px;padding:10px;}
-.logged{margin-top:30px;}
+.logged{margin-top:10px; text-align:right;}
 .logged .logout{color:#B52E29;}
 /*
 ===================================
@@ -238,6 +242,7 @@ ADMIN/EDIT
 ===================================
 */
 #edit{margin-bottom:30px;}	
+	#edit table{margin-bottom:20px;}
 	#edit table tr{margin-top:10px;text-align:center;}
 		#edit table tr th{font-weight:bold;font-size:18px;margin:10px 0;}	
 		#edit table tr td{border-bottom:1px solid #B52E29;padding:10px;margin-top:10px;font-size:14px;}
@@ -266,18 +271,6 @@ ADMIN/EDIT_ACCOUNT/PARISH
 				#edit_parish form fieldset textarea{width:300px;}
 	#edit_account form input[type="submit"],
 		#edit_parish form input[type="submit"]{background-color:#E87817;border:1px solid #DA8E2F;color:#FFF;cursor:pointer;font-size:16px;margin-left:10px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;}
-			#edit_account form ul,
-				#edit_parish form ul{margin-bottom:20px;}
-				#edit_account form ul li a,
-					#edit_parish form ul li a{background-color:#EAD8A5;-moz-border-radius:5px;float:left;font-size:16px;font-weight:bold;margin-right:1px;padding:5px;}
-
-/*
-===================================
-MASTER ADMIN
-===================================
-*/
-#master_menu{margin:30px 0;}
-	#master_menu ul li a{background-color:#EAD8A5;-moz-border-radius:5px;float:left;font-size:16px;font-weight:bold;margin-right:1px;padding:10px;}der:1px solid #DA8E2F;color:#FFF;cursor:pointer;font-size:16px;margin-left:10px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;}
 			#edit_account form ul,
 				#edit_parish form ul{margin-bottom:20px;}
 				#edit_account form ul li a,

@@ -1,7 +1,7 @@
 <!--footer-->
 <div id="links"class="grid_6">
 	<ul class="grid_6">
-		<li><a href="" title="Termos de uso">Termos de uso</a></li>
+		<li><a href="{$urlbase}menu/termos" title="Termos de uso">Termos de uso</a></li>
 	</ul>
 	<ul class="grid_6">
 		<li><a href="http://cancaonova.com" title="Portal Canção Nova">Portal CN</a></li>
