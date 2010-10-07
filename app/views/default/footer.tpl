@@ -11,5 +11,5 @@
 		<li><a href="http://gentedefe.com/" title="Gente de fé">Gente de Fé.</a></li>
 	</ul>
 </div>
-<p id="copy" class="grid_6">Copyright 2009 <span id="cn_sig">Cancaonova.com</span></p>
+<p id="copy" class="grid_6">Copyright © 2002 / {$ano_atual}<span id="cn_sig">Cancaonova.com</span></p>
 <!--end footer-->
