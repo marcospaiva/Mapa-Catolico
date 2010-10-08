@@ -24,7 +24,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;line-height:120%;letter-spacing:normal;word-spacing:0;}
+table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;letter-spacing:normal;word-spacing:0;}
 body{line-height:1;text-align:center}
 body *{text-align:left} 
 ol,ul{list-style:none}
@@ -37,6 +37,7 @@ ins{text-decoration:none}
 del{text-decoration:line-through}
 /* tables still need 'cellspacing="0"' in the markup */
 table{border-collapse:collapse;border-spacing:0}
+p{line-height:120%;}
 /*************************************************/
 
 /*The color reference: #CC4726 as first - #E87817 as light blue - #FF6C00 as orange over  ##CC4726  E87817*/
@@ -48,8 +49,48 @@ div.total_search{background:#fbf3e4;border-top:1px solid #dabd84;border-bottom:1
 a{text-decoration:none; color:#E87817}
 a:hover{text-decoration:underline;color:#008AC9;}
 hr{color:#008AC9;}
-
 .title{color:#CC4726;font-size:24px; padding:20px 0 5px 0;text-transform: capitalize;}
+
+/* O z-index do div#mask deve ser menor que do div#boxes e do div.window */
+#mask {position:absolute;top:0;left:0;z-index:9000;background-color:#000;display:none;}
+#boxes .window {position:absolute;width:440px;height:200px;display:none;z-index:9999;padding:20px;}
+#boxes #dialog {background:#FFF;
+				border:1px solid #CC4726;
+				padding:15px;
+				z-index:9999;
+				display:none;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				width:261px;
+				position:absolute;
+				}
+#boxes #dialog form fieldset legend{color:#CC4726;margin-bottom:10px;font-weight:bold;font-size:18px; }
+#boxes #dialog form fieldset label{display:block; font-size:14px;padding:2px;}
+#boxes #dialog form fieldset input[type="text"],
+#boxes #dialog form fieldset input[type="password"]{
+							border:1px solid #DA8E2F;
+							font-size:14px;
+							-webkit-border-radius: 5px;
+							-moz-border-radius: 5px;
+							border-radius: 5px;
+							padding:5px;
+							width:250px;
+							}
+#boxes #dialog form input[type="submit"]{
+											background-color:#CC4726;
+											border:none; 
+											color:#fff;
+											font-size:20px; 
+											padding:5px;
+											-webkit-border-radius: 5px;
+											-moz-border-radius: 5px;
+											border-radius: 5px;
+											margin:10px;
+											}
+
+.close {display:block;text-align:right;}
+
 
 /*rate*/
 .reliable_rate{display:block;color:#FF6C00;font-weight:bold;margin-top:5px;}
