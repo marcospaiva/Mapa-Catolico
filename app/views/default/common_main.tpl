@@ -34,7 +34,7 @@
         {if $template eq "default/help.tpl"}
 			<script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
 			<script type="text/javascript" src="{$urlbase}public/js/jquery-ui-1.8.1.custom.min.js"></script>
-			<script type="text/javascript" src="{$urlbase}public/js/main.js"></script>
+			<script type="text/javascript" src="{$urlbase}public/js/jquery.qtip.min.js"></script>
 		</head>
 		{/if}
         
@@ -52,6 +52,7 @@
 
             <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
             <script src="{$urlbase}public/js/maps.js" type="text/javascript"></script>
+			<script src="{$urlbase}public/js/main.js" type="text/javascript"></script>
         </head> 
 		<body onload="init('{$pa.pa_nome}','{$pa.pa_latitude}','{$pa.pa_longitude}')">               
              
