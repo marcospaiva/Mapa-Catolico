@@ -180,7 +180,7 @@ class Paroquias extends Zend_Db_Table_Abstract
 
         public function TotalParoquiaEstado($di,$df){
             $select  = $this->select();
-            $select->from($this, array('count(*) as total', 'upper(pa_estado) as estado'));
+            $select->from($this, array('count(*) as total', 'upper(pa_estado) as estado', 'pa_pais'));
             $select->where('pa_tipo = 1');
             if(strlen($di)>4){
                 $select->where("pa_cadastro >= ?",$di);
@@ -188,6 +188,7 @@ class Paroquias extends Zend_Db_Table_Abstract
 
             }
             $select->group("pa_estado");
+            $select->order("pa_pais ASC");
             $select->order("pa_estado ASC");
             return $this->fetchAll($select);
         }
@@ -209,7 +210,7 @@ class Paroquias extends Zend_Db_Table_Abstract
         
          public function TotalCapelaEstado($di,$df){
             $select  = $this->select();
-            $select->from($this, array('count(*) as total', 'upper(pa_estado) as estado'));
+            $select->from($this, array('count(*) as total', 'upper(pa_estado) as estado', 'pa_pais'));
             $select->where('pa_tipo = 2');
             if(strlen($di)>4){
                 $select->where("pa_cadastro >= ?",$di);
@@ -217,6 +218,7 @@ class Paroquias extends Zend_Db_Table_Abstract
 
             }
             $select->group("pa_estado");
+            $select->order("pa_pais ASC");
             $select->order("pa_estado ASC");
             return $this->fetchAll($select);
         }

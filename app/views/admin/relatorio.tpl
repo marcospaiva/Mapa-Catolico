@@ -19,15 +19,17 @@
 	<table border="0" cellspacing="0" cellpadding="0">
 		<thead>
 			<tr>
-				<th>UF</th>
+				<th>Pais</th>
+                                <th>UF</th>
 				<th>Usuários</th>
 			</tr>
 		</thead>
 		<tbody>
 			{foreach name=loop item=item from=$usuario}
 			<tr>
-				<td>{$item.estado}</th>
-				<td>{$item.total}</th>
+                                <td>{$item.us_pais|upper}</th>
+				<td>{$item.estado|upper}</th>
+				<td>{$item.total|upper}</th>
 			</tr>
 			{/foreach}
 		</tbody>
@@ -35,6 +37,7 @@
 	<table border="0" cellspacing="0" cellpadding="0">
 		<thead>
 			<tr>
+                                <th>Pais</th>
 				<th>UF</th>
 				<th>Capelas</th>
 			</tr>
@@ -42,8 +45,9 @@
 		<tbody>
 			{foreach name=loop item=item from=$capela}
 			<tr>
-				<td>{$item.estado}</th>
-				<td>{$item.total}</th>
+                                <td>{$item.pa_pais|upper}</th>
+				<td>{$item.estado|upper}</th>
+				<td>{$item.total|upper}</th>
 			</tr>
 			{/foreach}
 		</tbody>
@@ -52,6 +56,7 @@
 	<table border="0" cellspacing="0" cellpadding="0">
 		<thead>
 			<tr>
+                                <th>Pais</th>
 				<th>UF</th>
 				<th>Paróquias</th>
 			</tr>
@@ -59,8 +64,9 @@
 		<tbody>
 			{foreach name=loop item=item from=$paroquia}
 			<tr>
-				<td>{$item.estado}</th>
-				<td>{$item.total}</th>
+                                <td>{$item.pa_pais|upper}</th>
+				<td>{$item.estado|upper}</th>
+				<td>{$item.total|upper}</th>
 			</tr>
 			{/foreach}
 		</tbody>

@@ -99,13 +99,15 @@ class Usuarios extends Zend_Db_Table_Abstract
         }
         public function TotalEstado($di,$df){
             $select  = $this->select();
-            $select->from($this, array('count(*) as total', 'upper(us_estado) as estado'));
+            $select->from($this, array('count(*) as total', 'upper(us_estado) as estado', 'us_pais'));
+
             if(strlen($di)>4){
                 $select->where("us_cadastro >= ?",$di);
                 $select->where("us_cadastro <= ?",$df);
 
             }
             $select->group("us_estado");
+            $select->order("us_pais ASC");
             $select->order("us_estado ASC");
             return $this->fetchAll($select);
         }
