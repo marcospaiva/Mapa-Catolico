@@ -10,39 +10,6 @@
 
 /*The color reference: CC4726 as first - #E87817 as light blue - #FF6C00as orange over*/
 
-.tooltip{
-			background:#FFF; 
-			border:1px solid #CC4726; 
-			padding:15px; 
-			z-index:10;
-			display:none;
-			-webkit-border-radius: 5px;
-			-moz-border-radius: 5px;
-			border-radius: 5px;
-			width:261px;
-			position:absolute;
-			margin-top:-60px;
-			margin-left:490px;
-			}
-	.tooltip a{float:right;}
-		.tooltip form fieldset legend{color:#CC4726;margin-bottom:10px;font-weight:bold;font-size:18px; }
-			.tooltip form fieldset label{display:block; font-size:14px;padding:2px;}
-
-			.tooltip form fieldset input[type="text"],
-				.tooltip form fieldset input[type="password"]{border:1px solid #DA8E2F;font-size:14px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding:5px;width:250px;}
-			.tooltip form input[type="submit"]{
-							background-color:#CC4726;
-							border:none; 
-							color:#fff;
-							font-size:20px; 
-							padding:5px;
-							-webkit-border-radius: 5px;
-							-moz-border-radius: 5px;
-							border-radius: 5px;
-							margin:10px;
-							}
-
-
 #main_home h1{background:url("../img/logo_top.jpg") 0 0 no-repeat;height:200px; text-indent:-9999px; overflow:hidden;position:relative;top:-10px;left:30px;}
 #main_home  #first{font-size:20px; margin-top:15px;color:#CC4726;}
 #main_home  #second{font-style:italic;font-size:16px;margin-top:20px;color:#E87817;}
