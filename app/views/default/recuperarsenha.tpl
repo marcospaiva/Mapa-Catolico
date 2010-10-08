@@ -1,7 +1,7 @@
 <!--contact-->
 <div id="recover" class="grid_9_center">
 
-    <h1 id="">Esqueceu sua senha? Entre com seu email que em breve recebera no seu email sua nova senha!</h1>
+    <h1 id="">Esqueceu sua senha? Informe o seu email que em breve receberá sua nova senha!</h1>
 
     <form action="{$urlbase}usuario/recuperarsenha" method="post" name="form1" id="recover_form">
 		<label for="recuperar_email">E-mail:</label>
