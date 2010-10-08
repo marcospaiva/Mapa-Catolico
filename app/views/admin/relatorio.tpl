@@ -73,15 +73,15 @@
 	</table>
 	<table border="0" cellspacing="0" cellpadding="0" class="grid_4">
 		<tr>
-			<th>Total de usuários:</th>
+			<th>Total de Usuários:</th>
 			<td>{$totalusuario}</td>
 		</tr>
 		<tr>
-			<th>Total de usuários</th>
+			<th>Total de Capelas</th>
 			<td>{$totalcapela}</td>
 		</tr>
 		<tr>
-			<th>Total de paróquias</th>
+			<th>Total de Paróquias</th>
 			<td>{$totalparoquia}</td>
 		</tr>
 	</table>
