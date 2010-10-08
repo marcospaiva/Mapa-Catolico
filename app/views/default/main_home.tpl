@@ -12,11 +12,15 @@
 </form>
 
  {if $usuariobase eq ""}
-<div class="tooltip">
-	<a href="#">[X]fechar</a>
-	{include file=default/login.tpl}
-</div>
-<p id="login"><a href="#">Faça o login</a> ou</p>
+	<div id="boxes">
+		<div id="dialog" class="window">
+			<!-- Botão para fechar a janela tem class="close" -->
+			<a href="#" class="close">Fechar [X]</a>
+			{include file=default/login.tpl}
+		</div>
+		<div id="mask"></div>
+	</div>
+<p id="login"><a href="#dialog" name="modal">Faça o login</a> ou</p>
 <p id="new_account"><a href="{$urlbase}usuario/cadastro" title="crie uma nova conta">Crie uma conta</a></p>
 
 {else}
