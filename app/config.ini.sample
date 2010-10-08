@@ -1,0 +1,6 @@
+[producao]
+db.adapter = PDO_MYSQL
+db.params.host = 
+db.params.username = 
+db.params.password = 
+db.params.dbname = 
