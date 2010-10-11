@@ -52,7 +52,7 @@ hr{color:#008AC9;}
 .title{color:#CC4726;font-size:24px; padding:20px 0 5px 0;text-transform: capitalize;}
 
 /* O z-index do div#mask deve ser menor que do div#boxes e do div.window */
-#mask {position:absolute;top:0;left:0;z-index:9000;background-color:#000;display:none;}
+#mask {position:absolute;top:0;left:0;z-index:9000;background-color:#CC4726;display:none;}
 #boxes .window {position:absolute;width:440px;height:200px;display:none;z-index:9999;padding:20px;}
 #boxes #dialog {background:#FFF;
 				border:1px solid #CC4726;
