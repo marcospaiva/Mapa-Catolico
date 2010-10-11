@@ -10,7 +10,11 @@
 		
 		<title>Mapa Católico - cadastro de Paróquias e Capelas</title>
 		<link href="{$urlbase}public/css/style.css" type="text/css" rel="stylesheet" />
-		<link href="{$urlbase}public/css/main.css" type="text/css" rel="stylesheet" />	
+		<link href="{$urlbase}public/css/main.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="{$urlbase}public/js/resetDefaultValue.js"></script>
+		<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js"></script>
+		<script type="text/javascript" src="{$urlbase}public/js/main.js"></script>
 	</head>
 	<body>
 		<div class="total">
@@ -25,7 +29,6 @@
 		<div class="footer_100">
 			<div id="footer" class="container_12 clearfix">{include file=default/footer.tpl}</div>
 		</div>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="{$urlbase}public/js/main.js"></script>	
+		
 	</body>
 </html>

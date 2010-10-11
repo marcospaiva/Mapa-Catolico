@@ -7,7 +7,7 @@
 <form id="main_search" class="grid_6" method= "POST" action = "{$urlbase}busca/buscar">
 	<input type="hidden" id="tipo" name="tipo" value="geral">
 	<label for="palavra" class="lupe">Faça a sua busca</label>
-	<input type="text" name="palavra" id="palavra" value="Busca"/>
+	<input type="text" name="palavra" id="palavra" value="O que você deseja buscar"/>
 	<input type="submit" value="Buscar" />
 </form>
 
