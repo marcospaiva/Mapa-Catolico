@@ -56,7 +56,7 @@ class Paroquias extends Zend_Db_Table_Abstract
                 $db = Zend_Registry::get("db");
 		$s = $db->select();
         	$s->from(array('d'=>'diocese'),array('di_diocese','di_bispo','di_cidade','di_estado'));
-		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao'));
+		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao','pa_tipo'));
 
                 foreach ($part as $pa){
                     $palavra = "%$pa%";
@@ -84,7 +84,7 @@ class Paroquias extends Zend_Db_Table_Abstract
                 $db = Zend_Registry::get("db");
 		$s = $db->select();
         	$s->from(array('d'=>'diocese'),array('di_diocese','di_bispo','di_cidade','di_estado'));
-		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao'));
+		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao','pa_tipo'));
 
                 foreach ($part as $pa){
                     $palavra = "%$pa%";
@@ -112,7 +112,7 @@ class Paroquias extends Zend_Db_Table_Abstract
                 $db = Zend_Registry::get("db");
 		$s = $db->select();
         	$s->from(array('d'=>'diocese'),array('di_diocese','di_bispo','di_cidade','di_estado'));
-		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao'));
+		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao','pa_tipo'));
 
                 foreach ($part as $pa){
                     $palavra = "%$pa%";
