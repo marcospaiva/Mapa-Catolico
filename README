@@ -1,3 +1,16 @@
-Lorem ipsun
-	CADASTRO DE PARóQUIAS E CAPELAS
-	fgdfgdfgfdgdf
+Aplicativo para cadastro e pesquisa de Paróquias e Capelas.
+
+    * Equipe: Design – Marcos Paiva; DEV. – Rafael Salomão.
+    * Tecnologia: Zend framework (PHP), HTML, CSS, SMARTY, JS (jQUERY), google maps (API).
+
+Os aspectos de Brand/Design ficaram a cargo dE Douglas Lima, sob a supervisão de Marcos Jolbert. http://www.behance.net/gallery/MapacatAlico/490670
+
+Já as questões ligadas UX e UI ficaram a cargo de Marcos Paiva check o Relatório de re-design: https://docs.google.com/Doc?docid=0AT_B9V-liuC1ZGM3ejYyeHZfMTVnejVmcHJkNw&hl=pt_BR&authkey=CP_UnaYI
+
+Git:
+
+Atualmente o controle de versão está sendo feito em 2 locais: github e via retrospectiva.
+
+Deployment:
+
+Deployment é feito manualmente via FTP.
