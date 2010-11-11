@@ -9,7 +9,7 @@
 		</a>
         <p class="name">
 			<a href="{$urlbase}p/{$item.di_id}/{$item.pa_nome}/" title="{if $item.pa_tipo eq "1"}Paroquia {else} Capela {/if} {$item.pa_nome}">
-				{$item.pa_nome}
+				{if $item.pa_tipo eq "1"}Paroquia {else} Capela {/if} {$item.pa_nome}
 			</a>
 		</p>
                 
