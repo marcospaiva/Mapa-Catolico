@@ -195,7 +195,7 @@ Nova conta usuário / Contato
 			#contact form fieldset input,#contact form fieldset textarea{border:1px solid #DA8E2F;background-color:#fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;height:40px;}
 			#new_account form fieldset input:focus{border-color:#CC4726;}
 			#new_account form fieldset p.tos{overflow:auto;}
-			#new_account form fieldset input[id="nome"],#new_account form fieldset input[id="email"],
+			#new_account form fieldset input[id="nome"],#new_account form fieldset input[id="email1"],
 			#contact form fieldset input[id="nome"],#contact form fieldset input[id="email"]{width:350px;}
 			#new_account form fieldset p.tos,#contact form fieldset textarea{font-size:10px;height:80px;width:450px;padding:5px;margin-top:10px;}
 			#contact form fieldset textarea{font-size:14px;}
