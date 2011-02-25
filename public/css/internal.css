@@ -161,9 +161,9 @@ Vizualização da paróquia ou capela. Usuário
 			#parish #info p strong,
 				#user #info p strong{color:#15508A;font-weight:700;padding-right:5px;}
 				#parish #info p a.img_list,
-					#user #info p a.img_list{border:1px dotted #e2e2e2;display:block;overflow:hidden;padding:5px;width:112px;}
+					#user #info p a.img_list{border:1px dotted #F2B54F;display:block;overflow:hidden;padding:5px;width:112px;}
 				#parish #info p a img,
-					#user #info p a img{border:1px solid #e2e2e2;}
+					#user #info p a img{border:1px solid #F2B54F;}
 			/*diferenciação por cores das informações*/
 			#parish #info p.religious strong
 				#user #info p.religious strong{color:#14761B;}
@@ -172,10 +172,9 @@ Vizualização da paróquia ou capela. Usuário
 			#parish #info p.other strong,
 				#user #info p.other strong{color:#114D5E;}
 
-	#parish #info, #parish #render_map{margin-top:20px;margin-bottom:20px;}
-	#parish #render_map{overflow:hidden;}
+	#parish #info,#parish #map_canvas{margin-top:20px;margin-bottom:20px;}
+	#parish #map_canvas{overflow:hidden;}
 	#user{padding-bottom:20px;}
-#map_canvas{padding-bottom:20px;}
 
 
 /*
