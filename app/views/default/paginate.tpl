@@ -1,21 +1,16 @@
 <!--paginate-->
-<p id="more_results">Mais resultados:</p>
-<ul id="paginate_result">
-	{if $page->previous}
-	<li><a href='{$url}{$page->first}/' title='Primeiro'> << </a></li>
-	<li><a href='{$url}{$page->previous}/' title='Anterior'> < </a></li>
-	{/if}
-	{foreach item=pagina from=$page->pagesInRange}
-		{if $page->current eq $pagina}
-			{$pagina}
-	{else}	
-		<li><a href="{$url}{$pagina}/">{$pagina}</a> </li>
-	{/if}
-	{/foreach}
+<ul id="paginate">
+	<li><a href='' title='Anterior'class="_rounded rounded_ prev btn"> << </a></li>
 	
-	{if $page->next}		
-	<li><a href='{$url}{$page->next}/' title='Proximo'> > </a></li>
-	<li><a href='{$url}{$page->last}/' title='Ultimo'> >> </a></li>
-	{/if}
+		<li id="pags">
+			<a href="" class="active">1</a>
+			<a href="">1</a>
+			<a href="">1</a>
+			<a href="">1</a>
+			<a href="">1</a>
+			
+		</li>
+			
+	<li><a href='' title='Proximo' class="_rounded rounded_  next btn"> >> </a></li>	
 </ul>
 <!--end paginate-->
