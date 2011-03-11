@@ -1,26 +1,38 @@
 <!--contact-->
-<div id="contact" class="grid_9_center">
+<section id="content" class="container_12">
 	<form action="{$urlbase}menu/enviacontato" method="post" name="form1" id="form1">
 			<fieldset>
 				<legend class="title" title="Faça contato">Alguma dúvida ou sujestão? Fale com agente!</legend>
-				<label for="name">Nome completo:</label>
-				<input type="text" id="nome" name="nome" title="Digite o seu nome completo." />
-				<span class="clear"></span>
-				<label for="email">E-mail:</label>
-				<input type="text" id="email" name="email" title="Digite o seu email corretamente."/>
-				<span class="clear"></span>
-				<label for="assunto">Assunto:</label>
-				<select name="assunto" id="assunto" title="Selecione o assunto da mensagem.">
-					<option value="elogio">Elogios</option>
-					<option value="sugestao">Sugestões</option>
-					<option value="duvida">Dúvidas</option>
-					<option value="reclamacao">Reclamações</option>
-				</select>
-				<span class="clear"></span>	
-				<label for="texto">Seu texto.</label>
-				<textarea name="texto" id="texto" title="Digite o seu texto"></textarea>
+				<p>
+					Use o formulário abaixo ou envie uma "mention" no twitter para <a href="http://twitter.com/mapacatolico" title="">@mapacatolico.</a>
+				</p>
+				<div class="grid_6">
+					<label for="nome">Nome completo:</label>
+					<input type="text" id="nome" name="nome" title="Digite o seu nome completo." class="_rounded rounded_"/>
+				</div>
+				
+				<div class="grid_6">
+					<label for="email">E-mail:</label>
+					<input type="text" id="email" name="email" title="Digite o seu email corretamente." class="_rounded rounded_"/>
+				</div>
+				
+				<div class="grid_6">
+					<label for="assunto">Assunto:</label>
+					<select name="assunto" id="assunto" title="Selecione o assunto da mensagem." class="_rounded rounded_">
+						<option value="elogio">Elogios</option>
+						<option value="sugestao">Sugestões</option>
+						<option value="duvida">Dúvidas</option>
+						<option value="reclamacao">Reclamações</option>
+					</select>
+				</div>
+				
+				<div class="grid_6">
+					<label for="texto">Mensagem</label>
+					<textarea name="texto" id="texto" title="Digite a sua mensagem" class="_rounded rounded_"></textarea>
+				</div>	
+				
 		</fieldset>
-		<input type="submit" value="enviar" title="Enviar"/>
+		<input type="submit" value="enviar" title="Enviar" class="_rounded rounded_ btn"/>
 	</form>
-</div>
+</section>
 <!--end contact-->

@@ -1,7 +1,7 @@
 <!-- TOS -->
-<div id="tos" class="grid_12">
-	<h1 class="title">Termos de uso</h1>
-	<div id="tos_txt">
+<section id="content" class="container_12 clearfix">
+	<h1 class="title grid_12">Termos de uso</h1>
+	<div id="tos" class="grid_12">
 		<p>
 			
 		Este Termo de Uso aplica-se ao uso de todos os Produtos, Softwares, Aplicativos, Aplicações, Ferramentas, Serviços online na Web e/ou para Dispositivos Moveis, disponibilizados pela Canção Nova na Web, ou de qualquer outra forma, que aqui neste termo podem ser tratos por: “Ferramentas, Serviços e Aplicações na Web”, “Aplicativo”, “Aplicativos”, “Aplicação”, “Aplicações”, “Ferramentas e Serviços”, “Serviços”, “Serviço”, “Ferramentas”, “Ferramenta” e/ou “Canção Nova”, incluindo-se atualizações durante a sua vigência. 
@@ -303,8 +303,9 @@ Na hipótese do Usuário continuar participando dos Softwares, Aplicações, Fer
 </dd>
 </dl>
 <em>Última atualização: Junho de 2010.</em>		
-	
-	</div>
+	<a href="#content" class="clearfix">ir para o topo &#8593; </a>
 </div>
+
+</section>
 
 <!-- end TOS -->
