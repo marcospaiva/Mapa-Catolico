@@ -38,8 +38,8 @@ class BuscaController extends Zend_Controller_Action {
         $this->view->assign('dados',Paginacao::paginar($result,$pagina));
         $this->view->assign('url',$this->urlbase.'busca/geral/palavra/'.$this->_request->getParam('palavra').'/pagina/');
         $this->view->assign('tipo',"geral");
-        $this->view->assign('template',"default/search.tpl");
-        $this->view->display('default/common_main.tpl');
+        $this->view->assign('template',"default/common.tpl");
+        $this->view->display('default/common.tpl');
 
 
     }
