@@ -33,12 +33,13 @@
 							border-bottom-left-radius: 5px;
 							}
 .sprite,.carousel-pagination p a, ul#paginate li a, ul#paginate #pags a{background:url("../img/sprite.png") 0 0 no-repeat transparent; overflow:hidden;}
-.btn{background-color:#991313; border:none;display:block;height:20px;width:20px;overflow:hidden;text-indent:-1000px;}
+.btn{background-color:#991313; border:none; color:#fff;display:block;overflow:hidden; padding:5px; text-transform: lowercase;}
 	.btn:hover{background:#cd2b2b;}
 
 
 /*===================general====================*/
 body{background:url("../img/back.jpg") 0 0 repeat-x #fef2e5 ;}
+hr{border-color:#baac9e;}
 /*===================top====================*/
 #top{height:130px;margin-bottom:20px;}
 #top header a{background-image:url("../img/brand.png");margin:15px 0 0 13px;width:230px;float:left; height:100px;overflow:hidden;text-indent:-1000px;}
@@ -55,7 +56,8 @@ body{background:url("../img/back.jpg") 0 0 repeat-x #fef2e5 ;}
 .title{color:#991313; font-size:24px;text-shadow:0 1px #fff;}
 /*wrapper*/
 .wrapper{background-color:#fdf7ee;border-color:#baac9e;margin-top:20px;text-shadow:0 1px #fff;}
-	.wrapper .map{border-right: 1px solid #baac9e;height:500px;width:737px;float:left; margin-right:20px;}
+	.wrapper .left,.wrapper .map {border-right: 1px solid #baac9e;width:737px;float:left; margin-right:20px;}
+	.wrapper .map{height:500px;}
 	.wrapper ul.list{min-height:300px;}
 	.wrapper ul.list li{border-bottom:#baac9e 1px solid;float:left;width:217px;padding:15px 0;}
 	.wrapper ul.list li a{display:block;}
@@ -74,7 +76,7 @@ body{background:url("../img/back.jpg") 0 0 repeat-x #fef2e5 ;}
         opacity: 1;}
 		ul#paginate{float:left; margin-top:8px ;width:150px;}
 			 	ul#paginate li{float:left;}
-					ul#paginate li a.btn{background-color:#991313;}
+					ul#paginate li a.btn{background-color:#991313;width:20px;height:20px;text-indent:-1000px;padding:0;}
 						ul#paginate li a.btn:hover{background:url("../img/sprite.png") 0 0 no-repeat #cd2b2b; overflow:hidden;}
 					ul#paginate li a.btn.prev{background-position:-258px 3px;margin:0 10px;}
 					ul#paginate li a.btn.next{background-position:-241px 3px;margin:0 5px;}
@@ -92,7 +94,7 @@ body{background:url("../img/back.jpg") 0 0 repeat-x #fef2e5 ;}
 		.carousel-pagination p{margin:18px 0 0 10px; }
 			.carousel-pagination p a{background-position:-194px -13px;display:block;height:7px;width:7px;overflow:hidden;text-indent:-1000px;margin:5px 0;cursor:pointer;}
 				.carousel-pagination p a.active{background-position:-187px -13px;}
-/*===================top====================*/
+/*===================sign_box====================*/
 #sign_box{width:180px;border:none;background-color:#cd2b2b;display:none;position:absolute;margin-left:80px; top:90px;float:right;z-index:10;}
 	#sign_box form{background:#fef2e5;border:none;margin:4px;}
 		#sign_box form fieldset legend{display:none;}
@@ -101,9 +103,18 @@ body{background:url("../img/back.jpg") 0 0 repeat-x #fef2e5 ;}
 		#sign_box form input[type="submit"]{border:none; background-color:#991313; color:#fff;margin:10px 0 10px 10px;text-transform:lowercase;} 
 		#sign_box form a.forgot{background:transparent;color:#991313;font-size:11px;float:right;margin:13px 10px 0 0;padding:0;text-transform:lowercase;}
 			#sign_box form a.forgot:hover{background:transparent;}
-/*===================top====================*/
-/*===================top====================*/
-
+/**/
+section#info{}
+	section#info div{width:270px; float:left;}
+		section#info div p{ color:#cc341b;font-size:20px;font-weight:bold; margin-left:20px; line-height:24px;}
+		section#info #institucional{color:#cc4e3e; font-size:12px; line-height:24px; margin:0 20px;}
+/*===================forms====================*/
+form div, form p{margin-top:20px;margin-bottom:10px;}
+	form div label{display:block;}
+	form div input,form div textarea, form div select{padding:8px; width:400px;}
+	form input.btn{margin-left:10px;}
+/*===================tos====================*/
+#tos p{margin-top:20px; text-indent:10px;line-height:16px;}
 /*===================footer====================*/
 #footer{height:50px;margin-top:20px;}
 	#footer ul{line-height:50px;}
