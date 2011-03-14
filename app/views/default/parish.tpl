@@ -1,20 +1,20 @@
 <section class="container_12">
-	
-
 	<header class="grid_7">
 		<h1 class="title">{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}</h1>
-	
 	</header>
 	<section class="wrapper _rounded rounded_ grid_12">
-	<!-- the map -->
 		<section class="left">
-		
+			<!-- mapa -->
 			<section class="map">
-				
+				MAPA Paróquia são benedito do escapulário sagrado
 			</section>
+			<!-- end map -->
+			<!-- funcões -->
 			<section id="fn">
-				
+				ghjfghjfghj
 			</section>
+			<!-- end funcões -->
+			<!-- infos -->
 			<section id="info">
 				<div>
 					<p>Diocese:{$diocese}</p>
@@ -36,12 +36,12 @@
 					Achou alguma informação incorreta? Colabore <a href="">editando esse perfil</a> ou <a href="">denunciando abuso</a>
 					
 				</p>
-			</section	
+			</section
+			<!-- end infos -->
 		</section>
-	<!-- end of map -->
 		
 	<!-- begin list -->
-		<ul class="list ">
+		<ul class="list">
 			<li>
 				<a href="">
 					<img src="{$urlbase}public/img/gueres.jpg" alt="">
@@ -86,8 +86,6 @@
 	
 		{include file="default/paginate.tpl"}	
 	<!-- end list -->
-	<span class="clear"></span>
-	
 	</section>
 
 
