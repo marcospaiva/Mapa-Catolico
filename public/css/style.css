@@ -45,7 +45,7 @@ hr{border-color:#baac9e;}
 #top header a{background-image:url("../img/brand.png");margin:15px 0 0 13px;width:230px;float:left; height:100px;overflow:hidden;text-indent:-1000px;}
 #top #search_form{margin:48px 0 0 60px;width:312px;float:left;}
 	#top #search_form input[type="text"]{display:block;border-color: #ffe2c3; color:#999; width:241px; padding:10px 5px; float:left;}
-	#top #search_form input[type="submit"]{background:#991313;border: none;color:#fff;padding:10px 6px;}
+	#top #search_form input[type="submit"]{background:#991313;border: none;color:#fff;padding:10px 6px;width:55px;}
 #top nav ul{float:left;margin:50px 0 0 60px;width:339px;}
 	#top nav ul li a{background:#991313;color:#FFF;display: block;float:left; margin-left:5px;padding:10px 5px;box-shadow: 0 1px #fff; text-transform: lowercase;}
 		#top nav ul li a:hover, #top #search_form input[type="submit"]:hover, #top nav ul li a.active{background:#cd2b2b;}
