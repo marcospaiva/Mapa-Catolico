@@ -6,11 +6,12 @@
 	<!-- the map -->
 	<section class="left">
 		<section class="map">
-			
+			MAPA Paróquia são benedito do escapulário sagrado
 		</section>
 	</section>
 	<!-- end of map -->
 	<!-- begin list -->
+	
 	<ul class="list ">
 		<li>
 			<a href="">
@@ -53,7 +54,9 @@
 			</a>
 		</li>
 	</ul>
-	
+
 	{include file="default/paginate.tpl"}	
 	<!-- end list -->
+	
+	
 </section>
