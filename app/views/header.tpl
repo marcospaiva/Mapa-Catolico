@@ -34,14 +34,19 @@
 	
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.min.js"%3E%3C/script%3E'))</script>
+	<script src="{$urlbase}public/js/carousel.js"></script>
+	<script src="{$urlbase}public/js/script.js"></script>	
 
 	<link rel="stylesheet" type="text/css" href="{$urlbase}public/css/style.css">
 	
 	
 	<script src="{$urlbase}public/js/libs/modernizr-1.6.min.js"></script>
 </head>
-<body>
+
+<body onload="initialize()">
 <section id="top" class="container_12 clearfix">
 	<header>
 		<a href="{$urlbase}" title="ir para a home">Mapa Católico</a>
@@ -53,8 +58,8 @@
 	<nav>
 		<ul>
 			<li><a href="" class="rounded">Sobre<span> > </span></a></li>
-			<li><a href="menu/ajuda" class="rounded">Ajuda</a></li>
-			<li><a href="usuario/cadastro" class="rounded">Registrar</a></li>
+			<li><a href="{$urlbase}menu/ajuda" class="rounded">Ajuda</a></li>
+			<li><a href="{$urlbase}usuario/cadastro" class="rounded">Registrar</a></li>
 			<li>
 				<a href="" class="rounded sign_in">
 					<span class="link">Entrar</span>
@@ -62,6 +67,7 @@
 				</a>
 				
 			</li>
+
 			<div id="sign_box" class="_rounded rounded_">
 				<form method="post" action="{$urlbase}entrar" class="_rounded rounded_">
 					<fieldset id="" class="">
@@ -76,7 +82,7 @@
 					<a href="{$urlbase}usuario/recuperar" class="forgot">Esqueci a senha</a>
 				</form>
 			</div>
-			<li><a href="menu/contato" class="rounded">Contato</a></li>
+			<li><a href="{$urlbase}menu/contato" class="rounded">Contato</a></li>
 		</ul>
 	</nav>
 </section>

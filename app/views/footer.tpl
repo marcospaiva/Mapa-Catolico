@@ -10,11 +10,9 @@
 	</p>
 </section>
 <!-- end footer -->
+<script language="JavaScript" src="http://j.maxmind.com/app/geoip.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.min.js"%3E%3C/script%3E'))</script>
-<script src="{$urlbase}public/js/carousel.js"></script>
-<script src="{$urlbase}public/js/script.js"></script>
 <!--[if lt IE 7 ]>
 <script src="js/libs/dd_belatedpng.js"></script>
 <script> DD_belatedPNG.fix('img, .png_bg');</script>
