@@ -2,7 +2,7 @@
 <section id="content" class="container_12">
 	<form action="{$urlbase}menu/enviacontato" method="post" name="form1" id="form1">
 			<fieldset>
-				<legend class="title" title="Faça contato">Alguma dúvida ou sujestão? Fale com agente!</legend>
+				<legend class="title" title="Faça contato">Alguma dúvida ou sugestão? Fale com a gente!</legend>
 				<p>
 					Use o formulário abaixo ou envie uma "mention" no twitter para <a href="http://twitter.com/mapacatolico" title="">@mapacatolico.</a>
 				</p>

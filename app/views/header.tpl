@@ -58,8 +58,8 @@
 	<nav>
 		<ul>
 			<li><a href="" class="rounded">Sobre<span> > </span></a></li>
-			<li><a href="menu/ajuda" class="rounded">Ajuda</a></li>
-			<li><a href="usuario/cadastro" class="rounded">Registrar</a></li>
+			<li><a href="{$urlbase}menu/ajuda" class="rounded">Ajuda</a></li>
+			<li><a href="{$urlbase}usuario/cadastro" class="rounded">Registrar</a></li>
 			<li>
 				<a href="" class="rounded sign_in">Entrar
 					<span class="sprite"> > </span>
@@ -79,7 +79,7 @@
 					</form>
 				</div>
 			</li>
-			<li><a href="menu/contato" class="rounded">Contato</a></li>
+			<li><a href="{$urlbase}menu/contato" class="rounded">Contato</a></li>
 		</ul>
 	</nav>
 </section>
