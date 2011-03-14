@@ -129,5 +129,19 @@ class IndexController extends Zend_Controller_Action {
         $this->_redirect('/');
     }
 
+	public function listaproximosAction(){
+		$p  = new Paroquias();
+
+		$latitude = $this->_request->getPost('lat');
+		$longitude = $this->_request->getPost('long');	
+
+        	$proximos = $p->ListarProximas($latitude,$longitude);
+
+		$this->view->assign('proximos',$proximos);
+
+		$this->view->display('default/lista-proximos.tpl');
+
+	} 
+
 }
 ?>

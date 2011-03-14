@@ -6,12 +6,15 @@
 	<!-- the map -->
 	<section class="left">
 		<section class="map">
-			
+			<div id="map_canvas"></div>
 		</section>
 	</section>
 	<!-- end of map -->
 	<!-- begin list -->
-	<ul class="list ">
+
+	{include file=default/lista-proximos.tpl}
+
+	<!--<ul class="list ">
 		<li>
 			<a href="">
 				<img src="{$urlbase}public/img/gueres.jpg" alt="">
@@ -52,7 +55,7 @@
 				<h3>Cachoeira Paulista - SP</h3>
 			</a>
 		</li>
-	</ul>
+	</ul>-->
 	
 	{include file="default/paginate.tpl"}	
 	<!-- end list -->

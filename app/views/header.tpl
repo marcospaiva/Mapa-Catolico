@@ -33,7 +33,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png"
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.min.js"%3E%3C/script%3E'))</script>
+	<script src="{$urlbase}public/js/carousel.js"></script>
+	<script src="{$urlbase}public/js/script.js"></script>
 	
 
 	<link rel="stylesheet" type="text/css" href="{$urlbase}public/css/style.css">
@@ -41,7 +45,8 @@
 	
 	<script src="{$urlbase}public/js/libs/modernizr-1.6.min.js"></script>
 </head>
-<body>
+
+<body onload="initialize()">
 <section id="top" class="container_12 clearfix">
 	<header>
 		<a href="{$urlbase}" title="ir para a home">Mapa Católico</a>
