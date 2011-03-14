@@ -33,7 +33,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png"
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	
 
 	<link rel="stylesheet" type="text/css" href="{$urlbase}public/css/style.css">
@@ -56,24 +56,26 @@
 			<li><a href="menu/ajuda" class="rounded">Ajuda</a></li>
 			<li><a href="usuario/cadastro" class="rounded">Registrar</a></li>
 			<li>
-				<a href="" class="rounded sign_in">Entrar
-					<span class="sprite"> > </span>
+				<a href="" class="rounded sign_in">
+					<span class="link">Entrar</span>
+					<span class="sprite">></span>
 				</a>
-				<div id="sign_box" class="_rounded rounded_">
-					<form method="post" action="{$urlbase}entrar" class="_rounded rounded_">
-						<fieldset id="" class="">
-							<legend>Login</legend>
-							
-							<label for="email">Email</label>
-							<input type="text" name="email" id="email" class="_rounded rounded_"/>
-							<label for="senha">Senha</label>
-							<input type='password' name="senha" id="senha" class="_rounded rounded_"/>
-						</fieldset>
-						<input type="submit" value="Entrar" class="_rounded rounded_"/>
-						<a href="{$urlbase}usuario/recuperar" class="forgot">Esqueci a senha</a>
-					</form>
-				</div>
+				
 			</li>
+			<div id="sign_box" class="_rounded rounded_">
+				<form method="post" action="{$urlbase}entrar" class="_rounded rounded_">
+					<fieldset id="" class="">
+						<legend>Login</legend>
+						
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" class="_rounded rounded_"/>
+						<label for="senha">Senha</label>
+						<input type='password' name="senha" id="senha" class="_rounded rounded_"/>
+					</fieldset>
+					<input type="submit" value="Entrar" class="_rounded rounded_"/>
+					<a href="{$urlbase}usuario/recuperar" class="forgot">Esqueci a senha</a>
+				</form>
+			</div>
 			<li><a href="menu/contato" class="rounded">Contato</a></li>
 		</ul>
 	</nav>
