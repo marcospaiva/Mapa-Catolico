@@ -232,7 +232,7 @@ class Paroquias extends Zend_Db_Table_Abstract
 		
 		$select->order('distancia');
 
-		$select->limit('5');
+		
 
 		return $this->fetchAll($select);
         }

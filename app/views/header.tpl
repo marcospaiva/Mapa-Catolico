@@ -39,10 +39,7 @@
 	<script src="{$urlbase}public/js/carousel.js"></script>
 	<script src="{$urlbase}public/js/script.js"></script>
 	
-
 	<link rel="stylesheet" type="text/css" href="{$urlbase}public/css/style.css">
-	
-	
 	<script src="{$urlbase}public/js/libs/modernizr-1.6.min.js"></script>
 </head>
 
