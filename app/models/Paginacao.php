@@ -3,7 +3,7 @@
 class Paginacao extends Zend_Controller_Action
 {
 	
-	static function paginar($todos,$page)
+	static function paginar($todos,$page,$qtd)
 	{
 		
 		// configura paginacao
@@ -12,9 +12,9 @@ class Paginacao extends Zend_Controller_Action
 		// seta pagina atual
 		$paginator->setCurrentPageNumber($page);
 		// quantidade de numeros a aparecer na paginacao
-		$paginator->setPageRange(10);
+		$paginator->setPageRange($qtd);
 		// itens por pagina
-		$paginator->setItemCountPerPage(10);
+		$paginator->setItemCountPerPage($qtd);
 		// registra variavel no view
 		$view = Zend_Registry::get('view');
 		$view->assign('page',$paginator->getPages());

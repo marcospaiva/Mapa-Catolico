@@ -128,8 +128,9 @@ class MasterController extends Zend_Controller_Action {
         $result =  $p->ListarPalavras($this->_request->getParam('palavra'),'pa_nome ASC')->toArray();
 
         $total  =  count($result);
+	$qtd = 10;
         $this->view->assign('total',$total);
-        $this->view->assign('dados',Paginacao::paginar($result,$pagina));
+        $this->view->assign('dados',Paginacao::paginar($result,$pagina,$qtd));
         $this->view->assign('url',$this->urlbase.'master/paroquia/palavra/'.$this->_request->getParam('palavra').'/pagina/');
         
         $this->view->assign('paroquias',$lista);
@@ -186,12 +187,13 @@ class MasterController extends Zend_Controller_Action {
         $u       =  new Usuarios();
         $result  =  $u->ListarPalavras($this->_request->getParam('palavra'),'us_nome ASC')->toArray();
         $total   =  count($result);
+	$qtd = 10;
         $caminho = '/palavra/'.$this->_request->getParam('palavra').'/pagina/'.$this->_request->getParam('pagina');
         
         $this->view->assign('caminho',$caminho);
         $this->view->assign('palavra',$this->_request->getParam('palavra'));
         $this->view->assign('total',$total);
-        $this->view->assign('dados',Paginacao::paginar($result,$pagina));
+        $this->view->assign('dados',Paginacao::paginar($result,$pagina,$qtd));
         $this->view->assign('url', $this->urlbase.'master/usuario/palavra/'.$this->_request->getParam('palavra').'/pagina/');
         $this->view->assign('template',"admin/master_user.tpl");
         $this->view->display('admin/admin_master.tpl');
