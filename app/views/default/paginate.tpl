@@ -1,6 +1,6 @@
 <!--paginate-->
 <ul id="paginate">
-	<li><a href='' title='Anterior'class="_rounded rounded_ prev btn"> << </a></li>
+	<li><a href='' title='Anterior' class="_rounded rounded_ prev btn"> << </a></li>
 	
 		<li id="pags">
 			<a href="" class="active">1</a>

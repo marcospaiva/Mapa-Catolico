@@ -230,9 +230,7 @@ class Paroquias extends Zend_Db_Table_Abstract
 		
 		$select->where("ACOS(SIN(RADIANS(pa_latitude)) * SIN(RADIANS($lat)) + COS(RADIANS(pa_latitude)) * COS(RADIANS($lat)) * COS( RADIANS(pa_longitude) - RADIANS($long))) * 6380 < 10");
 		
-		$select->order('distancia');
-
-		
+		$select->order('distancia');		
 
 		return $this->fetchAll($select);
         }

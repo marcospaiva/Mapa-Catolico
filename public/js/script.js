@@ -1,4 +1,34 @@
+$(function(){
+	
+	        $(".slider").carousel( {pagination: true, direction: "vertical",autoSlide: true,
+			        autoSlideInterval: 5000 } );
+	   		
+			$(".sign_in").click(function(){
+			
+			$(this).toggleClass("active");
+				$("#sign_box").toggle();
+				return false;
+			});
+	
+});
 
+function paginarProximos(p,lat,long){
+	var lat = lat;
+	var long = long;
+	var p = p;
+	$.post("/mapacatolico/index/listaProximos",{pagina:p,lat: lat, long: long}, function(data){
+             $('#lista-proximos').html(data);
+        });
+}
+
+
+function listaProximos(lat,long){
+	var lat = lat;
+	var long = long;
+	$.post("/mapacatolico/index/listaProximos",{lat: lat, long: long}, function(data){
+             $('#lista-proximos').html(data);
+        });
+}
 
 
 function initialize() {
@@ -29,28 +59,3 @@ function initialize() {
       });
  
 }
-
-
-function listaProximos(lat,long){
-	var lat = lat;
-	var long = long;
-	$.post("/mapacatolico/index/listaProximos",{lat: lat, long: long}, function(data){
-             $('#lista-proximos').html(data);
-        });
-	
-}
-
-$(function(){
-	
-	        $(".slider").carousel( {pagination: true, direction: "vertical",autoSlide: true,
-			        autoSlideInterval: 5000 } );
-	   		
-			$(".sign_in").click(function(){
-			
-			$(this).toggleClass("active");
-				$("#sign_box").toggle();
-				return false;
-			});
-
-});
-
