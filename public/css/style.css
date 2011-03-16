@@ -50,7 +50,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 	#top nav ul li a{background:#991313;color:#FFF;border:none; display: block;float:left; margin:0 5px 0 0;padding:10px 5px;text-transform:lowercase;}
 		#top nav ul li a:hover, #top #search_form input[type="submit"]:hover, #top nav ul li a.active{background:#cd2b2b;}
 		#top nav ul li a.active.sign_in{height:40px;}
-		#top nav ul li a span.link{display:block; float:left;}
+		 a span.link{display:block; float:left;}
 		#top nav ul li a span.sprite{background-position:-210px 3px;display:block;width:15px;float:right;text-indent:-1000px;}
 			#top nav ul li a.active.sign_in span{background-position:-227px 3px;}
 /*===================content====================*/
