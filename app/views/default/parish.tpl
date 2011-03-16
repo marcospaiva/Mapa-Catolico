@@ -6,12 +6,12 @@
 		<section class="left">
 			<!-- mapa -->
 			<section class="map">
-				MAPA Paróquia são benedito do escapulário sagrado
+				<div id="map_canvas"></div>
 			</section>
 			<!-- end map -->
 			<!-- funcões -->
 			<section id="fn">
-				ghjfghjfghj
+				
 			</section>
 			<!-- end funcões -->
 			<!-- infos -->
@@ -22,7 +22,7 @@
 					<p>Pároco:{$pa.pa_paroco}</p>
 				</div>
 				<p id="institucional">
-					TEL: pa.pa_tel}, email: colocarumemail@coloque.com - <a href="{$pa.pa_site}">(colocar o site){$pa.pa_site}</a><br>
+					TEL: {$pa.pa_tel}, email: {$pa.pa_email} - <a href="{$pa.pa_site}">{$pa.pa_site}</a><br>
 					{$pa.pa_rua}, {$pa.pa_numero}, {$pa.pa_bairro} - {$pa.pa_cidade}-{$pa.pa_estado} / {$pa.pa_pais}
 				</p>
 				<span class="clear"></span>
@@ -41,7 +41,7 @@
 		</section>
 		
 	<!-- begin list -->
-		<ul class="list">
+		<!--<ul class="list">
 			<li>
 				<a href="">
 					<img src="{$urlbase}public/img/gueres.jpg" alt="">
@@ -84,8 +84,10 @@
 			</li>
 		</ul>
 	
-		{include file="default/paginate.tpl"}	
+		{include file="default/paginate.tpl"}-->
+
 	<!-- end list -->
+	{include file="default/lista-proximos.tpl"}
 	</section>
 
 

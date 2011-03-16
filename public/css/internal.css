@@ -330,20 +330,20 @@ REPORT
 ===================================
 */
 #report{padding:20px;}
-	#report h2{text-align:center;}
-	#report table{float:left;margin-right:10px;}
-	#report table{}
-	#report form{background-color:#E7832A;width:675px;margin:10px auto;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
-		#report form fieldset{float:left;margin-right:20px;padding:10px;}
-		#report form input{background-color:#CC4726;
-							border:none; 
-							color:#fff;
-							font-size:14px; 
-							padding:11px;
-							-webkit-border-radius: 5px;
-							-moz-border-radius: 5px;
-							border-radius: 5px;
-							cursor:pointer;
-							}
-		#report table thead tr th{background-color:#E7832A;padding:5px 10px;margin:2px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
-		#report table tbody tr td{text-align:center;}
+#report h2{text-align:center;}
+#report table{float:left;margin-right:10px;}
+#report table{}
+#report form{background-color:#E7832A;width:675px;margin:10px auto;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+#report form fieldset{float:left;margin-right:20px;padding:10px;}
+#report form input{background-color:#CC4726;
+	border:none; 
+	color:#fff;
+	font-size:14px; 
+	padding:11px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor:pointer;
+}
+#report table thead tr th{background-color:#E7832A;padding:5px 10px;margin:2px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+#report table tbody tr td{text-align:center;}
