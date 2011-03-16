@@ -62,7 +62,7 @@
 			<li><a href="{$urlbase}menu/ajuda" class="rounded">Ajuda</a></li>
 			<li><a href="{$urlbase}usuario/cadastro" class="rounded">Registrar</a></li>
 			<li>
-				<a href="" class="rounded sign_in">Entrar
+				<a href="" class="rounded sign_in"><span class="link">Entrar</span>
 					<span class="sprite"> > </span>
 				</a>
 				<div id="sign_box" class="_rounded rounded_">
