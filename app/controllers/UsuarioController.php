@@ -15,12 +15,7 @@ class UsuarioController extends Zend_Controller_Action {
     }
 
     public function cadastroAction() {
-
         
-        
-        $this->view->assign('sexo_id',array(1,2));
-        $this->view->assign('sexo',array("Masculino","Feminino"));
-        $this->view->assign('sexo_c',2);
         $this->view->assign('mensagem',"Todos os campos sao obrigatorios!");
 
         $this->view->assign('template',"default/new_account.tpl");
@@ -33,12 +28,8 @@ class UsuarioController extends Zend_Controller_Action {
             
             $this->view->assign('cep',$this->_request->getPost('cep1'));
             $this->view->assign('email1',$this->_request->getPost('email1'));
-            $this->view->assign('nome',$this->_request->getPost('nome'));
-            $this->view->assign('sexo_id',array(1,2));
-            $this->view->assign('sexo',array("Masculino","Feminino"));
-            $this->view->assign('sexo_c', $this->_request->getPost('sexo'));
+            $this->view->assign('nome',$this->_request->getPost('nome'));           
             $this->view->assign('mensagem',"Digite a mesma senha no dois campos!");
-
             $this->view->assign('template',"default/new_account.tpl");
             $this->view->display('default/common_main.tpl');
 
@@ -46,53 +37,14 @@ class UsuarioController extends Zend_Controller_Action {
         }
    
 
-        $usuarios = new Usuarios;
-
-        $c   = new Cep();
-        $res = $c->ObterEstado($this->_request->getPost('cep'));
-        $uf  = $res['uf'];
-
-        if(!$uf){
-            
-            $uf      = "";
-            $cidade  = "";
-            $bairro  = "";
-            $rua     = "";
-            
-        }else{
-            
-            $end = $c->ObterEndereco($this->_request->getPost('cep'), $uf);
-
-
-            $cidade  = "";
-            $bairro  = "";
-            $rua     = "";  
-
-            foreach ($end as $z) {
-                $cidade  = $z['cidade'];
-                $bairro  = $z['bairro'];
-                $rua     = $z['tp_logradouro']." ".$z['logradouro'];
-            }
-
-
-        }
-        
-
-
+        $usuarios = new Usuarios;       
 
         $data    = date("Y-m-d");
-
 
         $dado = array(
             'us_nome'=>$this->_request->getPost('nome'),            
             'us_email'=>$this->_request->getPost('email1'),
-            'us_senha'=>md5($this->_request->getPost('password')),
-            'us_sexo'=>$this->_request->getPost('sexo'),
-            'us_estado'=>$uf,
-            'us_cidade'=>$cidade,
-            'us_bairro'=>$bairro,
-            'us_rua'=>$rua,
-            'us_cep'=>$this->_request->getPost('cep'),
+            'us_senha'=>md5($this->_request->getPost('password')),           
             'us_log'=>$data,
             'us_cadastro'=>$data
         );
@@ -118,9 +70,7 @@ class UsuarioController extends Zend_Controller_Action {
                                                 'nome'=>$this->_request->getPost('nome')
                                                 )
                                          )
-                          );
-
-			//$this->_redirect('index.php');
+                          );			
         $this->view->assign('tipo',"cadastro");
         $this->view->assign('redirect',"index.php");
         $this->view->assign('template',"default/message.tpl");
