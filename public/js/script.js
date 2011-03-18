@@ -13,7 +13,8 @@ $(function(){
 					$("#trace").toggle();
 					return false;
 				});
-	
+			
+				$("input").clearDefault();
 });
 
 /*function paginarProximos(p,lat,long){
