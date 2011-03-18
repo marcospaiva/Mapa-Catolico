@@ -38,6 +38,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.min.js"%3E%3C/script%3E'))</script>
 	<script src="{$urlbase}public/js/carousel.js"></script>
+
 	<script src="{$urlbase}public/js/script.js"></script>	
         
         {if $template eq "default/new_account.tpl"}
@@ -49,11 +50,18 @@
 
         {/if}
         
+
+	<script src="{$urlbase}public/js/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="{$urlbase}public/css/style.css">
 	<script src="{$urlbase}public/js/libs/modernizr-1.6.min.js"></script>
-</head>
 
-<body onload="initialize()">
+</head>
+{if $template eq ""}
+	<body onload="initialize()">
+{else if $template eq "default/parish"}
+	<body onload="pagInterna({$pa.pa_latitude},{$pa.pa_longitude})">
+{/if}
+
 <section id="top" class="container_12 clearfix">
 	<header>
 		<a href="{$urlbase}" title="ir para a home">Mapa Católico</a>
@@ -68,7 +76,7 @@
 			<li><a href="{$urlbase}menu/ajuda" class="rounded">Ajuda</a></li>
 			<li><a href="{$urlbase}usuario/cadastro" class="rounded">Registrar</a></li>
 			<li>
-				<a href="" class="rounded sign_in">Entrar
+				<a href="" class="rounded sign_in"><span class="link">Entrar</span>
 					<span class="sprite"> > </span>
 				</a>
 				<div id="sign_box" class="_rounded rounded_">

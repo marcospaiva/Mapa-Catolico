@@ -5,15 +5,43 @@
 	<section class="wrapper _rounded rounded_ grid_12">
 		<section class="left">
 			<!-- mapa -->
-			<section class="map">
-				MAPA Paróquia são benedito do escapulário sagrado
+
+			<section class="map" class="clearfix">
+
+				<div id="map_canvas"></div>
 			</section>
 			<!-- end map -->
+		
 			<!-- funcões -->
-			<section id="fn">
-				ghjfghjfghj
+
+			<section id="fn" class="clearfix">
+				<ul>
+					<li>
+						<a href="" id="route" class="rounded">
+							<span class="link">Como chegar</span>
+							<span class="sprite">></span>
+						</a>
+						<form action="" method="" id="trace" class="rounded">
+							<fieldset id="" class="rounded">
+								<legend></legend>
+								
+									<label for=""><input type="radio" name="" value="">Usar a minha localização</label>
+									<span class="clearfix"></span>
+									<input type="text" name="some_name" value="" id="some_name" class="rounded_">
+									<input type="submit" name="" value="OK" class="btn _rounded">				
+							</fieldset>
+						</form>
+					</li>
+					<li><a href="" id="here" class="_rounded rounded_">Eu já estive aqui</a></li>
+					<li id="twitt"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="mapacatolico">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+					<li id="face"><iframe src="http://www.facebook.com/plugins/like.php?href&amp;layout=button_count&amp;show_faces=false&amp;width=120&amp;action=like&amp;font=trebuchet+ms&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:65px; height:21px;" allowTransparency="true"></iframe></li>
+					<li><a href="" class="share _rounded rounded_"><span class="sprite">Envelope</span>Email</a></li>
+					<li><a href="" class="share _rounded rounded_"> < /embed></a></li>
+				</ul>
+
 			</section>
 			<!-- end funcões -->
+			<hr>
 			<!-- infos -->
 			<section id="info">
 				<div>
@@ -22,26 +50,27 @@
 					<p>Pároco:{$pa.pa_paroco}</p>
 				</div>
 				<p id="institucional">
-					TEL: pa.pa_tel}, email: colocarumemail@coloque.com - <a href="{$pa.pa_site}">(colocar o site){$pa.pa_site}</a><br>
+					TEL: {$pa.pa_tel}, email: {$pa.pa_email} - <a href="{$pa.pa_site}">{$pa.pa_site}</a><br>
 					{$pa.pa_rua}, {$pa.pa_numero}, {$pa.pa_bairro} - {$pa.pa_cidade}-{$pa.pa_estado} / {$pa.pa_pais}
 				</p>
 				<span class="clear"></span>
 				<hr>
-				<p>
+				<p id="description">
 					{$pa.pa_descricao}
 				</p>
 				<hr>
-				<p>
+				<p id="update">
 					<small>Última atualização em 00/00/0000 - por "usuário"</small><br>
 					Achou alguma informação incorreta? Colabore <a href="">editando esse perfil</a> ou <a href="">denunciando abuso</a>
 					
 				</p>
-			</section
-			<!-- end infos -->
+			</section>
+			<!--  -->
+			
 		</section>
 		
 	<!-- begin list -->
-		<ul class="list">
+		<!--<ul class="list">
 			<li>
 				<a href="">
 					<img src="{$urlbase}public/img/gueres.jpg" alt="">
@@ -84,8 +113,10 @@
 			</li>
 		</ul>
 	
-		{include file="default/paginate.tpl"}	
+		{include file="default/paginate.tpl"}-->
+
 	<!-- end list -->
+	{include file="default/lista-proximos.tpl"}
 	</section>
 
 
@@ -94,64 +125,3 @@
 
 
 <span class="clear"></span>
-
-
-
-
-
-
-
-
-<!-- 
-	<h2 class="grid_12"></h2>
-	<div id="info" class="grid_4">
-		<p>
-			<a href="{$urlbase}p/{$item.di_id}/{$item.pa_nome}/" class="img_list">
-		    	<img src="{image id =$pa.pa_id}" width="110" height="110" alt="{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}" />
-		    </a>
-		
-        
-		
-			{if $pa.pa_validacao eq "1"} 
-			<p>	{$pa.pa_validacao} pessoa já esteve aqui!</p>
-			
-			{elseif $pa.pa_validacao ge "2"} 
-				<p>{$pa.pa_validacao} pessoas já estiveram aqui!</p>
-			{else}
-				{if $pa.pa_validacao eq "0" and $usuariobase ne ""}
-				<p>
-					Seja o primeiro a dizer que esteve aqui.
-				</p>
-				{else}
-				<a href="#dialog" class="login"name="modal">Seja o primeiro a dizer que esteve aqui</a>.
-				{/if}
-				
-			{/if}
-		</p>
-		{if $usuariobase ne ""}
-					<form method="post" name="form1" action ="{$urlbase}paroquiaexibir/validar">
-		            	<input type="hidden" id="validacao" name="validacao" value="{$pa.pa_validacao}">
-		               	<input type="hidden" id="paroquia" name="paroquia" value="{$pa.pa_id}">
-						<input type="submit" value="Eu já estive aqui!"/>
-			        </form>
-		        {/if} 
-		<hr/>
-		<p class="other"><strong>Descrição:</strong></p>           
-
-		{if $pa.pa_site eq ""} {else}
-		<p class="other">
-			<strong>Site:</strong><a href="{$pa.pa_site}">{$pa.pa_site}</a>
-		</p>
-		{/if}
-		<hr/>
-		<p>
-			<strong title="Quem cadastrou">Quem cadastrou:</strong>
-			<a href="{$urlbase}busca/usuarios/id/{$usuarioid}/" class="clearfix" title="Usuário: {$usuario}">{$usuario}</a>
-            <a href="" class="clearfix" title="Email: {$email}">{$email}</a>
-		</p>
-
-	</div>
-
-	<div id="map_canvas" class="grid_8" style="height:500px;"></div>
-	</div>
-</div> -->

@@ -71,7 +71,7 @@ Zend_Registry::set('controler', $controler);
 $config = new Zend_Config_Ini('./app/config.ini','local');
 
 
-$urlbase = "http://www.mapacatolico.com/";
+$urlbase = "http://localhost/mapacatolico/";
 
 //mapacatolico.com
 $gkey = "ABQIAAAAtyifEzud_MG-24R0knqNRBRWaK1xaAgrzDLhuIF7flgUv3LtLhRMmFf_xHO9qJxJstPatmWQwga3CQ";
@@ -103,13 +103,14 @@ Zend_Registry::set('db',$db);
 
 //usuario nome
 
+/*
 //banner principal
 $iBanner = new Cnbanner();
 $bannercapa = $iBanner->Banner();
  
 $view->assign('bannercapa', $bannercapa);
 Zend_Registry::set('bannercapa', $bannercapa);
-
+*/
 
 //Roda o sistema
 $controlador->dispatch();

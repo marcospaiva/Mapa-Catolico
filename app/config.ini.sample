@@ -1,6 +1,6 @@
-[producao]
+[local]
 db.adapter = PDO_MYSQL
-db.params.host = 
-db.params.username = 
-db.params.password = 
-db.params.dbname = 
+db.params.host = localhost 
+db.params.username = root   
+db.params.password = 123456
+db.params.dbname = mapacatolico
