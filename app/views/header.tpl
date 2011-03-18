@@ -38,12 +38,16 @@
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.min.js"%3E%3C/script%3E'))</script>
 	<script src="{$urlbase}public/js/carousel.js"></script>
 	<script src="{$urlbase}public/js/script.js"></script>
-	
 	<link rel="stylesheet" type="text/css" href="{$urlbase}public/css/style.css">
 	<script src="{$urlbase}public/js/libs/modernizr-1.6.min.js"></script>
-</head>
 
-<body onload="initialize()">
+</head>
+{if $template eq ""}
+	<body onload="initialize()">
+{else if $template eq "default/parish"}
+	<body onload="pagInterna({$pa.pa_latitude},{$pa.pa_longitude})">
+{/if}
+
 <section id="top" class="container_12 clearfix">
 	<header>
 		<a href="{$urlbase}" title="ir para a home">Mapa Católico</a>

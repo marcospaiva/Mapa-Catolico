@@ -1,7 +1,6 @@
 <div id="lista-proximos">
 	<ul class="list">	
-		{foreach name=proximos item=proximo from=$proximos}		
-			
+		{foreach name=proximos item=proximo from=$proximos}			
 			<li>
 				<a href="{$urlbase}p/{$proximo.di_id}/{$proximo.pa_nome}/">
 					<img src="{$urlbase}public/img/gueres.jpg" alt="">
