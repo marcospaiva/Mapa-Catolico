@@ -13,7 +13,22 @@
 			<!-- funcões -->
 			<section id="fn" class="clearfix">
 				<ul>
-					<li><a href="" id="route" class="_rounded rounded_"><span class="link">Como chegar</span> <span class="sprite">></span></a></li>
+					<li>
+						<a href="" id="route" class="rounded">
+							<span class="link">Como chegar</span>
+							<span class="sprite">></span>
+						</a>
+						<form action="" method="" id="trace" class="rounded">
+							<fieldset id="" class="rounded">
+								<legend></legend>
+								
+									<label for=""><input type="radio" name="" value="">Usar a minha localização</label>
+									<span class="clearfix"></span>
+									<input type="text" name="some_name" value="" id="some_name" class="rounded_">
+									<input type="submit" name="" value="OK" class="btn _rounded">				
+							</fieldset>
+						</form>
+					</li>
 					<li><a href="" id="here" class="_rounded rounded_">Eu já estive aqui</a></li>
 					<li id="twitt"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="mapacatolico">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
 					<li id="face"><iframe src="http://www.facebook.com/plugins/like.php?href&amp;layout=button_count&amp;show_faces=false&amp;width=120&amp;action=like&amp;font=trebuchet+ms&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:65px; height:21px;" allowTransparency="true"></iframe></li>

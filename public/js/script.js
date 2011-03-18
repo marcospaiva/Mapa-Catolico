@@ -4,11 +4,15 @@ $(function(){
 			        autoSlideInterval: 5000 } );
 	   		
 			$(".sign_in").click(function(){
-			
-			$(this).toggleClass("active");
-				$("#sign_box").toggle();
-				return false;
-			});
+				$(this).toggleClass("active");
+					$("#sign_box").toggle();
+					return false;
+				});
+			$("#route").click(function(){
+				$(this).toggleClass("active");
+					$("#trace").toggle();
+					return false;
+				});
 	
 });
 

@@ -117,12 +117,33 @@ section#info{}
 #fn{background-color:#fef2e5;border-top:1px solid #baac9e;padding-top:15px;}
 	#fn ul{margin-left:10px;height:30px;text-transform:lowercase;}
 		#fn ul li{float:left; margin-right:5px;}
-			#fn ul li #route, #fn ul li #here, #fn ul li .share{background-color:#f2efe9;color:#991313;display:block;float:left; padding:6px;}
+			#fn ul li #route, #fn ul li #here, #fn ul li .share{border-color:#baac9e;background-color:#f2efe9;color:#991313;display:block;float:left;padding:6px;}
+				#fn ul li #route{width:100px;}
 				#fn ul li #route span.sprite{background-position:-210px -9px;display:block;width:15px;height:15px;float:right;text-indent:-1000px;}
+				#fn ul li #route.active{height:23px;border-bottom:none;position:relative;z-index:10;
+											-webkit-border-top-right-radius: 5px;
+											-webkit-border-bottom-right-radius: 0px;
+											-moz-border-radius-topright: 5px;
+											-moz-border-radius-bottomright: 0px;
+											border-top-right-radius: 5px;
+											border-bottom-right-radius: 0px;
+											-webkit-border-top-left-radius: 5px;
+											-webkit-border-bottom-left-radius: 0px;
+											-moz-border-radius-topleft: 5px;
+											-moz-border-radius-bottomleft: 0px;
+											border-top-left-radius: 5px;
+											border-bottom-left-radius: 0px;}
 			#fn ul #twitt{margin:5px 0 0 30px;width:105px;}
 			#fn ul #face{margin:5px 0 0 0}
 			#fn ul li .share{font-size:12px;margin:5px 4px 0 0;padding:2px 5px;}
-				#fn ul li .share span.sprite{background-position:-187px -22px;display:block;width:18px;height:13px;float:left;margin-right:2px;text-indent:-1000px;}
+				#fn ul li .share span.sprite{background-position:-187px -22px;display:block;width:18px;height:13px;float:left;margin-right:2px;text-indent:-1000px;					}
+#trace{background-color:#f2efe9;border:#baac9e 1px solid;display:none;height:100px;width:360px;position:absolute;margin-top:35px;z-index:9;					-webkit-border-top-left-radius: 0px;
+					-moz-border-radius-topleft: 0px;
+					border-top-left-radius: 0px;}
+	#trace fieldset{background-color:#f8f7f4;border:none;height:70px;width:330px;margin:5px 0 0 5px; padding:10px;}/*#f8f7f4*/
+		#trace fieldset label{display:block; padding:5px;}
+		#trace fieldset input[type="text"]{width:287px;float:left;padding:5px;margin-right:none;}
+		#trace fieldset input[type="submit"]{float:left;margin:0;}
 /*===================forms====================*/
 form div, form p{margin-top:20px;margin-bottom:10px;}
 	form div label{display:block;}
