@@ -3,7 +3,8 @@ $(function(){
 	        $(".slider").carousel( {pagination: true, direction: "vertical",autoSlide: true,
 			        autoSlideInterval: 5000 } );
 	   		
-			$(".sign_in").click(function(){
+			$(".sign_in").click(function(e){
+				e.preventDefault(); //Remove default behavior
 				$(this).toggleClass("active");
 					$("#sign_box").toggle();
 					return false;
