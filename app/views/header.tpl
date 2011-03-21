@@ -76,7 +76,7 @@
 					<span class="sprite"> > </span>
 				</a>
 				<div id="sign_box" class="_rounded rounded_">
-					<form method="post" action="{$urlbase}entrar" class="_rounded rounded_">
+					<form method="post" action="{$urlbase}index/entrar" class="_rounded rounded_">
 						<fieldset id="" class="">
 							<legend>Login</legend>
 							
