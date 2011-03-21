@@ -3,7 +3,7 @@
 	<form action="{$urlbase}index/entrar" method="post" name="psot1" class="clearfix">
 		<fieldset>
 			<legend>Login</legend>
-             <!-- <p><label for="mensagem">{$mensagem}</label></p> -->
+              <p><label for="mensagem">{$mensagem}</label></p> 
 
 			<label for="email">Email</label>
 			<input type="text" name="email" value="" id="email" title="Insira o seu email."/>
