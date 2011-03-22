@@ -54,10 +54,12 @@
 </head>
 {if $template eq ""}
 	<body onload="initialize('{$urlbase}')">
+{elseif $template eq "default/parish.tpl"}
+	<body onload="pagInterna('{$urlbase}',{$pa.pa_latitude},{$pa.pa_longitude})">
+{else}
+	<body>
 {/if}
-{if $template eq "default/parish"}
-	<body onload="pagInterna({$urlbase},{$pa.pa_latitude},{$pa.pa_longitude})">
-{/if}
+
 
 <section id="top" class="container_12 clearfix">
 	<header>
@@ -102,7 +104,6 @@
 					Você está logado como<a href="{$urlbase}admin">Colocar o nome do usr</a></li>
 				</p>
 			</li>{/if}
-			<!-- if logado -->
 		</ul>
 	</nav>
 </section>
