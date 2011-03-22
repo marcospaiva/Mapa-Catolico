@@ -3,8 +3,7 @@ $(function(){
 	        $(".slider").carousel( {pagination: true, direction: "vertical",autoSlide: true,
 			        autoSlideInterval: 5000 } );
 	   		
-			$(".sign_in").click(function(e){
-				e.preventDefault(); //Remove default behavior
+			$(".sign_in").click(function(){
 				$(this).toggleClass("active");
 					$("#sign_box").toggle();
 					return false;
@@ -15,7 +14,7 @@ $(function(){
 					return false;
 				});
 			
-				$("input[type=text]").clearDefault();
+				$("input").clearDefault();
 });
 
 /*function paginarProximos(p,lat,long){
@@ -56,11 +55,15 @@ function initialize(urlbase) {
 	});
 
 
-      var marker = new google.maps.Marker({
+      //for (i=0;i<10;i++){
+	
+	var marker = new google.maps.Marker({
         position: latlng,
         map: map,
         title:"Você está em "+geoip_city()+" - "+geoip_region_name()
-      }); 
+      	});
+
+	//}
 
       google.maps.event.addListener(marker, 'click', function() {
 	infowindow.open(map,marker);
