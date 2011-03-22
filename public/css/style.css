@@ -33,7 +33,7 @@
 							border-bottom-left-radius: 5px;
 							}
 .sprite,.carousel-pagination p a, ul#paginate li a, ul#paginate #pags a{background:url("../img/sprite.png") 0 0 no-repeat transparent; overflow:hidden;}
-.btn{background-color:#991313; border:none; color:#fff;display:block;overflow:hidden; padding:5px; text-transform: lowercase;}
+.btn{background-color:#991313; border:none; color:#fff;display:block;overflow:hidden; padding:5px; text-transform: lowercase;cursor:pointer;}
 	.btn:hover{background:#cd2b2b;}
 
 
@@ -53,6 +53,20 @@ hr{border-color:#baac9e; margin:15px 0;}
 		 a span.link{display:block; float:left;}
 		#top nav ul li a span.sprite{background-position:-210px 3px;display:block;width:15px;float:right;text-indent:-1000px;}
 			#top nav ul li a.active.sign_in span{background-position:-227px 3px;}
+			#top nav ul li p{font-size:12px;clear:both;padding-top:10px;}
+				#top nav ul li p a{display:inline;background-color:transparent;color:red;float:none;margin:0;}
+				#top nav ul li p a:hover{background-color:transparent;}
+/*===================legend====================*/
+#legend{background-color:#f2efe9;height:40px;position:absolute;margin-top:-41px;right:257px;z-index:9999;}
+	#legend ul{margin:0 0 0 10px;padding:0;line-height:40px;}
+		#legend ul li{color:#8e1616;float:left; font-size:12px;margin-right:10px;}
+			#legend ul li span{display:block;float:left; /*background-color:green;*/height:26px;width:16px;margin:8px 3px 0 0;}
+				#legend ul li span.sprite.par{background-position:-179px -43px;}
+				#legend ul li span.sprite.cap{background-position:-196px -43px;}
+				#legend ul li span.sprite.shop{background-position:-213px -43px;}
+				#legend ul li span.sprite.house{background-position:-229px -43px;}
+				#legend ul li.btn.sprite{background-position:-210px -19px;width:10px;height:10px;text-indent:-1000px; overflow:hidden;margin-top:10px;}
+				#legend ul li.btn.sprite:hover{background:url("../img/sprite.png") -208px -19px no-repeat #cd2b2b; overflow:hidden;}
 /*===================content====================*/
 .title{color:#991313; font-size:24px; font-weight:normal;text-shadow:0 1px #fff;}
 /*wrapper*/
@@ -64,8 +78,9 @@ hr{border-color:#baac9e; margin:15px 0;}
 	.wrapper ul.list li{border-bottom:#baac9e 1px solid;float:left;width:217px;padding:15px 0;}
 	.wrapper ul.list li a{display:block;}
 		.wrapper ul.list li a img{float:left;margin-right:10px;}
+		.wrapper ul.list li a h2{font-size:14px;}
 		.wrapper ul.list li a h2, .wrapper ul li a h3 {font-weight:normal;}
-		.wrapper ul.list li a h3{color:#cc341b;font-size:12px; margin-top:10px;}
+		.wrapper ul.list li a h3{color:#cc341b;font-size:12px; margin-top:5px;}
 		.wrapper ul.list li a .see{background:#fdf7ee;border:none;display:block;font-size:10px;padding:3px;width:30px;margin-top:45px;float:left;position:absolute;right:180px;
 				filter:alpha(opacity=80);
 		        -moz-opacity:0.8;
@@ -152,6 +167,9 @@ form div, form p{margin-top:20px;margin-bottom:10px;}
 	form input.btn{margin-left:10px;}
 /*===================tos====================*/
 #tos p{margin-top:20px; text-indent:10px;line-height:16px;}
+/*===================admin====================*/
+#user.title{height:62px; line-height:62px;}
+	#user.title img{float:left;margin-right:10px;}
 /*===================footer====================*/
 #footer{height:50px;margin-top:20px;}
 	#footer ul{line-height:50px;}

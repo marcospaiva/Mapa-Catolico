@@ -54,10 +54,12 @@
 </head>
 {if $template eq ""}
 	<body onload="initialize('{$urlbase}')">
+{elseif $template eq "default/parish.tpl"}
+	<body onload="pagInterna('{$urlbase}',{$pa.pa_latitude},{$pa.pa_longitude})">
+{else}
+	<body>
 {/if}
-{if $template eq "default/parish"}
-	<body onload="pagInterna({$urlbase},{$pa.pa_latitude},{$pa.pa_longitude})">
-{/if}
+
 
 <section id="top" class="container_12 clearfix">
 	<header>
@@ -69,6 +71,7 @@
 	</form>
 	<nav>
 		<ul>
+			{if $usuariobase eq ""}
 			<li><a href="" class="rounded">Sobre<span> > </span></a></li>
 			<li><a href="{$urlbase}menu/ajuda" class="rounded">Ajuda</a></li>
 			<li><a href="{$urlbase}usuario/cadastro" class="rounded">Registrar</a></li>
@@ -92,7 +95,15 @@
 				</div>
 			</li>
 			<li><a href="{$urlbase}menu/contato" class="rounded">Contato</a></li>
-
+			{else}
+			<li><a href="" class="rounded">Sobre<span> > </span></a></li>
+			<li><a href="{$urlbase}menu/ajuda" class="rounded">Ajuda</a></li>
+			<li><a href="{$urlbase}menu/contato" class="rounded">Contato</a></li>
+			<li>
+				<p>
+					Você está logado como<a href="{$urlbase}admin">Colocar o nome do usr</a><a href="{$urlbase}index/sair">Log out</a></li>
+				</p>
+			</li>{/if}
 		</ul>
 	</nav>
 </section>

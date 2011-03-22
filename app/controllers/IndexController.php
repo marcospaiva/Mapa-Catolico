@@ -3,6 +3,7 @@
 class IndexController extends Zend_Controller_Action {
     public $view;
     public $gkey;
+    public $urlbase;
 
     public function init() {
         $this->view = Zend_Registry::get("view");
@@ -152,7 +153,7 @@ class IndexController extends Zend_Controller_Action {
 
 		$this->view->assign('proximos',Paginacao::paginar($result,$pagina,$qtd));
   		
-		$this->view->assign('url','http://localhost/mapacatolico/pagina/');		
+		$this->view->assign('url',$this->urlbase);		
 
 		$this->view->display('default/lista-proximos.tpl');
 
