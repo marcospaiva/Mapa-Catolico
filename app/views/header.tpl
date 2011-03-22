@@ -92,7 +92,7 @@
 				</div>
 			</li>
 			<li><a href="{$urlbase}menu/contato" class="rounded">Contato</a></li>
-
+			<!-- if logado -->
 		</ul>
 	</nav>
 </section>

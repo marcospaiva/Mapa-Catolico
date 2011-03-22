@@ -152,6 +152,9 @@ form div, form p{margin-top:20px;margin-bottom:10px;}
 	form input.btn{margin-left:10px;}
 /*===================tos====================*/
 #tos p{margin-top:20px; text-indent:10px;line-height:16px;}
+/*===================admin====================*/
+#user.title{height:62px; line-height:62px;}
+	#user.title img{float:left;margin-right:10px;}
 /*===================footer====================*/
 #footer{height:50px;margin-top:20px;}
 	#footer ul{line-height:50px;}
