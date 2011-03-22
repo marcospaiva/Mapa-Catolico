@@ -13,7 +13,6 @@
 	<!-- begin list -->
 
 	{include file="default/lista-proximos.tpl"}
-	
-	<!--{include file="default/paginate.tpl"}-->	
+		
 	<!-- end list -->
 </section>
