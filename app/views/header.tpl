@@ -54,9 +54,9 @@
 </head>
 {if $template eq ""}
 	<body onload="initialize('{$urlbase}')">
-{/if}
-{if $template eq "default/parish"}
-	<body onload="pagInterna({$urlbase},{$pa.pa_latitude},{$pa.pa_longitude})">
+
+{else if $template eq "default/parish"}
+	<body onload="pagInterna('{$urlbase}',{$pa.pa_latitude},{$pa.pa_longitude})">
 {/if}
 
 <section id="top" class="container_12 clearfix">
