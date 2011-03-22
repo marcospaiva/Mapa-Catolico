@@ -5,7 +5,7 @@ jQuery.noConflict();
 jQuery.validator.addMethod("mailvalido", function(){
 	var nomemail = jQuery('#email1').val();
 	var result;
-       // alert(nomemail);
+   // alert(nomemail);
 	jQuery.ajax({
 		cache:false,
         	async:false,		
