@@ -1,6 +1,7 @@
 <!--new account-->
 <section id="content" class="container_12">
 	<form action="{$urlbase}usuario/inserir" method="post" name="formcadastro" id="formcadastro" class="">
+            <input type="hidden" value="{$urlbase}" id="urlbase" name="urlbase">
 			<fieldset>
 				<legend title="Digite os seus dados corretamente" class="title grid_12">Preencha os campos abaixo corretamente</legend>
 				
