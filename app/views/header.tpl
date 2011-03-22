@@ -53,9 +53,9 @@
 
 </head>
 {if $template eq ""}
-	<body onload="initialize()">
+	<body onload="initialize('{$urlbase}')">
 {else if $template eq "default/parish"}
-	<body onload="pagInterna({$pa.pa_latitude},{$pa.pa_longitude})">
+	<body onload="pagInterna('{$urlbase}',{$pa.pa_latitude},{$pa.pa_longitude})">
 {/if}
 
 <section id="top" class="container_12 clearfix">
@@ -91,7 +91,7 @@
 				</div>
 			</li>
 			<li><a href="{$urlbase}menu/contato" class="rounded">Contato</a></li>
-
+			<!-- if logado -->
 		</ul>
 	</nav>
 </section>

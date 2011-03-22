@@ -1,5 +1,8 @@
 <header class="grid_7">
-	<h1 class="title">Lugares mais próximos</h1>
+	<h1 id="user" class="title">
+		<img src="{$urlbase}public/img/gueres.jpg" alt="">
+		usuárui
+	</h1>
 	
 </header>
 <section class="wrapper _rounded rounded_ grid_12">
