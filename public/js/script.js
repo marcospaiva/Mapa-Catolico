@@ -27,19 +27,20 @@ $(function(){
 }*/
 
 
-function listaProximos(p,lat,long){
+function listaProximos(urlbase,p,lat,long){
+	var urlbase = urlbase;
 	var lat = lat;
 	var long = long;
 	var p = p;
-	$.post("/mapacatolico/index/listaProximos",{pagina:p,lat: lat, long: long}, function(data){
+	$.post(urlbase+"index/listaProximos",{pagina:p,lat: lat, long: long}, function(data){
              $('#lista-proximos').html(data);
         });
 }
 
 
-function initialize() {
-
-     listaProximos(1,geoip_latitude(), geoip_longitude());
+function initialize(urlbase) {
+      var urlbase = urlbase;
+      listaProximos(urlbase,1,geoip_latitude(), geoip_longitude());
 
       var latlng = new google.maps.LatLng(geoip_latitude(), geoip_longitude());
       var options = {
@@ -66,11 +67,12 @@ function initialize() {
  
 }
 
-function pagInterna(lat,long){
+function pagInterna(urlbase,lat,long){
+	var urlbase = urlbase;
 	var lat = lat;
 	var long = long;
 	
-	listaProximos(1,lat,long);
+	listaProximos(urlbase,1,lat,long);
 	
 	var myLatlng = new google.maps.LatLng(lat,long);
 	var myOptions = {
