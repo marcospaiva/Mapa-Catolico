@@ -32,7 +32,7 @@ function listaProximos(p,lat,long){
 	var lat = lat;
 	var long = long;
 	var p = p;
-	$.post("/mapacatolico/index/listaProximos",{pagina:p,lat: lat, long: long}, function(data){
+	$.post("http://localhost:8888/Mapa-Cat-lico/index/listaProximos",{pagina:p,lat: lat, long: long}, function(data){
              $('#lista-proximos').html(data);
         });
 }
