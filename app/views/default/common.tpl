@@ -6,8 +6,11 @@
 	<!-- the map -->
 	<section class="left">
 		<section class="map">
-			<div id="map_canvas"></div>
+			<div id="map_canvas">
+			</div>
+			{include file="default/legend.tpl"}
 		</section>
+		
 	</section>
 	<!-- end of map -->
 	<!-- begin list -->
