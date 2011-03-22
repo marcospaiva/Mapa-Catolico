@@ -39,23 +39,24 @@
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.min.js"%3E%3C/script%3E'))</script>
 	<script src="{$urlbase}public/js/clearDefault.js"></script>
 	<script src="{$urlbase}public/js/carousel.js"></script>
-
 	<script src="{$urlbase}public/js/script.js"></script>	
    
         {if $template eq "default/new_account.tpl"}
+            <script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
             <script type="text/javascript" src="{$urlbase}public/js/jquery.validate.js"></script>
             <script type="text/javascript" src="{$urlbase}public/js/jquery.maskedinput-1.2.2.js"></script>
             <script type="text/javascript" src="{$urlbase}public/js/cadastro.js"></script>
-            <script type="text/javascript" src="{$urlbase}public/js/mascara.js"></script>      
-		{/if}
+            <script type="text/javascript" src="{$urlbase}public/js/mascara.js"></script>
+	{/if}
 	<link rel="stylesheet" type="text/css" href="{$urlbase}public/css/style.css">
 	<script src="{$urlbase}public/js/libs/modernizr-1.6.min.js"></script>
 
 </head>
 {if $template eq ""}
 	<body onload="initialize('{$urlbase}')">
-{else if $template eq "default/parish"}
-	<body onload="pagInterna('{$urlbase}',{$pa.pa_latitude},{$pa.pa_longitude})">
+{/if}
+{if $template eq "default/parish"}
+	<body onload="pagInterna({$urlbase},{$pa.pa_latitude},{$pa.pa_longitude})">
 {/if}
 
 <section id="top" class="container_12 clearfix">
