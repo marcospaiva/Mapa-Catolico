@@ -14,7 +14,7 @@ $(function(){
 					return false;
 				});
 			
-				$("input").clearDefault();
+				$("input[type=text]").clearDefault();
 });
 
 /*function paginarProximos(p,lat,long){
