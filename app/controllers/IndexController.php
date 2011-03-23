@@ -146,7 +146,15 @@ class IndexController extends Zend_Controller_Action {
 
         	$result = $p->ListarProximas($latitude,$longitude)->toArray();
 		$qtd = 5;	
-		$total  =  count($result);		
+		$total  =  count($result);
+
+		foreach($result as $r){
+			$dado = array(
+           		'latitude'=>$r['pa_latitude'],
+			'longitude'=>$r['pa_longitude']
+           
+        		);
+		}
 		
 		$this->view->assign('latitude',$latitude);
 		$this->view->assign('longitude',$longitude);

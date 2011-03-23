@@ -4,6 +4,7 @@ class ParoquiaexibirController extends Zend_Controller_Action {
     public $view;
     public $controler;
     public $gkey;
+    public $urlbase;
 
 
 
@@ -109,6 +110,44 @@ class ParoquiaexibirController extends Zend_Controller_Action {
         $this->_redirect($_SERVER['HTTP_REFERER']);
 
     }
+
+     	public function listaproximosAction(){
+
+		$pagina=1;
+        	if($this->_request->getPost('pagina')) {
+            		$pagina=$this->_request->getPost('pagina');
+        	}
+
+		//$this->view->assign('proximos',$proximos);
+		
+		$p  = new Paroquias();
+
+		$latitude = $this->_request->getPost('lat');
+		$longitude = $this->_request->getPost('long');	
+
+        	$result = $p->ListarProximas($latitude,$longitude)->toArray();
+		$qtd = 8;	
+		$total  =  count($result);
+
+		foreach($result as $r){
+			$dado = array(
+           		'latitude'=>$r['pa_latitude'],
+			'longitude'=>$r['pa_longitude']
+           
+        		);
+		}
+		
+		$this->view->assign('latitude',$latitude);
+		$this->view->assign('longitude',$longitude);
+
+		$this->view->assign('proximos',Paginacao::paginar($result,$pagina,$qtd));
+  		
+		$this->view->assign('url',$this->urlbase);
+		
+		$this->view->assign('template',"default/parish.tpl");
+		$this->view->display('default/lista-proximos.tpl');
+
+	}
 
 
 }
