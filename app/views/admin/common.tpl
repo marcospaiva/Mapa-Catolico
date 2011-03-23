@@ -1,7 +1,7 @@
 <header class="grid_7">
 	<h1 id="user" class="title">
 		<img src="{$urlbase}public/img/gueres.jpg" alt="">
-		Colocar o nome do usuário
+		{$usuariobase}
 	</h1>
 	
 </header>
