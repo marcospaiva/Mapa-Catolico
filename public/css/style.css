@@ -65,8 +65,9 @@ hr{border-color:#baac9e; margin:15px 0;}
 				#legend ul li span.sprite.cap{background-position:-196px -43px;}
 				#legend ul li span.sprite.shop{background-position:-213px -43px;}
 				#legend ul li span.sprite.house{background-position:-229px -43px;}
-				#legend ul li.btn.sprite{background-position:-210px -19px;width:10px;height:10px;text-indent:-1000px; overflow:hidden;margin-top:10px;}
+				#legend ul li.btn.sprite{background-position:-208px -19px;width:10px;height:10px;text-indent:-1000px; overflow:hidden;margin-top:10px;}
 				#legend ul li.btn.sprite:hover{background:url("../img/sprite.png") -208px -19px no-repeat #cd2b2b; overflow:hidden;}
+	#legend a{display:block;padding:11px 5px 0 5px;}
 /*===================content====================*/
 .title{color:#991313; font-size:24px; font-weight:normal;text-shadow:0 1px #fff;}
 /*wrapper*/
