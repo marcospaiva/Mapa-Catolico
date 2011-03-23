@@ -1,4 +1,9 @@
 <div id="lista-proximos">
+	{if $template eq "default/parish.tpl"}
+		<header>
+			<h1>Lugares próximos</h1>
+		</header>
+	{/if}
 	<ul class="list">	
 		{foreach name=proximos item=proximo from=$proximos}			
 			<li>

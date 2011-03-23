@@ -92,6 +92,7 @@ hr{border-color:#baac9e; margin:15px 0;}
         -moz-opacity:1;
         -khtml-opacity: 1;
         opacity: 1;}
+		#lista-proximos header h1{color:#991313;border-bottom:1px solid #baac9e;font-size:18px;float:left; font-weight:normal;margin:10px 15px 0 15px;padding-bottom:7px;width:215px}
 		ul#paginate{float:left; margin-top:8px ;width:150px;}
 			 	ul#paginate li{float:left;}
 					ul#paginate li a.btn{background-color:#991313;width:20px;height:20px;text-indent:-1000px;padding:0;}
