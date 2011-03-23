@@ -226,7 +226,7 @@ class Paroquias extends Zend_Db_Table_Abstract
 	public function ListarProximas($lat,$long){
 		$select  = $this->select();
 
-		$select->from($this, array("pa_id","pa_nome","pa_cidade","di_id", "ACOS(SIN(RADIANS(pa_latitude)) * SIN(RADIANS($lat)) + COS(RADIANS($lat)) * COS(RADIANS($lat)) * COS(RADIANS(pa_longitude) - RADIANS($long))) * 6380 AS distancia"));
+		$select->from($this, array("pa_id","pa_nome","pa_cidade","di_id", "pa_latitude","pa_longitude", "ACOS(SIN(RADIANS(pa_latitude)) * SIN(RADIANS($lat)) + COS(RADIANS($lat)) * COS(RADIANS($lat)) * COS(RADIANS(pa_longitude) - RADIANS($long))) * 6380 AS distancia"));
 		
 		$select->where("ACOS(SIN(RADIANS(pa_latitude)) * SIN(RADIANS($lat)) + COS(RADIANS(pa_latitude)) * COS(RADIANS($lat)) * COS( RADIANS(pa_longitude) - RADIANS($long))) * 6380 < 10");
 		

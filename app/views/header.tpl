@@ -53,9 +53,9 @@
 
 </head>
 {if $template eq ""}
-	<body onload="initialize('{$urlbase}')">
+	<body onload="initialize('{$urlbase}index/listaProximos')">
 {elseif $template eq "default/parish.tpl"}
-	<body onload="pagInterna('{$urlbase}',{$pa.pa_latitude},{$pa.pa_longitude})">
+	<body onload="pagInterna('{$urlbase}paroquiaexibir/listaProximos',{$pa.pa_latitude},{$pa.pa_longitude})">
 {else}
 	<body>
 {/if}
