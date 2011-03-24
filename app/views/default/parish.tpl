@@ -9,6 +9,7 @@
 			<section class="map" class="clearfix">
 
 				<div id="map_canvas"></div>
+				{include file="default/legend.tpl"}
 			</section>
 			<!-- end map -->
 		

@@ -3,8 +3,7 @@ $(function(){
 	        $(".slider").carousel( {pagination: true, direction: "vertical",autoSlide: true,
 			        autoSlideInterval: 5000 } );
 	   		
-			$(".sign_in").click(function(e){
-				e.preventDefault(); //Remove default behavior
+			$(".sign_in").click(function(){
 				$(this).toggleClass("active");
 					$("#sign_box").toggle();
 					return false;
@@ -15,7 +14,19 @@ $(function(){
 					return false;
 				});
 			
-				$("input").clearDefault();
+			$("input[type=text]").clearDefault();
+			
+			$("#legend a").hide();
+			$("#legend ul li.btn").click(function(){
+				$(this).parent().hide();
+				$("#legend a").show();
+				return false;
+			});
+			$("#legend a").click(function(){
+				$(this).hide();
+				$("#legend ul").show();
+				return false;
+			});
 });
 
 /*function paginarProximos(p,lat,long){
@@ -28,20 +39,21 @@ $(function(){
 }*/
 
 
-function listaProximos(urlbase,p,lat,long){
-	var urlbase = urlbase;
+function listaProximos(url,p,lat,long){
+	var url = url;
 	var lat = lat;
 	var long = long;
 	var p = p;
-	$.post(urlbase+"index/listaProximos",{pagina:p,lat: lat, long: long}, function(data){
+	$.post(url,{pagina:p,lat: lat, long: long}, function(data){
              $('#lista-proximos').html(data);
         });
 }
 
 
-function initialize(urlbase) {
-      var urlbase = urlbase;
-      listaProximos(urlbase,1,geoip_latitude(), geoip_longitude());
+function initialize(url) {
+      var url = url;
+
+      listaProximos(url,1,geoip_latitude(), geoip_longitude());
 
       var latlng = new google.maps.LatLng(geoip_latitude(), geoip_longitude());
       var options = {
@@ -56,11 +68,15 @@ function initialize(urlbase) {
 	});
 
 
-      var marker = new google.maps.Marker({
-        position: latlng,
-        map: map,
-        title:"Você está em "+geoip_city()+" - "+geoip_region_name()
-      }); 
+      //for (i=0;i<10;i++){
+	
+	var marker = new google.maps.Marker({
+        	position: latlng,
+        	map: map,
+        	title:"Você está em "+geoip_city()+" - "+geoip_region_name()
+      	});
+
+	//}
 
       google.maps.event.addListener(marker, 'click', function() {
 	infowindow.open(map,marker);

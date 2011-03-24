@@ -3,6 +3,7 @@
 class IndexController extends Zend_Controller_Action {
     public $view;
     public $gkey;
+    public $urlbase;
 
     public function init() {
         $this->view = Zend_Registry::get("view");
@@ -145,14 +146,22 @@ class IndexController extends Zend_Controller_Action {
 
         	$result = $p->ListarProximas($latitude,$longitude)->toArray();
 		$qtd = 5;	
-		$total  =  count($result);		
+		$total  =  count($result);
+
+		foreach($result as $r){
+			$dado = array(
+           		'latitude'=>$r['pa_latitude'],
+			'longitude'=>$r['pa_longitude']
+           
+        		);
+		}
 		
 		$this->view->assign('latitude',$latitude);
 		$this->view->assign('longitude',$longitude);
 
 		$this->view->assign('proximos',Paginacao::paginar($result,$pagina,$qtd));
   		
-		$this->view->assign('url','http://localhost/mapacatolico/pagina/');		
+		$this->view->assign('url',$this->urlbase);		
 
 		$this->view->display('default/lista-proximos.tpl');
 
