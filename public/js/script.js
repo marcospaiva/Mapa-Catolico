@@ -14,7 +14,19 @@ $(function(){
 					return false;
 				});
 			
-				$("input[type=text]").clearDefault();
+			$("input[type=text]").clearDefault();
+			
+			$("#legend a").hide();
+			$("#legend ul li.btn").click(function(){
+				$(this).parent().hide();
+				$("#legend a").show();
+				return false;
+			});
+			$("#legend a").click(function(){
+				$(this).hide();
+				$("#legend ul").show();
+				return false;
+			});
 });
 
 /*function paginarProximos(p,lat,long){

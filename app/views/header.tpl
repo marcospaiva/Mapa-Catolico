@@ -101,7 +101,7 @@
 			<li><a href="{$urlbase}menu/contato" class="rounded">Contato</a></li>
 			<li>
 				<p>
-					Você está logado como<a href="{$urlbase}admin">Colocar o nome do usr</a><a href="{$urlbase}index/sair">Log out</a></li>
+					Você está logado como<a href="{$urlbase}admin">{$usuariobase}</a><a href="{$urlbase}index/sair">Log out</a></li>
 				</p>
 			</li>{/if}
 		</ul>
