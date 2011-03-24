@@ -18,13 +18,25 @@ class IndexController extends Zend_Controller_Action {
         $paro   = new Paroquias();
 
         $fr  = new Frases();
+ 	
 
-        $frases = $fr->Listarcapa();
+	try{
+		$channel = new Zend_Feed_Rss('http://twitter.com/statuses/user_timeline/140888598.rss');
+		foreach ($channel as $item) {
+			$title[] = $item->title();
+		}
+		
+		$this->view->assign('frase',$title);
+		
+	}catch (Exception $e){
+		$frases = $fr->Listarcapa();
+		$this->view->assign('frase',$frases);
+	}
 
         $cont   = $paro->listarDestaque(3);
 
         $this->view->assign('dados',$cont);
-        $this->view->assign('frase',$frases);
+        
 
         $this->view->display('default/index.tpl');
 	}

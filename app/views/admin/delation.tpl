@@ -3,7 +3,7 @@
 	<ul class="list">	
 				
 			<li>
-				<a href="{$urlbase}p/{$proximo.di_id}/{$proximo.pa_nome}/">
+				<a href="{$urlbase}p/{$proximo.pa_id}/{substituir nome =$proximo.pa_nome}/">
 					<img src="{$urlbase}public/img/gueres.jpg" alt="">
 					<h2>Bla bla bla</h2>
 					<h3>Cidade - UF</h3>

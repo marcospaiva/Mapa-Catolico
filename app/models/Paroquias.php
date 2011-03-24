@@ -26,12 +26,10 @@ class Paroquias extends Zend_Db_Table_Abstract
 		return $this->fetchAll("us_id = '$usr' AND pa_id = '$id'")->current();
 	}
         
-        public function ListarExibir($paroquia,$id_di){
-                //echo "1 - $paroquia";
-
-                $paroquia = str_replace( "+", " ",$paroquia);
-                //echo "paroquia =  $paroquia";
-                return $this->fetchAll("di_id = '$id_di' AND pa_nome LIKE '%$paroquia%'")->current();
+        public function ListarExibir($paroquia,$id_paroquia)
+        {
+            
+                return $this->fetchAll("pa_id = '$id_paroquia'")->current();
 
         }
         public function ListarPalavras($palavra,$order)
@@ -234,6 +232,41 @@ class Paroquias extends Zend_Db_Table_Abstract
 
 		return $this->fetchAll($select);
         }
+
+        public function Busca($palavra)
+	{
+                $part =  explode(" ", $palavra);
+              
+                $db = Zend_Registry::get("db");
+		$s = $db->select();
+        	$s->from(array('d'=>'diocese'),array('di_diocese','di_bispo','di_cidade','di_estado'));
+		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao','pa_tipo'));
+
+
+                $cont = 0;
+               // $w = "(";
+                foreach ($part as $pa){
+                    
+                    $palavra = "%$pa%";
+
+                    $s->where($db->quoteInto('p.pa_nome LIKE ?',$palavra) . ' OR ' .                         
+                              $db->quoteInto('p.pa_rua LIKE ?',$palavra) . ' OR ' .
+                              $db->quoteInto('p.pa_cidade LIKE ?',$palavra) . ' OR ' .
+                              $db->quoteInto('d.di_diocese LIKE ?',$palavra) . ' OR ' .
+                              $db->quoteInto('p.pa_bairro LIKE ?',$palavra) . ' OR ' .
+                              $db->quoteInto('p.pa_estado LIKE ?',$palavra) . ' OR ' .
+                              $db->quoteInto('p.pa_rua LIKE ?',$palavra));
+                
+                }
+		$s->where('d.di_id = p.di_id');
+                $s->where('p.pa_tipo = 2');
+               
+		$s->group('p.pa_id');
+		$s->order('p.pa_nome ASC');
+               
+		return $db->fetchAll($s);
+                
+	}
 
 }
 

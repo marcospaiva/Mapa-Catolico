@@ -12,7 +12,7 @@
 	<ul class="list">
 		{foreach name=loop item=item from=$dados}
 		<li>
-			<a href="{$urlbase}p/{$proximo.di_id}/{$proximo.pa_nome}/">
+			<a href="{$urlbase}p/{$proximo.pa_id}/{substituir nome =$proximo.pa_nome}/">
 				<img src="{$urlbase}public/img/gueres.jpg" alt="">
 				<h2>{$tipo} : {$item.pa_nome}</h2>
 				<h3>{$item.pa_cidade} - {$item.pa_estado}</h3>

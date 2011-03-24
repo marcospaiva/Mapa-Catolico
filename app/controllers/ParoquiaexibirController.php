@@ -1,4 +1,5 @@
 <?php
+
 class ParoquiaexibirController extends Zend_Controller_Action {
 
     public $view;
@@ -6,14 +7,11 @@ class ParoquiaexibirController extends Zend_Controller_Action {
     public $gkey;
     public $urlbase;
 
-
-
     public function init() {
 
         $this->view = Zend_Registry::get("view");
         $this->controler = Zend_Registry::get("controler");
         $this->gkey = Zend_Registry::get("gkey");
-
     }
 
     public function exibirAction() {
@@ -23,56 +21,31 @@ class ParoquiaexibirController extends Zend_Controller_Action {
         $t = new Denunciatipo();
         $u = new Usuarios();
 
-        $diocese  = $this->_request->getUserParam("diocese");
+        $idparoquia = $this->_request->getUserParam("idparoquia");
         $paroquia = $this->_request->getUserParam("paroquia");
 
 
-        if ($this->_request->getUserParam("diocese") > 0) {
-            $id_di = $diocese;
-            $diocese = $d->GetName($id_di);
-            $bispo = $d->GetBispo($id_di);
-        }else {
-            $id_di = $d->GetId($diocese);
-            $bispo = $d->GetBispo($id_di);
-        }
+        $result = $p->ListarExibir($paroquia, $idparoquia);
 
-        $result = $p->ListarExibir($paroquia,$id_di);
-
-        if($result["pa_tipo"] == 1) {
+        if ($result["pa_tipo"] == 1) {
             $tipo = "Paroquia";
-        }else {
+        } else {
             $tipo = "Capela";
         }
 
-        /*
-        if($result["pa_validacao"] < 5){
+        $diocese = $d->GetName($result["di_id"]);
+        $bispo = $d->GetBispo($result["di_id"]);
 
-            $pontuacao = "30";
-
-        }elseif($result["pa_validacao"] < 10){
-
-            $pontuacao = "70";
-
-        }elseif($result["pa_validacao"] < 15){
-
-            $pontuacao = "100";
-        }
-
-*/
         $usuario = $u->ListarDados($result["us_id"]);
 
-
-        if($this->controler->id() > 0) {
+        if ($this->controler->id() > 0) {
 
             $denuncia = $t->Listar();
             $this->view->assign('denuncia', $denuncia);
-
         }
 
 
-
-        //echo "id = $id_di || nome = ".$result["pa_nome"];
-        $this->view->assign('apikey',$this->gkey);
+        $this->view->assign('apikey', $this->gkey);
         $this->view->assign('tipo', $tipo);
         $this->view->assign('usuario', $usuario["us_nome"]);
         $this->view->assign('usuarioid', $usuario["us_id"]);
@@ -81,74 +54,70 @@ class ParoquiaexibirController extends Zend_Controller_Action {
         $this->view->assign('diocese', $diocese);
         $this->view->assign('pa', $result);
 
-        $this->view->assign('template',"default/parish.tpl");
+        $this->view->assign('template', "default/parish.tpl");
         $this->view->display('default/common_main.tpl');
-
     }
 
     public function validarAction() {
 
-        $id   = $this->_request->getPost('paroquia');
+        $id = $this->_request->getPost('paroquia');
         $pont = $this->_request->getPost('validacao');
 
         $va = new Validacao();
 
-        if(!$va->ListarDados($this->controler->id(), $id)){
+        if (!$va->ListarDados($this->controler->id(), $id)) {
 
-            
-            $dados = array( 'us_id' => $this->controler->id(), 
-                            'pa_id' => $id);
+
+            $dados = array('us_id' => $this->controler->id(),
+                'pa_id' => $id);
             $va->insert($dados);
 
             $par = new Paroquias();
             $pont++;
-            $dado = array(  'pa_validacao' => $pont );
-            $id   = "pa_id=".$id;
+            $dado = array('pa_validacao' => $pont);
+            $id = "pa_id=" . $id;
 
-            $par->update($dado,$id);
+            $par->update($dado, $id);
         }
         $this->_redirect($_SERVER['HTTP_REFERER']);
-
     }
 
-     	public function listaproximosAction(){
+    public function listaproximosAction() {
 
-		$pagina=1;
-        	if($this->_request->getPost('pagina')) {
-            		$pagina=$this->_request->getPost('pagina');
-        	}
+        $pagina = 1;
+        if ($this->_request->getPost('pagina')) {
+            $pagina = $this->_request->getPost('pagina');
+        }
 
-		//$this->view->assign('proximos',$proximos);
-		
-		$p  = new Paroquias();
+        //$this->view->assign('proximos',$proximos);
 
-		$latitude = $this->_request->getPost('lat');
-		$longitude = $this->_request->getPost('long');	
+        $p = new Paroquias();
 
-        	$result = $p->ListarProximas($latitude,$longitude)->toArray();
-		$qtd = 8;	
-		$total  =  count($result);
+        $latitude = $this->_request->getPost('lat');
+        $longitude = $this->_request->getPost('long');
 
-		foreach($result as $r){
-			$dado = array(
-           		'latitude'=>$r['pa_latitude'],
-			'longitude'=>$r['pa_longitude']
-           
-        		);
-		}
-		
-		$this->view->assign('latitude',$latitude);
-		$this->view->assign('longitude',$longitude);
+        $result = $p->ListarProximas($latitude, $longitude)->toArray();
+        $qtd = 8;
+        $total = count($result);
 
-		$this->view->assign('proximos',Paginacao::paginar($result,$pagina,$qtd));
-  		
-		$this->view->assign('url',$this->urlbase);
-		
-		$this->view->assign('template',"default/parish.tpl");
-		$this->view->display('default/lista-proximos.tpl');
+        foreach ($result as $r) {
+            $dado = array(
+                'latitude' => $r['pa_latitude'],
+                'longitude' => $r['pa_longitude']
+            );
+        }
 
-	}
+        $this->view->assign('latitude', $latitude);
+        $this->view->assign('longitude', $longitude);
 
+        $this->view->assign('proximos', Paginacao::paginar($result, $pagina, $qtd));
+
+        $this->view->assign('url', $this->urlbase);
+
+        $this->view->assign('template', "default/parish.tpl");
+        $this->view->display('default/lista-proximos.tpl');
+    }
 
 }
+
 ?>
