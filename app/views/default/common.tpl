@@ -16,6 +16,7 @@
 	<!-- begin list -->
 
 	{include file="default/lista-proximos.tpl"}
+	
 		
 	<!-- end list -->
 </section>
