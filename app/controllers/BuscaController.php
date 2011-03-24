@@ -31,7 +31,8 @@ class BuscaController extends Zend_Controller_Action {
 
 
         $p      =  new Paroquias();
-        $result =  $p->ListarGeral($this->_request->getParam('palavra'));
+        //$result =  $p->ListarGeral($this->_request->getParam('palavra'));
+        $result =  $p->Busca($this->_request->getParam('palavra'));
 	$qtd = 10;
 
         $total  =  count($result);
@@ -54,7 +55,8 @@ class BuscaController extends Zend_Controller_Action {
 
 
         $p      =  new Paroquias();
-        $result =  $p->ListarParoquias($this->_request->getParam('palavra'));
+        //$result =  $p->ListarParoquias($this->_request->getParam('palavra'));
+        $result =  $p->Busca($this->_request->getParam('palavra'));
         $qtd = 10;
         $total  =  count($result);
         $this->view->assign('total',$total);
