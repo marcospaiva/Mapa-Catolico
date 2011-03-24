@@ -12,7 +12,7 @@
 @import url("reset.css"); 
 @import url("grid.css");
 
-/*@special classes*/
+/*===================general classes====================*/
 .rounded{   border:#ffe2c3 1px solid;
 								border-radius: 5px;
   								-webkit-border-radius: 5px;
@@ -35,9 +35,7 @@
 .sprite,.carousel-pagination p a, ul#paginate li a, ul#paginate #pags a{background:url("../img/sprite.png") 0 0 no-repeat transparent; overflow:hidden;}
 .btn{background-color:#991313; border:none; color:#fff;display:block;overflow:hidden; padding:5px; text-transform: lowercase;cursor:pointer;}
 	.btn:hover{background:#cd2b2b;}
-
-
-/*===================general====================*/
+.title, .subtitle{color:#991313; font-size:24px; font-weight:normal;text-shadow:0 1px #fff;}
 body{background:url("../img/back.jpg") 0 0 repeat-x #fef2e5 ;}
 hr{border-color:#baac9e; margin:15px 0;}
 /*===================top====================*/
@@ -69,9 +67,9 @@ hr{border-color:#baac9e; margin:15px 0;}
 				#legend ul li.btn.sprite:hover{background:url("../img/sprite.png") -208px -19px no-repeat #cd2b2b; overflow:hidden;}
 	#legend a{display:block;padding:11px 5px 0 5px;}
 /*===================content====================*/
-.title{color:#991313; font-size:24px; font-weight:normal;text-shadow:0 1px #fff;}
+
 /*wrapper*/
-.wrapper{background-color:#fdf7ee;border-color:#baac9e;margin-top:20px;text-shadow:0 1px #fff;}
+.wrapper{background-color:#fdf7ee;border-color:#baac9e;margin-top:20px;text-shadow:0 1px #fff;min-height:300px;}
 	.wrapper .left{border-right: 1px solid #baac9e;width:737px;float:left;}
 	.wrapper .map{height:500px;color:#fff;}
 		 #map_canvas{width:737px;height:500px;}
@@ -164,16 +162,31 @@ section#info{}
 		#trace fieldset input[type="submit"]{float:left;margin:0;}
 /*===================forms====================*/
 form div, form p{margin-top:20px;margin-bottom:10px;}
-	form div label{display:block;}
+	form div label{display:block;color:#991313;}
 	form div input,form div textarea, form div select{padding:8px; width:400px;}
 	form input.btn{margin-left:10px;}
+form#place fieldset div{float:left;margin:20px 0 0 0;}
+form#place fieldset div input{border-right:none;}
+form#place fieldset input.btn{float:left;margin:37px 0 0 0;padding:8px;}
+#details{width:240px;float:left;margin-left:15px;}
+	#details legend.title{display:block;float:left;font-size:18px;margin:10px 0;}
+	#details fieldset{}
+	#details label{text-transform:lowercase;clear:both;}
+		#details div input, #details div textarea{border-color:#baac9e;width:208px;}
+		#details hr{width:225px;clear:both;}
 /*===================tos====================*/
 #tos p{margin-top:20px; text-indent:10px;line-height:16px;}
 /*===================admin====================*/
-#user.title{height:62px; line-height:62px;margin-bottom:30px;}
+.admin header h1.subtitle{font-size:20px; border-bottom:1px solid #baac9e; padding-bottom:20px;}
+
+
+
+#user.title{border-bottom:solid #baac9e 1px;height:62px; line-height:62px;margin-bottom:30px;padding-bottom:30px;}
 	#user.title img{float:left;margin-right:10px;}
+/*===================forms====================*/	
+
 /*===================master menu====================*/
-#master_menu{border-top:solid #baac9e 1px;padding-top:30px;}
+
 #master_menu ul{margin:0;}
 	#master_menu ul li a{float:left;padding:5px;}
 	

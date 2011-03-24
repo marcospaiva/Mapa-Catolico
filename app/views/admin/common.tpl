@@ -1,10 +1,4 @@
-<header class="grid_7">
-	<h1 id="user" class="title">
-		<img src="{$urlbase}public/img/gueres.jpg" alt="">
-		{$usuariobase}
-	</h1>
-	
-</header>
+
 <section class="wrapper _rounded rounded_ grid_12">
 	<!-- the map -->
 	<section class="left">
@@ -20,7 +14,6 @@
 		<li>
 			<a href="{$urlbase}p/{$proximo.di_id}/{$proximo.pa_nome}/">
 				<img src="{$urlbase}public/img/gueres.jpg" alt="">
-				<span class="see _rounded rounded_" title="Veja mais">Veja +</span>
 				<h2>{$tipo} : {$item.pa_nome}</h2>
 				<h3>{$item.pa_cidade} - {$item.pa_estado}</h3>
 			</a>
