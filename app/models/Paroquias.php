@@ -26,12 +26,10 @@ class Paroquias extends Zend_Db_Table_Abstract
 		return $this->fetchAll("us_id = '$usr' AND pa_id = '$id'")->current();
 	}
         
-        public function ListarExibir($paroquia,$id_di){
-                //echo "1 - $paroquia";
-
-                $paroquia = str_replace( "+", " ",$paroquia);
-                //echo "paroquia =  $paroquia";
-                return $this->fetchAll("di_id = '$id_di' AND pa_nome LIKE '%$paroquia%'")->current();
+        public function ListarExibir($paroquia,$id_paroquia)
+        {
+            
+                return $this->fetchAll("pa_id = '$id_paroquia'")->current();
 
         }
         public function ListarPalavras($palavra,$order)

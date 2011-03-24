@@ -66,8 +66,8 @@
 		<a href="{$urlbase}" title="ir para a home">Mapa Católico</a>
 	</header>
 	<form id="search_form" action="{$urlbase}busca/buscar" method="POST" accept-charset="utf-8">
-		<input type="text" class="rounded_" value="Churbles e gueres"/>
-		<input type="submit" class="_rounded" name="" value="buscar">
+                <input type="text" class="rounded_" value="Digite aqui" id="palavra" name="palavra"/>
+		<input type="submit" class="_rounded" name="buscar" value="buscar">
 	</form>
 	<nav>
 		<ul>
