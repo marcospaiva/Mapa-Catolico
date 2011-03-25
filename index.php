@@ -73,12 +73,12 @@ $config = new Zend_Config_Ini('./app/config.ini','local');
 //mapacatolico.com
 $gkey = "ABQIAAAAtyifEzud_MG-24R0knqNRBRWaK1xaAgrzDLhuIF7flgUv3LtLhRMmFf_xHO9qJxJstPatmWQwga3CQ";
 
-$view->assign('urlbase',$config->app->url_base);
+$view->assign('urlbase',$config->app->base_url);
 $view->assign('usuariobase', $usubase);
 $view->assign('ano_atual', $ano_atual);
 
 Zend_Registry::set('config', $config);
-Zend_Registry::set('urlbase', $config->app->url_base);
+Zend_Registry::set('urlbase', $config->app->base_url);
 Zend_Registry::set('gkey', $gkey);
 Zend_Registry::set('ano_atual', $ano_atual);
 Zend_Registry::set('usuariobase', $usubase);
