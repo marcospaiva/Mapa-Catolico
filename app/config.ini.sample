@@ -4,3 +4,4 @@ db.params.host = localhost
 db.params.username = root   
 db.params.password = 123456
 db.params.dbname = mapacatolico
+app.base_url = http://localhost/mapacatolico/
