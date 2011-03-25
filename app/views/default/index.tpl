@@ -14,17 +14,10 @@
 			<h1 id="notícias_e_atualizações">Notícias e atualizações</h1>
 		</header>
 		<section class="slider">
-			<!--<ul>
-			        <li>Please contact the author to submit your suggestions, report a bug, or suggest improvements at this address: thomaslanciaux4(at)gmail(point)</li>
-			        <li>Please contact the author to submit your suggestions, report a bug, or suggest improvements at this address: thomaslanciaux4(at)gmail(point)</li>
-			        <li>Please contact the author to submit your suggestions, report a bug, or suggest improvements at this address: thomaslanciaux4(at)gmail(point)</li>
-
-			</ul>-->
-
 			<ul>
 			{foreach from=$frase item=f key=k}
 				{if $k < 3}
-					<li>{$f.fr_frase}</li>
+					<li>{$f.fr_frase} - {$f.fr_autor}</li>
 				{/if}
 			
 			{/foreach}

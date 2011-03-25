@@ -70,10 +70,11 @@ hr{border-color:#baac9e; margin:15px 0;}
 
 /*wrapper*/
 .wrapper{background-color:#fdf7ee;border-color:#baac9e;margin-top:20px;text-shadow:0 1px #fff;min-height:300px;}
-	.wrapper .left{border-right: 1px solid #baac9e;width:737px;float:left;}
+	.wrapper .left{width:737px;float:left;}
 	.wrapper .map{height:500px;color:#fff;}
 		 #map_canvas{width:737px;height:500px;}
-	ul.list{width:240px;min-height:300px;float:left;margin-left:15px;}
+	.list{}
+	ul.list{border-left: 1px solid #baac9e;width:240px;min-height:300px;float:left;margin:0;padding-left:15px;}
 	ul.list li{border-bottom:#baac9e 1px solid;float:left;width:217px;padding:15px 0;}
 	ul.list li a{display:block;}
 		ul.list li a img{float:left;margin-right:10px;}
@@ -168,12 +169,14 @@ form div, form p{margin-top:20px;margin-bottom:10px;}
 form#place fieldset div{float:left;margin:20px 0 0 0;}
 form#place fieldset div input{border-right:none;}
 form#place fieldset input.btn{float:left;margin:37px 0 0 0;padding:8px;}
-#details{width:240px;float:left;margin-left:15px;}
+
+#details{border-left: 1px solid #baac9e;width:240px;min-height:300px;float:left;margin:0;padding-left:15px;}
 	#details legend.title{display:block;float:left;font-size:18px;margin:10px 0;}
 	#details fieldset{}
 	#details label{text-transform:lowercase;clear:both;}
 		#details div input, #details div textarea{border-color:#baac9e;width:208px;}
 		#details hr{width:225px;clear:both;}
+		#details .btn{margin:10px 0 20px 0;}
 /*===================tos====================*/
 #tos p{margin-top:20px; text-indent:10px;line-height:16px;}
 /*===================admin====================*/
