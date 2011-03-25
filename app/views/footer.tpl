@@ -1,4 +1,5 @@
 <!-- footer -->
+<span class="clear"></span>
 <section id="footer" class="container_12 clearfix">
 	<ul class="grid_6">
 		<li><a href="{$urlbase}menu/termos">termos de uso</a></li>

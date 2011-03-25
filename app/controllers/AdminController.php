@@ -24,7 +24,7 @@ class AdminController extends Zend_Controller_Action {
     }
     public function indexAction() {
 
-        $this->view->assign('template',"admin/vazio.tpl");
+        $this->view->assign('template',"admin/common.tpl");
         $this->view->display('admin/admin.tpl');
     }
 
@@ -217,7 +217,7 @@ class AdminController extends Zend_Controller_Action {
       public function paroquiacadastroAction() {
 
 
-        $this->view->assign('template',"admin/step_1.tpl");
+        $this->view->assign('template',"admin/new.tpl");
         $this->view->display('admin/admin.tpl');
 
     }

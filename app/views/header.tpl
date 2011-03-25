@@ -53,9 +53,9 @@
 
 </head>
 {if $template eq ""}
-	<body onload="initialize('{$urlbase}')">
+	<body onload="initialize('{$urlbase}index/listaProximos')">
 {elseif $template eq "default/parish.tpl"}
-	<body onload="pagInterna('{$urlbase}',{$pa.pa_latitude},{$pa.pa_longitude})">
+	<body onload="pagInterna('{$urlbase}paroquiaexibir/listaProximos',{$pa.pa_latitude},{$pa.pa_longitude})">
 {else}
 	<body>
 {/if}
@@ -66,8 +66,8 @@
 		<a href="{$urlbase}" title="ir para a home">Mapa Católico</a>
 	</header>
 	<form id="search_form" action="{$urlbase}busca/buscar" method="POST" accept-charset="utf-8">
-		<input type="text" class="rounded_" value="Churbles e gueres"/>
-		<input type="submit" class="_rounded" name="" value="buscar">
+                <input type="text" class="rounded_" value="Digite aqui" id="palavra" name="palavra"/>
+		<input type="submit" class="_rounded" name="buscar" value="buscar">
 	</form>
 	<nav>
 		<ul>
@@ -101,7 +101,7 @@
 			<li><a href="{$urlbase}menu/contato" class="rounded">Contato</a></li>
 			<li>
 				<p>
-					Você está logado como<a href="{$urlbase}admin">Colocar o nome do usr</a><a href="{$urlbase}index/sair">Log out</a></li>
+					Você está logado como<a href="{$urlbase}admin">{$usuariobase}</a><a href="{$urlbase}index/sair">Log out</a></li>
 				</p>
 			</li>{/if}
 		</ul>

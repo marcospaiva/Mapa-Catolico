@@ -3,7 +3,7 @@
 	<h2 class="grid_12">Cidade onde o cara mora</h2>
 	<div id="info" class="grid_4">
 		<p>
-			<a href="{$urlbase}p/{$item.di_id}/{$item.pa_nome}/" class="img_list">
+			<a href="{$urlbase}p/{$item.pa_id}/{substituir nome= $item.pa_nome}/" class="img_list">
 		    	<img src="{image id =$item.pa_id}" width="110" height="110" alt="{if $pa.pa_tipo eq "1"}Paroquia :{else} Capela{/if} {$pa.pa_nome}" />
 		    </a>
 		</p>

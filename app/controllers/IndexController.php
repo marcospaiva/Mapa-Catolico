@@ -18,13 +18,25 @@ class IndexController extends Zend_Controller_Action {
         $paro   = new Paroquias();
 
         $fr  = new Frases();
+ 	
 
-        $frases = $fr->Listarcapa();
+	try{
+		$channel = new Zend_Feed_Rss('http://twitter.com/statuses/user_timeline/140888598.rss');
+		foreach ($channel as $item) {
+			$title[] = $item->title();
+		}
+		
+		$this->view->assign('frase',$title);
+		
+	}catch (Exception $e){
+		$frases = $fr->Listarcapa();
+		$this->view->assign('frase',$frases);
+	}
 
         $cont   = $paro->listarDestaque(3);
 
         $this->view->assign('dados',$cont);
-        $this->view->assign('frase',$frases);
+        
 
         $this->view->display('default/index.tpl');
 	}
@@ -146,7 +158,15 @@ class IndexController extends Zend_Controller_Action {
 
         	$result = $p->ListarProximas($latitude,$longitude)->toArray();
 		$qtd = 5;	
-		$total  =  count($result);		
+		$total  =  count($result);
+
+		foreach($result as $r){
+			$dado = array(
+           		'latitude'=>$r['pa_latitude'],
+			'longitude'=>$r['pa_longitude']
+           
+        		);
+		}
 		
 		$this->view->assign('latitude',$latitude);
 		$this->view->assign('longitude',$longitude);

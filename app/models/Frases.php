@@ -22,7 +22,7 @@ class Frases extends Zend_Db_Table_Abstract
 	{
                 $order = "RAND()";
                 $w     = "fr_ativo = 1";
-		return $this->fetchAll($this->select()->where($w)->order($order))->current();
+		return $this->fetchAll($this->select()->where($w)->order($order));
 
 	}
         public function Listarid($id)
