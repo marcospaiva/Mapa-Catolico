@@ -55,7 +55,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 				#top nav ul li p a{display:inline;background-color:transparent;color:red;float:none;margin:0;}
 				#top nav ul li p a:hover{background-color:transparent;}
 /*===================legend====================*/
-#legend{background-color:#f2efe9;height:40px;position:absolute;margin-top:-41px;right:257px;z-index:9999;}
+#legend{background-color:#f2efe9;border-color:#baac9e;height:40px;position:absolute;margin-top:-40px;right:257px;z-index:9999;}
 	#legend ul{margin:0 0 0 10px;padding:0;line-height:40px;}
 		#legend ul li{color:#8e1616;float:left; font-size:12px;margin-right:10px;}
 			#legend ul li span{display:block;float:left; /*background-color:green;*/height:26px;width:16px;margin:8px 3px 0 0;}
@@ -74,7 +74,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 	.wrapper .map{height:500px;color:#fff;}
 		 #map_canvas{width:737px;height:500px;}
 	.list{}
-	.right{background-color:yellow;border-left: 1px solid #baac9e;width:240px;float:left;margin:0;padding-left:15px;min-height:500px;}
+	.right{border-left: 1px solid #baac9e;width:240px;float:left;margin:0;padding-left:15px;min-height:500px;}
 	ul.list{margin:0;}
 	ul.list li{border-bottom:#baac9e 1px solid;float:left;width:217px;padding:15px 0;}
 	ul.list li a{display:block;}
@@ -92,7 +92,7 @@ hr{border-color:#baac9e; margin:15px 0;}
         -moz-opacity:1;
         -khtml-opacity: 1;
         opacity: 1;}
-		#lista-proximos header h1{color:#991313;border-bottom:1px solid #baac9e;font-size:18px;float:left; font-weight:normal;margin:10px 15px 0 15px;padding-bottom:7px;width:215px}
+		#lista-proximos header h1{color:#991313;border-bottom:1px solid #baac9e;font-size:18px;float:left; font-weight:normal;margin:10px 15px 0 0;padding-bottom:7px;width:215px}
 		ul#paginate{float:left; margin-top:8px ;width:150px;}
 			 	ul#paginate li{float:left;}
 					ul#paginate li a.btn{background-color:#991313;width:20px;height:20px;text-indent:-1000px;padding:0;}
@@ -102,7 +102,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 					ul#paginate #pags a{background-position:-198px 0;display:block;float:left;margin:5px 5px 0 0;width:10px; height:10px;text-indent:-1000px;}
 					ul#paginate #pags a.active{background-position:-187px 0;display:block;float:left;margin:5px 5px 0 0;width:10px; height:10px;text-indent:-1000px;}
 #ad span{font-size:10px;}
-#refresh{height:60px;margin:16px 11px 0 12px;}
+#refresh{border-color:#baac9e;height:60px;margin:16px 11px 0 12px;}
 	#refresh header h1{color:#991313;height:48px;float:left;font-size:14px;padding:12px 0 0 12px;width:93px;}
  	/*sets do slider*/
 	.carousel-control{display:none;}
