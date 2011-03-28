@@ -21,7 +21,7 @@ class IndexController extends Zend_Controller_Action {
  	
 
 	try{
-		$channel = new Zend_Feed_Rss('http://podcast.cancaonova.com/rss/categoria.xml.php?idCategoria=101');
+		$channel = new Zend_Feed_Rss('http://twitter.com/statuses/user_timeline/140888598.rss');
 		foreach ($channel as $item) {
 			$title[] = $item->title();
 		}
