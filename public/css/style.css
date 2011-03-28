@@ -79,6 +79,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 	ul.list li{border-bottom:#baac9e 1px solid;float:left;width:217px;padding:15px 0;}
 	ul.list li a{display:block;}
 		ul.list li a img{float:left;margin-right:10px;}
+		ul.list li a .over{background-position:-252px -45px;float:left;display:block;height:62px;width:62px;position:absolute;}
 		ul.list li a h2{font-size:14px;}
 		ul.list li a h2, .wrapper ul li a h3 {font-weight:normal;}
 		ul.list li a h3{color:#cc341b;font-size:12px; margin-top:5px;}
