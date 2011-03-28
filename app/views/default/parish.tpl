@@ -70,7 +70,7 @@
 			
 		</section>
 
-		<section class="right">
+		<section class="right big">
 			{include file="default/lista-proximos.tpl"}
 		</section>
 	

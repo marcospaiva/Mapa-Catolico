@@ -75,6 +75,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 		 #map_canvas{width:737px;height:500px;}
 	.list{}
 	.right{border-left: 1px solid #baac9e;width:240px;float:left;margin:0;padding-left:15px;min-height:500px;}
+	.right.big{min-height:800px;}
 	ul.list{margin:0;}
 	ul.list li{border-bottom:#baac9e 1px solid;float:left;width:217px;padding:15px 0;}
 	ul.list li a{display:block;}
