@@ -13,12 +13,12 @@
 @import url("grid.css");
 
 /*===================general classes====================*/
-.rounded{   border:#ffe2c3 1px solid;
+.rounded{border-width: 1px;border-style: solid;
 								border-radius: 5px;
   								-webkit-border-radius: 5px;
   								-moz-border-radius: 5px;
 							}
-._rounded, .rounded_{border: 1px solid #999;}
+._rounded, .rounded_{border-width: 1px;border-style: solid;}
 ._rounded{ 					-webkit-border-top-right-radius: 5px;
 							-webkit-border-bottom-right-radius: 5px;
 							-moz-border-radius-topright: 5px;
@@ -55,7 +55,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 				#top nav ul li p a{display:inline;background-color:transparent;color:red;float:none;margin:0;}
 				#top nav ul li p a:hover{background-color:transparent;}
 /*===================legend====================*/
-#legend{background-color:#f2efe9;height:40px;position:absolute;margin-top:-41px;right:257px;z-index:9999;}
+#legend{background-color:#f2efe9;border-color:#baac9e;height:40px;position:absolute;margin-top:-40px;right:257px;z-index:9999;}
 	#legend ul{margin:0 0 0 10px;padding:0;line-height:40px;}
 		#legend ul li{color:#8e1616;float:left; font-size:12px;margin-right:10px;}
 			#legend ul li span{display:block;float:left; /*background-color:green;*/height:26px;width:16px;margin:8px 3px 0 0;}
@@ -70,10 +70,12 @@ hr{border-color:#baac9e; margin:15px 0;}
 
 /*wrapper*/
 .wrapper{background-color:#fdf7ee;border-color:#baac9e;margin-top:20px;text-shadow:0 1px #fff;min-height:300px;}
-	.wrapper .left{border-right: 1px solid #baac9e;width:737px;float:left;}
+	.wrapper .left{width:737px;float:left;}
 	.wrapper .map{height:500px;color:#fff;}
 		 #map_canvas{width:737px;height:500px;}
-	ul.list{width:240px;min-height:300px;float:left;margin-left:15px;}
+	.list{}
+	.right{border-left: 1px solid #baac9e;width:240px;float:left;margin:0;padding-left:15px;min-height:500px;}
+	ul.list{margin:0;}
 	ul.list li{border-bottom:#baac9e 1px solid;float:left;width:217px;padding:15px 0;}
 	ul.list li a{display:block;}
 		ul.list li a img{float:left;margin-right:10px;}
@@ -90,7 +92,7 @@ hr{border-color:#baac9e; margin:15px 0;}
         -moz-opacity:1;
         -khtml-opacity: 1;
         opacity: 1;}
-		#lista-proximos header h1{color:#991313;border-bottom:1px solid #baac9e;font-size:18px;float:left; font-weight:normal;margin:10px 15px 0 15px;padding-bottom:7px;width:215px}
+		#lista-proximos header h1{color:#991313;border-bottom:1px solid #baac9e;font-size:18px;float:left; font-weight:normal;margin:10px 15px 0 0;padding-bottom:7px;width:215px}
 		ul#paginate{float:left; margin-top:8px ;width:150px;}
 			 	ul#paginate li{float:left;}
 					ul#paginate li a.btn{background-color:#991313;width:20px;height:20px;text-indent:-1000px;padding:0;}
@@ -100,7 +102,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 					ul#paginate #pags a{background-position:-198px 0;display:block;float:left;margin:5px 5px 0 0;width:10px; height:10px;text-indent:-1000px;}
 					ul#paginate #pags a.active{background-position:-187px 0;display:block;float:left;margin:5px 5px 0 0;width:10px; height:10px;text-indent:-1000px;}
 #ad span{font-size:10px;}
-#refresh{height:60px;margin:16px 11px 0 12px;}
+#refresh{border-color:#baac9e;height:60px;margin:16px 11px 0 12px;}
 	#refresh header h1{color:#991313;height:48px;float:left;font-size:14px;padding:12px 0 0 12px;width:93px;}
  	/*sets do slider*/
 	.carousel-control{display:none;}
@@ -161,19 +163,23 @@ section#info{}
 		#trace fieldset input[type="text"]{width:287px;float:left;padding:5px;margin-right:none;}
 		#trace fieldset input[type="submit"]{float:left;margin:0;}
 /*===================forms====================*/
+/*normal form*/
 form div, form p{margin-top:20px;margin-bottom:10px;}
 	form div label{display:block;color:#991313;}
-	form div input,form div textarea, form div select{padding:8px; width:400px;}
+	form div input,form div textarea, form div select{padding:8px; width:400px;border-color:#baac9e}
 	form input.btn{margin-left:10px;}
+/**/
 form#place fieldset div{float:left;margin:20px 0 0 0;}
 form#place fieldset div input{border-right:none;}
 form#place fieldset input.btn{float:left;margin:37px 0 0 0;padding:8px;}
-#details{width:240px;float:left;margin-left:15px;}
+
+/*new account*/
 	#details legend.title{display:block;float:left;font-size:18px;margin:10px 0;}
 	#details fieldset{}
 	#details label{text-transform:lowercase;clear:both;}
 		#details div input, #details div textarea{border-color:#baac9e;width:208px;}
 		#details hr{width:225px;clear:both;}
+		#details .btn{margin:10px 0 20px 0;}
 /*===================tos====================*/
 #tos p{margin-top:20px; text-indent:10px;line-height:16px;}
 /*===================admin====================*/

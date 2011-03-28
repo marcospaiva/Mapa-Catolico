@@ -27,7 +27,7 @@
 				
 				<p class="grid_12">Ao clicar em "Crie a minha conta", abaixo, você diz estar concordando com os <a href="{$urlbase}menu/termos"> Termos de serviço.</a></p>
 		</fieldset>
-		<input type="submit" name="button" id="button" value="Crie a minha conta" title="crie a minha conta" class="btn _rounded rounded_"/>
+		<input type="submit" name="button" id="button" value="Crie a minha conta" title="crie a minha conta" class="btn rounded"/>
 	</form>
 </section>
 <!--end new account-->

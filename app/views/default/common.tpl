@@ -14,8 +14,10 @@
 	</section>
 	<!-- end of map -->
 	<!-- begin list -->
-
-	{include file="default/lista-proximos.tpl"}
+	<section class="right">
+		{include file="default/lista-proximos.tpl"}
+	</section>
+	
 	
 		
 	<!-- end list -->

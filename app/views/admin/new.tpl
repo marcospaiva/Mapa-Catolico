@@ -26,6 +26,8 @@
 		<!-- end of map -->
 		<!-- begin list -->
 
+		<section class="right">
+			
 		
 			<form action="" method="" accept-charset="" id="details">
 				<fieldset id="" class="">
@@ -77,10 +79,10 @@
 					
 					
 				</fieldset>
-
+				<input type="submit" name="" value="Salvar" class="btn rounded" id="" >
 			</form>
 			
-
+</section>
 
 
 		<!-- end list -->

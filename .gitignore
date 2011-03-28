@@ -26,5 +26,4 @@ application/.tmp
 .#*
 Thumbs
 app/views_c/
-index.php
 app/config.ini

@@ -5,6 +5,7 @@
 		<h1 id="user" class="title">
 			<img src="{$urlbase}public/img/gueres.jpg" alt="">
 			{$usuariobase}
+			
 		</h1>
 
 	</header>

@@ -45,7 +45,7 @@ ini_set('display_errors', 1);
 
 //rota para direcionar para a paroquia url direta da paroquia
 $router = $controlador->getRouter();
-$route = new Zend_Controller_Router_Route('/p/:diocese/:paroquia', array(
+$route = new Zend_Controller_Router_Route('/p/:idparoquia/:paroquia', array(
 	'module'=>'',
 	'controller' => 'paroquiaexibir',
 	'action'=> 'exibir'));
@@ -70,18 +70,15 @@ Zend_Registry::set('controler', $controler);
 //loada o arquivo de configuracao
 $config = new Zend_Config_Ini('./app/config.ini','local');
 
-
-$urlbase = "http://localhost/mapacatolico/";
-
 //mapacatolico.com
 $gkey = "ABQIAAAAtyifEzud_MG-24R0knqNRBRWaK1xaAgrzDLhuIF7flgUv3LtLhRMmFf_xHO9qJxJstPatmWQwga3CQ";
 
-$view->assign('urlbase',$urlbase);
+$view->assign('urlbase',$config->app->base_url);
 $view->assign('usuariobase', $usubase);
 $view->assign('ano_atual', $ano_atual);
 
 Zend_Registry::set('config', $config);
-Zend_Registry::set('urlbase', $urlbase);
+Zend_Registry::set('urlbase', $config->app->base_url);
 Zend_Registry::set('gkey', $gkey);
 Zend_Registry::set('ano_atual', $ano_atual);
 Zend_Registry::set('usuariobase', $usubase);
@@ -103,14 +100,13 @@ Zend_Registry::set('db',$db);
 
 //usuario nome
 
-/*
-//banner principal
+/*banner principal
 $iBanner = new Cnbanner();
 $bannercapa = $iBanner->Banner();
  
 $view->assign('bannercapa', $bannercapa);
-Zend_Registry::set('bannercapa', $bannercapa);
-*/
+Zend_Registry::set('bannercapa', $bannercapa);*/
+
 
 //Roda o sistema
 $controlador->dispatch();
