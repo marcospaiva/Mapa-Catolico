@@ -16,15 +16,12 @@
 		<section class="slider">
 			<ul>
 			{foreach from=$frase item=f key=k}
-				<!--{if $k < 3}
+				{if $k < 3}
 					<li>{$f.fr_frase} - {$f.fr_autor}</li>
-				{/if}-->
-				{$f}
+				{/if}
 			
 			{/foreach}
-			</ul>
-
-		
+			</ul>		
 		</section>
 	</section>
 </section>
