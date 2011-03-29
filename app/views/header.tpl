@@ -39,7 +39,8 @@
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.min.js"%3E%3C/script%3E'))</script>
 	<script src="{$urlbase}public/js/clearDefault.js"></script>
 	<script src="{$urlbase}public/js/carousel.js"></script>
-	<script src="{$urlbase}public/js/script.js"></script>	
+	<script src="{$urlbase}public/js/script.js"></script>
+        
    
         {if $template eq "default/new_account.tpl"}
             <script type="text/javascript" src="{$urlbase}public/js/jquery-1.4.2.min.js"></script>
@@ -53,9 +54,18 @@
 
 </head>
 {if $template eq ""}
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<body onload="initialize('{$urlbase}index/listaProximos')">
+            
 {elseif $template eq "default/parish.tpl"}
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<body onload="pagInterna('{$urlbase}paroquiaexibir/listaProximos',{$pa.pa_latitude},{$pa.pa_longitude})">
+
+{elseif $template eq "default/search.tpl"}
+
+        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
+        <script src="{$urlbase}public/js/busca.js" charset="utf-8"></script>
+	<body onload="search('{$urlbase}','{$palavra}')">
 {else}
 	<body>
 {/if}
