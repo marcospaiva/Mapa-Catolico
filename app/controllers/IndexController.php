@@ -30,7 +30,10 @@ class IndexController extends Zend_Controller_Action {
 		
 	}catch (Exception $e){
 		$frases = $fr->Listarcapa();
-		$this->view->assign('frase',$frases);
+		foreach ($frases as $f) {
+		      $title[] = $f['fr_frase'];
+		}
+		$this->view->assign('frase',$title);
 	}
 
         $cont   = $paro->listarDestaque(3);

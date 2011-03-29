@@ -20,6 +20,7 @@
 
 				<div id="map_canvas"></div>
 				{include file="default/legend.tpl"}
+
 	   </section>
 
         </section>
@@ -32,6 +33,21 @@
                 <li>
                     <a href="{$urlbase}p/{$item.pa_id}/{substituir nome =$item.pa_nome}/" title="{if $item.pa_tipo eq "1"}Paroquia {else} Capela {/if} {$item.pa_nome}">
                         <img src="{image id =$item.pa_id}" alt="{$item.pa_id}/{substituir nome =$item.pa_nome}" width="62" height="62">
+
+			</section>
+		
+		</section>
+		<!-- end of map -->
+		<!-- begin list -->
+		<section class="right">
+			<ul class="list">
+				{foreach name=loop item=item from=$dados}
+
+			                <li>
+			                    <a href="{$urlbase}p/{$item.di_id}/{substituir nome =$item.pa_nome}/" title="{if $item.pa_tipo eq "1"}Paroquia {else} Capela {/if} {$item.pa_nome}">
+									<img src="{image id =$item.pa_id}" alt="{$proximo.pa_id}/{substituir nome =$proximo.pa_nome}" width="62" height="62">
+									<span class="over sprite"></span>
+
 									{include file="interact.tpl"}
                         <h2>{if $item.pa_tipo eq "1"}Paroquia {else} Capela {/if} {$item.pa_nome} {$item.pa_nome}</h2>
 
