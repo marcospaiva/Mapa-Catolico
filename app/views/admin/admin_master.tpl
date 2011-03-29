@@ -19,7 +19,10 @@
 	</div>
 	<!---->
 	<span class="clear"></span>
-	{include file="admin/delation.tpl"}
+	<section class="clearfix">
+		{include file="$template"}
+	</section>
+	
 </section>
 
 
