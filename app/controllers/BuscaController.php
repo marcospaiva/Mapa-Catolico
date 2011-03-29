@@ -31,7 +31,7 @@ class BuscaController extends Zend_Controller_Action {
         $p      =  new Paroquias();
         
         $result =  $p->Busca($this->_request->getParam('palavra'));
-	$qtd = 10;
+	$qtd = 5;
 
         $total  =  count($result);
 

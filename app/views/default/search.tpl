@@ -16,52 +16,40 @@
     <section class="wrapper _rounded rounded_ grid_12">
         <!-- the map -->
         <section class="left">
-           <section class="map" class="clearfix">
+            <section class="map" class="clearfix">
 
-				<div id="map_canvas"></div>
+                <div id="map_canvas"></div>
 				{include file="default/legend.tpl"}
 
-	   </section>
+            </section>
 
         </section>
-        <!-- end of map -->
+
+
         <!-- begin list -->
         <section class="right">
-            <ul id="mylist" class="list">
-		{foreach name=loop item=item from=$dados}
-
-                <li>
-                    <a href="{$urlbase}p/{$item.pa_id}/{substituir nome =$item.pa_nome}/" title="{if $item.pa_tipo eq "1"}Paroquia {else} Capela {/if} {$item.pa_nome}">
-                        <img src="{image id =$item.pa_id}" alt="{$item.pa_id}/{substituir nome =$item.pa_nome}" width="62" height="62">
-
-			</section>
-		
-		</section>
-		<!-- end of map -->
-		<!-- begin list -->
-		<section class="right">
-			<ul class="list">
+            <ul class="list">
 				{foreach name=loop item=item from=$dados}
 
-			                <li>
-			                    <a href="{$urlbase}p/{$item.di_id}/{substituir nome =$item.pa_nome}/" title="{if $item.pa_tipo eq "1"}Paroquia {else} Capela {/if} {$item.pa_nome}">
-									<img src="{image id =$item.pa_id}" alt="{$proximo.pa_id}/{substituir nome =$proximo.pa_nome}" width="62" height="62">
-									<span class="over sprite"></span>
+                <li>
+                    <a href="{$urlbase}p/{$item.di_id}/{substituir nome =$item.pa_nome}/" title="{$item.pa_nome}">
+                        <img src="{image id =$item.pa_id}" alt="{$proximo.pa_id}/{substituir nome =$proximo.pa_nome}" width="62" height="62">
+                        <span class="over sprite"></span>
 
 									{include file="interact.tpl"}
-                        <h2>{if $item.pa_tipo eq "1"}Paroquia {else} Capela {/if} {$item.pa_nome} {$item.pa_nome}</h2>
+                        <h2>{$item.pa_nome}</h2>
 
                         <h3>{$item.pa_cidade} - {$item.pa_estado}</h3>
                     </a>
                 </li>
 
                 {/foreach}
+                
             </ul>
+            {include file="default/paginate.tpl"}
         </section>
 
-
-
-        <!-- end list -->
     </section>
+    
 
 </section>

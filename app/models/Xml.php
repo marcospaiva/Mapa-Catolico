@@ -14,12 +14,13 @@ class Xml {
 
     public function montar($dados) {
 
+
         $html = "<markers>";
 
         foreach ($dados as $array) {
 
             $html .= "<marker ";
-            $html .= 'nome="'. $this->parseToXML($array["pa_nome"]). '" ';
+            $html .= 'nome="'. $this->parseToXML(utf8_decode($array["pa_nome"])). '" ';
             $html .= 'tipo="'. $this->parseToXML($array["pa_tipo"]). '" ';
             $html .= 'lat="'. $this->parseToXML($array["pa_latitude"]). '" ';
             $html .= 'lng="'. $this->parseToXML($array["pa_longitude"]). '" ';
@@ -27,7 +28,7 @@ class Xml {
         }
         $html .= "</markers>";
 
-
+      
         return $html;
     }
 

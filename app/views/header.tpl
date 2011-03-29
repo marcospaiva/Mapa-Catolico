@@ -64,8 +64,8 @@
 {elseif $template eq "default/search.tpl"}
 
         <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$apikey}&amp;sensor=false" type="text/javascript"></script>
-        <script src="{$urlbase}public/js/busca.js"></script>
-	<body onload="search()">
+        <script src="{$urlbase}public/js/busca.js" charset="utf-8"></script>
+	<body onload="search('{$urlbase}','{$palavra}')">
 {else}
 	<body>
 {/if}

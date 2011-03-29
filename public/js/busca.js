@@ -1,16 +1,16 @@
     var gmarkers = [];
 
     var iconBlue = new GIcon();
-    iconBlue.image = 'http://localhost/mapacatolico/public/img/ico_blue.jpg';
+    iconBlue.image = 'http://localhost/mapacatolico/public/img/chapel_marker_on.png';
 
-    iconBlue.iconSize = new GSize(23, 25);
+    iconBlue.iconSize = new GSize(19, 40);
     iconBlue.iconAnchor = new GPoint(6, 20);
     iconBlue.infoWindowAnchor = new GPoint(5, 1);
 
     var iconRed = new GIcon();
-    iconRed.image = 'http://localhost/mapacatolico/public/img/ico_red.jpg';
+    iconRed.image = 'http://localhost/mapacatolico/public/img/parish_marker_on.png';
 
-    iconRed.iconSize = new GSize(23, 25);
+    iconRed.iconSize = new GSize(19, 40);
     iconRed.iconAnchor = new GPoint(6, 20);
     iconRed.infoWindowAnchor = new GPoint(5, 1);
 
@@ -22,10 +22,12 @@
 
 
 
-function search(palavra){
+function search(urlbasee, palavrae){
 
 
-    
+    var palavra = palavrae;
+    var urlbase = urlbasee;
+    var url = urlbase+"busca/buscarxml/palavra/"+palavra;
       
     var map2 = new GMap2(document.getElementById("map_canvas"), {
         draggableCursor:"crosshair"
@@ -42,7 +44,7 @@ function search(palavra){
 
 
 
-    GDownloadUrl("http://localhost/mapacatolico/busca/buscarxml/palavra/nossa",
+    GDownloadUrl(url,
 
         function(data) {
                
@@ -59,8 +61,6 @@ function search(palavra){
 
                     var nome = markers[i].getAttribute("nome");
                     
-                    
-                    
                     var point = new GLatLng(parseFloat(markers[i].getAttribute("lat")),
                         parseFloat(markers[i].getAttribute("lng")));                   
 
@@ -69,33 +69,14 @@ function search(palavra){
                     map2.addOverlay(marker);
                    
                 }
+                map2.setCenter(point, 6);
           
 
             i = 0;
-            window.setInterval(function() {
-
-
-
-                GEvent.trigger(gmarkers[i], 'click');
-
-                var point = new GLatLng(parseFloat(markers[i].getAttribute("lat")),
-                    parseFloat(markers[i].getAttribute("lng")));
-
-
-
-              map2.setZoom(07);
-              map2.setMapType(G_NORMAL_MAP);
-                i++;
-
-                if (i >= gmarkers.length) {
-                    i = 0
-                }
-
-            }, 10000);
-
-
 
         });
+
+       
 
 }
 
@@ -105,10 +86,11 @@ function createMarker(point, tipo, nome) {
    
     var marker = new GMarker(point, customIcons[tipo]);
     gmarkers.push(marker);
-    var html = nome;
+    var html = "teste";
     GEvent.addListener(marker, 'click', function(){
         
-        marker.openInfoWindowHtml(html);
+        marker.openInfoWindowHtml("<a target='_blank' href=''>"+nome+"</a>");
+;
 
 
     });
