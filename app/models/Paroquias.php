@@ -240,7 +240,7 @@ class Paroquias extends Zend_Db_Table_Abstract
                 $db = Zend_Registry::get("db");
 		$s = $db->select();
         	$s->from(array('d'=>'diocese'),array('di_diocese','di_bispo','di_cidade','di_estado'));
-		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao','pa_tipo'));
+		$s->from(array('p'=>'paroquias'),array('di_id','pa_id','pa_nome', 'pa_nome','pa_paroco','pa_cidade','pa_bairro','pa_rua','pa_numero','pa_estado','pa_validacao','pa_tipo',  'pa_latitude','pa_longitude'));
 
 
                 $cont = 0;
@@ -258,9 +258,7 @@ class Paroquias extends Zend_Db_Table_Abstract
                               $db->quoteInto('p.pa_rua LIKE ?',$palavra));
                 
                 }
-		$s->where('d.di_id = p.di_id');
-                $s->where('p.pa_tipo = 2');
-               
+		$s->where('d.di_id = p.di_id');  
 		$s->group('p.pa_id');
 		$s->order('p.pa_nome ASC');
                
