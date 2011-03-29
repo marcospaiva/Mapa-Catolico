@@ -195,9 +195,13 @@ form#place fieldset input.btn{float:left;margin:37px 0 0 0;padding:8px;}
 
 /*===================master menu====================*/
 
-#master_menu ul{margin:0;}
+#master_menu ul{margin:0;border-bottom:solid #baac9e 1px;padding-bottom:30px;}
 	#master_menu ul li a{float:left;padding:5px;}
-	
+table{margin-top:00px;}
+table thead{font-size:18px; text-align:left;}
+table th{padding:5px;}
+table tr td{padding:5px;}
+ 	
 /*===================footer====================*/
 #footer{height:50px;margin-top:20px;}
 	#footer ul{line-height:50px;}
