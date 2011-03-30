@@ -46,7 +46,7 @@ class IndexController extends Zend_Controller_Action {
     
     public function logarAction() {
 
-//        $this->view->display('logar.tpl');
+	//$this->view->display('logar.tpl');
         $this->view->assign('template',"admin/vazio.tpl");
         $this->view->display('default/common_main.tpl');
     }
@@ -94,6 +94,7 @@ class IndexController extends Zend_Controller_Action {
                 $this->view->assign('template',"default/login.tpl");
                 $this->view->display('default/common_main.tpl');
                 break;
+
 
             case Zend_Auth_Result::SUCCESS:
                 $dados = $auth->getResultRowObject(array('us_id','us_nome','us_latitude', 'us_longitude'));// recuperar a linha da tabela mediante autenticação com sucesso

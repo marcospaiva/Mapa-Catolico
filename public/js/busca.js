@@ -70,13 +70,8 @@ function search(urlbasee, palavrae){
                    
                 }
                 map2.setCenter(point, 6);
-          
-
-           
 
         });
-
-       
 
 }
 

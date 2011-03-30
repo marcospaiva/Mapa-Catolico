@@ -62,7 +62,7 @@
 				<hr>
 				<p id="update">
 					<small>Última atualização em 00/00/0000 - por "usuário"</small><br>
-					Achou alguma informação incorreta? Colabore <a href="">editando esse perfil</a> ou <a href="">denunciando abuso</a>
+					Achou alguma informação incorreta? Colabore <a href="{$urlbase}index/entrar">editando esse perfil</a> ou <a href="">denunciando abuso</a>
 					
 				</p>
 			</section>
