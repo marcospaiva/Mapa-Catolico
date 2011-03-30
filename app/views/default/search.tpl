@@ -32,7 +32,7 @@
 				{foreach name=loop item=item from=$dados}
 
                 <li>
-                    <a href="{$urlbase}p/{$item.di_id}/{substituir nome =$item.pa_nome}/" title="{$item.pa_nome}">
+                    <a href="{$urlbase}p/{$item.pa_id}/{substituir nome =$item.pa_nome}/" title="{$item.pa_nome}">
                         <img src="{image id =$item.pa_id}" alt="{$proximo.pa_id}/{substituir nome =$proximo.pa_nome}" width="62" height="62">
                         <span class="over sprite"></span>
 

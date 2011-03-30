@@ -72,7 +72,7 @@ function search(urlbasee, palavrae){
                 map2.setCenter(point, 6);
           
 
-            i = 0;
+           
 
         });
 
@@ -90,7 +90,6 @@ function createMarker(point, tipo, nome) {
     GEvent.addListener(marker, 'click', function(){
         
         marker.openInfoWindowHtml("<a target='_blank' href=''>"+nome+"</a>");
-;
 
 
     });
