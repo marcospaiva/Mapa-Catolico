@@ -55,11 +55,11 @@
 </head>
 {if $template eq ""}
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<body onload="initialize('{$urlbase}index/listaProximos')">
+	<body onload="initialize('{$urlbase}')">
             
 {elseif $template eq "default/parish.tpl"}
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<body onload="pagInterna('{$urlbase}paroquiaexibir/listaProximos',{$pa.pa_latitude},{$pa.pa_longitude})">
+	<body onload="pagInterna('{$urlbase}',{$pa.pa_latitude},{$pa.pa_longitude})">
 
 {elseif $template eq "default/search.tpl"}
 
