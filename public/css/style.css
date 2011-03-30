@@ -189,8 +189,15 @@ form#place fieldset input.btn{float:left;margin:37px 0 0 0;padding:8px;}
 
 
 
-#user.title{border-bottom:solid #baac9e 1px;height:62px; line-height:62px;margin-bottom:30px;padding-bottom:30px;}
-	#user.title img{float:left;margin-right:10px;}
+#user{border-bottom:solid #baac9e 1px;height:62px; margin-bottom:30px;padding-bottom:30px;}
+	#user .title{line-height:62px;}
+		#user .title img{float:left;margin-right:10px;}
+#interaction{width:60px;margin:0;position:absolute; top:22px; left:12px;}
+	#interaction li a{width:8px;height:8px;float:left;margin-right:3px;text-indent:-1000px;}	
+		#interaction li a.edit:hover,#interaction li a.out:hover{background:url("../img/sprite.png") 0 0 no-repeat #cd2b2b; overflow:hidden;}
+		#interaction li a.edit,#interaction li a.edit:hover{background-color:;background-position:-287px 1px;}
+		#interaction li a.out,#interaction li a.out:hover{background-position:-272px 1px;}
+		
 /*===================forms====================*/	
 
 /*===================master menu====================*/

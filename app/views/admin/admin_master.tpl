@@ -1,12 +1,6 @@
 {include file="header.tpl"}
 <section id="content" class="admin container_12">
-	<header class="grid_12">
-		<h1 id="user" class="title">
-			<img src="{$urlbase}public/img/gueres.jpg" alt="">
-			{$usuariobase}
-		</h1>
-
-	</header>
+	{include file = "admin/user_header.tpl"}
 	<span class="clear"></span>
 	<!--Master menu-->
 	<div id="master_menu" class="grid_12 clearfix" >
