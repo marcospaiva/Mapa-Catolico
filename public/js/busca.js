@@ -1,24 +1,4 @@
 
-
-function guardar(){
-    
-    
-    var capela = new google.maps.MarkerImage('http://localhost/mapacatolico/public/img/chapel_marker_on.png',
-        new google.maps.Size(19, 40),
-        new google.maps.Point(5, 1),
-        new google.maps.Point(6, 20));
-    var paroquia = new google.maps.MarkerImage('http://localhost/mapacatolico/public/img/parish_marker_on.png',
-        new google.maps.Size(19, 40),
-        new google.maps.Point(5, 1),
-        new google.maps.Point(6, 20));
-
-
-    var customIcons = [];
-    customIcons["1"] = capela;
-    customIcons["2"] = paroquia;
-
-}
-
 function search(urlbasee, palavrae, paginae){
    
     var customIcons = {
@@ -48,7 +28,6 @@ function search(urlbasee, palavrae, paginae){
     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
     var infoWindow = new google.maps.InfoWindow;
-
    
     downloadUrl(url, function(data) {
 
