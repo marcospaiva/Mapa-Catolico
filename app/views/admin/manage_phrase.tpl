@@ -1,9 +1,11 @@
-<div id="edit" class="grid_12">
+
 	<form action="{$urlbase}master/frasesalvar" method="post" accept-charset="utf-8">
 		<fieldset id="" class="">
 			<legend></legend>
-			<label for="">Nova frase</label>
-			<textarea id="frase" name="frase"></textarea>
+			<div class="grid_6">
+				<label for="">Nova frase</label>
+				<textarea id="frase" name="frase"></textarea>
+			</div>
 			<label for="autor">Autor</label>
 			<input type="text" name="autor" id="autor">
 		</fieldset>
@@ -35,4 +37,3 @@
 					
 				</tbody>		
 			</table>
-		</div>

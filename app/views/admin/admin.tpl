@@ -5,6 +5,10 @@
 		<h1 id="user" class="title">
 			<img src="{$urlbase}public/img/gueres.jpg" alt="">
 			{$usuariobase}
+			<a href="{$urlbase}admin/cadastro">Novo Cadastro</a>
+			<a href="{$urlbase}admin/paroquia">Editar Cadastros</a>
+			<a href="{$urlbase}admin/usuario">Minha Conta</a>
+			
 			
 		</h1>
 

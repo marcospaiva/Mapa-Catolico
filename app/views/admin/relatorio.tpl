@@ -1,22 +1,30 @@
 <!--report-->
-<div id="report" class="grid_12">
-	<h1 class="title">Relatório de cadastros</h1>
-	<h2>Filtre a sua pesquisa</h2>
-	<form action="{$urlbase}relatorio/index" method="post" name="periodo do relatorio" class="clearfix">
-		<fieldset id="" class="">
+<section class="container_12">
+	
+
+	<h1 class="title grid_12">Relatório de cadastros</h1>
+	<p class="grid_12">Filtre a sua pesquisa</p>
+	<span class="clear"></span>
+	<hr>
+	<form action="{$urlbase}relatorio/index" method="post" name="periodo do relatorio" class="grid_12">
+		<fieldset id="">
 			<legend></legend>
-			<label for="">Data Inicio:</label>
-			{html_select_date prefix = "Data_i_" month_format="%m" field_order="DMY" field_separator="/" time=$datai start_year='-5' end_year='+2'}
+				<label for="">Data Inicio:</label>
+				{html_select_date prefix = "Data_i_" month_format="%m" field_order="DMY" field_separator="/" time=$datai start_year='-5' end_year='+2'}			
 		</fieldset>
-		<fieldset id="" class="">
+		<fieldset id="">
 			<legend></legend>
-			<label for="">Data Final</label>
-			{html_select_date prefix = "Data_f_" month_format="%m" field_order="DMY" field_separator="/" time=$dataf start_year='-5' end_year='+2'}			
+				<label for="">Data Final</label>
+				{html_select_date prefix = "Data_f_" month_format="%m" field_order="DMY" field_separator="/" time=$dataf start_year='-5' end_year='+2'}
+					
 		</fieldset>
-		<input type="submit" name="Pesquisar" value="Pesquisar" id="Pesquisar">
+		<span class="clear"></span>
+		<input type="submit" name="Pesquisar" value="Pesquisar" id="Pesquisar" class="btn rounded">
 		
 	</form>
-	<table border="0" cellspacing="0" cellpadding="0">
+	<span class="clear"></span>
+	<hr>
+	<table border="0" cellspacing="0" cellpadding="0" class="grid_4">
 		<thead>
 			<tr>
 				<th>Pais</th>
@@ -34,7 +42,7 @@
 			{/foreach}
 		</tbody>
 	</table>
-	<table border="0" cellspacing="0" cellpadding="0">
+	<table border="0" cellspacing="0" cellpadding="0" class="grid_4">
 		<thead>
 			<tr>
                                 <th>Pais</th>
@@ -53,7 +61,7 @@
 		</tbody>
 	</table>
 	
-	<table border="0" cellspacing="0" cellpadding="0">
+	<table border="0" cellspacing="0" cellpadding="0" class="grid_4">
 		<thead>
 			<tr>
                                 <th>Pais</th>
@@ -85,5 +93,5 @@
 			<td>{$totalparoquia}</td>
 		</tr>
 	</table>
-</div>
+</section>
 <!---->

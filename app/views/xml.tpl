@@ -1,0 +1,3 @@
+{xml array=$xml}
+
+{$xml}

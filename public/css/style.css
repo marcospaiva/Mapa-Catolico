@@ -75,6 +75,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 		 #map_canvas{width:737px;height:500px;}
 	.list{}
 	.right{border-left: 1px solid #baac9e;width:240px;float:left;margin:0;padding-left:15px;min-height:500px;}
+	.right.big{min-height:800px;}
 	ul.list{margin:0;}
 	ul.list li{border-bottom:#baac9e 1px solid;float:left;width:217px;padding:15px 0;}
 	ul.list li a{display:block;}
@@ -194,9 +195,13 @@ form#place fieldset input.btn{float:left;margin:37px 0 0 0;padding:8px;}
 
 /*===================master menu====================*/
 
-#master_menu ul{margin:0;}
+#master_menu ul{margin:0;border-bottom:solid #baac9e 1px;padding-bottom:30px;}
 	#master_menu ul li a{float:left;padding:5px;}
-	
+table{margin-top:00px;}
+table thead{font-size:18px; text-align:left;}
+table th{padding:5px;}
+table tr td{padding:5px;}
+ 	
 /*===================footer====================*/
 #footer{height:50px;margin-top:20px;}
 	#footer ul{line-height:50px;}

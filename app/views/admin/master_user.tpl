@@ -1,5 +1,4 @@
 <!---->
-<div id="edit" class="grid_12">
 	<table border="0" cellspacing="0" cellpadding="0">
 		<thead>
 			<tr colspan="3">
@@ -26,5 +25,4 @@
 			
 		</tbody>		
 	</table>
-</div>
 <!---->->

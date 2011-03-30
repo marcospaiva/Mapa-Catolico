@@ -12,7 +12,7 @@
 </section>
 <!-- end footer -->
 <script language="JavaScript" src="http://j.maxmind.com/app/geoip.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
 
 <!--[if lt IE 7 ]>
 <script src="js/libs/dd_belatedpng.js"></script>

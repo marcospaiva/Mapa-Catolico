@@ -214,7 +214,7 @@ class AdminController extends Zend_Controller_Action {
     }
 
 
-      public function paroquiacadastroAction() {
+      public function cadastroAction() {
 
 
         $this->view->assign('template',"admin/new.tpl");
