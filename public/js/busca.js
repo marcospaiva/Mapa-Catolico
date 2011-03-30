@@ -35,7 +35,7 @@ function search(urlbasee, palavrae){
 
 
     map2.setCenter(new GLatLng(-13.667338,-47.988281), 6);
-    map2.setMapType(G_PHYSICAL_MAP);
+    map2.setMapType(G_NORMAL_MAP);
     map2.enableScrollWheelZoom();
     var customUI = map2.getDefaultUI();
     customUI.controls.scalecontrol = false;
@@ -70,13 +70,8 @@ function search(urlbasee, palavrae){
                    
                 }
                 map2.setCenter(point, 6);
-          
-
-            i = 0;
 
         });
-
-       
 
 }
 
@@ -90,7 +85,6 @@ function createMarker(point, tipo, nome) {
     GEvent.addListener(marker, 'click', function(){
         
         marker.openInfoWindowHtml("<a target='_blank' href=''>"+nome+"</a>");
-;
 
 
     });

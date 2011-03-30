@@ -44,6 +44,7 @@ $(function(){
 
 
 function listaProximos(url,p,lat,long){
+
     var url = url;
     var lat = lat;
     var long = long;
@@ -55,6 +56,7 @@ function listaProximos(url,p,lat,long){
     }, function(data){
         $('#lista-proximos').html(data);
     });
+
 }
 
 
