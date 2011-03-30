@@ -1,16 +1,7 @@
 
 function search(urlbasee, palavrae, paginae){
    
-    var customIcons = {
-        1: {
-            icon: 'http://localhost/mapacatolico/public/img/chapel_marker_on.png',
-            shadow: 'http://localhost/mapacatolico/public/img/chapel_marker_on.png'
-        },
-        2: {
-            icon: 'http://localhost/mapacatolico/public/img/parish_marker_on.png',
-            shadow: 'http://localhost/mapacatolico/public/img/parish_marker_on.png'
-        }
-    };
+    
    
     var palavra = palavrae;
     var pagina = paginae;
@@ -18,6 +9,17 @@ function search(urlbasee, palavrae, paginae){
     var url = urlbase+"busca/buscarxml/palavra/"+palavra+"/pagina/"+pagina;
     var lat = "-13.667338";
     var long = "-47.988281";
+
+    var customIcons = {
+        1: {
+            icon: urlbase+'public/img/chapel_marker_on.png',
+            shadow: urlbase+'public/img/chapel_marker_on.png'
+        },
+        2: {
+            icon: urlbase+'public/img/parish_marker_on.png',
+            shadow: urlbase+'public/img/parish_marker_on.png'
+        }
+    };
 
     var myLatlng = new google.maps.LatLng(lat,long);
     var myOptions = {
