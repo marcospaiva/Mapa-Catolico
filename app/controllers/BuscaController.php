@@ -35,7 +35,7 @@ class BuscaController extends Zend_Controller_Action {
 
         $total  =  count($result);
 
-
+        $this->view->assign('pagina',$pagina);
         $this->view->assign('palavra',$this->_request->getParam('palavra'));
         $this->view->assign('total',$total);
         $this->view->assign('dados',Paginacao::paginar($result,$pagina,$qtd));
@@ -46,10 +46,17 @@ class BuscaController extends Zend_Controller_Action {
 
     public function buscarxmlAction() {
 
+        $pagina=1;
+        if($this->_request->getParam('pagina')) {
+            $pagina=$this->_request->getParam('pagina');
+        }
+
         $p      =  new Paroquias();
 
         $result =  $p->Busca($this->_request->getParam('palavra'));
-
+        $qtd = 5;
+        $result = Paginacao::paginar($result,$pagina,$qtd);
+        
         $xml =  new Xml();
 
         $dados = $xml->montar($result);
