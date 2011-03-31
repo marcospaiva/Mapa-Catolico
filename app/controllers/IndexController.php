@@ -43,9 +43,8 @@ class IndexController extends Zend_Controller_Action {
     }
 
     public function logarAction() {
-
-        //$this->view->display('logar.tpl');
-        $this->view->assign('template', "admin/vazio.tpl");
+        
+        $this->view->assign('template', "default/login.tpl");
         $this->view->display('default/common_main.tpl');
     }
 
