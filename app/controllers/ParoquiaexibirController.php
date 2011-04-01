@@ -82,6 +82,7 @@ class ParoquiaexibirController extends Zend_Controller_Action {
         $this->_redirect($_SERVER['HTTP_REFERER']);
     }
 
+    
     public function listaproximosAction() {
 
         $pagina = 1;

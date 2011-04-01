@@ -32,8 +32,7 @@ $(function(){
         return false;
     });
 	$("a.fancy").fancybox({
-		'overlayColor': '#fef2e5',
-		'width': 200
+		'overlayColor': '#fef2e5'
 	});
 });
 
@@ -64,14 +63,32 @@ function listaProximos(url,p,lat,long){
 }
 
 
-function initialize(url) {
-    var url = url;
+function initialize(urle) {
+
+    var url = urle+"index/listaProximos";
+    var lat = geoip_latitude();
+    var long = geoip_longitude();
+    var urlxml = urle+"index/listaproximosxml/lat/"+lat+"/long/"+long;
+
+
+
+     var customIcons = {
+        1: {
+            icon: urle+'public/img/chapel_marker_on.png',
+            shadow: urle+'public/img/chapel_marker_on.png'
+        },
+        2: {
+            icon: urle+'public/img/parish_marker_on.png',
+            shadow: urle+'public/img/parish_marker_on.png'
+        }
+    };
+    
 
     listaProximos(url,1,geoip_latitude(), geoip_longitude());
 
     var latlng = new google.maps.LatLng(geoip_latitude(), geoip_longitude());
     var options = {
-        zoom: 9,
+        zoom: 12,
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -95,13 +112,59 @@ function initialize(url) {
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map,marker);
     });
+
+      var infoWindow = new google.maps.InfoWindow;
+
+    downloadUrl(urlxml, function(data) {
+
+
+
+        var xml = parseXml(data);
+        var markerNodes = xml.documentElement.getElementsByTagName("marker");
+        var bounds = new google.maps.LatLngBounds();
+
+        for (var i = 0; i < markerNodes.length; i++) {
+            var name = markerNodes[i].getAttribute("nome");
+            var tipo = markerNodes[i].getAttribute("tipo");
+            var point = new google.maps.LatLng(
+                parseFloat(markerNodes[i].getAttribute("lat")),
+                parseFloat(markerNodes[i].getAttribute("lng")));
+            var icon = customIcons[tipo] || {};
+            var html = "<a target='_blank' href=''>" + name+"</a>";
+
+            var marker = new google.maps.Marker({
+                map: map,
+                position: point,
+                icon: icon.icon,
+                shadow: icon.shadow
+            });
+
+            bindInfoWindow(marker, map, infoWindow, html);
+        }
+    });
+
+
+
+
  
 }
 
-function pagInterna(urlbase,lat,long){
-    var urlbase = urlbase;
+function pagInterna(urlbasee,lat,long){
+    var urlbase = urlbasee+"paroquiaexibir/listaProximos";
     var lat = lat;
     var long = long;
+    var url = urlbasee+"index/listaproximosxml/lat/"+lat+"/long/"+long;
+
+    var customIcons = {
+        1: {
+            icon: urlbasee+'public/img/chapel_marker_on.png',
+            shadow: urlbasee+'public/img/chapel_marker_on.png'
+        },
+        2: {
+            icon: urlbasee+'public/img/parish_marker_on.png',
+            shadow: urlbasee+'public/img/parish_marker_on.png'
+        }
+    };
 	
     listaProximos(urlbase,1,lat,long);
 	
@@ -111,19 +174,89 @@ function pagInterna(urlbase,lat,long){
         center: myLatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
+
     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
 	
     var infowindow = new google.maps.InfoWindow({
         content: geoip_city()+" - "+geoip_region_name()
     });
 
+
     var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
-        title: geoip_city()+" - "+geoip_region_name()
+        title: geoip_city()+" Aqui "+geoip_region_name()
+    });
+
+
+    var infoWindow = new google.maps.InfoWindow;
+    
+    downloadUrl(url, function(data) {
+
+      
+        
+        var xml = parseXml(data);
+        var markerNodes = xml.documentElement.getElementsByTagName("marker");
+        var bounds = new google.maps.LatLngBounds();
+        
+        for (var i = 0; i < markerNodes.length; i++) {
+            var name = markerNodes[i].getAttribute("nome");
+            var tipo = markerNodes[i].getAttribute("tipo");
+            var point = new google.maps.LatLng(
+                parseFloat(markerNodes[i].getAttribute("lat")),
+                parseFloat(markerNodes[i].getAttribute("lng")));
+            var icon = customIcons[tipo] || {};
+            var html = "<a target='_blank' href=''>" + name+"</a>";
+
+            var marker = new google.maps.Marker({
+                map: map,
+                position: point,
+                icon: icon.icon,
+                shadow: icon.shadow
+            });
+
+            bindInfoWindow(marker, map, infoWindow, html);
+        }
     });
 	
 }
+
+
+function bindInfoWindow(marker, map, infoWindow, html) {
+    google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.setContent(html);
+        infoWindow.open(map, marker);
+    });
+}
+
+function downloadUrl(url, callback) {
+    var request = window.ActiveXObject ?
+    new ActiveXObject('Microsoft.XMLHTTP') :
+    new XMLHttpRequest;
+
+    request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+            request.onreadystatechange = doNothing;
+            callback(request.responseText, request.status);
+        }
+    };
+
+    request.open('GET', url, true);
+    request.send(null);
+}
+
+function parseXml(str) {
+    if (window.ActiveXObject) {
+        var doc = new ActiveXObject('Microsoft.XMLDOM');
+        doc.loadXML(str);
+        return doc;
+    } else if (window.DOMParser) {
+        return (new DOMParser).parseFromString(str, 'text/xml');
+    }
+}
+
+function doNothing() {}
 
 
 
