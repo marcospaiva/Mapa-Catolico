@@ -1,5 +1,5 @@
 <!-- header user -->
-		{if $usuariobase eq "1"}
+		{if $usuariobase eq "Master"}
 			<header id="user" class="grid_12">
 				<h1 class="title">
 					<img src="{$urlbase}public/img/gueres.jpg" alt="">

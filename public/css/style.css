@@ -55,7 +55,7 @@ hr{border-color:#baac9e; margin:15px 0;}
 				#top nav ul li p a{display:inline;background-color:transparent;color:red;float:none;margin:0;}
 				#top nav ul li p a:hover{background-color:transparent;}
 /*===================legend====================*/
-#legend{background-color:#f2efe9;border-color:#baac9e;height:40px;position:absolute;margin-top:-40px;right:257px;z-index:9999;}
+#legend{background-color:#f2efe9;border-color:#baac9e;height:40px;position:absolute;margin-top:-40px;right:257px;z-index:1100;}
 	#legend ul{margin:0 0 0 10px;padding:0;line-height:40px;}
 		#legend ul li{color:#8e1616;float:left; font-size:12px;margin-right:10px;}
 			#legend ul li span{display:block;float:left; /*background-color:green;*/height:26px;width:16px;margin:8px 3px 0 0;}
@@ -164,6 +164,8 @@ section#info{}
 		#trace fieldset label{display:block; padding:5px;}
 		#trace fieldset input[type="text"]{width:287px;float:left;padding:5px;margin-right:none;}
 		#trace fieldset input[type="submit"]{float:left;margin:0;}
+/*===================delation====================*/
+
 /*===================forms====================*/
 /*normal form*/
 form div, form p{margin-top:20px;margin-bottom:10px;}

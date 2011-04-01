@@ -31,6 +31,10 @@ $(function(){
         $("#legend ul").show();
         return false;
     });
+	$("a.fancy").fancybox({
+		'overlayColor': '#fef2e5',
+		'width': 200
+	});
 });
 
 /*function paginarProximos(p,lat,long){

@@ -40,6 +40,8 @@
 	<script src="{$urlbase}public/js/clearDefault.js"></script>
 	<script src="{$urlbase}public/js/carousel.js"></script>
 	<script src="{$urlbase}public/js/script.js"></script>
+	<script type="text/javascript" src="{$urlbase}public/js/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="{$urlbase}public/css/jquery.fancybox-1.3.4.css" media="screen" />
         
    
         {if $template eq "default/new_account.tpl"}

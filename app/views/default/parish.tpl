@@ -62,9 +62,12 @@
 				<hr>
 				<p id="update">
 					<small>Última atualização em 00/00/0000 - por "usuário"</small><br>
-					Achou alguma informação incorreta? Colabore <a href="{$urlbase}index/entrar">editando esse perfil</a> ou <a href="">denunciando abuso</a>
+					Achou alguma informação incorreta? Colabore <a href="{$urlbase}index/entrar">editando esse perfil</a> ou <a href="#mk_delation" class="fancy">denunciando abuso</a>
 					
 				</p>
+				<div style="display:none">
+				{include file="default/make-delation.tpl"}
+				</div>
 			</section>
 			<!--  -->
 			
